@@ -19,18 +19,18 @@ function di(){
   var dayNr = now.getDay();
 // (((dayNr>1) && (dayNr<5)) ? " Kwietnia " : " Kwiecień ");
   mies=new Array(12);
-  mies[0]=' Styczeń ';
-  mies[1]=' Luty ';
-  mies[2]=' Marzec ';
-  mies[3]=' Kwietnia ';
-  mies[4]=' Maja ';
-  mies[5]=' Czerwiec ';
-  mies[6]=' Lipiec ';
-  mies[7]=' Sierpień ';
-  mies[8]=' Wrzesień ';
-  mies[9]=' Październik ';
-  mies[10]=' Listopad ';
-  mies[11]=' Grudzień ';
+  mies[0]=' Styczeń';
+  mies[1]=' Luty';
+  mies[2]=' Marzec';
+  mies[3]=' Kwietnia';
+  mies[4]=' Maja';
+  mies[5]=' Czerwiec';
+  mies[6]=' Lipiec';
+  mies[7]=' Sierpień';
+  mies[8]=' Wrzesień';
+  mies[9]=' Październik';
+  mies[10]=' Listopad';
+  mies[11]=' Grudzień';
   dzie=new Array(7);
   dzie[0]='Niedziela, ';
   dzie[1]='Poniedziałek, ';
@@ -416,7 +416,7 @@ function di(){
   i[11][29]='Dawida, Dominika i Tomasza';
   i[11][30]='Irminy i Eugeniusza';
   i[11][31]='Sylwestra i Melanii';
-  document.write(dzie[now.getDay()]+now.getDate()+mies[now.getMonth()]+lanc+'\n');
+  document.write(dzie[now.getDay()]+now.getDate()+mies[now.getMonth()]+lanc);
   document.write(', Dzisiaj imieniny: '+i[now.getMonth()][now.getDate()]+'.');
 }
 
