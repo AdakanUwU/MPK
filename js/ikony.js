@@ -1,3 +1,5 @@
+const base = document.baseURI.endsWith('/') ? document.baseURI : document.baseURI + '/';
+
 document.addEventListener("DOMContentLoaded", () => {
     console.log("Skrypt załadowany");
   
