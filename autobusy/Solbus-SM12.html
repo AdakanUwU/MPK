@@ -1,33 +1,32 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
+    <base href="/MPK/">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Solbus SM12 - MPK Częstochowa</title>
-    <link rel="stylesheet" href="/css/style.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
 
-    <base href="/MPK/">
+    <script src="js/ikony.js" defer></script> <!--wczytywanie ikon-->
+    <script src="js/tabela_link.js" defer></script> <!--wczytywanie klikalnych wierszy tabel-->
 
-    <script src="/js/ikony.js" defer></script> <!--wczytywanie ikon-->
-    <script src="/js/tabela_link.js" defer></script> <!--wczytywanie klikalnych wierszy tabel-->
-
-    <script src="/js/w_gore.js" defer></script> <!--Skrypt do przycisku przesuwania do samej góry-->
-    <script src="/js/zdjecia.js" defer></script> 
-    <script src="/js/foto-blok.js" defer></script> <!--Blokada menu kontekstowego na zdjęciach-->
+    <script src="js/w_gore.js" defer></script> <!--Skrypt do przycisku przesuwania do samej góry-->
+    <script src="js/zdjecia.js" defer></script> 
+    <script src="js/foto-blok.js" defer></script> <!--Blokada menu kontekstowego na zdjęciach-->
 
 
 </head>
 <body>
     <div class="pasek"> <!--Pasek nawigacyjny-->
     <nav>
-        <label class="logo"><a href="/"><img src="/img/logo_mpk.png" alt="Logo MPK"></a></label>
+        <label class="logo"><a href="/MPK/"><img src="img/logo_mpk.png" alt="Logo MPK"></a></label>
         <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
         <ul id="menu">
-        <li><a class="pasek" href="/">Spis</a></li>
-        <li><a class="pasek" href="/autobusy.html">Autobusy</a></li>
-        <li><a class="pasek" href="/tramwaje.html">Tramwaje</a></li>
-        <li><a class="pasek" href="#">Trasy</a></li>
-        <li><a class="pasek" href="#">Pętle</a></li>
+        <li><a class="pasek" href="/MPK/">Spis</a></li>
+        <li><a class="pasek" href="autobusy.html">Autobusy</a></li>
+        <li><a class="pasek" href="tramwaje.html">Tramwaje</a></li>
+        <li><a class="pasek" href="javascript:void(0)">Trasy</a></li>
+        <li><a class="pasek" href="javascript:void(0)">Pętle</a></li>
         </ul>
     </nav>
     </div>
@@ -35,7 +34,7 @@
     <div class="tresc"> <!--Główna treść strony-->
         <h1>Solbus SM12</h1><hr />
         <BR>
-        <img src="/img/SM12/miniaturka.jpg" alt="Solbus SM12 nr 038" class="fullscreen-img miniatura">
+        <img src="img/SM12/miniaturka.jpg" alt="Solbus SM12 nr 038" class="fullscreen-img miniatura">
         <BR>
 
         <div class="opis-pojazdu">
@@ -191,12 +190,12 @@
         <h2>Zdjęcia pojazdów:</h2><hr><br>
         <div class="galeria">
             <div class="opis-zdj">» 036</div>
-            <img src="/img/SM12/036/1.jpg" alt="Solbus SM12 nr 036" class="fullscreen-img">
-            <img src="/img/SM12/036/2.jpg" alt="Solbus SM12 nr 036" class="fullscreen-img">
+            <img src="img/SM12/036/1.jpg" alt="Solbus SM12 nr 036" class="fullscreen-img">
+            <img src="img/SM12/036/2.jpg" alt="Solbus SM12 nr 036" class="fullscreen-img">
             <div class="opis-zdj">» 037</div>
             <div class="opis-zdj">» 038</div>
-            <img src="/img/SM12/038/1.jpg" alt="Solbus SM12 nr 038" class="fullscreen-img">
-            <img src="/img/SM12/038/2.jpg" alt="Solbus SM12 nr 038" class="fullscreen-img">
+            <img src="img/SM12/038/1.jpg" alt="Solbus SM12 nr 038" class="fullscreen-img">
+            <img src="img/SM12/038/2.jpg" alt="Solbus SM12 nr 038" class="fullscreen-img">
         </div>
         <!--Okno do otwierania zdjęć na całej stronie-->
         <div id="fullscreenOverlay" class="fullscreen-overlay">
