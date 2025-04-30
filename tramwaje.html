@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Tramwaje - MPK Częstochowa</title>
+    <link rel="stylesheet" href="/css/style.css"/>
+
+    <script src="/js/ikony.js" defer></script> <!--wczytywanie ikon-->
+    <script src="/js/tabela_link.js" defer></script> <!--wczytywanie klikalnych wierszy tabel-->
+
+    <script src="/js/w_gore.js" defer></script> <!--Skrypt do przycisku przesuwania do samej góry-->
+    <script src="/js/foto-blok.js" defer></script> <!--Blokada menu kontekstowego na zdjęciach-->
+
+</head>
+<body>
+    <div class="pasek"> <!--Pasek nawigacyjny-->
+    <nav>
+        <label class="logo"><a href="/"><img src="/img/logo_mpk.png" alt="Logo MPK"></a></label>
+        <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+        <ul id="menu">
+        <li><a class="pasek" href="/">Spis</a></li>
+        <li><a class="pasek" href="/autobusy.html">Autobusy</a></li>
+        <li><a class="pasek" href="#">Tramwaje</a></li>
+        <li><a class="pasek" href="#">Trasy</a></li>
+        <li><a class="pasek" href="#">Pętle</a></li>
+        </ul>
+    </nav>
+    </div>
+
+    <div class="tresc"> <!--Główna treść strony-->
+        <h1>Tramwaje obecne:</h3><hr>
+
+        <div class="menu-container">
+            <a href="/tramwaje/Konstal-105Na.html" class="tile">
+                <div class="tile">
+                <img src="/img/105Na/miniaturka.jpg" alt="Konstal 105Na">
+                <div class="caption">Konstal 105Na</div>
+                </div>
+            </a>
+
+            <a href="/tramwaje/Pesa-129Nb.html" class="tile">
+                <div class="tile">
+                <img src="/img/129Nb/miniaturka.jpg" alt='Pesa 129Nb "Twist"'>
+                <div class="caption">Pesa 129Nb "Twist"</div>
+                </div>
+            </a>
+            
+            <a href="/tramwaje/Pesa-129Nb.html" class="tile">
+                <div class="tile">
+                <img src="/img/2010N-10/miniaturka.jpg" alt='Pesa 2010N-10 "Twist II"'>
+                <div class="caption">Pesa 2010N-10 "Twist II"</div>
+                </div>
+            </a>
+
+            <!-- Dodaj więcej kafelków w ten sam sposób -->
+          </div>
+
+        <BR><BR>
+        <h1>Tramwaje zabytkowe:</h1><hr>
+
+        <div class="menu-container">
+            <a href="/tramwaje/Konstal-4N1.html" class="tile">
+                <div class="tile">
+                <img src="/img/4N1/miniaturka.jpg" alt="Konstal 4N1">
+                <div class="caption">Konstal 4N1</div>
+                </div>
+            </a>
+
+            <a href="/tramwaje/Konstal-ND3.html" class="tile">
+                <div class="tile">
+                <img src="/img/ND3/miniaturka.jpg" alt="Konstal ND3">
+                <div class="caption">Konstal ND3</div>
+                </div>
+            </a>
+
+            <a href="/tramwaje/Konstal-102Na.html" class="tile">
+                <div class="tile">
+                <img src="/img/102Na/miniaturka.jpg" alt="Konstal 102Na">
+                <div class="caption">Konstal 102Na</div>
+                </div>
+            </a>
+        </div>
+
+        <BR><BR>
+        <h1>Tramwaje dawne:</h1><hr>
+    
+        <div class="menu-container">
+            <a href="/tramwaje/Konstal-4ND1.html" class="tile">
+                <div class="tile">
+                <img src="/img/4ND1/miniaturka.jpg" alt="Konstal 4ND1">
+                <div class="caption">Konstal 4ND1</div>
+                </div>
+            </a>
+        </div>
+
+    </div>
+<button onclick="scrollToTop()" id="scrollTopBtn" title="Do góry">⬆</button>
+</body>
+</html>

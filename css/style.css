@@ -1,0 +1,550 @@
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: lato;
+  margin-top: 80px; /* wysokość paska, by nic nie było zasłonięte */
+}
+
+
+nav {
+  background-color: rgb(255, 130, 130);
+  list-style: none;
+  height: 80px;
+  width: 100%;
+  position: fixed; /* ZAMIANA z relative na fixed */
+  top: 0;
+  left: 0;
+  z-index: 1000; /* Żeby był nad innymi elementami */
+}
+
+
+label.logo {
+  color: white;
+  font-size: 35px;
+  line-height: 80px;
+  padding: 0 100px;
+  font-weight: bold;
+}
+
+label.logo img {
+  margin-top: 5px;
+  height: 85%;
+}
+
+nav ul {
+  float: right;
+  margin-right: 30px;
+}
+
+nav ul li {
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 3px;
+}
+
+nav ul li a {
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  padding: 7px 10px;
+  transition-duration: 0.3s;
+}
+
+a.pasek:hover {
+  background-color: rgb(255, 205, 205);
+  transition-duration: 0.3s;
+  border-radius: 8px;
+  color: rgb(48, 48, 48);
+}
+
+/* Hamburger button */
+.hamburger {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+  color: white;
+  line-height: 80px;
+  padding-right: 20px;
+  float: right;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  nav ul {
+    flex-direction: column;
+    background-color: rgb(255, 130, 130);
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transition: max-height 0.4s ease, opacity 0.3s ease;
+  }
+
+  nav ul li {
+    display: block;
+    text-align: center;
+    margin: 10px 0;
+  }
+
+  nav ul.show {
+    max-height: 500px; /* Wystarczające dla kilku opcji */
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+
+.tresc-glowna{
+  margin: 95px 25px 10px 25px;
+}
+
+.tresc-glowna a{
+  color: #ff8282;
+  transition-duration: 0.5s;
+}
+
+.tresc-glowna a:hover{
+  color:#303030;
+  transition-duration: 0.5s;
+}
+
+.tresc{
+  margin: 95px 12% 10px 12%;
+}
+
+.tresc a{
+  color: #ff8282;
+  transition-duration: 0.5s;
+}
+
+.tresc a:hover{
+  color:#303030;
+  transition-duration: 0.5s;
+}
+
+.tresc a{
+  color: #ff8282;
+  transition-duration: 0.5s;
+}
+
+@media (max-width: 768px) {
+  .tresc{
+    margin: 95px 25px 10px 25px;
+  }
+}
+
+.spis{
+  margin: 0 auto; /* wyśrodkowanie poziome */
+  border-collapse: collapse;
+  width: 98%;
+  text-align: center;
+  background-color: #fff;
+  border: 2px solid #000000;
+}
+
+.spis th{
+  border: 1px solid black;
+  background-color: #ff8282;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+
+.spis td{
+  border: 1px solid black;
+  background-color: white;
+  padding: 7px;
+}
+
+.spis input{
+  border: 1px solid black;
+  border-radius: 3px;
+}
+
+.spis select{
+  border: 1px solid black;
+  border-radius: 3px;
+}
+
+.atr {transition: transform 0.25s ease;}
+.atr:hover {-webkit-transform:scale(1.5); /* lub inna wartość */ transform:scale(1.5);}
+
+
+.tabela_link {
+  cursor: help;
+}
+
+.tabela_link td {
+  transition: background-color 0.2s ease;
+}
+
+.tabela_link:hover td {
+  transition: background-color 0.2s ease;
+  background-color: rgba(255, 130, 130, 0.25);
+}
+
+.gps{
+  transition-duration: 0.5s;
+  content: url('../ikony/gps1.svg')
+}
+
+.gps:hover{
+  transition-duration: 0.5s;
+  content: url('../ikony/gps2.svg')
+}
+
+.skroty{
+  margin-left: 1%;
+  list-style-type: "» ";
+}
+
+.skroty ul{
+  margin-left: calc(1% + 10px);
+}
+
+details summary {
+  font-size: 30px;
+  cursor: pointer;
+  font-weight: bold;
+  color: #ff8282;
+  margin-bottom: 5px;
+}
+
+details summary::marker{
+  color:#484848;
+}
+
+#scrollTopBtn {
+  position: fixed;
+  bottom: 30px;
+  right: 0; /* Przycisk dotyka prawej krawędzi */
+  z-index: 999;
+  border: none;
+  outline: none;
+  background-color: #ff8282;
+  color: white;
+  cursor: pointer;
+  width: 35px;
+  height: 50px;
+  font-size: 24px;
+
+  /* Zaokrąglenia tylko po lewej stronie */
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+
+  box-shadow: -4px 4px 8px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  pointer-events: none;
+}
+
+#scrollTopBtn.show {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+#scrollTopBtn:hover {
+  background-color: #ff5a5a;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 700px) {
+  #scrollTopBtn {
+    display: none !important;
+  }
+}
+
+
+/*Kafelki zdjęciowe w menu*/
+
+.menu-container {
+  display: grid;
+  grid-template-columns: repeat(4, 300px); /* zawsze max 4 kolumny */
+  gap: 15px;
+  justify-content: center; /* centrowanie kafelków w rzędzie */
+  margin: 30px auto 0;
+  padding: 0;
+}
+
+@media (max-width: 1250px) {
+  .menu-container {
+    grid-template-columns: repeat(3, 300px);
+  }
+}
+
+@media (max-width: 930px) {
+  .menu-container {
+    grid-template-columns: repeat(2, 300px);
+  }
+}
+
+@media (max-width: 620px) {
+  .menu-container {
+    grid-template-columns: repeat(1, 300px);
+  }
+}
+
+
+.tile {
+  position: relative;
+  width: 300px;
+  aspect-ratio: 3 / 2;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tile:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.tile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: none; /* zdjęcie się nie rusza */
+}
+
+.caption {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 10px;
+  backdrop-filter: blur(4px);
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  font-size: 1rem;
+  z-index: 1;
+}
+
+/*Koniec*/
+
+
+hr {
+  border-style: solid;
+  border-color: #ff8282;
+}
+
+.dane-techniczne{
+  margin: 0 auto; /* wyśrodkowanie poziome */
+  border-collapse: collapse;
+  width: 75%;
+  text-align: center;
+  background-color: #fff;
+  border: 2px solid #000000;
+}
+
+.dane-techniczne th{
+  border: 1px solid black;
+  background-color: #ff8282;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+
+.dane-techniczne td{
+  border: 1px solid black;
+  background-color: white;
+  padding: 7px;
+  transition: background-color 0.2s ease;
+}
+
+.tabela-hover td {
+  transition: background-color 0.2s ease;
+}
+
+.tabela-hover:hover td {
+  transition: background-color 0.2s ease;
+  background-color: rgba(255, 130, 130, 0.25);
+}
+
+/* POJAWIANIE SIĘ ZDJĘCIA */
+/*    NA PEŁNYM EKRANIE   */
+
+.fullscreen-img {
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.fullscreen-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 9999;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  animation: fadeIn 0.5s forwards; /* Animacja pojawiania się */
+}
+
+.fullscreen-overlay.show {
+  display: flex;
+  opacity: 1;
+}
+
+.fullscreen-image {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+  transform: scale(0.8);
+  animation: zoomIn 0.3s forwards; /* Animacja powiększenia zdjęcia */
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes zoomIn {
+  0% {
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes zoomOut {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.8);
+  }
+}
+
+#closeBtn {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+  z-index: 10000;
+}
+
+/*KONIEC*/
+
+/*Miniaturka zdjęć na górze artykułu o pojeździe*/
+.miniatura {
+  display: flex;
+  margin: auto;
+  width: 700px;
+  border-radius: 25px;
+  padding: 10px;
+}
+
+.miniatura:hover {
+  scale: 1.05;
+}
+/*KONIEC*/
+
+
+.galeria {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px; /* odstęp między zdjęciami */
+  justify-content: left;
+  padding: 10px;
+  margin-left: 20px;
+  list-style-type: "» ";
+}
+
+.galeria img {
+  width: 100%;
+  max-width: 250px;
+  margin-left: 25px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  transition: transform 0.3s;
+  border: 2px outset #303030;
+}
+
+.galeria img:hover {
+  transform: scale(1.05);
+  border: 2px outset #ff8282;
+}
+
+.opis-zdj{
+  width: 100%;
+  font-size: 20px;
+}
+
+/*Tabela stan taboru na przestrzeni lat*/
+.ilostan{
+  margin: 0 1.25%;
+  border-collapse: collapse;
+  text-align: center;
+  background-color: #fff;
+  border: 2px solid #000000;
+}
+
+.ilostan th{
+  border: 1px solid black;
+  background-color: #ff8282;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+
+.ilostan td{
+  border: 1px solid black;
+  background-color: white;
+  padding: 7px;
+  transition: background-color 0.2s ease;
+}
+/*Koniec*/
+
+.kolumna-opis {
+  font-weight: bold;
+}
+
+.opis-pojazdu {
+  font-size: 18px; 
+  text-align: justify;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+zz {
+  font-weight: bold;
+  color: red;
+}

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   id="svg2"
+   sodipodi:docname="AC.svg"
+   viewBox="0 0 63.999994 72.625449"
+   version="1.1"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
+   width="63.999996"
+   height="72.62545"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <defs
+     id="defs9" />
+  <title
+     id="title3324">Snowflake (Monchrome; Icon)</title>
+  <sodipodi:namedview
+     id="base"
+     bordercolor="#666666"
+     inkscape:pageshadow="2"
+     inkscape:window-y="-8"
+     fit-margin-left="0"
+     pagecolor="#ffffff"
+     inkscape:window-height="1009"
+     inkscape:window-maximized="1"
+     inkscape:zoom="11.2"
+     inkscape:window-x="-8"
+     showgrid="false"
+     borderopacity="1.0"
+     inkscape:current-layer="layer1"
+     inkscape:cx="19.107143"
+     inkscape:cy="37.1875"
+     fit-margin-top="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:window-width="1920"
+     inkscape:pageopacity="0.0"
+     inkscape:document-units="px"
+     inkscape:pagecheckerboard="true"
+     inkscape:showpageshadow="2"
+     inkscape:deskcolor="#d1d1d1" />
+  <g
+     id="layer1"
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     transform="translate(-117.39004,-533.61775)">
+    <path
+       id="path3210"
+       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.16646019;stroke-opacity:1"
+       inkscape:connector-curvature="0"
+       d="m 149.39033,533.61775 c -2.29765,0 -4.21593,1.91846 -4.21593,4.21594 v 2.78838 c -0.78445,-0.68181 -1.79478,-1.0493 -2.81068,-1.03913 -0.81441,0.008 -1.64097,0.25888 -2.34959,0.74727 -1.89198,1.30387 -2.38421,3.97058 -1.08003,5.86306 l 6.24043,9.0566 v 3.4389 3.93895 l -6.39091,-3.68992 -4.72347,-9.93218 c -0.98663,-2.07526 -3.54177,-2.9833 -5.6177,-1.99653 -0.77953,0.37061 -1.40795,0.96149 -1.82174,1.66186 -0.51646,0.87423 -0.70431,1.9326 -0.50562,2.95383 l -2.41467,-1.39417 c -1.99003,-1.14899 -4.60912,-0.44363 -5.75703,1.54475 -1.14796,1.9882 -0.44649,4.60845 1.54289,5.75703 l 2.41467,1.39417 c -0.98333,0.33778 -1.80726,1.02884 -2.30697,1.91462 -0.40129,0.71146 -0.5965,1.55175 -0.52793,2.40918 0.18319,2.29033 2.24738,4.04965 4.53754,3.86654 l 10.9639,-0.87741 6.3909,3.68992 -3.41293,1.97039 -2.97797,1.71953 -10.9639,-0.87554 c -2.29016,-0.18318 -4.35443,1.57614 -4.53754,3.86653 -0.0686,0.85742 0.12666,1.69773 0.52793,2.40918 0.49943,0.88537 1.32244,1.5767 2.30497,1.91463 l -2.41284,1.39232 c -1.99119,1.14961 -2.69149,3.76966 -1.54288,5.75886 1.14857,1.98936 3.76882,2.69083 5.75702,1.54288 l 2.41467,-1.39417 c -0.19903,1.02144 -0.0116,2.08009 0.50563,2.95567 0.41556,0.70339 1.04736,1.29186 1.82174,1.66001 2.07392,0.98594 4.63059,0.0816 5.61769,-1.99453 l 4.72348,-9.93401 2.97614,-1.71953 3.41476,-1.97039 v 3.94094 3.4389 l -6.24042,9.0566 c -1.30415,1.89249 -0.81196,4.55918 1.08003,5.86306 0.70868,0.4884 1.53519,0.73914 2.34958,0.74728 1.01597,0.0102 2.02615,-0.35733 2.81068,-1.03913 v 2.78837 c 0,2.29765 1.91845,4.21594 4.21594,4.21594 2.29765,0 4.21594,-1.91845 4.21594,-4.21594 v -2.78837 c 0.78444,0.68179 1.79477,1.0493 2.81068,1.03913 0.81445,-0.008 1.64096,-0.25888 2.34958,-0.74728 1.89199,-1.30385 2.38421,-3.97057 1.08003,-5.86306 l -6.24043,-9.0566 v -3.4389 -3.94094 l 6.38908,3.68992 4.72347,9.93401 c 0.98706,2.07626 3.54377,2.98064 5.6177,1.99453 0.77437,-0.36815 1.40617,-0.9566 1.82174,-1.66001 0.51729,-0.8756 0.70466,-1.93427 0.50562,-2.95567 l 2.41467,1.39417 c 1.98937,1.14853 4.60929,0.44828 5.75886,-1.54288 1.14957,-1.99103 0.44538,-4.60995 -1.54475,-5.75886 l -2.41284,-1.39232 c 0.9826,-0.33797 1.80559,-1.02928 2.30497,-1.91463 0.40134,-0.7115 0.5965,-1.55174 0.52793,-2.40918 -0.18317,-2.29032 -2.24738,-4.04964 -4.53754,-3.86653 l -10.9639,0.87554 -2.97797,-1.71953 -3.41293,-1.97039 6.3909,-3.68992 10.9639,0.87741 c 2.29016,0.18316 4.35444,-1.57614 4.53754,-3.86654 0.0686,-0.8574 -0.12661,-1.69772 -0.52793,-2.40918 -0.49969,-0.88588 -1.32357,-1.57691 -2.30697,-1.91462 l 2.41467,-1.39417 c 1.98837,-1.14798 2.69366,-3.76699 1.54475,-5.75703 -1.149,-1.99019 -3.76782,-2.69432 -5.75885,-1.54475 l -2.41467,1.39417 c 0.19868,-1.02113 0.0109,-2.07958 -0.50563,-2.95383 -0.41378,-0.70042 -1.04219,-1.29125 -1.82174,-1.66186 -2.07576,-0.98687 -4.63092,-0.0788 -5.6177,1.99653 l -4.72347,9.93218 -6.38907,3.68992 v -3.93895 -3.4389 l 6.24042,-9.0566 c 1.30415,-1.89248 0.81196,-4.55918 -1.08003,-5.86306 -0.7087,-0.48841 -1.53524,-0.73912 -2.34958,-0.74727 -1.01597,-0.0102 -2.02615,0.35732 -2.81068,1.03913 v -2.78838 c 0,-2.29765 -1.91845,-4.21594 -4.21594,-4.21594 z"
+       sodipodi:nodetypes="cscccccccccccccccccccccccccccccccccccccccccccssscccccccccccccccccccccccccccccsccccccccccccscc" />
+  </g>
+  <metadata
+     id="metadata6">
+    <rdf:RDF>
+      <cc:Work>
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <cc:license
+           rdf:resource="http://creativecommons.org/publicdomain/zero/1.0/" />
+        <dc:publisher>
+          <cc:Agent
+             rdf:about="http://openclipart.org/">
+            <dc:title>Openclipart</dc:title>
+          </cc:Agent>
+        </dc:publisher>
+        <dc:title>Snowflake - Monochrome</dc:title>
+        <dc:date>2011-01-23T01:27:02</dc:date>
+        <dc:description>Monochrome snowflake icon</dc:description>
+        <dc:source>https://openclipart.org/detail/109747/snowflake---monochrome-by-uroesch</dc:source>
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>uroesch</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <dc:subject>
+          <rdf:Bag>
+            <rdf:li>Black &amp; White</rdf:li>
+            <rdf:li>Icon</rdf:li>
+            <rdf:li>Monochrome</rdf:li>
+            <rdf:li>Snowflake</rdf:li>
+            <rdf:li>Symbol</rdf:li>
+            <rdf:li>coloring book</rdf:li>
+          </rdf:Bag>
+        </dc:subject>
+      </cc:Work>
+      <cc:License
+         rdf:about="http://creativecommons.org/publicdomain/zero/1.0/">
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Reproduction" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Distribution" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#DerivativeWorks" />
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+</svg>

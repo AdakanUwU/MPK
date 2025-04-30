@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Mercedes-Benz O530 Citaro - MPK Częstochowa</title>
+    <link rel="stylesheet" href="/css/style.css"/>
+
+    <script src="/js/ikony.js" defer></script> <!--wczytywanie ikon-->
+    <script src="/js/tabela_link.js" defer></script> <!--wczytywanie klikalnych wierszy tabel-->
+
+    <script src="/js/w_gore.js" defer></script> <!--Skrypt do przycisku przesuwania do samej góry-->
+    <script src="/js/zdjecia.js" defer></script> 
+    <script src="/js/foto-blok.js" defer></script> <!--Blokada menu kontekstowego na zdjęciach-->
+
+    <style>
+        .kolumna-opis {
+            font-weight: bold;
+        }
+    </style>
+
+
+
+</head>
+<body>
+    <div class="pasek"> <!--Pasek nawigacyjny-->
+    <nav>
+        <label class="logo"><a href="/"><img src="/img/logo_mpk.png" alt="Logo MPK"></a></label>
+        <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+        <ul id="menu">
+        <li><a class="pasek" href="/">Spis</a></li>
+        <li><a class="pasek" href="/autobusy.html">Autobusy</a></li>
+        <li><a class="pasek" href="/tramwaje.html">Tramwaje</a></li>
+        <li><a class="pasek" href="#">Trasy</a></li>
+        <li><a class="pasek" href="#">Pętle</a></li>
+        </ul>
+    </nav>
+    </div>
+
+    <div class="tresc"> <!--Główna treść strony-->
+        <h1>Mercedes-Benz O530 Citaro</h1><hr />
+        <BR>
+        <img src="/img/MB-O530/miniaturka.jpg" alt="Mercedes-Benz O530 Citaro nr 113" class="fullscreen-img miniatura">
+        <BR>
+
+        <div class="opis-pojazdu">
+            <p style="text-indent: 30px;">
+            Pierwsze autobusy Mercedes-Benz O530 Citaro zostały dostarczone do MPK Częstochowa w 2006 roku. W tamtym 
+            czasie były to jedne z najnowocześniejszych pojazdów w taborze spółki. Były w 75% niskopodłogowe, 
+            wyposażone w duże otwierane okna, rampę dla osób poruszających się na wózkach inwalidzkich (co nie 
+            było jeszcze standardem w MPK), a także niemal 30 miejsc siedzących. Autobusy miały fabrycznie 
+            zainstalowane zewnętrzne wyświetlacze diodowe LED, jedną czerwoną tablicę informacyjną oraz system 
+            zapowiedzi głosowych. Były to również pierwsze pojazdy w malowaniu czerwono-białym, z czerwonymi 
+            poręczami. Pierwsza partia otrzymała numery taborowe 108–117 (2006) oraz 118 (2007).
+            </p><p style="text-indent: 30px;">
+            Kolejna partia, dostarczona w 2008 roku, obejmowała już pojazdy po faceliftingu. W porównaniu do 
+            poprzedników miały nieco mniejsze, lecz nadal duże otwierane okna, odświeżony wygląd przedniej i tylnej 
+            ściany, a także dach pomalowany na czerwono. Te autobusy otrzymały numery 119–128.
+            </p><p style="text-indent: 30px;">
+            W 2009 roku dostarczono kolejną serię, obejmującą pojazdy o numerach 129–136. Zmiany względem 
+            wcześniejszych egzemplarzy były niewielkie, lecz wprowadzono monitoring (od numeru 131 wzwyż) oraz 
+            zmieniono sposób nanoszenia oznaczeń przewoźnika — z malowanych ręcznie na naklejki. W tym samym roku 
+            dostarczono także pierwsze sześć przegubowych Mercedesów O530G Citaro o numerach 185–190.
+            </p><p style="text-indent: 30px;">
+            Ostatnia dostawa Mercedesów Citaro miała miejsce w 2010 roku. Autobusy te jako pierwsze wyposażono 
+            w tzw. "ciepły guzik", a także w nowszą skrzynię biegów Voith D864.5, zastępującą wcześniejszy 
+            model D864.3. Pojazdy z tej serii otrzymały numery 137–142.
+            </p><p style="text-indent: 30px;">
+            24 lutego 2018 roku, na ulicy Sabinowskiej, doszło do pożaru komory silnika autobusu nr 128. Pojazd 
+            został zezłomowany. Po sześciu latach, w 2024 roku, MPK zakupiło w jego miejsce używanego 
+            Mercedesa-Benz O530 Citaro FL od PKM Świerklaniec. Autobus ten różnił się od wcześniejszych 
+            m.in. słabszym silnikiem Mercedes-Benz OM 906 hLA, skrzynią biegów ZF 6 AP 1200 B EcoLife 
+            oraz zielonymi poręczami zamiast czerwonych.
+            </p>
+        </div>
+        
+        <BR>
+            <h2>Dane technicze:</h2><hr><br>
+        <TABLE class="dane-techniczne"> <!--Tabela pojazdów-->
+            <colgroup>
+                <col style="width: 50%;">
+                <col style="width: 50%;">
+            </colgroup>
+
+            <TR> <!--Nagłówek tabeli-->
+            <TH width="90%" colspan="2" style="font-size: 20px;">Mercedes-Benz O530 Citaro</TH>
+            </TR>
+
+            <TR class="tabela-hover"> <!--Producent-->
+                <TD class="kolumna-opis">Producent</TD>
+                <TD>EvoBus GmbH</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Długość-->
+                <TD class="kolumna-opis">Długość</TD>
+                <TD>12135 mm</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Szerokość-->
+                <TD class="kolumna-opis">Szerokość</TD>
+                <TD>2550 mm</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Wysokość-->
+                <TD class="kolumna-opis">Wysokość</TD>
+                <TD>3130 mm</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Liczba miejsc siedzących-->
+                <TD class="kolumna-opis">Masa</TD>
+                <TD>18 475 KG</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Układ drzwi-->
+                <TD class="kolumna-opis">Układ drzwi</TD>
+                <TD>2-2-2</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Wysokość podłogi przy drzwiach-->
+                <TD class="kolumna-opis">Wysokość podłogi przy drzwiach</TD>
+                <TD>320-340-340 [mm]</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Liczba miejsc siedzących-->
+                <TD class="kolumna-opis">Po przyklęku</TD>
+                <TD>-80 mm</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Silnik-->
+                <TD class="kolumna-opis">Silnik (moc)</TD>
+                <TD>Mercedes-Benz OM 457 hLA (315kW)<BR>
+                Nr tab. 128 (od 2024) - Mercedes-Benz OM 906 hLA (170kW)</TD>
+            </TR>  
+            <TR class="tabela-hover"> <!--Skrzynia biegów-->
+                <TD class="kolumna-opis">Skrzynia Biegów</TD>
+                <TD>Voith D864.3<BR>
+                Nr tab. 128 (od 2024) - ZF 6 AP 1200 B EcoLife</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Liczba miejsc siedzących-->
+                <TD class="kolumna-opis">Liczba miejsc siedzących</TD>
+                <TD>29</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Liczba miejsc stojących-->
+                <TD class="kolumna-opis">Liczba miejsc stojących</TD>
+                <TD>76</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Udział niskiej podłogi-->
+                <TD class="kolumna-opis">Udział niskiej podłogi</TD>
+                <TD>75%</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Klimatyzacja-->
+                <TD class="kolumna-opis">Klimatyzacja</TD>
+                <TD>Nie</TD>
+            </TR>
+        </TABLE>
+
+        <BR>
+        <h2>Spis pojazdów:</h2><hr><br>
+
+        <h3>Mercedes-Benz O530 Citaro (I generacja)</h3><BR>
+
+        <TABLE class="spis" > <!--Tabela pojazdów-->
+            <TR> <!--Nagłówek tabeli-->
+            <TH width="90px">Numer</TH>
+            <TH width="200px">Malowanie</TH>
+            <TH width="55px">Rok prod.</TH>
+            <TH width="200px">Atrybuty</TH>
+            <TH width="">Uwagi</TH>
+            <TH width="100px">Rejestracja</TH>
+            <TH width="85px">Linki</TH>
+            </TR>
+    
+            <TR class="tabela-hover">
+                <TD>108</TD>
+                <TD>Czerwono-Białe</TD>
+                <TD>2006</TD>
+                <TD><niskopodlogowy> <biletkier></TD>
+                <TD>Dawniej numer rejestracyjny SC 82430.</TD>
+                <TD>SC 8919G</TD>
+                <TD><A href="https://czgk.pl/categories.php?cat_id=347" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/6b9ddd10-de2d-4287-ad90-64b262707fb8" target="_blank"><gps1></A></TD>
+            </TR>
+    
+            <TR class="tabela-hover">
+                <TD>109</TD>
+                <TD>Czerwono-Białe</TD>
+                <TD>2006</TD>
+                <TD><niskopodlogowy> <biletkier></TD>
+                <TD></TD>
+                <TD>SC 82431</TD>
+                <TD><A href="https://czgk.pl/categories.php?cat_id=348" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/fc8602ee-3b4f-4b95-a7f0-d41f2e2e1172" target="_blank"><gps1></A></TD>
+            </TR> 
+    
+            <TR class="tabela-hover">
+                <TD>110</TD>
+                <TD>Czerwono-Białe</TD>
+                <TD>2006</TD>
+                <TD><niskopodlogowy> <biletkier></TD>
+                <TD></TD>
+                <TD>SC 82432</TD>
+                <TD><A href="https://czgk.pl/categories.php?cat_id=349" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/72db0572-44cf-43b2-9cae-247360b9e701" target="_blank"><gps1></A></TD>
+            </TR>
+    
+            <TR class="tabela-hover">
+                <TD>111</TD>
+                <TD>Czerwono-Białe</TD>
+                <TD>2006</TD>
+                <TD><niskopodlogowy> <biletkier></TD>
+                <TD></TD>
+                <TD>SC 82420</TD>
+                <TD><A href="https://czgk.pl/categories.php?cat_id=350" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/ad339d22-b078-43f6-9df5-1d5fe0bcfbab" target="_blank"><gps1></A></TD>
+            </TR>
+    
+            <TR class="tabela-hover">
+                <TD>112</TD>
+                <TD>Czerwono-Białe</TD>
+                <TD>2006</TD>
+                <TD><niskopodlogowy> <kamery> <biletkier></TD>
+                <TD></TD>
+                <TD>SC 82421</TD>
+                <TD><A href="https://czgk.pl/categories.php?cat_id=351" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/35d23431-3e68-473d-afd1-b761d54f4b7f" target="_blank"><gps1></A></TD>
+            </TR>
+    
+            <TR class="tabela-hover">
+                <TD>113</TD>
+                <TD>Czerwono-Białe</TD>
+                <TD>2006</TD>
+                <TD><niskopodlogowy> <biletkier></TD>
+                <TD></TD>
+                <TD>SC 82422</TD>
+                <TD><A href="https://czgk.pl/categories.php?cat_id=352" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/77620f5f-1dcf-47b0-8948-ffa84dd4c291" target="_blank"><gps1></A></TD>
+            </TR>
+    
+            <TR class="tabela-hover">
+                <TD>114</TD>
+                <TD>Czerwono-Białe</TD>
+                <TD>2006</TD>
+                <TD><niskopodlogowy> <biletkier></TD>
+                <TD></TD>
+                <TD>SC 82981</TD>
+                <TD><A href="https://czgk.pl/categories.php?cat_id=353" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/87630262-9bbf-4bff-a4bc-dc11c6a4fe1b" target="_blank"><gps1></A></TD>
+            </TR>
+    
+            <TR class="tabela-hover">
+                <TD>115</TD>
+                <TD>Czerwono-Białe</TD>
+                <TD>2006</TD>
+                <TD><niskopodlogowy> <biletkier></TD>
+                <TD></TD>
+                <TD>SC 82983</TD>
+                <TD><A href="https://czgk.pl/categories.php?cat_id=354" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/c0a94f7f-7fc4-4fc7-a5c9-8ad4f7683765" target="_blank"><gps1></A></TD>
+            </TR>
+    
+            <TR class="tabela-hover">
+                <TD>116</TD>
+                <TD>Czerwono-Białe</TD>
+                <TD>2006</TD>
+                <TD><niskopodlogowy> <biletkier></TD>
+                <TD></TD>
+                <TD>SC 82984</TD>
+                <TD><A href="https://czgk.pl/categories.php?cat_id=355" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/42e67ef8-3925-4f6f-86e6-9aa59073fcf8" target="_blank"><gps1></A></TD>
+            </TR>
+    
+            <TR class="tabela-hover">
+                <TD>117</TD>
+                <TD>Czerwono-Białe</TD>
+                <TD>2006</TD>
+                <TD><niskopodlogowy> <biletkier></TD>
+                <TD>Dawniej numer rejestracyjny SC 81107.</TD>
+                <TD>SC 83110</TD>
+                <TD><A href="https://czgk.pl/categories.php?cat_id=356" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/4172bf1f-6541-4542-ad16-8b9179cda7bc" target="_blank"><gps1></A></TD>
+            </TR>
+    
+            <TR class="tabela-hover">
+                <TD>118</TD>
+                <TD>Czerwono-Białe</TD>
+                <TD>2007</TD>
+                <TD><niskopodlogowy> <biletkier></TD>
+                <TD></TD>
+                <TD>SC 91694</TD>
+                <TD><A href="https://czgk.pl/categories.php?cat_id=357" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/08619220-04ab-45e9-bd27-a1f8a10977d4" target="_blank"><gps1></A></TD>
+            </TR>
+        </TABLE><BR>
+
+        <h3>Mercedes-Benz O530 Citaro FL</h3><BR>
+
+            <TABLE class="spis" > <!--Tabela pojazdów-->
+                <TR> <!--Nagłówek tabeli-->
+                <TH width="90px">Numer</TH>
+                <TH width="200px">Malowanie</TH>
+                <TH width="55px">Rok prod.</TH>
+                <TH width="200px">Atrybuty</TH>
+                <TH width="">Uwagi</TH>
+                <TH width="100px">Rejestracja</TH>
+                <TH width="85px">Linki</TH>
+                </TR>
+        
+                <TR class="tabela-hover">
+                    <TD>119</TD>
+                    <TD>Czerwono-Białe</TD>
+                    <TD>2008</TD>
+                    <TD><niskopodlogowy> <biletkier></TD>
+                    <TD></TD>
+                    <TD>SC 5532A</TD>
+                    <TD><A href="https://czgk.pl/categories.php?cat_id=358" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/7a18f0e5-bdd6-42a6-a004-f0f89d19df61" target="_blank"><gps1></A></TD>
+                </TR>
+        
+                <TR class="tabela-hover">
+                    <TD>120</TD>
+                    <TD>Czerwono-Białe</TD>
+                    <TD>2008</TD>
+                    <TD><niskopodlogowy> <biletkier></TD>
+                    <TD></TD>
+                    <TD>SC 5534A</TD>
+                    <TD><A href="https://czgk.pl/categories.php?cat_id=359" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/15865053-8c87-4dc5-a432-2daf5202d459" target="_blank"><gps1></A></TD>
+                </TR>
+        
+                <TR class="tabela-hover">
+                    <TD>121</TD>
+                    <TD>Czerwono-Białe</TD>
+                    <TD>2008</TD>
+                    <TD><niskopodlogowy> <biletkier></TD>
+                    <TD></TD>
+                    <TD>SC 5538A</TD>
+                    <TD><A href="https://czgk.pl/categories.php?cat_id=360" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/571723fb-e6b0-46b0-8db3-291febb00a9d" target="_blank"><gps1></A></TD>
+                </TR>
+        
+                <TR class="tabela-hover">
+                    <TD>122</TD>
+                    <TD>Czerwono-Białe</TD>
+                    <TD>2008</TD>
+                    <TD><niskopodlogowy> <biletkier></TD>
+                    <TD></TD>
+                    <TD>SC 5537A</TD>
+                    <TD><A href="https://czgk.pl/categories.php?cat_id=361" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/b59d93b4-5816-436d-9010-52f65bb260e4" target="_blank"><gps1></A></TD>
+                </TR>
+        
+                <TR class="tabela-hover">
+                    <TD>123</TD>
+                    <TD>Czerwono-Białe</TD>
+                    <TD>2008</TD>
+                    <TD><niskopodlogowy> <biletkier></TD>
+                    <TD></TD>
+                    <TD>SC 5536A</TD>
+                    <TD><A href="https://czgk.pl/categories.php?cat_id=362" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/fa2e8ffd-18c7-4ae2-a5cc-3cc336d66c62" target="_blank"><gps1></A></TD>
+                </TR>
+        
+                <TR class="tabela-hover">
+                    <TD>124</TD>
+                    <TD>Czerwono-Białe</TD>
+                    <TD>2008</TD>
+                    <TD><niskopodlogowy> <biletkier></TD>
+                    <TD></TD>
+                    <TD>SC 5528A</TD>
+                    <TD><A href="https://czgk.pl/categories.php?cat_id=363" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/d48ebde0-8194-475c-b7e9-7ec3e8c88bcc" target="_blank"><gps1></A></TD>
+                </TR>
+        
+                <TR class="tabela-hover">
+                    <TD>125</TD>
+                    <TD>Czerwono-Białe</TD>
+                    <TD>2008</TD>
+                    <TD><niskopodlogowy> <biletkier></TD>
+                    <TD></TD>
+                    <TD>SC 5529A</TD>
+                    <TD><A href="https://czgk.pl/categories.php?cat_id=364" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/d00b4b49-180e-4f97-a336-f5f76b92e9fa" target="_blank"><gps1></A></TD>
+                </TR>
+        
+                <TR class="tabela-hover">
+                    <TD>126</TD>
+                    <TD>Czerwono-Białe</TD>
+                    <TD>2008</TD>
+                    <TD><niskopodlogowy> <biletkier></TD>
+                    <TD></TD>
+                    <TD>SC 5531A</TD>
+                    <TD><A href="https://czgk.pl/categories.php?cat_id=365" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/775c5580-dd15-44f5-9913-65b4e7aab25b" target="_blank"><gps1></A></TD>
+                </TR>
+        
+                <TR class="tabela-hover">
+                    <TD>127</TD>
+                    <TD>Czerwono-Białe</TD>
+                    <TD>2008</TD>
+                    <TD><niskopodlogowy> <biletkier></TD>
+                    <TD></TD>
+                    <TD>SC 5530A</TD>
+                    <TD><A href="https://czgk.pl/categories.php?cat_id=366" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/6e22ba60-ce24-4a75-b552-8208653e7395" target="_blank"><gps1></A></TD>
+                </TR>
+
+                <TR class="tabela-hover">
+                    <TD>128</TD>
+                    <TD>Czerwono-Białe</TD>
+                    <TD>2008-2018</TD>
+                    <TD><niskopodlogowy> <biletkier></TD>
+                    <TD><zz>Zezłomowany</zz> po pożarze komory silnika na ul. Sabinowskiej dnia 24 lutego 2018</TD>
+                    <TD>SC 5527A</TD>
+                    <TD><A href="https://czgk.pl/categories.php?cat_id=367" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/c3d6af20-f487-4a10-961e-19c883fe3927" target="_blank"><gps1></A></TD>
+                </TR>
+        
+                <TR class="tabela-hover">
+                    <TD>128</TD>
+                    <TD>Czerwono-Białe</TD>
+                    <TD>2011</TD>
+                    <TD><niskopodlogowy> <kamery> <biletkier></TD>
+                    <TD>2011-2014 Fischinger Rottweil, 2014-2024 PKM Świerklaniec (5401), od 2024 MPK w Częstochowie.<BR>Kupiony w miejsce spalonego 128.</TD>
+                    <TD>SC 128EW</TD>
+                    <TD><A href="https://czgk.pl/categories.php?cat_id=367" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/819a6674-008c-4acc-b2ab-384566236948" target="_blank"><gps1></A></TD>
+                </TR>
+        
+                <TR class="tabela-hover">
+                    <TD>129</TD>
+                    <TD>Czerwono-Białe</TD>
+                    <TD>2009</TD>
+                    <TD><niskopodlogowy> <biletkier></TD>
+                    <TD></TD>
+                    <TD>SC 2354F</TD>
+                    <TD><A href="https://czgk.pl/categories.php?cat_id=368" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/5e9970ea-b264-43f4-8f4d-3a77ce6b6252" target="_blank"><gps1></A></TD>
+                </TR>
+        
+                <TR class="tabela-hover">
+                    <TD>130</TD>
+                    <TD>Czerwono-Białe</TD>
+                    <TD>2009</TD>
+                    <TD><niskopodlogowy> <biletkier></TD>
+                    <TD></TD>
+                    <TD>SC 2356F</TD>
+                    <TD><A href="https://czgk.pl/categories.php?cat_id=369" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/0e907212-5130-4a12-bd91-6a08e54212df" target="_blank"><gps1></A></TD>
+                </TR>
+        
+                <TR class="tabela-hover">
+                    <TD>131</TD>
+                    <TD>Czerwono-Białe</TD>
+                    <TD>2009</TD>
+                    <TD><niskopodlogowy> <kamery> <biletkier></TD>
+                    <TD></TD>
+                    <TD>SC 2359F</TD>
+                    <TD><A href="https://czgk.pl/categories.php?cat_id=370" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/a1793387-fbb8-4e1c-8ab4-ca0c610eae3" target="_blank"><gps1></A></TD>
+                </TR>
+        
+                <TR class="tabela-hover">
+                    <TD>132</TD>
+                    <TD>Czerwono-Białe</TD>
+                    <TD>2009</TD>
+                    <TD><niskopodlogowy> <kamery> <biletkier></TD>
+                    <TD></TD>
+                    <TD>SC 2351F</TD>
+                    <TD><A href="https://czgk.pl/categories.php?cat_id=371" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/29ef224d-15cc-4087-a75f-a3ea5849edfa" target="_blank"><gps1></A></TD>
+                </TR>
+        
+                <TR class="tabela-hover">
+                    <TD>133</TD>
+                    <TD>Czerwono-Białe</TD>
+                    <TD>2009</TD>
+                    <TD><niskopodlogowy> <kamery> <biletkier></TD>
+                    <TD>Dawniej numer rejestracyjny SC 2357F.</TD>
+                    <TD>SC 5818G</TD>
+                    <TD><A href="https://czgk.pl/categories.php?cat_id=372" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/a858bd53-7d38-4a28-b89b-e9d9c19fa828" target="_blank"><gps1></A></TD>
+                </TR>
+                
+                <TR class="tabela-hover">
+                    <TD>134</TD>
+                    <TD>Czerwono-Białe</TD>
+                    <TD>2009</TD>
+                    <TD><niskopodlogowy> <kamery> <biletkier></TD>
+                    <TD>Dawniej numer rejestracyjny SC 2352F.</TD>
+                    <TD>SC 8126G</TD>
+                    <TD><A href="https://czgk.pl/categories.php?cat_id=373" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/05b0c3d1-5f79-45ae-88b8-92a2af9cb4e4" target="_blank"><gps1></A></TD>
+                </TR>
+        
+                <TR class="tabela-hover">
+                    <TD>135</TD>
+                    <TD>Czerwono-Białe</TD>
+                    <TD>2009</TD>
+                    <TD><niskopodlogowy> <kamery> <biletkier></TD>
+                    <TD></TD>
+                    <TD>SC 2353F</TD>
+                    <TD><A href="https://czgk.pl/categories.php?cat_id=374" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/b55f4fa5-1aac-4d71-bcc8-2fef6cf03fe7" target="_blank"><gps1></A></TD>
+                </TR>
+        
+                <TR class="tabela-hover">
+                    <TD>136</TD>
+                    <TD>Czerwono-Białe</TD>
+                    <TD>2009</TD>
+                    <TD><niskopodlogowy> <kamery> <biletkier></TD>
+                    <TD>Dawniej numer rejestracyjny SC 2355F.</TD>
+                    <TD>SC 8522G</TD>
+                    <TD><A href="https://czgk.pl/categories.php?cat_id=375" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/5afca59b-8529-419a-a25b-7f67635741dd" target="_blank"><gps1></A></TD>
+                </TR>
+        
+                <TR class="tabela-hover">
+                    <TD>137</TD>
+                    <TD>Czerwono-Białe</TD>
+                    <TD>2010</TD>
+                    <TD><niskopodlogowy> <kamery> <biletkier></TD>
+                    <TD></TD>
+                    <TD>SC 4135G</TD>
+                    <TD><A href="https://czgk.pl/categories.php?cat_id=376" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/7f912328-57a4-4a8b-9fbe-9470ba13f314" target="_blank"><gps1></A></TD>
+                </TR>
+        
+                <TR class="tabela-hover">
+                    <TD>138</TD>
+                    <TD>Czerwono-Białe</TD>
+                    <TD>2010</TD>
+                    <TD><niskopodlogowy> <kamery> <biletkier></TD>
+                    <TD>Dawniej numer rejestracyjny SC 4136G.</TD>
+                    <TD>SC 2641J</TD>
+                    <TD><A href="https://czgk.pl/categories.php?cat_id=377" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/ac54441f-9666-4e0b-9554-efaf36f84c28" target="_blank"><gps1></A></TD>
+                </TR>
+        
+                <TR class="tabela-hover">
+                    <TD>139</TD>
+                    <TD>Czerwono-Białe</TD>
+                    <TD>2010</TD>
+                    <TD><niskopodlogowy> <kamery> <biletkier></TD>
+                    <TD></TD>
+                    <TD>SC 4138G</TD>
+                    <TD><A href="https://czgk.pl/categories.php?cat_id=378" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/7a69ca7d-3b0b-45b4-a2db-26575af899db" target="_blank"><gps1></A></TD>
+                </TR>
+        
+                <TR class="tabela-hover">
+                    <TD>140</TD>
+                    <TD>Czerwono-Białe</TD>
+                    <TD>2010</TD>
+                    <TD><niskopodlogowy> <kamery> <biletkier></TD>
+                    <TD></TD>
+                    <TD>SC 4137G</TD>
+                    <TD><A href="https://czgk.pl/categories.php?cat_id=379" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/6a27b397-ff2b-4323-8352-31b020c93f37" target="_blank"><gps1></A></TD>
+                </TR>
+        
+                <TR class="tabela-hover">
+                    <TD>141</TD>
+                    <TD>Czerwono-Białe</TD>
+                    <TD>2010</TD>
+                    <TD><niskopodlogowy> <kamery> <biletkier></TD>
+                    <TD></TD>
+                    <TD>SC 4139G</TD>
+                    <TD><A href="https://czgk.pl/categories.php?cat_id=380" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/f9f8b6d2-d7bc-4d73-aef1-5f65482b0807" target="_blank"><gps1></A></TD>
+                </TR>
+        
+                <TR class="tabela-hover">
+                    <TD>142</TD>
+                    <TD>Czerwono-Białe</TD>
+                    <TD>2010</TD>
+                    <TD><niskopodlogowy> <kamery> <biletkier></TD>
+                    <TD></TD>
+                    <TD>SC 4822G</TD>
+                    <TD><A href="https://czgk.pl/categories.php?cat_id=381" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/38d80c24-671d-4731-bafd-6e5b6e126f12" target="_blank"><gps1></A></TD>
+                </TR>
+            </TABLE>
+
+        <BR>
+        <h2>Stan taboru na przestrzeni lat:</h2><hr><br>
+        <TABLE class="ilostan" > <!--Tabela pojazdów-->
+            <TR> <!--Nagłówek tabeli-->
+                <TH width="70px">Rok</TH>
+                <TH width="130px">Wpisane na stan</TH>
+                <TH width="130px">Skreślone ze stanu</TH>
+                <TH width="100px">Ilość na koniec roku</TH>
+            </TR>
+    
+            <TR>
+                <TD>2006</TD>
+                <TD>10 (108-117)</TD>
+                <TD>-</TD>
+                <TD>10</TD>
+            </TR>
+            <TR>
+                <TD>2007</TD>
+                <TD>1 (118)</TD>
+                <TD>-</TD>
+                <TD>11</TD>
+            </TR>
+            <TR>
+                <TD>2008</TD>
+                <TD>10 (119-128)</TD>
+                <TD>-</TD>
+                <TD>21</TD>
+            </TR>
+            <TR>
+                <TD>2009</TD>
+                <TD>8 (129-136)</TD>
+                <TD>-</TD>
+                <TD>29</TD>
+            </TR>
+            <TR>
+                <TD>2010</TD>
+                <TD>6 (137-142)</TD>
+                <TD>-</TD>
+                <TD>35</TD>
+            </TR>
+            <TR>
+                <TD>2011-2017</TD>
+                <TD>-</TD>
+                <TD>-</TD>
+                <TD>35</TD>
+            </TR>
+            <TR>
+                <TD>2018</TD>
+                <TD>-</TD>
+                <TD>1 (128)</TD>
+                <TD>34</TD>
+            </TR>
+            <TR>
+                <TD>2019-2023</TD>
+                <TD>-</TD>
+                <TD>-</TD>
+                <TD>34</TD>
+            </TR>
+            <TR>
+                <TD>2024</TD>
+                <TD>1 (128)</TD>
+                <TD>-</TD>
+                <TD>35</TD>
+            </TR>
+            <TR>
+                <TD>2025</TD>
+                <TD>-</TD>
+                <TD>-</TD>
+                <TD>35</TD>
+            </TR>
+        </TABLE>
+
+
+        <BR>
+        <h2>Zdjęcia pojazdów:</h2><hr><br>
+        <div class="galeria">
+            <div class="opis-zdj">» 108</div>
+            <img src="/img/MB-O530/108/1.jpg" alt="Mercedes-Benz O530 Citaro nr 108" class="fullscreen-img">
+            <img src="/img/MB-O530/108/2.jpg" alt="Mercedes-Benz O530 Citaro nr 108" class="fullscreen-img">
+            <img src="/img/MB-O530/108/3.jpg" alt="Mercedes-Benz O530 Citaro nr 108" class="fullscreen-img">
+            <img src="/img/MB-O530/108/4.jpg" alt="Mercedes-Benz O530 Citaro nr 108" class="fullscreen-img">
+            <div class="opis-zdj">» 109</div>
+            <img src="/img/MB-O530/109/1.jpg" alt="Mercedes-Benz O530 Citaro nr 109" class="fullscreen-img">
+            <img src="/img/MB-O530/109/2.jpg" alt="Mercedes-Benz O530 Citaro nr 109" class="fullscreen-img">
+            <img src="/img/MB-O530/109/3.jpg" alt="Mercedes-Benz O530 Citaro nr 109" class="fullscreen-img">
+            <div class="opis-zdj">» 110</div>
+            <img src="/img/MB-O530/110/1.jpg" alt="Mercedes-Benz O530 Citaro nr 110" class="fullscreen-img">
+            <div class="opis-zdj">» 111</div>
+            <img src="/img/MB-O530/111/1.jpg" alt="Mercedes-Benz O530 Citaro nr 111" class="fullscreen-img">
+            <img src="/img/MB-O530/111/2.jpg" alt="Mercedes-Benz O530 Citaro nr 111" class="fullscreen-img">
+            <img src="/img/MB-O530/111/3.jpg" alt="Mercedes-Benz O530 Citaro nr 111" class="fullscreen-img">
+            <div class="opis-zdj">» 112</div>
+            <img src="/img/MB-O530/112/1.jpg" alt="Mercedes-Benz O530 Citaro nr 112" class="fullscreen-img">
+            <div class="opis-zdj">» 113</div>
+            <img src="/img/MB-O530/113/1.jpg" alt="Mercedes-Benz O530 Citaro nr 113" class="fullscreen-img">
+            <img src="/img/MB-O530/113/2.jpg" alt="Mercedes-Benz O530 Citaro nr 113" class="fullscreen-img">
+            <img src="/img/MB-O530/113/3.jpg" alt="Mercedes-Benz O530 Citaro nr 113" class="fullscreen-img">
+            <img src="/img/MB-O530/113/4.jpg" alt="Mercedes-Benz O530 Citaro nr 113" class="fullscreen-img">
+            <img src="/img/MB-O530/113/5.jpg" alt="Mercedes-Benz O530 Citaro nr 113" class="fullscreen-img">
+            <div class="opis-zdj">» 114</div>
+            <img src="/img/MB-O530/114/1.jpg" alt="Mercedes-Benz O530 Citaro nr 114" class="fullscreen-img">
+            <img src="/img/MB-O530/114/2.jpg" alt="Mercedes-Benz O530 Citaro nr 114" class="fullscreen-img">
+            <img src="/img/MB-O530/114/3.jpg" alt="Mercedes-Benz O530 Citaro nr 114" class="fullscreen-img">
+            <div class="opis-zdj">» 115</div>
+            <img src="/img/MB-O530/115/1.jpg" alt="Mercedes-Benz O530 Citaro nr 115" class="fullscreen-img">
+            <div class="opis-zdj">» 116</div>
+            <img src="/img/MB-O530/116/1.jpg" alt="Mercedes-Benz O530 Citaro nr 116" class="fullscreen-img">
+            <img src="/img/MB-O530/116/2.jpg" alt="Mercedes-Benz O530 Citaro nr 116" class="fullscreen-img">
+            <img src="/img/MB-O530/116/3.jpg" alt="Mercedes-Benz O530 Citaro nr 116" class="fullscreen-img">
+            <img src="/img/MB-O530/116/4.jpg" alt="Mercedes-Benz O530 Citaro nr 116" class="fullscreen-img">
+            <div class="opis-zdj">» 117</div>
+            <img src="/img/MB-O530/117/1.jpg" alt="Mercedes-Benz O530 Citaro nr 117" class="fullscreen-img">
+            <img src="/img/MB-O530/117/2.jpg" alt="Mercedes-Benz O530 Citaro nr 117" class="fullscreen-img">
+            <img src="/img/MB-O530/117/3.jpg" alt="Mercedes-Benz O530 Citaro nr 117" class="fullscreen-img">
+            <img src="/img/MB-O530/117/4.jpg" alt="Wypadek cz. 1 -  Mercedes-Benz O530 Citaro nr 117" class="fullscreen-img">
+            <img src="/img/MB-O530/117/5.jpg" alt="Wypadek cz. 2 -  Mercedes-Benz O530 Citaro nr 117" class="fullscreen-img">
+            <img src="/img/MB-O530/117/6.jpg" alt="Wypadek cz. 3 - Mercedes-Benz O530 Citaro nr 117" class="fullscreen-img">
+            <div class="opis-zdj">» 118</div>
+            <img src="/img/MB-O530/118/1.jpg" alt="Mercedes-Benz O530 Citaro nr 118" class="fullscreen-img">
+            <div class="opis-zdj">» 119</div>
+            <img src="/img/MB-O530/119/1.jpg" alt="Mercedes-Benz O530 Citaro FL nr 119" class="fullscreen-img">
+            <img src="/img/MB-O530/119/2.jpg" alt="Mercedes-Benz O530 Citaro FL nr 119" class="fullscreen-img">
+            <img src="/img/MB-O530/119/3.jpg" alt="Mercedes-Benz O530 Citaro FL nr 119" class="fullscreen-img">
+            <div class="opis-zdj">» 120</div>
+            <img src="/img/MB-O530/120/1.jpg" alt="Mercedes-Benz O530 Citaro FL nr 120" class="fullscreen-img">
+            <img src="/img/MB-O530/120/2.jpg" alt="Mercedes-Benz O530 Citaro FL nr 120" class="fullscreen-img">
+            <img src="/img/MB-O530/120/3.jpg" alt="Mercedes-Benz O530 Citaro FL nr 120" class="fullscreen-img">
+            <div class="opis-zdj">» 121</div>
+            <img src="/img/MB-O530/121/1.jpg" alt="Mercedes-Benz O530 Citaro FL nr 121" class="fullscreen-img">
+            <img src="/img/MB-O530/121/2.jpg" alt="Mercedes-Benz O530 Citaro FL nr 121" class="fullscreen-img">
+            <img src="/img/MB-O530/121/3.jpg" alt="Mercedes-Benz O530 Citaro FL nr 121" class="fullscreen-img">
+            <div class="opis-zdj">» 122</div>
+            <img src="/img/MB-O530/122/1.jpg" alt="Mercedes-Benz O530 Citaro FL nr 122" class="fullscreen-img">
+            <img src="/img/MB-O530/122/2.jpg" alt="Mercedes-Benz O530 Citaro FL nr 122" class="fullscreen-img">
+            <img src="/img/MB-O530/122/3.jpg" alt="Mercedes-Benz O530 Citaro FL nr 122" class="fullscreen-img">
+            <img src="/img/MB-O530/122/4.jpg" alt="Mercedes-Benz O530 Citaro FL nr 122" class="fullscreen-img">
+            <img src="/img/MB-O530/122/5.jpg" alt="Mercedes-Benz O530 Citaro FL nr 122" class="fullscreen-img">
+            <div class="opis-zdj">» 123</div>
+            <img src="/img/MB-O530/123/1.jpg" alt="Mercedes-Benz O530 Citaro FL nr 123" class="fullscreen-img">
+            <img src="/img/MB-O530/123/2.jpg" alt="Mercedes-Benz O530 Citaro FL nr 123" class="fullscreen-img">
+            <div class="opis-zdj">» 124</div>
+            <img src="/img/MB-O530/124/1.jpg" alt="Mercedes-Benz O530 Citaro FL nr 124" class="fullscreen-img">
+            <img src="/img/MB-O530/124/2.jpg" alt="Mercedes-Benz O530 Citaro FL nr 124" class="fullscreen-img">
+            <img src="/img/MB-O530/124/3.jpg" alt="Mercedes-Benz O530 Citaro FL nr 124" class="fullscreen-img">
+            <div class="opis-zdj">» 125</div>
+            <img src="/img/MB-O530/125/1.jpg" alt="Mercedes-Benz O530 Citaro FL nr 125" class="fullscreen-img">
+            <div class="opis-zdj">» 126</div>
+            <img src="/img/MB-O530/126/1.jpg" alt="Mercedes-Benz O530 Citaro FL nr 126" class="fullscreen-img">
+            <img src="/img/MB-O530/126/2.jpg" alt="Mercedes-Benz O530 Citaro FL nr 126" class="fullscreen-img">
+            <div class="opis-zdj">» 127</div>
+            <img src="/img/MB-O530/127/1.jpg" alt="Mercedes-Benz O530 Citaro FL nr 127" class="fullscreen-img">
+            <img src="/img/MB-O530/127/2.jpg" alt="Mercedes-Benz O530 Citaro FL nr 127" class="fullscreen-img">
+            <img src="/img/MB-O530/127/3.jpg" alt="Mercedes-Benz O530 Citaro FL nr 127" class="fullscreen-img">
+            <img src="/img/MB-O530/127/4.jpg" alt="Mercedes-Benz O530 Citaro FL nr 127" class="fullscreen-img">
+            <div class="opis-zdj">» 128 (2008)</div>
+            <div class="opis-zdj">» 128 (2024)</div>
+            <img src="/img/MB-O530/128/1.jpg" alt="Mercedes-Benz O530 Citaro FL nr 128" class="fullscreen-img">
+            <img src="/img/MB-O530/128/2.jpg" alt="Mercedes-Benz O530 Citaro FL nr 128" class="fullscreen-img">
+            <img src="/img/MB-O530/128/3.jpg" alt="Mercedes-Benz O530 Citaro FL nr 128" class="fullscreen-img">
+            <div class="opis-zdj">» 129</div>
+            <img src="/img/MB-O530/125/1.jpg" alt="Mercedes-Benz O530 Citaro FL nr 129" class="fullscreen-img">
+            <div class="opis-zdj">» 130</div>
+            <div class="opis-zdj">» 131</div>
+            <img src="/img/MB-O530/131/1.jpg" alt="Mercedes-Benz O530 Citaro FL nr 131" class="fullscreen-img">
+            <div class="opis-zdj">» 132</div>
+            <img src="/img/MB-O530/132/1.jpg" alt="Mercedes-Benz O530 Citaro FL nr 132" class="fullscreen-img">
+            <img src="/img/MB-O530/132/2.jpg" alt="Mercedes-Benz O530 Citaro FL nr 132" class="fullscreen-img">
+            <div class="opis-zdj">» 133</div>
+            <img src="/img/MB-O530/133/1.jpg" alt="Mercedes-Benz O530 Citaro FL nr 133" class="fullscreen-img">
+            <img src="/img/MB-O530/133/2.jpg" alt="Mercedes-Benz O530 Citaro FL nr 133" class="fullscreen-img">
+            <img src="/img/MB-O530/133/3.jpg" alt="Mercedes-Benz O530 Citaro FL nr 133" class="fullscreen-img">
+            <img src="/img/MB-O530/133/4.jpg" alt="Mercedes-Benz O530 Citaro FL nr 133" class="fullscreen-img">
+            <div class="opis-zdj">» 134</div>
+            <img src="/img/MB-O530/134/1.jpg" alt="Mercedes-Benz O530 Citaro FL nr 134" class="fullscreen-img">
+            <img src="/img/MB-O530/134/2.jpg" alt="Mercedes-Benz O530 Citaro FL nr 134" class="fullscreen-img">
+            <img src="/img/MB-O530/134/3.jpg" alt="Mercedes-Benz O530 Citaro FL nr 134" class="fullscreen-img">
+            <div class="opis-zdj">» 135</div>
+            <img src="/img/MB-O530/135/1.jpg" alt="Mercedes-Benz O530 Citaro FL nr 135" class="fullscreen-img">
+            <div class="opis-zdj">» 136</div>
+            <div class="opis-zdj">» 137</div>
+            <img src="/img/MB-O530/137/1.jpg" alt="Mercedes-Benz O530 Citaro FL nr 137" class="fullscreen-img">
+            <div class="opis-zdj">» 138</div>
+            <img src="/img/MB-O530/138/1.jpg" alt="Mercedes-Benz O530 Citaro FL nr 138" class="fullscreen-img">
+            <img src="/img/MB-O530/138/2.jpg" alt="Mercedes-Benz O530 Citaro FL nr 138" class="fullscreen-img">
+            <img src="/img/MB-O530/138/3.jpg" alt="Mercedes-Benz O530 Citaro FL nr 138" class="fullscreen-img">
+            <img src="/img/MB-O530/138/4.jpg" alt="Mercedes-Benz O530 Citaro FL nr 138" class="fullscreen-img">
+            <img src="/img/MB-O530/138/5.jpg" alt="Mercedes-Benz O530 Citaro FL nr 138" class="fullscreen-img">
+            <div class="opis-zdj">» 139</div>
+            <img src="/img/MB-O530/139/1.jpg" alt="Mercedes-Benz O530 Citaro FL nr 139" class="fullscreen-img">
+            <img src="/img/MB-O530/139/2.jpg" alt="Mercedes-Benz O530 Citaro FL nr 139" class="fullscreen-img">
+            <img src="/img/MB-O530/139/3.jpg" alt="Mercedes-Benz O530 Citaro FL nr 139" class="fullscreen-img">
+            <img src="/img/MB-O530/139/4.jpg" alt="Mercedes-Benz O530 Citaro FL nr 139" class="fullscreen-img">
+            <img src="/img/MB-O530/139/5.jpg" alt="Mercedes-Benz O530 Citaro FL nr 139" class="fullscreen-img">
+            <div class="opis-zdj">» 140</div>
+            <img src="/img/MB-O530/140/1.jpg" alt="Mercedes-Benz O530 Citaro FL nr 140" class="fullscreen-img">
+            <img src="/img/MB-O530/140/2.jpg" alt="Mercedes-Benz O530 Citaro FL nr 140" class="fullscreen-img">
+            <div class="opis-zdj">» 141</div>
+            <img src="/img/MB-O530/141/1.jpg" alt="Mercedes-Benz O530 Citaro FL nr 141" class="fullscreen-img">
+            <img src="/img/MB-O530/141/2.jpg" alt="Mercedes-Benz O530 Citaro FL nr 141" class="fullscreen-img">
+            <img src="/img/MB-O530/141/3.jpg" alt="Mercedes-Benz O530 Citaro FL nr 141" class="fullscreen-img">
+            <img src="/img/MB-O530/141/4.jpg" alt="Mercedes-Benz O530 Citaro FL nr 141" class="fullscreen-img">
+            <img src="/img/MB-O530/141/5.jpg" alt="Mercedes-Benz O530 Citaro FL nr 141" class="fullscreen-img">
+            <img src="/img/MB-O530/141/6.jpg" alt="Mercedes-Benz O530 Citaro FL nr 141" class="fullscreen-img">
+            <img src="/img/MB-O530/141/7.jpg" alt="Mercedes-Benz O530 Citaro FL nr 141" class="fullscreen-img">
+            <img src="/img/MB-O530/141/8.jpg" alt="Mercedes-Benz O530 Citaro FL nr 141" class="fullscreen-img">
+            <div class="opis-zdj">» 142</div>
+            <img src="/img/MB-O530/142/1.jpg" alt="Mercedes-Benz O530 Citaro FL nr 142" class="fullscreen-img">
+            <img src="/img/MB-O530/142/2.jpg" alt="Mercedes-Benz O530 Citaro FL nr 142" class="fullscreen-img">
+            <img src="/img/MB-O530/142/3.jpg" alt="Mercedes-Benz O530 Citaro FL nr 142" class="fullscreen-img">
+        </div>
+
+        <!--Okno do otwierania zdjęć na całej stronie-->
+        <div id="fullscreenOverlay" class="fullscreen-overlay">
+            <span id="closeBtn">&times;</span>
+            <img id="fullscreenImage" class="fullscreen-image">
+        </div>
+    </div>
+<button onclick="scrollToTop()" id="scrollTopBtn" title="Do góry">⬆</button>
+</body>
+</html>

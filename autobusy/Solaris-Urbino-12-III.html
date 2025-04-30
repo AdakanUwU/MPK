@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Solaris Urbino 12 III - MPK Częstochowa</title>
+    <link rel="stylesheet" href="/css/style.css"/>
+
+    <script src="/js/ikony.js" defer></script> <!--wczytywanie ikon-->
+    <script src="/js/tabela_link.js" defer></script> <!--wczytywanie klikalnych wierszy tabel-->
+
+    <script src="/js/w_gore.js" defer></script> <!--Skrypt do przycisku przesuwania do samej góry-->
+    <script src="/js/zdjecia.js" defer></script> 
+    <script src="/js/foto-blok.js" defer></script> <!--Blokada menu kontekstowego na zdjęciach-->
+
+    <style>
+        .kolumna-opis {
+            font-weight: bold;
+        }
+    </style>
+
+
+
+</head>
+<body>
+    <div class="pasek"> <!--Pasek nawigacyjny-->
+    <nav>
+        <label class="logo"><a href="/"><img src="/img/logo_mpk.png" alt="Logo MPK"></a></label>
+        <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+        <ul id="menu">
+        <li><a class="pasek" href="/">Spis</a></li>
+        <li><a class="pasek" href="/autobusy.html">Autobusy</a></li>
+        <li><a class="pasek" href="/tramwaje.html">Tramwaje</a></li>
+        <li><a class="pasek" href="#">Trasy</a></li>
+        <li><a class="pasek" href="#">Pętle</a></li>
+        </ul>
+    </nav>
+    </div>
+
+    <div class="tresc"> <!--Główna treść strony-->
+        <h1>Solaris Urbino 12 III</h1><hr />
+        <BR>
+        <img src="/img/SU12III/miniaturka.jpg" alt="Solaris Urbino 12 III nr 006" class="fullscreen-img miniatura">
+        <BR>
+
+        <div class="opis-pojazdu">
+            <p style="text-indent: 30px;">
+            Na początku 2014 roku Solaris wygrał przetarg na dostawę siedmiu nowych, niskopodłogowych autobusów modelu Solaris Urbino 12 trzeciej generacji. 
+            Zgodnie z umową, miały one zostać dostarczone w ciągu 150 dni od jej podpisania — i tak też się stało. Solarisy Urbino 12 III były pierwszymi 
+            autobusami w Częstochowie spełniającymi europejską normę emisji spalin Euro 6, wyposażonymi w klimatyzację oraz pomalowanymi w tzw. malowanie „Twistowe”. 
+            Jeszcze w tym samym roku skorzystano z opcji dostawy kolejnych trzech autobusów tego samego typu. Pojazdy otrzymały numery z zakresu 001–010.
+            </p><p style="text-indent: 30px;">
+            W 2015 roku autobus o numerze 001 otrzymał nazwę „Muniek”, a 002 — „Yanina”. Na przełomie lat 2022/2023 pojazdy 001, 004 i 009 zostały 
+            wypożyczone do firmy Transgór Mysłowice i otrzymały numery odpowiednio: 333, 334 i 335.
+            </p>
+        </div>
+        
+        <BR>
+            <h2>Dane technicze:</h2><hr><br>
+        <TABLE class="dane-techniczne"> <!--Tabela pojazdów-->
+            <colgroup>
+                <col style="width: 50%;">
+                <col style="width: 50%;">
+            </colgroup>
+
+            <TR> <!--Nagłówek tabeli-->
+            <TH width="90%" colspan="2" style="font-size: 20px;">Solaris Urbino 12 III</TH>
+            </TR>
+
+            <TR class="tabela-hover"> <!--Producent-->
+                <TD class="kolumna-opis">Producent</TD>
+                <TD>Solaris Bus & Coach</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Długość-->
+                <TD class="kolumna-opis">Długość</TD>
+                <TD>12000 mm</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Szerokość-->
+                <TD class="kolumna-opis">Szerokość</TD>
+                <TD>2550 mm</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Wysokość-->
+                <TD class="kolumna-opis">Wysokość</TD>
+                <TD>2850 mm</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Liczba miejsc siedzących-->
+                <TD class="kolumna-opis">Masa</TD>
+                <TD>18 000 KG</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Układ drzwi-->
+                <TD class="kolumna-opis">Układ drzwi</TD>
+                <TD>2-2-2</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Wysokość podłogi przy drzwiach-->
+                <TD class="kolumna-opis">Wysokość podłogi przy drzwiach</TD>
+                <TD>360-360-360 [mm]</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Liczba miejsc siedzących-->
+                <TD class="kolumna-opis">Po przyklęku</TD>
+                <TD>-70 mm</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Silnik-->
+                <TD class="kolumna-opis">Silnik (moc)</TD>
+                <TD>Cummins ISB6.7E6 280B (209kW)</TD>
+            </TR>  
+            <TR class="tabela-hover"> <!--Skrzynia biegów-->
+                <TD class="kolumna-opis">Skrzynia Biegów</TD>
+                <TD>Voith D854.6</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Liczba miejsc siedzących-->
+                <TD class="kolumna-opis">Liczba miejsc siedzących</TD>
+                <TD>25</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Liczba miejsc stojących-->
+                <TD class="kolumna-opis">Liczba miejsc stojących</TD>
+                <TD>73</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Udział niskiej podłogi-->
+                <TD class="kolumna-opis">Udział niskiej podłogi</TD>
+                <TD>100%</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Klimatyzacja-->
+                <TD class="kolumna-opis">Klimatyzacja</TD>
+                <TD>Tak</TD>
+            </TR>
+        </TABLE>
+
+        <BR>
+        <h2>Spis pojazdów:</h2><hr><br>
+
+        <TABLE class="spis" > <!--Tabela pojazdów-->
+            <TR> <!--Nagłówek tabeli-->
+            <TH width="90px">Numer</TH>
+            <TH width="200px">Malowanie</TH>
+            <TH width="55px">Rok prod.</TH>
+            <TH width="200px">Atrybuty</TH>
+            <TH width="">Uwagi</TH>
+            <TH width="100px">Rejestracja</TH>
+            <TH width="85px">Linki</TH>
+            </TR>
+    
+            <TR class="tabela-hover">
+                <TD>001<BR>"Muniek"</TD>
+                <TD>Czerwono-Biało-Szare</TD>
+                <TD>2014</TD>
+                <TD><niskopodlogowy> <kamery> <ac> <biletkier></TD>
+                <TD>Pierwszy Solaris III generacji w Częstochowie. Prezentacja na placu Biegańskiego 21 sierpnia 2014.</TD>
+                <TD>SC 5001M</TD>
+                <TD><A href="https://czgk.pl/categories.php?cat_id=4158" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/f0f91905-8ea2-469b-8ae1-14b575b4fdfa" target="_blank"><gps1></A></TD>
+            </TR>
+    
+            <TR class="tabela-hover">
+                <TD>002<BR>"Yanina"</TD>
+                <TD>Czerwono-Biało-Szare</TD>
+                <TD>2014</TD>
+                <TD><niskopodlogowy> <kamery> <ac> <biletkier></TD>
+                <TD>Prezentacja na placu Biegańskiego 21 sierpnia 2014.</TD>
+                <TD>SC 5002M</TD>
+                <TD><A href="https://czgk.pl/categories.php?cat_id=4159" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/f96b5dd6-1b48-4c2e-9cb0-18505e1e71d3" target="_blank"><gps1></A></TD>
+            </TR>
+    
+            <TR class="tabela-hover">
+                <TD>003</TD>
+                <TD>Czerwono-Biało-Szare</TD>
+                <TD>2014</TD>
+                <TD><niskopodlogowy> <kamery> <ac> <biletkier></TD>
+                <TD>Prezentacja na placu Biegańskiego 21 sierpnia 2014.</TD>
+                <TD>SC 5003M</TD>
+                <TD><A href="https://czgk.pl/categories.php?cat_id=4160" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/27c97d1f-86b8-4bec-b9b4-92a399fe88be" target="_blank"><gps1></A></TD>
+            </TR>
+    
+            <TR class="tabela-hover">
+                <TD>004</TD>
+                <TD>Czerwono-Biało-Szare</TD>
+                <TD>2014</TD>
+                <TD><niskopodlogowy> <kamery> <ac> <biletkier></TD>
+                <TD>Prezentacja na placu Biegańskiego 21 sierpnia 2014.</TD>
+                <TD>SC 5004M</TD>
+                <TD><A href="https://czgk.pl/categories.php?cat_id=4161" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/c7163864-028e-45d2-96f6-7a565ace0847" target="_blank"><gps1></A></TD>
+            </TR>
+    
+            <TR class="tabela-hover">
+                <TD>005</TD>
+                <TD>Czerwono-Biało-Szare</TD>
+                <TD>2014</TD>
+                <TD><niskopodlogowy> <kamery> <ac> <biletkier></TD>
+                <TD>Prezentacja na placu Biegańskiego 21 sierpnia 2014.</TD>
+                <TD>SC 5005M</TD>
+                <TD><A href="https://czgk.pl/categories.php?cat_id=4162" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/44e85258-f882-4864-b974-f3e72b36edb0" target="_blank"><gps1></A></TD>
+            </TR>
+    
+            <TR class="tabela-hover">
+                <TD>006</TD>
+                <TD>Czerwono-Biało-Szare</TD>
+                <TD>2014</TD>
+                <TD><niskopodlogowy> <kamery> <ac> <biletkier></TD>
+                <TD>Prezentacja na placu Biegańskiego 21 sierpnia 2014.</TD>
+                <TD>SC 5006M</TD>
+                <TD><A href="https://czgk.pl/categories.php?cat_id=4163" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/98a402ee-4375-4b40-8e29-5380a54377b6" target="_blank"><gps1></A></TD>
+            </TR>
+    
+            <TR class="tabela-hover">
+                <TD>007</TD>
+                <TD>Czerwono-Biało-Szare</TD>
+                <TD>2014</TD>
+                <TD><niskopodlogowy> <kamery> <ac> <biletkier></TD>
+                <TD>Prezentacja na placu Biegańskiego 21 sierpnia 2014.</TD>
+                <TD>SC 5007M</TD>
+                <TD><A href="https://czgk.pl/categories.php?cat_id=4164" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/cb274ee1-66f7-4726-9d17-ee3bab5af36d" target="_blank"><gps1></A></TD>
+            </TR>
+    
+            <TR class="tabela-hover">
+                <TD>008</TD>
+                <TD>Czerwono-Biało-Szare</TD>
+                <TD>2014</TD>
+                <TD><niskopodlogowy> <kamery> <ac> <biletkier></TD>
+                <TD></TD>
+                <TD>SC 7908M</TD>
+                <TD><A href="https://czgk.pl/categories.php?cat_id=4165" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/da43e549-be41-43ce-b99a-ea03d5ab637d" target="_blank"><gps1></A></TD>
+            </TR>
+    
+            <TR class="tabela-hover">
+                <TD>009</TD>
+                <TD>Czerwono-Biało-Szare</TD>
+                <TD>2014</TD>
+                <TD><niskopodlogowy> <kamery> <ac> <biletkier></TD>
+                <TD></TD>
+                <TD>SC 7909M</TD>
+                <TD><A href="https://czgk.pl/categories.php?cat_id=4167" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/39a3a2d7-11e9-49b2-bd6c-34c35faf266d" target="_blank"><gps1></A></TD>
+            </TR>
+    
+            <TR class="tabela-hover">
+                <TD>010</TD>
+                <TD>Czerwono-Biało-Szare</TD>
+                <TD>2014</TD>
+                <TD><niskopodlogowy> <kamery> <ac> <biletkier></TD>
+                <TD></TD>
+                <TD>SC 7910M</TD>
+                <TD><A href="https://czgk.pl/categories.php?cat_id=4168" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/86082b7d-cf39-4d02-bf64-cfd1534ff09e" target="_blank"><gps1></A></TD>
+            </TR>
+        </TABLE>
+
+        <BR>
+        <h2>Stan taboru na przestrzeni lat:</h2><hr><br>
+        <TABLE class="ilostan" > <!--Tabela pojazdów-->
+            <TR> <!--Nagłówek tabeli-->
+                <TH width="70px">Rok</TH>
+                <TH width="130px">Wpisane na stan</TH>
+                <TH width="130px">Skreślone ze stanu</TH>
+                <TH width="100px">Ilość na koniec roku</TH>
+            </TR>
+    
+            <TR>
+                <TD>2014</TD>
+                <TD>10 (001-010)</TD>
+                <TD>-</TD>
+                <TD>10</TD>
+            </TR>
+            <TR>
+                <TD>2015+</TD>
+                <TD>-</TD>
+                <TD>-</TD>
+                <TD>10</TD>
+            </TR>
+        </TABLE>
+
+
+        <BR>
+        <h2>Zdjęcia pojazdów:</h2><hr><br>
+        <div class="galeria">
+            <div class="opis-zdj">» 001</div>
+            <img src="/img/SU12III/001/1.jpg" alt="Solaris Urbino 12 III nr 001" class="fullscreen-img">
+            <BR>
+            <div class="opis-zdj">» 002</div>
+            <img src="/img/SU12III/002/1.jpg" alt="Solaris Urbino 12 III nr 002" class="fullscreen-img">
+            <img src="/img/SU12III/002/2.jpg" alt="Solaris Urbino 12 III nr 002" class="fullscreen-img">
+            <img src="/img/SU12III/002/3.jpg" alt="Solaris Urbino 12 III nr 002" class="fullscreen-img">
+            <div class="opis-zdj">» 003</div>
+            <img src="/img/SU12III/003/1.jpg" alt="Solaris Urbino 12 III nr 003" class="fullscreen-img">
+            <img src="/img/SU12III/003/2.jpg" alt="Solaris Urbino 12 III nr 003" class="fullscreen-img">
+            <img src="/img/SU12III/003/3.jpg" alt="Solaris Urbino 12 III nr 003" class="fullscreen-img">
+            <div class="opis-zdj">» 004</div>
+            <img src="/img/SU12III/004/1.jpg" alt="Solaris Urbino 12 III nr 004" class="fullscreen-img">
+            <img src="/img/SU12III/004/2.jpg" alt="Solaris Urbino 12 III nr 004" class="fullscreen-img">
+            <img src="/img/SU12III/004/3.jpg" alt="Solaris Urbino 12 III nr 004" class="fullscreen-img">
+            <img src="/img/SU12III/004/4.jpg" alt="Solaris Urbino 12 III nr 004" class="fullscreen-img">
+            <div class="opis-zdj">» 005</div>
+            <img src="/img/SU12III/005/1.jpg" alt="Solaris Urbino 12 III nr 005" class="fullscreen-img">
+            <img src="/img/SU12III/005/2.jpg" alt="Solaris Urbino 12 III nr 005" class="fullscreen-img">
+            <img src="/img/SU12III/005/3.jpg" alt="Solaris Urbino 12 III nr 005" class="fullscreen-img">
+            <img src="/img/SU12III/005/4.jpg" alt="Solaris Urbino 12 III nr 005" class="fullscreen-img">
+            <img src="/img/SU12III/005/5.jpg" alt="Solaris Urbino 12 III nr 005" class="fullscreen-img">
+            <img src="/img/SU12III/005/6.jpg" alt="Solaris Urbino 12 III nr 005" class="fullscreen-img">
+            <div class="opis-zdj">» 006</div>
+            <img src="/img/SU12III/006/1.jpg" alt="Solaris Urbino 12 III nr 006" class="fullscreen-img">
+            <img src="/img/SU12III/006/2.jpg" alt="Solaris Urbino 12 III nr 006" class="fullscreen-img">
+            <img src="/img/SU12III/006/3.jpg" alt="Solaris Urbino 12 III nr 006" class="fullscreen-img">
+            <img src="/img/SU12III/006/4.jpg" alt="Solaris Urbino 12 III nr 006" class="fullscreen-img">
+            <img src="/img/SU12III/006/5.jpg" alt="Solaris Urbino 12 III nr 006" class="fullscreen-img">
+            <img src="/img/SU12III/006/6.jpg" alt="Solaris Urbino 12 III nr 006" class="fullscreen-img">
+            <img src="/img/SU12III/006/7.jpg" alt="Solaris Urbino 12 III nr 006" class="fullscreen-img">
+            <img src="/img/SU12III/006/8.jpg" alt="Solaris Urbino 12 III nr 006" class="fullscreen-img">
+            <div class="opis-zdj">» 007</div>
+            <img src="/img/SU12III/007/1.jpg" alt="Solaris Urbino 12 III nr 007" class="fullscreen-img">
+            <img src="/img/SU12III/007/2.jpg" alt="Solaris Urbino 12 III nr 007" class="fullscreen-img">
+            <img src="/img/SU12III/007/3.jpg" alt="Solaris Urbino 12 III nr 007" class="fullscreen-img">  
+            <div class="opis-zdj">» 008</div>
+            <img src="/img/SU12III/008/1.jpg" alt="Solaris Urbino 12 III nr 008" class="fullscreen-img">
+            <img src="/img/SU12III/008/2.jpg" alt="Solaris Urbino 12 III nr 008" class="fullscreen-img"> 
+            <img src="/img/SU12III/008/3.jpg" alt="Solaris Urbino 12 III nr 008" class="fullscreen-img">  
+            <div class="opis-zdj">» 009</div>
+            <img src="/img/SU12III/009/1.jpg" alt="Solaris Urbino 12 III nr 009" class="fullscreen-img">
+            <img src="/img/SU12III/009/2.jpg" alt="Solaris Urbino 12 III nr 009" class="fullscreen-img">
+            <div class="opis-zdj">» 010</div>
+            <img src="/img/SU12III/010/1.jpg" alt="Solaris Urbino 12 III nr 009" class="fullscreen-img">
+            <img src="/img/SU12III/010/2.jpg" alt="Solaris Urbino 12 III nr 009" class="fullscreen-img">
+        </div>
+
+        <!--Okno do otwierania zdjęć na całej stronie-->
+        <div id="fullscreenOverlay" class="fullscreen-overlay">
+            <span id="closeBtn">&times;</span>
+            <img id="fullscreenImage" class="fullscreen-image">
+        </div>
+    </div>
+<button onclick="scrollToTop()" id="scrollTopBtn" title="Do góry">⬆</button>
+</body>
+</html>

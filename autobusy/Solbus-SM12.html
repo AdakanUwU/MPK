@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Solbus SM12 - MPK Częstochowa</title>
+    <link rel="stylesheet" href="/css/style.css"/>
+
+    <script src="/js/ikony.js" defer></script> <!--wczytywanie ikon-->
+    <script src="/js/tabela_link.js" defer></script> <!--wczytywanie klikalnych wierszy tabel-->
+
+    <script src="/js/w_gore.js" defer></script> <!--Skrypt do przycisku przesuwania do samej góry-->
+    <script src="/js/zdjecia.js" defer></script> 
+    <script src="/js/foto-blok.js" defer></script> <!--Blokada menu kontekstowego na zdjęciach-->
+
+
+</head>
+<body>
+    <div class="pasek"> <!--Pasek nawigacyjny-->
+    <nav>
+        <label class="logo"><a href="/"><img src="/img/logo_mpk.png" alt="Logo MPK"></a></label>
+        <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+        <ul id="menu">
+        <li><a class="pasek" href="/">Spis</a></li>
+        <li><a class="pasek" href="/autobusy.html">Autobusy</a></li>
+        <li><a class="pasek" href="/tramwaje.html">Tramwaje</a></li>
+        <li><a class="pasek" href="#">Trasy</a></li>
+        <li><a class="pasek" href="#">Pętle</a></li>
+        </ul>
+    </nav>
+    </div>
+
+    <div class="tresc"> <!--Główna treść strony-->
+        <h1>Solbus SM12</h1><hr />
+        <BR>
+        <img src="/img/SM12/miniaturka.jpg" alt="Solbus SM12 nr 038" class="fullscreen-img miniatura">
+        <BR>
+
+        <div class="opis-pojazdu">
+            <p style="text-indent: 30px;">
+            W lipcu 2015 roku MPK w Częstochowie wybrało Solbusa jako producenta 3 niskopodłogowych autobusów spełniających
+            normę spalin EURO 6. Solbus wtedy wygrał z Solarisem, który był droższy o niecałe 100 tys. MPK wymagało od producenta
+            wyposażenia autobusów w klimatyzację, monitoring, system informacji pasażerskiej oraz silnik spełaniający normę EURO 6.
+            Autobusy zostały dostarczone pod koniec stycznia 2016 roku.
+            </p><!-- Źródło: transinfo.pl/x/infobus/kolejne-solbusy-w-czestochowie -->
+        </div>
+        
+        <BR>
+            <h2>Dane technicze:</h2><hr><br>
+        <TABLE class="dane-techniczne"> <!--Tabela pojazdów-->
+            <colgroup>
+                <col style="width: 50%;">
+                <col style="width: 50%;">
+            </colgroup>
+
+            <TR> <!--Nagłówek tabeli-->
+            <TH width="90%" colspan="2" style="font-size: 20px;">Solbus SM12HL Hybrid CNG</TH>
+            </TR>
+
+            <TR class="tabela-hover"> <!--Producent-->
+                <TD class="kolumna-opis">Producent</TD>
+                <TD>Solbus Sp. z o.o.</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Długość-->
+                <TD class="kolumna-opis">Długość</TD>
+                <TD>12000 mm</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Szerokość-->
+                <TD class="kolumna-opis">Szerokość</TD>
+                <TD>2550 mm</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Wysokość-->
+                <TD class="kolumna-opis">Wysokość</TD>
+                <TD>3100 mm</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Liczba miejsc siedzących-->
+                <TD class="kolumna-opis">Masa</TD>
+                <TD>18 000 KG</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Układ drzwi-->
+                <TD class="kolumna-opis">Układ drzwi</TD>
+                <TD>2-2-2</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Wysokość podłogi przy drzwiach-->
+                <TD class="kolumna-opis">Wysokość podłogi przy drzwiach</TD>
+                <TD>320-320-320 [mm]</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Liczba miejsc siedzących-->
+                <TD class="kolumna-opis">Po przyklęku</TD>
+                <TD>Brak Danych</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Silnik-->
+                <TD class="kolumna-opis">Silnik (moc)</TD>
+                <TD>Cummins ISB6.7E6 280B (209kW)</TD>
+            </TR>  
+            <TR class="tabela-hover"> <!--Skrzynia biegów-->
+                <TD class="kolumna-opis">Skrzynia Biegów</TD>
+                <TD>Voith D854.5</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Liczba miejsc siedzących-->
+                <TD class="kolumna-opis">Liczba miejsc siedzących</TD>
+                <TD>28</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Liczba miejsc stojących-->
+                <TD class="kolumna-opis">Liczba miejsc stojących</TD>
+                <TD>67</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Udział niskiej podłogi-->
+                <TD class="kolumna-opis">Udział niskiej podłogi</TD>
+                <TD>100%</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Klimatyzacja-->
+                <TD class="kolumna-opis">Klimatyzacja</TD>
+                <TD>Tak</TD>
+            </TR>
+        </TABLE>
+
+        <BR>
+        <h2>Spis pojazdów:</h2><hr><br>
+
+        <TABLE class="spis" > <!--Tabela pojazdów-->
+            <TR> <!--Nagłówek tabeli-->
+            <TH width="90px">Numer</TH>
+            <TH width="200px">Malowanie</TH>
+            <TH width="55px">Rok prod.</TH>
+            <TH width="200px">Atrybuty</TH>
+            <TH width="">Uwagi</TH>
+            <TH width="100px">Rejestracja</TH>
+            <TH width="85px">Linki</TH>
+            </TR>
+    
+            <TR class="tabela-hover">
+                <TD>036</TD>
+                <TD>Czerwono-Biało-Szare</TD>
+                <TD>2016</TD>
+                <TD><niskopodlogowy> <ac> <kamery> <usb> <biletkier></TD>
+                <TD></TD>
+                <TD>SC 5036P</TD>
+                <TD><A href="https://czgk.pl/categories.php?cat_id=5138" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/939a65d2-180d-47aa-8e01-f39d0ab4a4d7" target="_blank"><gps1></A></TD>
+            </TR>
+    
+            <TR class="tabela-hover">
+                <TD>037</TD>
+                <TD>Czerwono-Biało-Szare</TD>
+                <TD>2016</TD>
+                <TD><niskopodlogowy> <ac> <kamery> <usb> <biletkier></TD>
+                <TD></TD>
+                <TD>SC 5037P</TD>
+                <TD><A href="https://czgk.pl/categories.php?cat_id=5136" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/aea3e2be-00b2-4d85-9fa2-acbcc7e36126" target="_blank"><gps1></A></TD>
+            </TR>
+    
+            <TR class="tabela-hover">
+                <TD>038</TD>
+                <TD>Czerwono-Biało-Szare</TD>
+                <TD>2016</TD>
+                <TD><niskopodlogowy> <ac> <kamery> <usb> <biletkier></TD>
+                <TD></TD>
+                <TD>SC 5038P</TD>
+                <TD><A href="https://czgk.pl/categories.php?cat_id=5137" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/d43b3a7b-3441-4693-876f-24976a912d66" target="_blank"><gps1></A></TD>
+            </TR>    
+        </TABLE>
+
+        <BR>
+        <h2>Stan taboru na przestrzeni lat:</h2><hr><br>
+        <TABLE class="ilostan" > <!--Tabela pojazdów-->
+            <TR> <!--Nagłówek tabeli-->
+                <TH width="70px">Rok</TH>
+                <TH width="130px">Wpisane na stan</TH>
+                <TH width="130px">Skreślone ze stanu</TH>
+                <TH width="100px">Ilość na koniec roku</TH>
+            </TR>
+    
+            <TR>
+                <TD>2016</TD>
+                <TD>3 (036-038)</TD>
+                <TD>-</TD>
+                <TD>3</TD>
+            </TR>
+            <TR>
+                <TD>2017+</TD>
+                <TD>-</TD>
+                <TD>-</TD>
+                <TD>3</TD>
+            </TR>
+        </TABLE>
+
+
+        <BR>
+        <h2>Zdjęcia pojazdów:</h2><hr><br>
+        <div class="galeria">
+            <div class="opis-zdj">» 036</div>
+            <img src="/img/SM12/036/1.jpg" alt="Solbus SM12 nr 036" class="fullscreen-img">
+            <img src="/img/SM12/036/2.jpg" alt="Solbus SM12 nr 036" class="fullscreen-img">
+            <div class="opis-zdj">» 037</div>
+            <div class="opis-zdj">» 038</div>
+            <img src="/img/SM12/038/1.jpg" alt="Solbus SM12 nr 038" class="fullscreen-img">
+            <img src="/img/SM12/038/2.jpg" alt="Solbus SM12 nr 038" class="fullscreen-img">
+        </div>
+        <!--Okno do otwierania zdjęć na całej stronie-->
+        <div id="fullscreenOverlay" class="fullscreen-overlay">
+            <span id="closeBtn">&times;</span>
+            <img id="fullscreenImage" class="fullscreen-image">
+        </div>
+    </div>
+<button onclick="scrollToTop()" id="scrollTopBtn" title="Do góry">⬆</button>
+</body>
+</html>

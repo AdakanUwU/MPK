@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>MAN NL293 Lion`s City - MPK Częstochowa</title>
+    <link rel="stylesheet" href="/css/style.css"/>
+
+    <script src="/js/ikony.js" defer></script> <!--wczytywanie ikon-->
+    <script src="/js/tabela_link.js" defer></script> <!--wczytywanie klikalnych wierszy tabel-->
+
+    <script src="/js/w_gore.js" defer></script> <!--Skrypt do przycisku przesuwania do samej góry-->
+    <script src="/js/zdjecia.js" defer></script> 
+    <script src="/js/foto-blok.js" defer></script> <!--Blokada menu kontekstowego na zdjęciach-->
+
+    <style>
+        .kolumna-opis {
+            font-weight: bold;
+        }
+    </style>
+
+
+
+</head>
+<body>
+    <div class="pasek"> <!--Pasek nawigacyjny-->
+    <nav>
+        <label class="logo"><a href="/"><img src="/img/logo_mpk.png" alt="Logo MPK"></a></label>
+        <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+        <ul id="menu">
+        <li><a class="pasek" href="/">Spis</a></li>
+        <li><a class="pasek" href="/autobusy.html">Autobusy</a></li>
+        <li><a class="pasek" href="/tramwaje.html">Tramwaje</a></li>
+        <li><a class="pasek" href="#">Trasy</a></li>
+        <li><a class="pasek" href="#">Pętle</a></li>
+        </ul>
+    </nav>
+    </div>
+
+    <div class="tresc"> <!--Główna treść strony-->
+        <h1>MAN NL293 Lion`s City</h1><hr />
+        <BR>
+        <img src="/img/NL293/miniaturka.jpg" alt="MAN NL293 Lion`s City nr 159" class="fullscreen-img miniatura">
+        <BR>
+
+        <div class="opis-pojazdu">
+            <p style="text-indent: 30px;">
+                W 2018 roku MPK w Częstochowie planowało skorzystać z opcji dokupienia 12 autobusów Solaris 
+                Urbino 12 IV generacji. Jednak producent odmówił realizacji zamówienia z powodu zaangażowania 
+                w inne kontrakty. W związku z tym spółka była zmuszona ogłosić nowy przetarg, zachowując 
+                te same wymagania co w poprzednim postępowaniu.
+            </p>
+            <p style="text-indent: 30px;">
+                Jedyną ofertę złożyła firma MAN, nieznacznie przekraczając założony budżet. Umowę podpisano 19 
+                kwietnia, a dostawę pojazdów zaplanowano do 9 listopada 2018 roku. Dwunastometrowe autobusy 
+                MAN NL293 serii A37 dostarczono zgodnie z harmonogramem i nadano im numery taborowe od 149 do 160.
+            </p>
+        </div>
+
+        <!-- źrodło: https://www.transport-publiczny.pl/wiadomosci/czestochowa-kupuje-12-autobusow-dlaczego-nie-solarisy-57617.html -->
+        <!--         https://www.transport-publiczny.pl/wiadomosci/w-czestochowie-tylko-man-gotow-dostarczyc-autobusy-58189.html    -->
+        <!--         https://transinfo.pl/x/infobus/man-wraca-do-czestochowy-z-umowa-na-12-autobusow-_more_104434/                  -->
+        
+        <BR>
+            <h2>Dane technicze:</h2><hr><br>
+        <TABLE class="dane-techniczne"> <!--Tabela pojazdów-->
+            <colgroup>
+                <col style="width: 50%;">
+                <col style="width: 50%;">
+            </colgroup>
+
+            <TR> <!--Nagłówek tabeli-->
+            <TH width="90%" colspan="2" style="font-size: 20px;">MAN NL293 Lion`s City</TH>
+            </TR>
+
+            <TR class="tabela-hover"> <!--Producent-->
+                <TD class="kolumna-opis">Producent</TD>
+                <TD>MAN Bus Sp. z o.o.</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Długość-->
+                <TD class="kolumna-opis">Długość</TD>
+                <TD>11950 mm</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Szerokość-->
+                <TD class="kolumna-opis">Szerokość</TD>
+                <TD>2550 mm</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Wysokość-->
+                <TD class="kolumna-opis">Wysokość</TD>
+                <TD>2880 mm</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Liczba miejsc siedzących-->
+                <TD class="kolumna-opis">Masa</TD>
+                <TD>18 000 KG</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Układ drzwi-->
+                <TD class="kolumna-opis">Układ drzwi</TD>
+                <TD>2-2-2</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Wysokość podłogi przy drzwiach-->
+                <TD class="kolumna-opis">Wysokość podłogi przy drzwiach</TD>
+                <TD>320-340-340 [mm]</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Liczba miejsc siedzących-->
+                <TD class="kolumna-opis">Po przyklęku</TD>
+                <TD>Brak danych</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Silnik-->
+                <TD class="kolumna-opis">Silnik (moc)</TD>
+                <TD>MAN D0836 LOH78 (213kW)</TD>
+            </TR>  
+            <TR class="tabela-hover"> <!--Skrzynia biegów-->
+                <TD class="kolumna-opis">Skrzynia Biegów</TD>
+                <TD>Voith D854.6</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Liczba miejsc siedzących-->
+                <TD class="kolumna-opis">Liczba miejsc siedzących</TD>
+                <TD>36</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Liczba miejsc stojących-->
+                <TD class="kolumna-opis">Liczba miejsc stojących</TD>
+                <TD>64</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Udział niskiej podłogi-->
+                <TD class="kolumna-opis">Udział niskiej podłogi</TD>
+                <TD>100%</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Klimatyzacja-->
+                <TD class="kolumna-opis">Klimatyzacja</TD>
+                <TD>Tak</TD>
+            </TR>
+        </TABLE>
+
+        <BR>
+        <h2>Spis pojazdów:</h2><hr><br>
+
+        <TABLE class="spis" > <!--Tabela pojazdów-->
+            <TR> <!--Nagłówek tabeli-->
+            <TH width="90px">Numer</TH>
+            <TH width="200px">Malowanie</TH>
+            <TH width="55px">Rok prod.</TH>
+            <TH width="200px">Atrybuty</TH>
+            <TH width="">Uwagi</TH>
+            <TH width="100px">Rejestracja</TH>
+            <TH width="85px">Linki</TH>
+            </TR>
+            
+            <TR class="tabela-hover" id="man-nl293-tabela">
+                <TD>149</TD>
+                <TD>Czerwono-Biało-Szare</TD>
+                <TD>2018</TD>
+                <TD><niskopodlogowy> <ac> <kamery> <usb> <wifi> <biletomat> <biletkier></TD>
+                <TD></TD>
+                <TD>SC 2449V</TD>
+                <TD><A href="https://czgk.pl/categories.php?cat_id=7301" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/4d638265-b885-4a3d-8929-c802ea519624" target="_blank"><gps1></A></TD>
+            </TR>
+    
+            <TR class="tabela-hover">
+                <TD>150</TD>
+                <TD>Czerwono-Biało-Szare</TD>
+                <TD>2018</TD>
+                <TD><niskopodlogowy> <ac> <kamery> <usb> <wifi> <biletomat> <biletkier></TD>
+                <TD></TD>
+                <TD>SC 2450V</TD>
+                <TD><A href="https://czgk.pl/categories.php?cat_id=7302" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/219243ea-3bec-45ab-9fa3-cfc1563623c0" target="_blank"><gps1></A></TD>
+            </TR>
+    
+            <TR class="tabela-hover">
+                <TD>151</TD>
+                <TD>Czerwono-Biało-Szare</TD>
+                <TD>2018</TD>
+                <TD><niskopodlogowy> <ac> <kamery> <usb> <wifi> <biletomat> <biletkier></TD>
+                <TD></TD>
+                <TD>SC 2451V</TD>
+                <TD><A href="https://czgk.pl/categories.php?cat_id=7303" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/efadcaaa-4dc1-4943-af2a-90be1f29df13" target="_blank"><gps1></A></TD>
+            </TR>
+    
+            <TR class="tabela-hover">
+                <TD>152</TD>
+                <TD>Czerwono-Biało-Szare</TD>
+                <TD>2018</TD>
+                <TD><niskopodlogowy> <ac> <kamery> <usb> <wifi> <biletomat> <biletkier></TD>
+                <TD></TD>
+                <TD>SC 2452V</TD>
+                <TD><A href="https://czgk.pl/categories.php?cat_id=7304" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/af3e6cfb-2ac2-46e4-9612-f6c6d3f5852c" target="_blank"><gps1></A></TD>
+            </TR>
+    
+            <TR class="tabela-hover">
+                <TD>153</TD>
+                <TD>Czerwono-Biało-Szare</TD>
+                <TD>2018</TD>
+                <TD><niskopodlogowy> <ac> <kamery> <usb> <wifi> <biletomat> <biletkier></TD>
+                <TD></TD>
+                <TD>SC 2453V</TD>
+                <TD><A href="https://czgk.pl/categories.php?cat_id=7305" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/9acc796b-5586-4aab-84ba-bd07179ac988" target="_blank"><gps1></A></TD>
+            </TR>
+    
+            <TR class="tabela-hover">
+                <TD>154</TD>
+                <TD>Czerwono-Biało-Szare</TD>
+                <TD>2018</TD>
+                <TD><niskopodlogowy> <ac> <kamery> <usb> <wifi> <biletomat> <biletkier></TD>
+                <TD></TD>
+                <TD>SC 2454V</TD>
+                <TD><A href="https://czgk.pl/categories.php?cat_id=7306" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/bdc27d29-ad40-497d-a568-619be394a2f1" target="_blank"><gps1></A></TD>
+            </TR>
+    
+            <TR class="tabela-hover">
+                <TD>155</TD>
+                <TD>Czerwono-Biało-Szare</TD>
+                <TD>2018</TD>
+                <TD><niskopodlogowy> <ac> <kamery> <usb> <wifi> <biletomat> <biletkier></TD>
+                <TD></TD>
+                <TD>SC 2455V</TD>
+                <TD><A href="https://czgk.pl/categories.php?cat_id=7307" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/561a6a94-9fa9-4262-b0ae-e7f4d1dd458b" target="_blank"><gps1></A></TD>
+            </TR>
+    
+            <TR class="tabela-hover">
+                <TD>156</TD>
+                <TD>Czerwono-Biało-Szare</TD>
+                <TD>2018</TD>
+                <TD><niskopodlogowy> <ac> <kamery> <usb> <wifi> <biletomat> <biletkier></TD>
+                <TD></TD>
+                <TD>SC 2456V</TD>
+                <TD><A href="https://czgk.pl/categories.php?cat_id=7308" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/26081a47-b409-4495-bd0f-7a9ce406c14a" target="_blank"><gps1></A></TD>
+            </TR>
+    
+            <TR class="tabela-hover">
+                <TD>157</TD>
+                <TD>Czerwono-Biało-Szare</TD>
+                <TD>2018</TD>
+                <TD><niskopodlogowy> <ac> <kamery> <usb> <wifi> <biletomat> <biletkier></TD>
+                <TD></TD>
+                <TD>SC 2457V</TD>
+                <TD><A href="https://czgk.pl/categories.php?cat_id=7309" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/025a59ac-21ef-4216-86b9-ae43c738d19e" target="_blank"><gps1></A></TD>
+            </TR>
+    
+            <TR class="tabela-hover">
+                <TD>158</TD>
+                <TD>Czerwono-Biało-Szare</TD>
+                <TD>2018</TD>
+                <TD><niskopodlogowy> <ac> <kamery> <usb> <wifi> <biletomat> <biletkier></TD>
+                <TD></TD>
+                <TD>SC 2458V</TD>
+                <TD><A href="https://czgk.pl/categories.php?cat_id=7310" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/361b22be-797d-442d-962a-7dca09932f54" target="_blank"><gps1></A></TD>
+            </TR>
+    
+            <TR class="tabela-hover">
+                <TD>159</TD>
+                <TD>Czerwono-Biało-Szare</TD>
+                <TD>2018</TD>
+                <TD><niskopodlogowy> <ac> <kamery> <usb> <wifi> <biletomat> <biletkier></TD>
+                <TD></TD>
+                <TD>SC 2459V</TD>
+                <TD><A href="https://czgk.pl/categories.php?cat_id=7311" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/8088e7a4-584e-4a2b-b3fd-5798ba1d73ff" target="_blank"><gps1></A></TD>
+            </TR>
+    
+            <TR class="tabela-hover">
+                <TD>160</TD>
+                <TD>Czerwono-Biało-Szare</TD>
+                <TD>2018</TD>
+                <TD><niskopodlogowy> <ac> <kamery> <usb> <wifi> <biletomat> <biletkier></TD>
+                <TD></TD>
+                <TD>SC 2460V</TD>
+                <TD><A href="https://czgk.pl/categories.php?cat_id=7312" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/245d09f8-e7d8-4114-9fef-9f51efebd0c2" target="_blank"><gps1></A></TD>
+            </TR>
+            
+            </TABLE>
+
+        <BR>
+        <h2>Stan taboru na przestrzeni lat:</h2><hr><br>
+        <TABLE class="ilostan" > <!--Tabela pojazdów-->
+            <TR> <!--Nagłówek tabeli-->
+                <TH width="70px">Rok</TH>
+                <TH width="130px">Wpisane na stan</TH>
+                <TH width="130px">Skreślone ze stanu</TH>
+                <TH width="100px">Ilość na koniec roku</TH>
+            </TR>
+    
+            <TR>
+                <TD>2018</TD>
+                <TD>12 (149-160)</TD>
+                <TD>-</TD>
+                <TD>12</TD>
+            </TR>
+            <TR>
+                <TD>2019+</TD>
+                <TD>-</TD>
+                <TD>-</TD>
+                <TD>12</TD>
+            </TR>
+        </TABLE>
+
+
+        <BR>
+        <h2>Zdjęcia pojazdów:</h2><hr><br>
+        <div class="galeria">
+            <div class="opis-zdj">» 149</div>
+            <img src="/img/NL293/149/1.jpg" alt="MAN NL293 Lion`S City nr 149" class="fullscreen-img">
+            <img src="/img/NL293/149/2.jpg" alt="MAN NL293 Lion`S City nr 149" class="fullscreen-img">
+            <img src="/img/NL293/149/3.jpg" alt="MAN NL293 Lion`S City nr 149" class="fullscreen-img">
+            <img src="/img/NL293/149/4.jpg" alt="MAN NL293 Lion`S City nr 149" class="fullscreen-img">
+            <div class="opis-zdj">» 150</div>
+            <img src="/img/NL293/150/1.jpg" alt="MAN NL293 Lion`S City nr 150" class="fullscreen-img">
+            <div class="opis-zdj">» 151</div>
+            <img src="/img/NL293/151/1.jpg" alt="MAN NL293 Lion`S City nr 151" class="fullscreen-img">
+            <img src="/img/NL293/151/2.jpg" alt="MAN NL293 Lion`S City nr 151" class="fullscreen-img">
+            <div class="opis-zdj">» 152</div>
+            <img src="/img/NL293/152/1.jpg" alt="MAN NL293 Lion`S City nr 152" class="fullscreen-img">
+            <img src="/img/NL293/152/2.jpg" alt="MAN NL293 Lion`S City nr 152" class="fullscreen-img">
+            <div class="opis-zdj">» 153</div>
+            <img src="/img/NL293/153/1.jpg" alt="MAN NL293 Lion`S City nr 153" class="fullscreen-img">
+            <div class="opis-zdj">» 154</div>
+            <img src="/img/NL293/154/1.jpg" alt="MAN NL293 Lion`S City nr 154" class="fullscreen-img">
+            <img src="/img/NL293/154/2.jpg" alt="MAN NL293 Lion`S City nr 154" class="fullscreen-img">
+            <div class="opis-zdj">» 155</div>
+            <div class="opis-zdj">» 156</div>
+            <img src="/img/NL293/156/1.jpg" alt="MAN NL293 Lion`S City nr 156" class="fullscreen-img">
+            <div class="opis-zdj">» 157</div>
+            <img src="/img/NL293/157/1.jpg" alt="MAN NL293 Lion`S City nr 157" class="fullscreen-img">
+            <img src="/img/NL293/157/2.jpg" alt="MAN NL293 Lion`S City nr 157" class="fullscreen-img">
+            <div class="opis-zdj">» 158</div>
+            <div class="opis-zdj">» 159</div>
+            <img src="/img/NL293/159/1.jpg" alt="MAN NL293 Lion`S City nr 159" class="fullscreen-img">
+            <img src="/img/NL293/159/2.jpg" alt="MAN NL293 Lion`S City nr 159" class="fullscreen-img">
+            <img src="/img/NL293/159/3.jpg" alt="MAN NL293 Lion`S City nr 159" class="fullscreen-img">
+            <img src="/img/NL293/159/4.jpg" alt="MAN NL293 Lion`S City nr 159" class="fullscreen-img">
+            <img src="/img/NL293/159/5.jpg" alt="MAN NL293 Lion`S City nr 159" class="fullscreen-img">
+            <img src="/img/NL293/159/6.jpg" alt="MAN NL293 Lion`S City nr 159" class="fullscreen-img">
+            <img src="/img/NL293/159/7.jpg" alt="MAN NL293 Lion`S City nr 159" class="fullscreen-img">
+            <div class="opis-zdj">» 160</div>
+        </div>
+
+        <!--Okno do otwierania zdjęć na całej stronie-->
+        <div id="fullscreenOverlay" class="fullscreen-overlay">
+            <span id="closeBtn">&times;</span>
+            <img id="fullscreenImage" class="fullscreen-image">
+        </div>
+    </div>
+<button onclick="scrollToTop()" id="scrollTopBtn" title="Do góry">⬆</button>
+</body>
+</html>
