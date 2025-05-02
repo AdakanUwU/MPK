@@ -26,7 +26,6 @@
 body {
   font-family: Lato;
   margin-top: 80px; /* wysokość paska, by nic nie było zasłonięte */
-  overflow-x: hidden;
 }
 
 
@@ -126,6 +125,7 @@ a.pasek:hover {
 }
 
 .tresc-glowna{
+  overflow-x: auto;
   margin: 95px 25px 10px 25px;
 }
 
@@ -140,6 +140,7 @@ a.pasek:hover {
 }
 
 .tresc{
+  overflow-x: auto;
   margin: 95px 12% 10px 12%;
 }
 
