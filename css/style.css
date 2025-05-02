@@ -1,4 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@font-face {
+  font-family: 'Lato';
+  src: local('Lato Regular'), local('Lato'), 
+       url('https://fonts.gstatic.com/s/lato/v22/S6uyw4BMUTPHjxAwXiWtFCc.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: local('Lato Bold'), local('Lato-Bold'),
+       url('https://fonts.gstatic.com/s/lato/v22/S6u9w4BMUTPHh6UVSwiPHA.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+
 
 * {
   padding: 0;
@@ -8,7 +24,7 @@
 }
 
 body {
-  font-family: lato;
+  font-family: Lato;
   margin-top: 80px; /* wysokość paska, by nic nie było zasłonięte */
 }
 
@@ -110,6 +126,7 @@ a.pasek:hover {
 
 .tresc-glowna{
   margin: 95px 25px 10px 25px;
+  overflow-x: auto;
 }
 
 .tresc-glowna a{
