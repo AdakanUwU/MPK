@@ -140,7 +140,6 @@ a.pasek:hover {
 }
 
 .tresc{
-  overflow-x: auto;
   margin: 95px 12% 10px 12%;
 }
 
@@ -165,6 +164,11 @@ a.pasek:hover {
   }
 }
 
+.tresc ul {
+  list-style: disc;
+  margin-left: 60px;
+}
+
 .spis{
   margin: 0 auto; /* wyśrodkowanie poziome */
   border-collapse: collapse;
@@ -172,6 +176,7 @@ a.pasek:hover {
   text-align: center;
   background-color: #fff;
   border: 2px solid #000000;
+  overflow-x: auto;
 }
 
 .spis th{

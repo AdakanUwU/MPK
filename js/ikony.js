@@ -17,7 +17,8 @@ document.addEventListener("DOMContentLoaded", () => {
       cng: '<img src="ikony/cng.svg" height="20" class="atr" title="Napęd CNG">',
       gps1: '<img src="ikony/gps1.svg" height="20" class="gps" title="Lokalizacja GPS">',
       gps2: '<img src="ikony/gps2.svg" height="20" class="gps" title="Lokalizacja GPS">',
-      tram: '<img src="ikony/tramwaj.svg" height="20" class="atr" title="Tramwaj">'
+      tram: '<img src="ikony/tramwaj.svg" height="20" class="atr" title="Tramwaj">',
+      zz: '<zezlomowany style="color: red; font-weight: bold">Zezłomowany</zezlomowany>'
     };
   
     // Funkcja do zamiany skrótów na obrazy

@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <base href="/MPK/">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Solaris Urbino 18 III - MPK Częstochowa</title>
+    <link rel="stylesheet" href="css/style.css"/>
+
+
+    <script src="js/ikony.js" defer></script> <!--wczytywanie ikon-->
+    <script src="js/tabela_link.js" defer></script> <!--wczytywanie klikalnych wierszy tabel-->
+    <script src="js/toogleMenu.js" defer></script><!--Skrypt do listy menu-->
+
+    <script src="js/w_gore.js" defer></script> <!--Skrypt do przycisku przesuwania do samej góry-->
+    <script src="js/zdjecia.js" defer></script> 
+    <script src="js/foto-blok.js" defer></script> <!--Blokada menu kontekstowego na zdjęciach-->
+
+    <style>
+        .kolumna-opis {
+            font-weight: bold;
+        }
+    </style>
+
+
+
+</head>
+<body>
+    <div class="pasek"> <!--Pasek nawigacyjny-->
+    <nav>
+        <label class="logo"><a href="/MPK/"><img src="img/logo_mpk.png" alt="Logo MPK"></a></label>
+        <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+        <ul id="menu">
+        <li><a class="pasek" href="/MPK/">Spis</a></li>
+        <li><a class="pasek" href="autobusy">Autobusy</a></li>
+        <li><a class="pasek" href="tramwaje">Tramwaje</a></li>
+        <li><a class="pasek" href="javascript:void(0)">Trasy</a></li>
+        <li><a class="pasek" href="javascript:void(0)">Pętle</a></li>
+        </ul>
+    </nav>
+    </div>
+
+    <div class="tresc"> <!--Główna treść strony-->
+        <h1>Solaris Urbino 18 III</h1><hr />
+        <BR>
+        <img src="img/SU18III/miniaturka.jpg" alt="Solaris Urbino 18 III W8 nr 222" class="fullscreen-img miniatura">
+        <BR>
+
+        <div class="opis-pojazdu">
+            <p style="text-indent: 30px;">
+                Pierwszy Solaris Urbino 18 III generacji pojawił się w Częstochowie w 2018 roku. Wyprodukowany w 2007
+                roku, do 2018 jeździł dla przewoźnika KVG Kassel z numerem 158. Po przybyciu do Częstochowy otrzymał 
+                numer taborowy 218 i został pomalowany w takie samo barwy jak pozostałe Solarisy trzeciej generacji. 
+                Wyróżniał się na tle innych przegubowców tym, że posiadał tylko troje drzwi.
+            </p>
+            <p style="text-indent: 30px;">
+                Kolejne pojazdy pojawiły się pod koniec 2018 oraz na początku 2019 roku. Zostały wypożyczone od 
+                firmy Iwobus Piekary Śląskie, a wcześniej należały do MPK Kraków. Autobusy te wyprodukowano w 2006 
+                roku. Pojazdy, które dotarły do Częstochowy w 2018 roku, otrzymały numery 222 i 223, a w 2019 roku
+                — 220, 221 oraz 224–229. Wszystkie zostały przemalowane w barwy częstochowskiego przewoźnika. W 
+                2019 roku MPK odkupiło wszystkie wypożyczone pojazdy. Autobus o numerze 221 został przeznaczony na 
+                części w 2022 roku.
+            </p>
+            <p style="text-indent: 30px;">
+                W 2020 roku MPK Częstochowa wypożyczyło kolejne autobusy od firmy Iwobus. Podobnie jak wcześniej, 
+                były to pojazdy należące pierwotnie do MPK Kraków. Autobusy o numerach 230, 231 i 235 wyprodukowano 
+                w 2006 roku, natomiast 236 — w 2005. Wszystkie miały białe malowanie. Jeszcze w tym samym roku MPK 
+                odkupiło pojazdy 230, 231 i 235. W 2021 roku zakończono eksploatację autobusu 236, a autobus 235 
+                zezłomowano. Pojazd 230 przeznaczono na części. Początkowo taki sam los miał spotkać 231, jednak 
+                ze względu na problemy z autobusem 221, to on został odstawiony, a 231 pozostaje w eksploatacji 
+                do dziś (nadal bez malowania).
+            </p>
+            <p style="text-indent: 30px;">
+                Ostatniego Solarisa Urbino 18 zakupiono w 2023 roku. Został wyprodukowany w 2011 roku dla Mobilis 
+                Warszawa (numer taborowy A732), a w 2020 sprzedano go do Transdev Alpina we Frankfurcie nad Menem 
+                (numer 3736). Stamtąd pojazd odkupiło MPK Częstochowa. Autobus został pomalowany w barwy miejskiego 
+                przewoźnika.
+            </p>            
+        </div>
+        
+        <BR>
+            <h2>Dane technicze:</h2><hr><br>
+        <TABLE class="dane-techniczne"> <!--Tabela pojazdów-->
+            <colgroup>
+                <col style="width: 50%;">
+                <col style="width: 50%;">
+            </colgroup>
+
+            <TR> <!--Nagłówek tabeli-->
+            <TH width="90%" colspan="2" style="font-size: 20px;">Solaris Urbino 18 III W8</TH>
+            </TR>
+
+            <TR class="tabela-hover"> <!--Producent-->
+                <TD class="kolumna-opis">Producent</TD>
+                <TD>Solaris Bus & Coach</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Długość-->
+                <TD class="kolumna-opis">Długość</TD>
+                <TD>18000 mm</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Szerokość-->
+                <TD class="kolumna-opis">Szerokość</TD>
+                <TD>2550 mm</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Wysokość-->
+                <TD class="kolumna-opis">Wysokość</TD>
+                <TD>3090 mm</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Liczba miejsc siedzących-->
+                <TD class="kolumna-opis">Masa</TD>
+                <TD>28 000 KG</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Układ drzwi-->
+                <TD class="kolumna-opis">Układ drzwi</TD>
+                <TD>2-2-2-2</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Wysokość podłogi przy drzwiach-->
+                <TD class="kolumna-opis">Wysokość podłogi przy drzwiach</TD>
+                <TD>320-320-320-320 [mm]</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Liczba miejsc siedzących-->
+                <TD class="kolumna-opis">Po przyklęku</TD>
+                <TD>-75 mm</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Silnik-->
+                <TD class="kolumna-opis">Silnik (moc)</TD>
+                <TD>DAF PE228C (228kW)</TD>
+            </TR>  
+            <TR class="tabela-hover"> <!--Skrzynia biegów-->
+                <TD class="kolumna-opis">Skrzynia Biegów</TD>
+                <TD>Voith D864.3</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Liczba miejsc siedzących-->
+                <TD class="kolumna-opis">Liczba miejsc siedzących</TD>
+                <TD>44</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Liczba miejsc stojących-->
+                <TD class="kolumna-opis">Liczba miejsc stojących</TD>
+                <TD>122</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Udział niskiej podłogi-->
+                <TD class="kolumna-opis">Udział niskiej podłogi</TD>
+                <TD>100%</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Klimatyzacja-->
+                <TD class="kolumna-opis">Klimatyzacja</TD>
+                <TD>Nie</TD>
+            </TR>
+        </TABLE>
+
+        <BR>
+        <TABLE class="dane-techniczne"> <!--Tabela pojazdów-->
+            <colgroup>
+                <col style="width: 50%;">
+                <col style="width: 50%;">
+            </colgroup>
+
+            <TR> <!--Nagłówek tabeli-->
+            <TH width="90%" colspan="2" style="font-size: 20px;">Solaris Urbino 18 III (nr 218)</TH>
+            </TR>
+
+            <TR class="tabela-hover"> <!--Producent-->
+                <TD class="kolumna-opis">Producent</TD>
+                <TD>Solaris Bus & Coach</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Długość-->
+                <TD class="kolumna-opis">Długość</TD>
+                <TD>18000 mm</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Szerokość-->
+                <TD class="kolumna-opis">Szerokość</TD>
+                <TD>2550 mm</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Wysokość-->
+                <TD class="kolumna-opis">Wysokość</TD>
+                <TD>3090 mm</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Liczba miejsc siedzących-->
+                <TD class="kolumna-opis">Masa</TD>
+                <TD>28 000 KG</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Układ drzwi-->
+                <TD class="kolumna-opis">Układ drzwi</TD>
+                <TD>2-2-2-0</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Wysokość podłogi przy drzwiach-->
+                <TD class="kolumna-opis">Wysokość podłogi przy drzwiach</TD>
+                <TD>320-320-320-X [mm]</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Liczba miejsc siedzących-->
+                <TD class="kolumna-opis">Po przyklęku</TD>
+                <TD>-75 mm</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Silnik-->
+                <TD class="kolumna-opis">Silnik (moc)</TD>
+                <TD>DAF PR228U1 (228kW)</TD>
+            </TR>  
+            <TR class="tabela-hover"> <!--Skrzynia biegów-->
+                <TD class="kolumna-opis">Skrzynia Biegów</TD>
+                <TD>ZF 6 AP 1400 B EcoLife</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Liczba miejsc siedzących-->
+                <TD class="kolumna-opis">Liczba miejsc siedzących</TD>
+                <TD>54</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Liczba miejsc stojących-->
+                <TD class="kolumna-opis">Liczba miejsc stojących</TD>
+                <TD>93</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Udział niskiej podłogi-->
+                <TD class="kolumna-opis">Udział niskiej podłogi</TD>
+                <TD>100%</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Klimatyzacja-->
+                <TD class="kolumna-opis">Klimatyzacja</TD>
+                <TD>Tak</TD>
+            </TR>
+        </TABLE>
+
+        <BR>
+        <TABLE class="dane-techniczne"> <!--Tabela pojazdów-->
+            <colgroup>
+                <col style="width: 50%;">
+                <col style="width: 50%;">
+            </colgroup>
+
+            <TR> <!--Nagłówek tabeli-->
+            <TH width="90%" colspan="2" style="font-size: 20px;">Solaris Urbino 18 III (nr 232)</TH>
+            </TR>
+
+            <TR class="tabela-hover"> <!--Producent-->
+                <TD class="kolumna-opis">Producent</TD>
+                <TD>Solaris Bus & Coach</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Długość-->
+                <TD class="kolumna-opis">Długość</TD>
+                <TD>18000 mm</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Szerokość-->
+                <TD class="kolumna-opis">Szerokość</TD>
+                <TD>2550 mm</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Wysokość-->
+                <TD class="kolumna-opis">Wysokość</TD>
+                <TD>3090 mm</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Liczba miejsc siedzących-->
+                <TD class="kolumna-opis">Masa</TD>
+                <TD>28 000 KG</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Układ drzwi-->
+                <TD class="kolumna-opis">Układ drzwi</TD>
+                <TD>2-2-2-2</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Wysokość podłogi przy drzwiach-->
+                <TD class="kolumna-opis">Wysokość podłogi przy drzwiach</TD>
+                <TD>320-320-320-320 [mm]</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Liczba miejsc siedzących-->
+                <TD class="kolumna-opis">Po przyklęku</TD>
+                <TD>-75 mm</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Silnik-->
+                <TD class="kolumna-opis">Silnik (moc)</TD>
+                <TD>DAF PR228U1 (228kW)</TD>
+            </TR>  
+            <TR class="tabela-hover"> <!--Skrzynia biegów-->
+                <TD class="kolumna-opis">Skrzynia Biegów</TD>
+                <TD>Voith D864.5</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Liczba miejsc siedzących-->
+                <TD class="kolumna-opis">Liczba miejsc siedzących</TD>
+                <TD>40</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Liczba miejsc stojących-->
+                <TD class="kolumna-opis">Liczba miejsc stojących</TD>
+                <TD>121</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Udział niskiej podłogi-->
+                <TD class="kolumna-opis">Udział niskiej podłogi</TD>
+                <TD>100%</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Klimatyzacja-->
+                <TD class="kolumna-opis">Klimatyzacja</TD>
+                <TD>Tak</TD>
+            </TR>
+        </TABLE>
+
+
+        <BR>
+        <h2>Spis pojazdów:</h2><hr><br>
+
+        <h3>Solaris Urbino 18 III W8</h3><BR>
+
+        <TABLE class="spis" > <!--Tabela pojazdów-->
+            <TR> <!--Nagłówek tabeli-->
+            <TH width="90px">Numer</TH>
+            <TH width="200px">Malowanie</TH>
+            <TH width="55px">Rok prod.</TH>
+            <TH width="200px">Atrybuty</TH>
+            <TH width="">Uwagi</TH>
+            <TH width="100px">Rejestracja</TH>
+            <TH width="85px">Linki</TH>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>220</TD>
+                <TD>Czerwono-Biało-Szare</TD>
+                <TD>2006</TD>
+                <TD><przeg> <niskopodlogowy> <kamery> <biletkier></TD>
+                <TD>Wypożyczony z Iwobus Piekary Śląskie, od 2019 MPK Częstochowa. Do 2018 MPK Kraków.</TD>
+                <TD>SC 4853U</TD>
+                <TD><A href="https://czgk.pl/categories.php?cat_id=7291" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/7da4b67c-6349-468e-a708-91c61d854fde" target="_blank"><gps1></A></TD>
+            </TR>
+    
+            <TR class="tabela-hover">
+                <TD>221</TD>
+                <TD>Czerwono-Biało-Szare</TD>
+                <TD>2006-2022</TD>
+                <TD><przeg> <niskopodlogowy> <kamery> <biletkier></TD>
+                <TD>Wypożyczony z Iwobus Piekary Śląskie, od 2019 MPK Częstochowa. Do 2018 MPK Kraków.<BR>Odstawiony na części w 2022 roku.</TD>
+                <TD>SC 4854W</TD>
+                <TD><A href="https://czgk.pl/categories.php?cat_id=7292" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/12ec0969-fb3c-4d8f-a908-a5c1ed5685e5" target="_blank"><gps1></A></TD>
+            </TR>
+    
+            <TR class="tabela-hover">
+                <TD>222</TD>
+                <TD>Czerwono-Biało-Szare</TD>
+                <TD>2006</TD>
+                <TD><przeg> <niskopodlogowy> <kamery> <biletkier></TD>
+                <TD>Wypożyczony z Iwobus Piekary Śląskie, od 2019 MPK Częstochowa. Do 2018 MPK Kraków.</TD>
+                <TD>SC 4222X</TD>
+                <TD><A href="https://czgk.pl/categories.php?cat_id=7293" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/3cbae894-732f-4ee8-a587-ca6862281b54" target="_blank"><gps1></A></TD>
+            </TR>
+    
+            <TR class="tabela-hover">
+                <TD>223</TD>
+                <TD>Czerwono-Biało-Szare</TD>
+                <TD>2006</TD>
+                <TD><przeg> <niskopodlogowy> <kamery> <biletkier></TD>
+                <TD>Wypożyczony z Iwobus Piekary Śląskie, od 2019 MPK Częstochowa. Do 2018 MPK Kraków.</TD>
+                <TD>SC 4223X</TD>
+                <TD><A href="https://czgk.pl/categories.php?cat_id=7294" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/cc5c908d-52a0-4054-ab70-e9c6d9927b0c" target="_blank"><gps1></A></TD>
+            </TR>
+    
+            <TR class="tabela-hover">
+                <TD>224</TD>
+                <TD>Czerwono-Biało-Szare</TD>
+                <TD>2006</TD>
+                <TD><przeg> <niskopodlogowy> <kamery> <biletkier></TD>
+                <TD>Wypożyczony z Iwobus Piekary Śląskie, od 2019 MPK Częstochowa. Do 2018 MPK Kraków.</TD>
+                <TD>SC 4224X</TD>
+                <TD><A href="https://czgk.pl/categories.php?cat_id=7295" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/c4aac308-8f98-4ab1-85e6-ff16a02cf430" target="_blank"><gps1></A></TD>
+            </TR>
+    
+            <TR class="tabela-hover">
+                <TD>225</TD>
+                <TD>Czerwono-Biało-Szare</TD>
+                <TD>2006</TD>
+                <TD><przeg> <niskopodlogowy> <kamery> <biletkier></TD>
+                <TD>Wypożyczony z Iwobus Piekary Śląskie, od 2019 MPK Częstochowa. Do 2018 MPK Kraków.</TD>
+                <TD>SC 4850W</TD>
+                <TD><A href="https://czgk.pl/categories.php?cat_id=7387" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/68bcf4d1-7feb-4f73-8413-aa73814f22de" target="_blank"><gps1></A></TD>
+            </TR>
+    
+            <TR class="tabela-hover">
+                <TD>226</TD>
+                <TD>Czerwono-Biało-Szare</TD>
+                <TD>2006</TD>
+                <TD><przeg> <niskopodlogowy> <kamery> <biletkier></TD>
+                <TD>Wypożyczony z Iwobus Piekary Śląskie, od 2019 MPK Częstochowa. Do 2018 MPK Kraków.</TD>
+                <TD>SC 4852W</TD>
+                <TD><A href="https://czgk.pl/categories.php?cat_id=7388" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/b5631268-8c6b-4ff2-b9ad-06c450a93d8a" target="_blank"><gps1></A></TD>
+            </TR>
+    
+            <TR class="tabela-hover">
+                <TD>227</TD>
+                <TD>Czerwono-Biało-Szare</TD>
+                <TD>2006</TD>
+                <TD><przeg> <niskopodlogowy> <kamery> <biletkier></TD>
+                <TD>Wypożyczony z Iwobus Piekary Śląskie, od 2019 MPK Częstochowa. Do 2018 MPK Kraków.</TD>
+                <TD>SC 4227X</TD>
+                <TD><A href="https://czgk.pl/categories.php?cat_id=7398" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/47e83eb6-d67c-45cc-8d18-0b22277b1f51" target="_blank"><gps1></A></TD>
+            </TR>
+    
+            <TR class="tabela-hover">
+                <TD>228</TD>
+                <TD>Czerwono-Biało-Szare</TD>
+                <TD>2006</TD>
+                <TD><przeg> <niskopodlogowy> <kamery> <biletkier></TD>
+                <TD>Wypożyczony z Iwobus Piekary Śląskie, od 2019 MPK Częstochowa. Do 2018 MPK Kraków.</TD>
+                <TD>SC 4228X</TD>
+                <TD><A href="https://czgk.pl/categories.php?cat_id=7399" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/96fd61d8-9b2e-4bcd-a931-617ed7e5c8ed" target="_blank"><gps1></A></TD>
+            </TR>
+    
+            <TR class="tabela-hover">
+                <TD>229</TD>
+                <TD>Czerwono-Biało-Szare</TD>
+                <TD>2006</TD>
+                <TD><przeg> <niskopodlogowy> <kamery> <biletkier></TD>
+                <TD>Wypożyczony z Iwobus Piekary Śląskie, od 2019 MPK Częstochowa. Do 2018 MPK Kraków.</TD>
+                <TD>SC 4851W</TD>
+                <TD><A href="https://czgk.pl/categories.php?cat_id=7412" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/c29cd2b3-7307-4deb-b323-048fadaa4a6f" target="_blank"><gps1></A></TD>
+            </TR>
+    
+            <TR class="tabela-hover">
+                <TD>230</TD>
+                <TD>Białe</TD>
+                <TD>2006-2022</TD>
+                <TD><przeg> <niskopodlogowy> <kamery> <biletkier></TD>
+                <TD>Wypożyczony z Iwobus Piekary Śląskie, od 2020 MPK Częstochowa. Do 2018 MPK Kraków.<BR>Odstawiony na części w 2022 roku.</TD>
+                <TD>SPI 08493</TD>
+                <TD><A href="https://czgk.pl/categories.php?cat_id=8121" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/64e5372b-aa85-4614-8a1b-4578923da9ce" target="_blank"><gps1></A></TD>
+            </TR>
+    
+            <TR class="tabela-hover">
+                <TD>231</TD>
+                <TD>Białe</TD>
+                <TD>2006</TD>
+                <TD><przeg> <niskopodlogowy> <kamery> <biletkier></TD>
+                <TD>Wypożyczony z Iwobus Piekary Śląskie, od 2020 MPK Częstochowa. Do 2018 MPK Kraków.</TD>
+                <TD>SC 731AP</TD>
+                <TD><A href="https://czgk.pl/categories.php?cat_id=8122" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/39da3aab-9713-41ca-a28a-c706a909714a" target="_blank"><gps1></A></TD>
+            </TR>
+                
+            <TR class="tabela-hover">
+                <TD>235</TD>
+                <TD>Białe</TD>
+                <TD>2006-2021</TD>
+                <TD><przeg> <niskopodlogowy> <kamery> <biletkier></TD>
+                <TD><zz><BR>Wypożyczony z Iwobus Piekary Śląskie, od 2020 MPK Częstochowa. Do 2018 MPK Kraków.</TD>
+                <TD>SPI 12378</TD>
+                <TD><A href="https://czgk.pl/categories.php?cat_id=8154" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/b560d50e-d67b-4555-beb5-722c04b30536" target="_blank"><gps1></A></TD>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>236</TD>
+                <TD>Białe</TD>
+                <TD>2005-2022</TD>
+                <TD><przeg> <niskopodlogowy> <kamery> <biletkier></TD>
+                <TD><zz><BR>Wypożyczony z Iwobus Piekary Śląskie (2020-2021).<BR>Do 2018 MPK Kraków.</TD>
+                <TD>SPI 12379</TD>
+                <TD><A href="https://czgk.pl/categories.php?cat_id=8153" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/8f73a64f-caf6-4559-ad10-9a98f32181ba" target="_blank"><gps1></A></TD>
+            </TR>
+        </TABLE><BR>
+
+        <h3>Solaris Urbino 18 III</h3><BR>
+
+        <TABLE class="spis" > <!--Tabela pojazdów-->
+            <TR> <!--Nagłówek tabeli-->
+            <TH width="90px">Numer</TH>
+            <TH width="200px">Malowanie</TH>
+            <TH width="55px">Rok prod.</TH>
+            <TH width="200px">Atrybuty</TH>
+            <TH width="">Uwagi</TH>
+            <TH width="100px">Rejestracja</TH>
+            <TH width="85px">Linki</TH>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>218</TD>
+                <TD>Czerwono-Biało-Szare</TD>
+                <TD>2007</TD>
+                <TD><przeg> <niskopodlogowy> <kamery> <ac> <biletkier></TD>
+                <TD>Kupiony od KVG Kassel [158] w 2018 roku.</TD>
+                <TD>SC 0533U</TD>
+                <TD><A href="https://czgk.pl/categories.php?cat_id=7063" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/a8c4ceff-3ac5-4ba3-b101-9abd4f922fae" target="_blank"><gps1></A></TD>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>232</TD>
+                <TD>Czerwono-Biało-Szare</TD>
+                <TD>2011</TD>
+                <TD><przeg> <niskopodlogowy> <kamery> <ac> <biletkier></TD>
+                <TD>Kupiony od Transdev Alpina Frankfurt am Main [3736] w 2023 roku.<BR>Dawniej w Mobilis Warszawa [A732].</TD>
+                <TD>SC 132CS</TD>
+                <TD><A href="https://czgk.pl/categories.php?cat_id=9142" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/31dad849-8158-4641-83c1-7be72c2db1f5" target="_blank"><gps1></A></TD>
+            </TR>
+        </TABLE>
+
+        <BR>
+        <h2>Stan taboru na przestrzeni lat:</h2><hr><br>
+        <TABLE class="ilostan" > <!--Tabela pojazdów-->
+            <TR> <!--Nagłówek tabeli-->
+                <TH width="70px">Rok</TH>
+                <TH width="130px">Wpisane na stan</TH>
+                <TH width="130px">Skreślone ze stanu</TH>
+                <TH width="100px">Ilość na koniec roku</TH>
+            </TR>
+    
+            <TR>
+                <TD>2018</TD>
+                <TD>3 (218; wyp.222,223)</TD>
+                <TD>-</TD>
+                <TD>3</TD>
+            </TR>
+            <TR>
+                <TD>2019</TD>
+                <TD>8 (wyp.+kup.220-221,224-229; kup.222,223)</TD>
+                <TD>-</TD>
+                <TD>11</TD>
+            </TR>
+            <TR>
+                <TD>2020</TD>
+                <TD>4 (wyp.+kup.230,231,235; wyp.236)</TD>
+                <TD>-</TD>
+                <TD>15</TD>
+            </TR>
+            <TR>
+                <TD>2021</TD>
+                <TD>-</TD>
+                <TD>2 (235; wyp.236)</TD>
+                <TD>13</TD>
+            </TR>
+            <TR>
+                <TD>2022</TD>
+                <TD>-</TD>
+                <TD>2 (221,230)</TD>
+                <TD>11</TD>
+            </TR>
+            <TR>
+                <TD>2023</TD>
+                <TD>1 (232)</TD>
+                <TD>-</TD>
+                <TD>12</TD>
+            </TR>
+            <TR>
+                <TD>2024+</TD>
+                <TD>-</TD>
+                <TD>-</TD>
+                <TD>12</TD>
+            </TR>
+        </TABLE>
+
+        <BR>
+        <ul>
+            <li>wyp. - wypożyczono</li>
+            <li>kup. - kupiono</li>
+            <li>wyp.+kup. - wypożczono i w tym samym roku kupiono</li>
+        </ul>
+        
+
+
+        <BR>
+        <h2>Zdjęcia pojazdów:</h2><hr><br>
+        <div class="galeria">
+            <div class="opis-zdj">» 218</div>
+            <img src="img/SU18III/218/1.jpg" alt="Solaris Urbino 18 III nr 218" class="fullscreen-img">
+            <img src="img/SU18III/218/2.jpg" alt="Solaris Urbino 18 III nr 218" class="fullscreen-img">
+            <img src="img/SU18III/218/3.jpg" alt="Solaris Urbino 18 III nr 218" class="fullscreen-img">
+            <img src="img/SU18III/218/4.jpg" alt="Solaris Urbino 18 III nr 218" class="fullscreen-img">
+            <img src="img/SU18III/218/5.jpg" alt="Solaris Urbino 18 III nr 218" class="fullscreen-img">
+            <div class="opis-zdj">» 220</div>
+            <img src="img/SU18III/220/1.jpg" alt="Solaris Urbino 18 III W8 nr 200" class="fullscreen-img">
+            <div class="opis-zdj">» 221</div>
+            <div class="opis-zdj">» 222</div>
+            <img src="img/SU18III/222/1.jpg" alt="Solaris Urbino 18 III W8 nr 222" class="fullscreen-img">
+            <img src="img/SU18III/222/2.jpg" alt="Solaris Urbino 18 III W8 nr 222" class="fullscreen-img">
+            <img src="img/SU18III/222/3.jpg" alt="Solaris Urbino 18 III W8 nr 222" class="fullscreen-img">
+            <div class="opis-zdj">» 223</div>
+            <img src="img/SU18III/223/1.jpg" alt="Solaris Urbino 18 III W8 nr 223" class="fullscreen-img">
+            <img src="img/SU18III/223/2.jpg" alt="Solaris Urbino 18 III W8 nr 223" class="fullscreen-img">
+            <img src="img/SU18III/223/3.jpg" alt="Solaris Urbino 18 III W8 nr 223" class="fullscreen-img">
+            <img src="img/SU18III/223/4.jpg" alt="Solaris Urbino 18 III W8 nr 223" class="fullscreen-img">
+            <div class="opis-zdj">» 224</div>
+            <img src="img/SU18III/224/1.jpg" alt="Solaris Urbino 18 III W8 nr 224" class="fullscreen-img">
+            <img src="img/SU18III/224/2.jpg" alt="Solaris Urbino 18 III W8 nr 224" class="fullscreen-img">
+            <div class="opis-zdj">» 225</div>
+            <img src="img/SU18III/225/1.jpg" alt="Solaris Urbino 18 III W8 nr 225" class="fullscreen-img">
+            <img src="img/SU18III/225/2.jpg" alt="Solaris Urbino 18 III W8 nr 225" class="fullscreen-img">
+            <div class="opis-zdj">» 226</div>
+            <img src="img/SU18III/226/1.jpg" alt="Solaris Urbino 18 III W8 nr 226" class="fullscreen-img">
+            <div class="opis-zdj">» 227</div>
+            <img src="img/SU18III/227/1.jpg" alt="Solaris Urbino 18 III W8 nr 227" class="fullscreen-img">
+            <img src="img/SU18III/227/2.jpg" alt="Solaris Urbino 18 III W8 nr 227" class="fullscreen-img">
+            <img src="img/SU18III/227/3.jpg" alt="Solaris Urbino 18 III W8 nr 227" class="fullscreen-img">
+            <img src="img/SU18III/227/4.jpg" alt="Solaris Urbino 18 III W8 nr 227" class="fullscreen-img">
+            <img src="img/SU18III/227/5.jpg" alt="Solaris Urbino 18 III W8 nr 227" class="fullscreen-img">
+            <div class="opis-zdj">» 228</div>
+            <img src="img/SU18III/228/1.jpg" alt="Solaris Urbino 18 III W8 nr 228" class="fullscreen-img">
+            <img src="img/SU18III/228/2.jpg" alt="Solaris Urbino 18 III W8 nr 228" class="fullscreen-img">
+            <div class="opis-zdj">» 229</div>
+            <img src="img/SU18III/229/1.jpg" alt="Solaris Urbino 18 III W8 nr 229" class="fullscreen-img">
+            <img src="img/SU18III/229/2.jpg" alt="Solaris Urbino 18 III W8 nr 229" class="fullscreen-img">
+            <img src="img/SU18III/229/3.jpg" alt="Solaris Urbino 18 III W8 nr 229" class="fullscreen-img">
+            <img src="img/SU18III/229/4.jpg" alt="Solaris Urbino 18 III W8 nr 229" class="fullscreen-img">
+            <div class="opis-zdj">» 230</div>
+            <div class="opis-zdj">» 231</div>
+            <img src="img/SU18III/231/1.jpg" alt="Solaris Urbino 18 III W8 nr 231" class="fullscreen-img">
+            <div class="opis-zdj">» 231</div>
+            <img src="img/SU18III/231/1.jpg" alt="Solaris Urbino 18 III W8 nr 232" class="fullscreen-img">
+            <img src="img/SU18III/232/2.jpg" alt="Solaris Urbino 18 III W8 nr 232" class="fullscreen-img">
+            <div class="opis-zdj">» 235</div>
+            <div class="opis-zdj">» 236</div>
+        </div>
+
+        <!--Okno do otwierania zdjęć na całej stronie-->
+        <div id="fullscreenOverlay" class="fullscreen-overlay">
+            <span id="closeBtn">&times;</span>
+            <img id="fullscreenImage" class="fullscreen-image">
+        </div>
+    </div>
+<button onclick="scrollToTop()" id="scrollTopBtn" title="Do góry">⬆</button>
+</body>
+</html>

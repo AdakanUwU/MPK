@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <base href="/MPK/">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Solbus SM18HL Hybryda CNG - MPK Częstochowa</title>
+    <link rel="stylesheet" href="css/style.css"/>
+
+
+    <script src="js/ikony.js" defer></script> <!--wczytywanie ikon-->
+    <script src="js/tabela_link.js" defer></script> <!--wczytywanie klikalnych wierszy tabel-->
+    <script src="js/toogleMenu.js" defer></script><!--Skrypt do listy menu-->
+
+    <script src="js/w_gore.js" defer></script> <!--Skrypt do przycisku przesuwania do samej góry-->
+    <script src="js/zdjecia.js" defer></script> 
+    <script src="js/foto-blok.js" defer></script> <!--Blokada menu kontekstowego na zdjęciach-->
+
+    <style>
+        .kolumna-opis {
+            font-weight: bold;
+        }
+    </style>
+
+
+
+</head>
+<body>
+    <div class="pasek"> <!--Pasek nawigacyjny-->
+    <nav>
+        <label class="logo"><a href="/MPK/"><img src="img/logo_mpk.png" alt="Logo MPK"></a></label>
+        <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+        <ul id="menu">
+        <li><a class="pasek" href="/MPK/">Spis</a></li>
+        <li><a class="pasek" href="autobusy">Autobusy</a></li>
+        <li><a class="pasek" href="tramwaje">Tramwaje</a></li>
+        <li><a class="pasek" href="javascript:void(0)">Trasy</a></li>
+        <li><a class="pasek" href="javascript:void(0)">Pętle</a></li>
+        </ul>
+    </nav>
+    </div>
+
+    <div class="tresc"> <!--Główna treść strony-->
+        <h1>Solbus SM18HL Hybryda CNG</h1><hr />
+        <BR>
+        <img src="img/SM18HL/miniaturka.jpg" alt="Solbus SM18HL Hybrid CNG nr 201" class="fullscreen-img miniatura">
+        <BR>
+
+        <div class="opis-pojazdu">
+            <p style="text-indent: 30px;">
+                W 2015 roku MPK w Częstochowie udało się wygrać dofinansowanie z programu GAZELA na zakup autobusów 
+                hybrydowych elektryczno-gazowych (CNG). Dofinansowanie pokryło 100% kosztów zakupu autobusów 
+                (66 mln zł). Dzięki temu MPK udało się kupić 25 krótkich autobusów oraz 15 autobusów przegubowych. 
+                Dostawcą autobusów został Solbus z Solca Kujawskiego, który zbudował model Solbus SM18HL Hybrid 
+                CNG w oparciu o istniejący już model Solbus Solcity 18.
+            </p>
+            <p style="text-indent: 30px;">
+                Problemy z autobusami zaczęły się już na etapie planowania, ponieważ w ciągu jednego roku Solbus 
+                musiał zaprojektować nową nieistniejącą dotychczas konstrukcję. Ograniczenie czasu spowodowało, że 
+                Solbus nie zdążył zbudować nawet prototypu. Przez nietypową konfigurację pracy silnika, Solbus miał 
+                kłopoty ze znalezieniem producenta. Udało im się znaleźć silniki produkcji firmy Tedom (produkowali 
+                oni silniki stworzone do takiej pracy). Przez sporą pojeność silników do wyprodukowania energii 
+                potrzebne było 12 tysięcy obrotów na minutę (RPM), przez co silnik wytwarzał bardzo dużo hałasu.
+            </p>
+            <p style="text-indent: 30px;">
+                Na początku eksploatacji pojawiało się wiele usterek spowodowanych bardzo ograniczonym czasem, m.in. 
+                nie dokręcone wężyki, źle dobrane reduktory czy błędy w oprogramowaniu. Często psuł się też 
+                superkondensatory. Kulminacyjnym problemem hybryd okazał się pożar  hybrydy nr 210 spowodowany 
+                zwarciem w źle wykonanej instalacji elektrycznej, głownie z powodu użycia zbyt cienkich przewodów 
+                wprowadzonych do otworów stworzonych do większej średnicy. Szpary zalepione były silikonem który po 
+                czasie się wykruszał i woda dostawała się do instalacji. Doprowadziło to do wycofania wszystkich 
+                hybryd w okresie 2017-2020 z eksploatacji, a przegubowych 2017-2021, i do śledztwa prokuratury.
+            </p>
+            <p style="text-indent: 30px;">
+                We współpracy z Autosanem w 2021 roku udało się przywrócić do ruchu testowo hybrydę nr 209. Mimo
+                powrotu do jazdy, autobus wciąż posiadał wiele problemów, więc większość czasu stał a kolejne
+                pojazdy naprawiono dopiero w 2024 roku. Pierwszą przywróconą do ruchu sprawną hybrydą miałą numer
+                203, a następne 201, 202 i 200. 3 marca hybryda 201 podczas obsługi linii 30 zdarzyła się z
+                samochodem osobowym i została odstawiona do naprawy.
+            </p>
+        </div>
+        
+        <BR>
+            <h2>Dane technicze:</h2><hr><br>
+        <TABLE class="dane-techniczne"> <!--Tabela pojazdów-->
+            <colgroup>
+                <col style="width: 50%;">
+                <col style="width: 50%;">
+            </colgroup>
+
+            <TR> <!--Nagłówek tabeli-->
+            <TH width="90%" colspan="2" style="font-size: 20px;">Solbus SM18HL Hybrid</TH>
+            </TR>
+
+            <TR class="tabela-hover"> <!--Producent-->
+                <TD class="kolumna-opis">Producent</TD>
+                <TD>Solbus Sp. z o.o.</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Długość-->
+                <TD class="kolumna-opis">Długość</TD>
+                <TD>18000 mm</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Szerokość-->
+                <TD class="kolumna-opis">Szerokość</TD>
+                <TD>2550 mm</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Wysokość-->
+                <TD class="kolumna-opis">Wysokość</TD>
+                <TD>3350 mm</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Liczba miejsc siedzących-->
+                <TD class="kolumna-opis">Masa</TD>
+                <TD>28 000 KG</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Układ drzwi-->
+                <TD class="kolumna-opis">Układ drzwi</TD>
+                <TD>2-2-2-2</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Wysokość podłogi przy drzwiach-->
+                <TD class="kolumna-opis">Wysokość podłogi przy drzwiach</TD>
+                <TD>320-320-320-320 [mm]</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Liczba miejsc siedzących-->
+                <TD class="kolumna-opis">Po przyklęku</TD>
+                <TD>Brak Danych</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Silnik-->
+                <TD class="kolumna-opis">Silnik (moc)</TD>
+                <TD>Brak danych [Tedom TG230AV T 06 (230kW)]</TD>
+            </TR>  
+            <TR class="tabela-hover"> <!--Skrzynia biegów-->
+                <TD class="kolumna-opis">Skrzynia Biegów</TD>
+                <TD>Brak</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Liczba miejsc siedzących-->
+                <TD class="kolumna-opis">Liczba miejsc siedzących</TD>
+                <TD>43</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Liczba miejsc stojących-->
+                <TD class="kolumna-opis">Liczba miejsc stojących</TD>
+                <TD>100</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Udział niskiej podłogi-->
+                <TD class="kolumna-opis">Udział niskiej podłogi</TD>
+                <TD>100%</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Klimatyzacja-->
+                <TD class="kolumna-opis">Klimatyzacja</TD>
+                <TD>Nie</TD>
+            </TR>
+        </TABLE>
+
+        <BR>
+        <h2>Spis pojazdów:</h2><hr><br>
+
+        <TABLE class="spis" > <!--Tabela pojazdów-->
+            <TR> <!--Nagłówek tabeli-->
+            <TH width="90px">Numer</TH>
+            <TH width="200px">Malowanie</TH>
+            <TH width="55px">Rok prod.</TH>
+            <TH width="200px">Atrybuty</TH>
+            <TH width="">Uwagi</TH>
+            <TH width="100px">Rejestracja</TH>
+            <TH width="85px">Linki</TH>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>196</TD>
+                <TD>Czerwono-Biało-Szare</TD>
+                <TD>2015</TD>
+                <TD><cng> <przeg> <niskopodlogowy> <kamery> <biletkier></TD>
+                <TD>Prezentacja na placu Biegańskiego 8 stycznia 2016.<BR>Odstawiony na części - wadliwy fabrycznie.</TD>
+                <TD>SC 4196P</TD>
+                <TD><A href="https://czgk.pl/categories.php?cat_id=5215" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/201583e3-a023-4a9c-af60-c07adf9f709b" target="_blank"><gps1></A></TD>
+            </TR>
+    
+            <TR class="tabela-hover">
+                <TD>197</TD>
+                <TD>Czerwono-Biało-Szare</TD>
+                <TD>2015</TD>
+                <TD><cng> <przeg> <niskopodlogowy> <kamery> <biletkier></TD>
+                <TD>Prezentacja na placu Biegańskiego 8 stycznia 2016. Odstawiony.</TD>
+                <TD>SC 4197P</TD>
+                <TD><A href="https://czgk.pl/categories.php?cat_id=5216" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/f64710b9-8735-4267-b675-b5f5773a2af8" target="_blank"><gps1></A></TD>
+            </TR>
+    
+            <TR class="tabela-hover">
+                <TD>198</TD>
+                <TD>Czerwono-Biało-Szare</TD>
+                <TD>2015</TD>
+                <TD><cng> <przeg> <niskopodlogowy> <kamery> <biletkier></TD>
+                <TD>Prezentacja na placu Biegańskiego 8 stycznia 2016. Odstawiony.</TD>
+                <TD>SC 4198P</TD>
+                <TD><A href="https://czgk.pl/categories.php?cat_id=5217" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/1120db2f-b1b2-4492-b8b6-a144a2b06953" target="_blank"><gps1></A></TD>
+            </TR>
+    
+            <TR class="tabela-hover">
+                <TD>199</TD>
+                <TD>Czerwono-Biało-Szare</TD>
+                <TD>2015</TD>
+                <TD><cng> <przeg> <niskopodlogowy> <kamery> <biletkier></TD>
+                <TD>Prezentacja na placu Biegańskiego 8 stycznia 2016. Odstawiony.</TD>
+                <TD>SC 4199P</TD>
+                <TD><A href="https://czgk.pl/categories.php?cat_id=5218" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/19ca893e-98c9-4c28-a929-1c60b7445a7d" target="_blank"><gps1></A></TD>
+            </TR>
+    
+            <TR class="tabela-hover">
+                <TD>200</TD>
+                <TD>Czerwono-Biało-Szare</TD>
+                <TD>2015</TD>
+                <TD><cng> <przeg> <niskopodlogowy> <kamery> <biletkier></TD>
+                <TD>Prezentacja na placu Biegańskiego 8 stycznia 2016.<BR>Zmodernizowany w Autosanie.</TD>
+                <TD>SC 4200P</TD>
+                <TD><A href="https://czgk.pl/categories.php?cat_id=5219" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/7b6dd895-a630-4e09-85c6-6ec16c913f19" target="_blank"><gps1></A></TD>
+            </TR>
+    
+            <TR class="tabela-hover">
+                <TD>201</TD>
+                <TD>Czerwono-Biało-Szare</TD>
+                <TD>2015</TD>
+                <TD><cng> <przeg> <niskopodlogowy> <kamery> <biletkier></TD>
+                <TD>Prezentacja na placu Biegańskiego 8 stycznia 2016.<BR>Zmodernizowany w Autosanie.</TD>
+                <TD>SC 4201P</TD>
+                <TD><A href="https://czgk.pl/categories.php?cat_id=5220" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/3e15056d-a0fe-4056-81f8-a68f9ad98835" target="_blank"><gps1></A></TD>
+            </TR>
+    
+            <TR class="tabela-hover">
+                <TD>202</TD>
+                <TD>Czerwono-Biało-Szare</TD>
+                <TD>2015</TD>
+                <TD><cng> <przeg> <niskopodlogowy> <kamery> <biletkier></TD>
+                <TD>Prezentacja na placu Biegańskiego 8 stycznia 2016.<BR>Zmodernizowany w Autosanie.</TD>
+                <TD>SC 4202P</TD>
+                <TD><A href="https://czgk.pl/categories.php?cat_id=5221" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/e93f99ad-24ff-4348-bac9-4918511aa4d3" target="_blank"><gps1></A></TD>
+            </TR>
+    
+            <TR class="tabela-hover">
+                <TD>203</TD>
+                <TD>Czerwono-Biało-Szare</TD>
+                <TD>2015</TD>
+                <TD><cng> <przeg> <niskopodlogowy> <kamery> <biletkier></TD>
+                <TD>Prezentacja na placu Biegańskiego 8 stycznia 2016.<BR>Zmodernizowany w Autosanie.</TD>
+                <TD>SC 4203P</TD>
+                <TD><A href="https://czgk.pl/categories.php?cat_id=5222" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/b90e442f-a627-4a48-870c-a7ccb5dc402b" target="_blank"><gps1></A></TD>
+            </TR>
+    
+            <TR class="tabela-hover">
+                <TD>204</TD>
+                <TD>Czerwono-Biało-Szare</TD>
+                <TD>2015</TD>
+                <TD><cng> <przeg> <niskopodlogowy> <kamery> <biletkier></TD>
+                <TD>Prezentacja na placu Biegańskiego 8 stycznia 2016. Odstawiony.</TD>
+                <TD>SC 4204P</TD>
+                <TD><A href="https://czgk.pl/categories.php?cat_id=5223" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/36d5cba6-066e-4ef1-adad-757ace4dc7c5" target="_blank"><gps1></A></TD>
+            </TR>
+    
+            <TR class="tabela-hover">
+                <TD>205</TD>
+                <TD>Czerwono-Biało-Szare</TD>
+                <TD>2015</TD>
+                <TD><cng> <przeg> <niskopodlogowy> <kamery> <biletkier></TD>
+                <TD>Prezentacja na placu Biegańskiego 8 stycznia 2016. Odstawiony.</TD>
+                <TD>SC 4205P</TD>
+                <TD><A href="https://czgk.pl/categories.php?cat_id=5224" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/7e43d061-2046-4b2d-8bdc-f48de67eae5b" target="_blank"><gps1></A></TD>
+            </TR>
+    
+            <TR class="tabela-hover">
+                <TD>206</TD>
+                <TD>Czerwono-Biało-Szare</TD>
+                <TD>2015</TD>
+                <TD><cng> <przeg> <niskopodlogowy> <kamery> <biletkier></TD>
+                <TD>Prezentacja na placu Biegańskiego 8 stycznia 2016. Odstawiony.</TD>
+                <TD>SC 4206P</TD>
+                <TD><A href="https://czgk.pl/categories.php?cat_id=5225" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/def27258-ca71-4451-8d60-a1265dd6a629" target="_blank"><gps1></A></TD>
+            </TR>
+    
+            <TR class="tabela-hover">
+                <TD>207</TD>
+                <TD>Czerwono-Biało-Szare</TD>
+                <TD>2015</TD>
+                <TD><cng> <przeg> <niskopodlogowy> <kamery> <biletkier></TD>
+                <TD>Prezentacja na placu Biegańskiego 8 stycznia 2016. Odstawiony.</TD>
+                <TD>SC 4207P</TD>
+                <TD><A href="https://czgk.pl/categories.php?cat_id=5226" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/a6bb9f4e-f928-44ae-8e26-38c16715e1ab" target="_blank"><gps1></A></TD>
+            </TR>
+    
+            <TR class="tabela-hover">
+                <TD>208</TD>
+                <TD>Czerwono-Biało-Szare</TD>
+                <TD>2015</TD>
+                <TD><cng> <przeg> <niskopodlogowy> <kamery> <biletkier></TD>
+                <TD>Prezentacja na placu Biegańskiego 8 stycznia 2016. Odstawiony.</TD>
+                <TD>SC 4208P</TD>
+                <TD><A href="https://czgk.pl/categories.php?cat_id=5227" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/27345f71-7bb6-42ad-a43b-8595058fbdc9" target="_blank"><gps1></A></TD>
+            </TR>
+    
+            <TR class="tabela-hover">
+                <TD>209</TD>
+                <TD>Czerwono-Biało-Szare</TD>
+                <TD>2015</TD>
+                <TD><cng> <przeg> <niskopodlogowy> <kamery> <biletkier></TD>
+                <TD>Prezentacja na placu Biegańskiego 8 stycznia 2016.<BR>Zmodernizowany w Autosanie.</TD>
+                <TD>SC 4209P</TD>
+                <TD><A href="https://czgk.pl/categories.php?cat_id=5228" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/0c923204-1b49-40fa-820d-984a849c755f" target="_blank"><gps1></A></TD>
+            </TR>
+    
+            <TR class="tabela-hover">
+                <TD>210</TD>
+                <TD>Czerwono-Biało-Szare</TD>
+                <TD>2015</TD>
+                <TD><cng> <przeg> <niskopodlogowy> <kamery> <biletkier></TD>
+                <TD>Prezentacja na placu Biegańskiego 8 stycznia 2016.<BR>Autobus spalił się na ul. Legionów 29 kwietnia 2017.</TD>
+                <TD>SC 4210P</TD>
+                <TD><A href="https://czgk.pl/categories.php?cat_id=5229" target="_blank">CZGK</A> </TD>
+            </TR>
+        </TABLE>
+
+
+
+        <BR>
+        <h2>Stan taboru na przestrzeni lat:</h2><hr><br>
+        <TABLE class="ilostan" > <!--Tabela pojazdów-->
+            <TR> <!--Nagłówek tabeli-->
+                <TH width="70px">Rok</TH>
+                <TH width="130px">Wpisane na stan</TH>
+                <TH width="130px">Skreślone ze stanu</TH>
+                <TH width="100px">Ilość na koniec roku</TH>
+            </TR>
+    
+            <TR>
+                <TD>2015</TD>
+                <TD>15 (196-210)</TD>
+                <TD>-</TD>
+                <TD>15</TD>
+            </TR>
+            <TR>
+                <TD>2016+</TD>
+                <TD>5 (190-195)</TD>
+                <TD>-</TD>
+                <TD>15</TD>
+            </TR>
+        </TABLE>
+
+
+        <BR>
+        <h2>Zdjęcia pojazdów:</h2><hr><br>
+        <div class="galeria">
+            <div class="opis-zdj">» 196</div>
+            <div class="opis-zdj">» 197</div>
+            <div class="opis-zdj">» 198</div>
+            <div class="opis-zdj">» 199</div>
+            <div class="opis-zdj">» 200</div>
+            <img src="img/SM18HL/200/1.jpg" alt="Solbus SM18HL Hybrid CNG nr 200" class="fullscreen-img">
+            <div class="opis-zdj">» 201</div>
+            <img src="img/SM18HL/201/1.jpg" alt="Solbus SM18HL Hybrid CNG nr 201" class="fullscreen-img">
+            <img src="img/SM18HL/201/2.jpg" alt="Solbus SM18HL Hybrid CNG nr 201" class="fullscreen-img">
+            <img src="img/SM18HL/201/3.jpg" alt="Solbus SM18HL Hybrid CNG nr 201" class="fullscreen-img">
+            <div class="opis-zdj">» 202</div>
+            <img src="img/SM18HL/202/1.jpg" alt="Solbus SM18HL Hybrid CNG nr 202" class="fullscreen-img">
+            <img src="img/SM18HL/202/2.jpg" alt="Solbus SM18HL Hybrid CNG nr 202" class="fullscreen-img">
+            <img src="img/SM18HL/202/3.jpg" alt="Solbus SM18HL Hybrid CNG nr 202" class="fullscreen-img">
+            <div class="opis-zdj">» 203</div>
+            <img src="img/SM18HL/203/1.jpg" alt="Solbus SM18HL Hybrid CNG nr 203" class="fullscreen-img">
+            <img src="img/SM18HL/203/2.jpg" alt="Solbus SM18HL Hybrid CNG nr 203" class="fullscreen-img">
+            <img src="img/SM18HL/203/3.jpg" alt="Solbus SM18HL Hybrid CNG nr 203" class="fullscreen-img">
+            <div class="opis-zdj">» 204</div>
+            <div class="opis-zdj">» 205</div>
+            <div class="opis-zdj">» 206</div>
+            <div class="opis-zdj">» 207</div>
+            <div class="opis-zdj">» 208</div>
+            <div class="opis-zdj">» 209</div>
+            <div class="opis-zdj">» 210</div>
+        </div>
+
+        <!--Okno do otwierania zdjęć na całej stronie-->
+        <div id="fullscreenOverlay" class="fullscreen-overlay">
+            <span id="closeBtn">&times;</span>
+            <img id="fullscreenImage" class="fullscreen-image">
+        </div>
+    </div>
+<button onclick="scrollToTop()" id="scrollTopBtn" title="Do góry">⬆</button>
+</body>
+</html>

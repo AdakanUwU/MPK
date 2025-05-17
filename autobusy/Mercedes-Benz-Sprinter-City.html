@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <base href="/MPK/">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Mercedes-Benz Sprinter City - MPK Częstochowa</title>
+    <link rel="stylesheet" href="css/style.css"/>
+
+    <script src="js/ikony.js" defer></script> <!--wczytywanie ikon-->
+    <script src="js/tabela_link.js" defer></script> <!--wczytywanie klikalnych wierszy tabel-->
+    <script src="js/toogleMenu.js" defer></script><!--Skrypt do listy menu-->
+
+    <script src="js/w_gore.js" defer></script> <!--Skrypt do przycisku przesuwania do samej góry-->
+    <script src="js/zdjecia.js" defer></script> 
+    <script src="js/foto-blok.js" defer></script> <!--Blokada menu kontekstowego na zdjęciach-->
+
+    <style>
+        .kolumna-opis {
+            font-weight: bold;
+        }
+    </style>
+
+
+
+</head>
+<body>
+    <div class="pasek"> <!--Pasek nawigacyjny-->
+    <nav>
+        <label class="logo"><a href="/MPK/"><img src="img/logo_mpk.png" alt="Logo MPK"></a></label>
+        <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+        <ul id="menu">
+        <li><a class="pasek" href="/MPK/">Spis</a></li>
+        <li><a class="pasek" href="autobusy">Autobusy</a></li>
+        <li><a class="pasek" href="tramwaje">Tramwaje</a></li>
+        <li><a class="pasek" href="javascript:void(0)">Trasy</a></li>
+        <li><a class="pasek" href="javascript:void(0)">Pętle</a></li>
+        </ul>
+    </nav>
+    </div>
+
+    <div class="tresc"> <!--Główna treść strony-->
+        <h1>Mercedes-Benz Sprinter City</h1><hr />
+        <BR>
+        <img src="img/MB-Sprinter-City/miniaturka.jpg" alt="Mercedes-Benz Sprinter City nr 414" class="fullscreen-img miniatura">
+        <BR>
+
+        <div class="opis-pojazdu">
+            <p style="text-indent: 30px;">
+            Pierwszy minibus Mercedes-Benz Sprinter City z 2008 roku został kupiony w 2022 roku. Otrzymał numer 400 
+            oraz  pomalowano go w barwy MPK. Początkowo był testowany na linii 18, gdzie zazwyczaj większe pojazdy 
+            nie były potrzebne. Następnie jeździł na zastępczej linii 92, gdzie wymagane było zawracanie przez
+            teren Polontexu, gdzie zwykłe pojazdy się nie mieściły. Obecnie kursuje na linii 16 oraz jest
+            wynajmowany do przewozu dzieci oraz niepełnosprawnych.
+            </p><p style="text-indent: 30px;">
+            Kolejne minibusy zostały wypożyczone w 2024 roku od Iwobus Piekary Śląskie w celu obsługi nowej linii
+            16 kursujących po wąskich uliczkach Parkitki i Północy gdzie duże pojazdy nie mieściły by się. 
+            Wyprodukowane były w 2011 roku. Oznaczono je numerami 413 i 414. Od poprzedniego egzemplarza 
+            różniły się dodatkowymi drzwiami z tyłu i nowszym wyposażeniem.
+            </p><p style="text-indent: 30px;">
+            Ostatni minibus Mercedesa zakupiono w 2025. Otrzymał numer 415 oraz nie został przemalowany. Jest
+            najnowszy ze wszystkich, wyprodukowano go w 2014 roku.
+            </p>
+        </div>
+        
+        <BR>
+            <h2>Dane technicze:</h2><hr><br>
+        <TABLE class="dane-techniczne"> <!--Tabela pojazdów-->
+            <colgroup>
+                <col style="width: 50%;">
+                <col style="width: 50%;">
+            </colgroup>
+
+            <TR> <!--Nagłówek tabeli-->
+            <TH width="90%" colspan="2" style="font-size: 20px;">Mercedes-Benz 515 CDI Sprinter City 35</TH>
+            </TR>
+
+            <TR class="tabela-hover"> <!--Producent-->
+                <TD class="kolumna-opis">Producent</TD>
+                <TD>Mercedes-Benz</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Długość-->
+                <TD class="kolumna-opis">Długość</TD>
+                <TD>6960 mm</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Szerokość-->
+                <TD class="kolumna-opis">Szerokość</TD>
+                <TD>1990 mm</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Wysokość-->
+                <TD class="kolumna-opis">Wysokość</TD>
+                <TD>2920 mm</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Liczba miejsc siedzących-->
+                <TD class="kolumna-opis">Masa</TD>
+                <TD>5 000 KG</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Układ drzwi-->
+                <TD class="kolumna-opis">Układ drzwi</TD>
+                <TD>0-2-0</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Wysokość podłogi przy drzwiach-->
+                <TD class="kolumna-opis">Wysokość podłogi przy drzwiach</TD>
+                <TD>Brak danych</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Liczba miejsc siedzących-->
+                <TD class="kolumna-opis">Po przyklęku</TD>
+                <TD>Brak możliwości przyklęku</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Silnik-->
+                <TD class="kolumna-opis">Silnik (moc)</TD>
+                <TD>Mercedes-Benz OM 646 DE 22 LA [646.989/990] (110 kW)</TD>
+            </TR>  
+            <TR class="tabela-hover"> <!--Skrzynia biegów-->
+                <TD class="kolumna-opis">Skrzynia Biegów</TD>
+                <TD>Mercedes-Benz W 5 A 380</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Liczba miejsc siedzących-->
+                <TD class="kolumna-opis">Liczba miejsc siedzących</TD>
+                <TD>11</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Liczba miejsc stojących-->
+                <TD class="kolumna-opis">Liczba miejsc stojących</TD>
+                <TD>12</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Udział niskiej podłogi-->
+                <TD class="kolumna-opis">Udział niskiej podłogi</TD>
+                <TD>40%</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Klimatyzacja-->
+                <TD class="kolumna-opis">Klimatyzacja</TD>
+                <TD>Nie</TD>
+            </TR>
+        </TABLE><BR>
+
+        <TABLE class="dane-techniczne"> <!--Tabela pojazdów-->
+            <colgroup>
+                <col style="width: 50%;">
+                <col style="width: 50%;">
+            </colgroup>
+
+            <TR> <!--Nagłówek tabeli-->
+            <TH width="90%" colspan="2" style="font-size: 20px;">Mercedes-Benz 516 CDI Sprinter City 65</TH>
+            </TR>
+
+            <TR class="tabela-hover"> <!--Producent-->
+                <TD class="kolumna-opis">Producent</TD>
+                <TD>Mercedes-Benz</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Długość-->
+                <TD class="kolumna-opis">Długość</TD>
+                <TD>7700 mm</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Szerokość-->
+                <TD class="kolumna-opis">Szerokość</TD>
+                <TD>1993 mm</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Wysokość-->
+                <TD class="kolumna-opis">Wysokość</TD>
+                <TD>2845 mm</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Liczba miejsc siedzących-->
+                <TD class="kolumna-opis">Masa</TD>
+                <TD>5 650 KG</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Układ drzwi-->
+                <TD class="kolumna-opis">Układ drzwi</TD>
+                <TD>0-2-1</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Wysokość podłogi przy drzwiach-->
+                <TD class="kolumna-opis">Wysokość podłogi przy drzwiach</TD>
+                <TD>Brak danych</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Liczba miejsc siedzących-->
+                <TD class="kolumna-opis">Po przyklęku</TD>
+                <TD>Brak możliwości przyklęku</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Silnik-->
+                <TD class="kolumna-opis">Silnik (moc)</TD>
+                <TD>Mercedes-Benz OM 651 DE 22 LA [*E5+E6] (120 kW)</TD>
+            </TR>  
+            <TR class="tabela-hover"> <!--Skrzynia biegów-->
+                <TD class="kolumna-opis">Skrzynia Biegów</TD>
+                <TD>Brak danych</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Liczba miejsc siedzących-->
+                <TD class="kolumna-opis">Liczba miejsc siedzących</TD>
+                <TD>13</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Liczba miejsc stojących-->
+                <TD class="kolumna-opis">Liczba miejsc stojących</TD>
+                <TD>13</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Udział niskiej podłogi-->
+                <TD class="kolumna-opis">Udział niskiej podłogi</TD>
+                <TD>40%</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Klimatyzacja-->
+                <TD class="kolumna-opis">Klimatyzacja</TD>
+                <TD>Nie</TD>
+            </TR>
+        </TABLE><BR>
+
+        <TABLE class="dane-techniczne"> <!--Tabela pojazdów-->
+            <colgroup>
+                <col style="width: 50%;">
+                <col style="width: 50%;">
+            </colgroup>
+
+            <TR> <!--Nagłówek tabeli-->
+            <TH width="90%" colspan="2" style="font-size: 20px;">Mercedes-Benz 516 CDI / Altas Cityline</TH>
+            </TR>
+
+            <TR class="tabela-hover"> <!--Producent-->
+                <TD class="kolumna-opis">Producent</TD>
+                <TD>Atlas</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Długość-->
+                <TD class="kolumna-opis">Długość</TD>
+                <TD>7367 mm</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Szerokość-->
+                <TD class="kolumna-opis">Szerokość</TD>
+                <TD>2020 mm</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Wysokość-->
+                <TD class="kolumna-opis">Wysokość</TD>
+                <TD>2880 mm</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Liczba miejsc siedzących-->
+                <TD class="kolumna-opis">Masa</TD>
+                <TD>5 000 KG</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Układ drzwi-->
+                <TD class="kolumna-opis">Układ drzwi</TD>
+                <TD>0-2-0</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Wysokość podłogi przy drzwiach-->
+                <TD class="kolumna-opis">Wysokość podłogi przy drzwiach</TD>
+                <TD>Brak danych</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Liczba miejsc siedzących-->
+                <TD class="kolumna-opis">Po przyklęku</TD>
+                <TD>Brak możliwości przyklęku</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Silnik-->
+                <TD class="kolumna-opis">Silnik (moc)</TD>
+                <TD>Mercedes-Benz OM 651 DE 22 LA [651.955] (120 kW)</TD>
+            </TR>  
+            <TR class="tabela-hover"> <!--Skrzynia biegów-->
+                <TD class="kolumna-opis">Skrzynia Biegów</TD>
+                <TD>Brak danych</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Liczba miejsc siedzących-->
+                <TD class="kolumna-opis">Liczba miejsc siedzących</TD>
+                <TD>17</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Liczba miejsc stojących-->
+                <TD class="kolumna-opis">Liczba miejsc stojących</TD>
+                <TD>6</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Udział niskiej podłogi-->
+                <TD class="kolumna-opis">Udział niskiej podłogi</TD>
+                <TD>40%</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Klimatyzacja-->
+                <TD class="kolumna-opis">Klimatyzacja</TD>
+                <TD>Nie</TD>
+            </TR>
+        </TABLE>
+
+        <BR>
+        <h2>Spis pojazdów:</h2><hr><br>
+
+        <h3>Mercedes-Benz 515 CDI Sprinter City 35</h3><BR>
+
+        <TABLE class="spis" > <!--Tabela pojazdów-->
+            <TR> <!--Nagłówek tabeli-->
+            <TH width="90px">Numer</TH>
+            <TH width="200px">Malowanie</TH>
+            <TH width="55px">Rok prod.</TH>
+            <TH width="200px">Atrybuty</TH>
+            <TH width="">Uwagi</TH>
+            <TH width="100px">Rejestracja</TH>
+            <TH width="85px">Linki</TH>
+            </TR>
+    
+            <TR class="tabela-hover">
+                <TD>400</TD>
+                <TD>Czerwono-Biało-Szare</TD>
+                <TD>2008</TD>
+                <TD><niskopodlogowy> <biletkier></TD>
+                <TD>Od 2022 MPK w Częstochowie</TD>
+                <TD>SC 400AX</TD>
+                <TD><A href="https://czgk.pl/categories.php?cat_id=8561" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/cf67c431-81f0-48fc-b3ad-59f7a3fb1a24" target="_blank"><gps1></A></TD>
+            </TR>
+        </TABLE><BR>
+
+        <h3>Mercedes-Benz 516 CDI Sprinter City 65</h3><BR>
+
+            <TABLE class="spis" > <!--Tabela pojazdów-->
+                <TR> <!--Nagłówek tabeli-->
+                <TH width="90px">Numer</TH>
+                <TH width="200px">Malowanie</TH>
+                <TH width="55px">Rok prod.</TH>
+                <TH width="200px">Atrybuty</TH>
+                <TH width="">Uwagi</TH>
+                <TH width="100px">Rejestracja</TH>
+                <TH width="85px">Linki</TH>
+                </TR>
+        
+                <TR class="tabela-hover">
+                    <TD>413</TD>
+                    <TD>Czerwono-Białe</TD>
+                    <TD>2011</TD>
+                    <TD><niskopodlogowy> <biletkier></TD>
+                    <TD>Od 2024 wypożyczony z Iwobus Piekary Śląskie.</TD>
+                    <TD>SPI 24045</TD>
+                    <TD><A href="https://czgk.pl/categories.php?cat_id=10157" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/233efa86-dee9-45d5-9ddd-eebb22cd3c9c" target="_blank"><gps1></A></TD>
+                </TR>
+
+                <TR class="tabela-hover">
+                    <TD>414</TD>
+                    <TD>Czerwono-Białe</TD>
+                    <TD>2011</TD>
+                    <TD><niskopodlogowy> <biletkier></TD>
+                    <TD>Od 2024 wypożyczony z Iwobus Piekary Śląskie.</TD>
+                    <TD>SPI 24035</TD>
+                    <TD><A href="https://czgk.pl/categories.php?cat_id=10158" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/e3751bca-fb79-4ddd-9c17-81881207d078" target="_blank"><gps1></A></TD>
+                </TR>
+            </TABLE><BR>
+
+            <h3>Mercedes-Benz 516 CDI / Altas Cityline</h3><BR>
+
+            <TABLE class="spis" > <!--Tabela pojazdów-->
+                <TR> <!--Nagłówek tabeli-->
+                <TH width="90px">Numer</TH>
+                <TH width="200px">Malowanie</TH>
+                <TH width="55px">Rok prod.</TH>
+                <TH width="200px">Atrybuty</TH>
+                <TH width="">Uwagi</TH>
+                <TH width="100px">Rejestracja</TH>
+                <TH width="85px">Linki</TH>
+                </TR>
+        
+                <TR class="tabela-hover">
+                    <TD>415</TD>
+                    <TD>Białe</TD>
+                    <TD>2014</TD>
+                    <TD><niskopodlogowy> <biletkier></TD>
+                    <TD>Od 2025 MPK w Częstochowie</TD>
+                    <TD>SC 909EN</TD>
+                    <TD><!--<A href="https://czgk.pl/categories.php?cat_id=8561" target="_blank">CZGK</A>--> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/cf67c431-81f0-48fc-b3ad-59f7a3fb1a24" target="_blank"><gps1></A></TD>
+                </TR>
+            </TABLE>
+
+        <BR>
+        <h2>Stan taboru na przestrzeni lat:</h2><hr><br>
+        <TABLE class="ilostan" > <!--Tabela pojazdów-->
+            <TR> <!--Nagłówek tabeli-->
+                <TH width="70px">Rok</TH>
+                <TH width="130px">Wpisane na stan</TH>
+                <TH width="130px">Skreślone ze stanu</TH>
+                <TH width="100px">Ilość na koniec roku</TH>
+            </TR>
+    
+            <TR>
+                <TD>2022</TD>
+                <TD>1 (400)</TD>
+                <TD>-</TD>
+                <TD>1</TD>
+            </TR>
+            <TR>
+                <TD>2024</TD>
+                <TD>-</TD>
+                <TD>-</TD>
+                <TD>1</TD>
+            </TR>
+            <TR>
+                <TD>2024</TD>
+                <TD>2 (413-414)</TD>
+                <TD>-</TD>
+                <TD>3</TD>
+            </TR>
+            <TR>
+                <TD>2025</TD>
+                <TD>1 (415)</TD>
+                <TD>-</TD>
+                <TD>4</TD>
+            </TR>
+        </TABLE>
+
+
+        <BR>
+        <h2>Zdjęcia pojazdów:</h2><hr><br>
+        <div class="galeria">
+            <div class="opis-zdj">» 400</div>
+            <img src="img/MB-sprinter-city/400/1.jpg" alt="Mercedes-Benz 515 CDI Sprinter City 35 nr 400" class="fullscreen-img">
+            <div class="opis-zdj">» 413</div>
+            <div class="opis-zdj">» 414</div>
+            <img src="img/MB-sprinter-city/414/1.jpg" alt="Mercedes-Benz 516 CDI Sprinter City 6 nr 414" class="fullscreen-img">
+            <img src="img/MB-sprinter-city/414/2.jpg" alt="Mercedes-Benz 516 CDI Sprinter City 6 nr 414" class="fullscreen-img">
+            <div class="opis-zdj">» 415</div>
+            <img src="img/MB-sprinter-city/415/1.jpg" alt="Mercedes-Benz 516 CDI / Altas Cityline nr 415" class="fullscreen-img">
+            <img src="img/MB-sprinter-city/415/2.jpg" alt="Mercedes-Benz 516 CDI / Altas Cityline nr 415" class="fullscreen-img">        
+            <img src="img/MB-sprinter-city/415/3.jpg" alt="Mercedes-Benz 516 CDI / Altas Cityline nr 415" class="fullscreen-img">       
+        </div>
+
+        <!--Okno do otwierania zdjęć na całej stronie-->
+        <div id="fullscreenOverlay" class="fullscreen-overlay">
+            <span id="closeBtn">&times;</span>
+            <img id="fullscreenImage" class="fullscreen-image">
+        </div>
+    </div>
+<button onclick="scrollToTop()" id="scrollTopBtn" title="Do góry">⬆</button>
+</body>
+</html>
