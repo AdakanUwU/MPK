@@ -579,3 +579,22 @@ zz {
   font-weight: bold;
   color: red;
 }
+
+.tresc-404 {
+  width: 100%;
+  max-width: 800px; /* lub inna max szerokość jaka Ci pasuje */
+  margin: 80px auto 15px auto;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+
+.tresc-404 img {
+  width: 100%;         /* dopasuj do szerokości kontenera */
+  height: auto;        /* zachowaj proporcje */
+  max-height: 85vh;    /* maksymalna wysokość to 80% wysokości okna */
+  display: block;
+  margin: 0 auto;      /* wyśrodkuj w poziomie */
+  object-fit: contain; /* dobrze dopasowuje obraz wewnątrz */
+}
+
+

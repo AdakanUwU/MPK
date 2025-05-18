@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Błąd 404 - MPK Częstochowa</title>
+    <link rel="stylesheet" href="css/style.css"/>
+
+    <base href="/MPK/">
+
+    <script src="js/ikony.js" defer></script> <!--wczytywanie ikon-->
+    <script src="js/tabela_link.js" defer></script> <!--wczytywanie klikalnych wierszy tabel-->
+
+    <script src="js/toogleMenu.js" defer></script><!--Skrypt do listy menu-->
+
+    <script src="js/w_gore.js" defer></script> <!--Skrypt do przycisku przesuwania do samej góry-->
+
+    <script src="js/filtrowanie.js" defer></script>             
+</head>
+<body style="overflow-y: hidden">
+  <div class="pasek"> <!--Pasek nawigacyjny-->
+    <nav>
+      <label class="logo"><a href="/MPK/"><img src="img/logo_mpk.png" alt="Logo MPK"></a></label>
+      <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+      <ul id="menu">
+        <li><a class="pasek" href="javascript:void(0)">Spis</a></li>
+        <li><a class="pasek" href="autobusy">Autobusy</a></li>
+        <li><a class="pasek" href="tramwaje">Tramwaje</a></li>
+        <li><a class="pasek" href="javascript:void(0)">Trasy</a></li>
+        <li><a class="pasek" href="javascript:void(0)">Pętle</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <div class="tresc tresc-404"> <!--Główna treśćstrony-->
+    <img src="img/404.png" alt="404" class="error-img">
+  </div>
+<button onclick="scrollToTop()" id="scrollTopBtn" title="Do góry">⬆</button>
+</body>
+</html>
