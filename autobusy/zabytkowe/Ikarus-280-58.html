@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <base href="/MPK/">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Ikarus 280.58 - MPK Częstochowa</title>
+    <link rel="stylesheet" href="css/style.css"/>
+
+
+    <script src="js/ikony.js" defer></script> <!--wczytywanie ikon-->
+    <script src="js/tabela_link.js" defer></script> <!--wczytywanie klikalnych wierszy tabel-->
+    <script src="js/toogleMenu.js" defer></script><!--Skrypt do listy menu-->
+
+    <script src="js/w_gore.js" defer></script> <!--Skrypt do przycisku przesuwania do samej góry-->
+    <script src="js/zdjecia.js" defer></script> 
+    <script src="js/foto-blok.js" defer></script> <!--Blokada menu kontekstowego na zdjęciach-->
+
+    <style>
+        .kolumna-opis {
+            font-weight: bold;
+        }
+    </style>
+
+
+
+</head>
+<body>
+    <div class="pasek"> <!--Pasek nawigacyjny-->
+    <nav>
+        <label class="logo"><a href="/MPK/"><img src="img/logo_mpk.png" alt="Logo MPK"></a></label>
+        <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+        <ul id="menu">
+        <li><a class="pasek" href="/MPK/">Spis</a></li>
+        <li><a class="pasek" href="autobusy">Autobusy</a></li>
+        <li><a class="pasek" href="tramwaje">Tramwaje</a></li>
+        <li><a class="pasek" href="javascript:void(0)">Trasy</a></li>
+        <li><a class="pasek" href="javascript:void(0)">Pętle</a></li>
+        </ul>
+    </nav>
+    </div>
+
+    <div class="tresc"> <!--Główna treść strony-->
+        <h1>Ikarus 280.58</h1><hr />
+        <BR>
+        <img src="img/Ikarus280-58/miniaturka.jpg" alt="Ikarus 280.58 nr 358" class="fullscreen-img miniatura">
+        <BR>
+
+        <div class="opis-pojazdu">
+            <p style="text-indent: 30px;">
+            W 1991 roku Miejskie Przedsiębiorstwo Komunikacyjne w Częstochowie wzbogaciło swój tabor o trzy 
+            przegubowe autobusy Ikarus 280.58, oznaczone numerami taborowymi #357, #358 i #359. Były to pierwsze 
+            w Częstochowie Ikarusy z automatyczną skrzynią biegów, co stanowiło istotne udogodnienie dla kierowców 
+            i przyczyniło się do płynniejszej jazdy w miejskich warunkach.
+            </p><p style="text-indent: 30px;">
+            Ikarusy 280.58 były intensywnie eksploatowane na liniach o dużym natężeniu ruchu przez ponad dwie dekady.
+            Z czasem, ze względu na postępujące zużycie oraz wprowadzanie do taboru nowszych, łatwiejszych w eksploatacji
+            pojazdów (280.58 były technicznie bliżej Ikarusów 280.26, niż 280.70E) pojawiały się coraz rzadziej 
+            pojawiały się na liniach. Dwie sztuki wycofano w 2016 roku i skasowano w 2017 roku. Autobus nr 358 
+            został zachowany w celach historycznych, jednak ze względu na brak funduszy jego renowacja nie odbędzie 
+            się w najbliższym czasie.
+            </p>
+        </div>
+        
+        <BR>
+        <h2>Dane technicze:</h2><hr><br>
+        <TABLE class="dane-techniczne"> <!--Tabela pojazdów-->
+            <colgroup>
+                <col style="width: 50%;">
+                <col style="width: 50%;">
+            </colgroup>
+
+            <TR> <!--Nagłówek tabeli-->
+            <TH width="90%" colspan="2" style="font-size: 20px;">Ikarus 280.58</TH>
+            </TR>
+
+            <TR class="tabela-hover"> <!--Producent-->
+                <TD class="kolumna-opis">Producent</TD>
+                <TD>Ikarus</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Długość-->
+                <TD class="kolumna-opis">Długość</TD>
+                <TD>16 500 mm</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Szerokość-->
+                <TD class="kolumna-opis">Szerokość</TD>
+                <TD>2500 mm</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Wysokość-->
+                <TD class="kolumna-opis">Wysokość</TD>
+                <TD>3040 mm</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Liczba miejsc siedzących-->
+                <TD class="kolumna-opis">Masa</TD>
+                <TD>22 500 KG</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Układ drzwi-->
+                <TD class="kolumna-opis">Układ drzwi</TD>
+                <TD>2-2-2-2</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Wysokość podłogi przy drzwiach-->
+                <TD class="kolumna-opis">Wysokość podłogi przy drzwiach</TD>
+                <TD>920-920-920-920 [mm]</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Liczba miejsc siedzących-->
+                <TD class="kolumna-opis">Po przyklęku</TD>
+                <TD>Brak możliwości przyklęku</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Silnik-->
+                <TD class="kolumna-opis">Silnik (moc)</TD>
+                <TD>Rába D2156HM6UT (mocRABA kW)</TD>
+            </TR>  
+            <TR class="tabela-hover"> <!--Skrzynia biegów-->
+                <TD class="kolumna-opis">Skrzynia Biegów</TD>
+                <TD>ZF 4HP500</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Liczba miejsc siedzących-->
+                <TD class="kolumna-opis">Liczba miejsc siedzących</TD>
+                <TD>36</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Liczba miejsc stojących-->
+                <TD class="kolumna-opis">Liczba miejsc stojących</TD>
+                <TD>110</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Udział niskiej podłogi-->
+                <TD class="kolumna-opis">Udział niskiej podłogi</TD>
+                <TD>0% (wysokopodłogowy)</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Klimatyzacja-->
+                <TD class="kolumna-opis">Klimatyzacja</TD>
+                <TD>Nie</TD>
+            </TR>
+        </TABLE>
+
+        <BR>
+        <h2>Spis pojazdów:</h2><hr><br>
+
+        <TABLE class="spis" > <!--Tabela pojazdów-->
+            <TR> <!--Nagłówek tabeli-->
+            <TH width="90px">Numer</TH>
+            <TH width="200px">Malowanie</TH>
+            <TH width="55px">Rok prod.</TH>
+            <TH width="200px">Atrybuty</TH>
+            <TH width="">Uwagi</TH>
+            <TH width="100px">Rejestracja</TH>
+            <TH width="85px">Linki</TH>
+            </TR>
+
+            <TR ALIGN="CENTER">
+            <TD>357</TD>
+            <TD>Czerwono-Białe</TD>
+            <TD>1991-2017</TD>
+            <TD><przeg> <biletkier></TD>
+            <TD>Dawniej CEG 0622</TD>
+            <TD>SC 32281</TD>
+            <TD><A href="https://czgk.pl/categories.php?cat_id=179" target="_blank">CZGK</A></TD>
+            </TR>
+
+            <TR ALIGN="CENTER">
+            <TD>358</TD>
+            <TD>Czerwono-Białe</TD>
+            <TD>1991</TD>
+            <TD><przeg> <biletkier></TD>
+            <TD>Dawniej CEG 0623</TD>
+            <TD>SC 21581</TD>
+            <TD><A href="https://czgk.pl/categories.php?cat_id=178" target="_blank">CZGK</A></TD>
+            </TR>
+
+            <TR ALIGN="CENTER">
+            <TD>359</TD>
+            <TD>Czerwono-Białe</TD>
+            <TD>1991-2017</TD>
+            <TD><przeg> <biletkier></TD>
+            <TD>Dawniej CEG 0624</TD>
+            <TD>SC 21568</TD>
+            <TD><A href="https://czgk.pl/categories.php?cat_id=180" target="_blank">CZGK</A></TD>
+            </TR>
+        </TABLE>
+
+        <BR>
+        <h2>Stan taboru na przestrzeni lat:</h2><hr><br>
+        <TABLE class="ilostan" > <!--Tabela pojazdów-->
+            <TR> <!--Nagłówek tabeli-->
+                <TH width="70px">Rok</TH>
+                <TH width="130px">Wpisane na stan</TH>
+                <TH width="130px">Skreślone ze stanu</TH>
+                <TH width="100px">Ilość na koniec roku</TH>
+            </TR>
+            <TR>
+                <TD>1991</TD>
+                <TD>3 (357-359)</TD>
+                <TD>-</TD>
+                <TD>3</TD>
+            </TR>
+            <TR>
+                <TD>1992-2016</TD>
+                <TD>-</TD>
+                <TD>-</TD>
+                <TD>3</TD>
+            </TR>
+            <TR>
+                <TD>2017</TD>
+                <TD>2 (357,359)</TD>
+                <TD>-</TD>
+                <TD>1</TD>
+            </TR>
+            <TR>
+                <TD>2018+</TD>
+                <TD>-</TD>
+                <TD>-</TD>
+                <TD>1</TD>
+            </TR>
+        </TABLE>
+
+        <BR>
+        <h2>Zdjęcia pojazdów:</h2><hr><br>
+        <div class="galeria">
+            <div class="opis-zdj">» 357</div>
+            <div class="opis-zdj">» 358</div>
+            <img src="img/Ikarus280-58/358/1.jpg" alt="Ikarus 280.58 nr 358" class="fullscreen-img">
+            <div class="opis-zdj">» 359</div>
+        </div>
+
+        <!--Okno do otwierania zdjęć na całej stronie-->
+        <div id="fullscreenOverlay" class="fullscreen-overlay">
+            <span id="closeBtn">&times;</span>
+            <img id="fullscreenImage" class="fullscreen-image">
+        </div>
+    </div>
+<button onclick="scrollToTop()" id="scrollTopBtn" title="Do góry">⬆</button>
+</body>
+</html>

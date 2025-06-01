@@ -4,14 +4,16 @@
        url('https://fonts.gstatic.com/s/lato/v22/S6uyw4BMUTPHjxAwXiWtFCc.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'Lato';
   src: local('Lato Bold'), local('Lato-Bold'),
        url('https://fonts.gstatic.com/s/lato/v22/S6u9w4BMUTPHh6UVSwiPHA.woff2') format('woff2');
-  font-weight: 700;
+  font-weight: bold;
   font-style: normal;
+  font-display: swap;
 }
 
 

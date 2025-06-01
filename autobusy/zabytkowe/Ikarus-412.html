@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <base href="/MPK/">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Ikarus 412.08A - MPK Częstochowa</title>
+    <link rel="stylesheet" href="css/style.css"/>
+
+
+    <script src="js/ikony.js" defer></script> <!--wczytywanie ikon-->
+    <script src="js/tabela_link.js" defer></script> <!--wczytywanie klikalnych wierszy tabel-->
+    <script src="js/toogleMenu.js" defer></script><!--Skrypt do listy menu-->
+
+    <script src="js/w_gore.js" defer></script> <!--Skrypt do przycisku przesuwania do samej góry-->
+    <script src="js/zdjecia.js" defer></script> 
+    <script src="js/foto-blok.js" defer></script> <!--Blokada menu kontekstowego na zdjęciach-->
+
+    <style>
+        .kolumna-opis {
+            font-weight: bold;
+        }
+    </style>
+
+
+
+</head>
+<body>
+    <div class="pasek"> <!--Pasek nawigacyjny-->
+    <nav>
+        <label class="logo"><a href="/MPK/"><img src="img/logo_mpk.png" alt="Logo MPK"></a></label>
+        <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+        <ul id="menu">
+        <li><a class="pasek" href="/MPK/">Spis</a></li>
+        <li><a class="pasek" href="autobusy">Autobusy</a></li>
+        <li><a class="pasek" href="tramwaje">Tramwaje</a></li>
+        <li><a class="pasek" href="javascript:void(0)">Trasy</a></li>
+        <li><a class="pasek" href="javascript:void(0)">Pętle</a></li>
+        </ul>
+    </nav>
+    </div>
+
+    <div class="tresc"> <!--Główna treść strony-->
+        <h1>Ikarus 412.08A</h1><hr />
+        <BR>
+        <img src="img/Ikarus412/miniaturka.jpg" alt="Ikarus 412.08A nr 74" class="fullscreen-img miniatura">
+        <BR>
+
+        <div class="opis-pojazdu">
+            <p style="text-indent: 30px;">
+            W 1996 roku Miejskie Przedsiębiorstwo Komunikacyjne w Częstochowie zakupiło 12 niskopodłogowych 
+            autobusów Ikarus 412.08A, oznaczonych numerami taborowymi od 73 do 84. Pojazdy te zostały nabyte w 
+            ramach inwestycji miejskiej o wartości 12,3 mln zł, obejmującej również zakup 17 przegubowych Ikarusów 
+            280. Zakup był finansowany przez gminę i miał na celu poprawę dostępności transportu publicznego dla 
+            osób z ograniczoną mobilnością.
+            </p>
+            <p style="text-indent: 30px;">
+            Autobusy te były pierwszymi w pełni niskopodłogowymi pojazdami w MPK, jednak był dosyć problematyczne
+            w eksploatacji ze względu na trudno dostępne części zamienne (Ikarus 412 nie był zbyt popularym modelem,
+            w Polsce kursowały jedynie w Bielsku-Białej i Kędzierzynie-Koźlu). Ostatnie egzemplaże odstawiono w 2013
+            roku.
+            </p>
+            <p style="text-indent: 30px;">
+            Autobus nr 74, choć zachowany jako historyczny, do dzisiaj stoi w zajezdni czekając na renowację. Ze 
+            względu na brak środków nie wiadomo kiedy pojazd zostanie odrestaurowany.
+            </p>
+        </div>
+        
+        <BR>
+            <h2>Dane technicze:</h2><hr><br>
+        <TABLE class="dane-techniczne"> <!--Tabela pojazdów-->
+            <colgroup>
+                <col style="width: 50%;">
+                <col style="width: 50%;">
+            </colgroup>
+
+            <TR> <!--Nagłówek tabeli-->
+            <TH width="90%" colspan="2" style="font-size: 20px;">Ikarus 412.08A</TH>
+            </TR>
+
+            <TR class="tabela-hover"> <!--Producent-->
+                <TD class="kolumna-opis">Producent</TD>
+                <TD>Ikarus</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Długość-->
+                <TD class="kolumna-opis">Długość</TD>
+                <TD>11930 mm</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Szerokość-->
+                <TD class="kolumna-opis">Szerokość</TD>
+                <TD>2500 mm</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Wysokość-->
+                <TD class="kolumna-opis">Wysokość</TD>
+                <TD>2805 mm</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Liczba miejsc siedzących-->
+                <TD class="kolumna-opis">Masa</TD>
+                <TD>16 900 KG</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Układ drzwi-->
+                <TD class="kolumna-opis">Układ drzwi</TD>
+                <TD>2-2-2</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Wysokość podłogi przy drzwiach-->
+                <TD class="kolumna-opis">Wysokość podłogi przy drzwiach</TD>
+                <TD>350-350-350 [mm]</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Liczba miejsc siedzących-->
+                <TD class="kolumna-opis">Po przyklęku</TD>
+                <TD>Brak możliwości przyklęku</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Silnik-->
+                <TD class="kolumna-opis">Silnik (moc)</TD>
+                <TD>MAN D0826LOH17 (162kW)</TD>
+            </TR>  
+            <TR class="tabela-hover"> <!--Skrzynia biegów-->
+                <TD class="kolumna-opis">Skrzynia Biegów</TD>
+                <TD>ZF 4HP500 </TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Liczba miejsc siedzących-->
+                <TD class="kolumna-opis">Liczba miejsc siedzących</TD>
+                <TD>28</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Liczba miejsc stojących-->
+                <TD class="kolumna-opis">Liczba miejsc stojących</TD>
+                <TD>58</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Udział niskiej podłogi-->
+                <TD class="kolumna-opis">Udział niskiej podłogi</TD>
+                <TD>100%</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Klimatyzacja-->
+                <TD class="kolumna-opis">Klimatyzacja</TD>
+                <TD>Nie</TD>
+            </TR>
+        </TABLE>
+
+        <BR>
+        <h2>Spis pojazdów:</h2><hr><br>
+
+        <TABLE class="spis" > <!--Tabela pojazdów-->
+            <TR> <!--Nagłówek tabeli-->
+            <TH width="90px">Numer</TH>
+            <TH width="200px">Malowanie</TH>
+            <TH width="55px">Rok prod.</TH>
+            <TH width="200px">Atrybuty</TH>
+            <TH width="">Uwagi</TH>
+            <TH width="100px">Rejestracja</TH>
+            <TH width="85px">Linki</TH>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>73</TD>
+                <TD>Biało-Niebiesko-Fioletowy</TD>
+                <TD>1997-2011</TD>
+                <TD><niskopodlogowy> <biletkier></TD>
+                <TD><zz> w 2011 roku.<BR>Dawniej CEN 8497, SC 21585</TD>
+                <TD>SC 1376A</TD>
+                <TD><A href="https://czgk.pl/categories.php?cat_id=270" target="_blank">CZGK</A></TD>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>74</TD>
+                <TD>Czerwono-Białe</TD>
+                <TD>1997</TD>
+                <TD><niskopodlogowy> <biletkier></TD>
+                <TD>Odstawiony na zabytek.<BR>Dawniej numer rejestracyjny CEN 8498.</TD>
+                <TD>SC 21584</TD>
+                <TD><A href="https://czgk.pl/categories.php?cat_id=271" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/39fe8c7c-e4c4-4c86-a113-4045e8f3d3f0" target="_blank"><gps1></A></TD>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>75</TD>
+                <TD>Biało-Niebiesko-Fioletowy</TD>
+                <TD>1997-2012</TD>
+                <TD><niskopodlogowy> <biletkier></TD>
+                <TD><zz> w 2012 roku.<BR>Dawniej CEN 8499</TD>
+                <TD>SC 32167</TD>
+                <TD><A href="https://czgk.pl/categories.php?cat_id=272" target="_blank">CZGK</A></TD>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>76</TD>
+                <TD>Biało-Niebiesko-Fioletowy</TD>
+                <TD>1997-2013</TD>
+                <TD><niskopodlogowy> <biletkier></TD>
+                <TD><zz> w 2013 roku.<BR>Dawniej CEN 6053</TD>
+                <TD>SC 32283</TD>
+                <TD><A href="https://czgk.pl/categories.php?cat_id=273" target="_blank">CZGK</A></TD>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>77</TD>
+                <TD>Biało-Niebiesko-Fioletowy</TD>
+                <TD>1997-2010</TD>
+                <TD><niskopodlogowy> <biletkier></TD>
+                <TD><zz> w 2010 roku.<BR>Dawniej CEN 6054</TD>
+                <TD>SC 32171</TD>
+                <TD><A href="https://czgk.pl/categories.php?cat_id=274" target="_blank">CZGK</A></TD>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>78</TD>
+                <TD>Biało-Niebiesko-Fioletowy</TD>
+                <TD>1997-2010</TD>
+                <TD><niskopodlogowy> <biletkier></TD>
+                <TD><zz> w 2010 roku.<BR>Dawniej CEN 6055</TD>
+                <TD>SC 32176</TD>
+                <TD><A href="https://czgk.pl/categories.php?cat_id=275" target="_blank">CZGK</A></TD>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>79</TD>
+                <TD>Czerwono-Białe</TD>
+                <TD>1997-2013</TD>
+                <TD><niskopodlogowy> <biletkier></TD>
+                <TD><zz> w 2013 roku.<BR>Dawniej CEN 6056</TD>
+                <TD>SC 32258</TD>
+                <TD><A href="https://czgk.pl/categories.php?cat_id=276" target="_blank">CZGK</A></TD>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>80</TD>
+                <TD>Biało-Niebiesko-Fioletowy</TD>
+                <TD>1997-2013</TD>
+                <TD><niskopodlogowy> <biletkier></TD>
+                <TD><zz> w 2013 roku.<BR>Dawniej CEN 6064</TD>
+                <TD>SC 21566</TD>
+                <TD><A href="https://czgk.pl/categories.php?cat_id=277" target="_blank">CZGK</A></TD>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>81</TD>
+                <TD>Czerwono-Białe</TD>
+                <TD>1997-2015</TD>
+                <TD><niskopodlogowy> <biletkier></TD>
+                <TD><zz> w 2013 roku.<BR>Dawniej CEN 6065</TD>
+                <TD>SC 21571</TD>
+                <TD><A href="https://czgk.pl/categories.php?cat_id=278" target="_blank">CZGK</A></TD>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>82</TD>
+                <TD>Biało-Niebiesko-Fioletowy</TD>
+                <TD>1997-2008</TD>
+                <TD><niskopodlogowy> <biletkier></TD>
+                <TD><zz> w 2013 roku.<BR>Uległ wypadkowi w kwietniu 2006, skreślony ze stany 29.09.2008.<BR>Dawniej CEN 6068</TD>
+                <TD>SC 32274</TD>
+                <TD><A href="https://czgk.pl/categories.php?cat_id=279" target="_blank">CZGK</A></TD>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>83</TD>
+                <TD>Biało-Niebiesko-Fioletowy</TD>
+                <TD>1997-2010</TD>
+                <TD><niskopodlogowy> <biletkier></TD>
+                <TD><zz> w 2010 roku.<BR>Dawniej CEN 6069</TD>
+                <TD>SC 32315</TD>
+                <TD><A href="https://czgk.pl/categories.php?cat_id=280" target="_blank">CZGK</A></TD>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>84</TD>
+                <TD>Biało-Niebiesko-Fioletowy</TD>
+                <TD>1997-2011</TD>
+                <TD><niskopodlogowy> <biletkier></TD>
+                <TD><zz> w 2011 roku.<BR>Dawniej CEN 6071</TD>
+                <TD>SC 32181</TD>
+                <TD><A href="https://czgk.pl/categories.php?cat_id=281" target="_blank">CZGK</A></TD>
+            </TR>
+        </TABLE>
+
+        <BR>
+        <h2>Stan taboru na przestrzeni lat:</h2><hr><br>
+        <TABLE class="ilostan" > <!--Tabela pojazdów-->
+            <TR> <!--Nagłówek tabeli-->
+                <TH width="70px">Rok</TH>
+                <TH width="130px">Wpisane na stan</TH>
+                <TH width="130px">Skreślone ze stanu</TH>
+                <TH width="100px">Ilość na koniec roku</TH>
+            </TR>
+            <TR>
+                <TD>1997</TD>
+                <TD>12 (73-84)</TD>
+                <TD>-</TD>
+                <TD>12</TD>
+            </TR>
+            <TR>
+                <TD>1998-2007</TD>
+                <TD>-</TD>
+                <TD>-</TD>
+                <TD>12</TD>
+            </TR>
+            <TR>
+                <TD>2008</TD>
+                <TD>-</TD>
+                <TD>1 (82)</TD>
+                <TD>11</TD>
+            </TR>
+            <TR>
+                <TD>2009</TD>
+                <TD>-</TD>
+                <TD>-</TD>
+                <TD>11</TD>
+            </TR>
+            <TR>
+                <TD>2010</TD>
+                <TD>-</TD>
+                <TD>3 (77,78,83)</TD>
+                <TD>8</TD>
+            </TR>
+            <TR>
+                <TD>2011</TD>
+                <TD>-</TD>
+                <TD>2 (73,84)</TD>
+                <TD>6</TD>
+            </TR>
+            <TR>
+                <TD>2012</TD>
+                <TD>-</TD>
+                <TD>1 (75)</TD>
+                <TD>5</TD>
+            </TR>
+            <TR>
+                <TD>2013</TD>
+                <TD>-</TD>
+                <TD>3 (76,79,80)</TD>
+                <TD>2</TD>
+            </TR>
+            <TR>
+                <TD>2014</TD>
+                <TD>-</TD>
+                <TD>-</TD>
+                <TD>2</TD>
+            </TR>
+            <TR>
+                <TD>2015</TD>
+                <TD>-</TD>
+                <TD>1 (81)</TD>
+                <TD>1</TD>
+            </TR>
+            <TR>
+                <TD>2016+</TD>
+                <TD>-</TD>
+                <TD>-</TD>
+                <TD>1</TD>
+            </TR>
+        </TABLE>
+
+        <BR>
+        <h2>Zdjęcia pojazdów:</h2><hr><br>
+        <div class="galeria">
+            <div class="opis-zdj">» 73</div>
+            <div class="opis-zdj">» 74</div>
+            <img src="img/Ikarus412/74/1.jpg" alt="Ikarus 412.08A nr 74" class="fullscreen-img">
+            <div class="opis-zdj">» 75</div>
+            <div class="opis-zdj">» 76</div>
+            <div class="opis-zdj">» 77</div>
+            <div class="opis-zdj">» 78</div>
+            <div class="opis-zdj">» 79</div>
+            <div class="opis-zdj">» 80</div>
+            <div class="opis-zdj">» 81</div>
+            <div class="opis-zdj">» 82</div>
+            <div class="opis-zdj">» 83</div>
+            <div class="opis-zdj">» 84</div>
+        </div>
+
+        <!--Okno do otwierania zdjęć na całej stronie-->
+        <div id="fullscreenOverlay" class="fullscreen-overlay">
+            <span id="closeBtn">&times;</span>
+            <img id="fullscreenImage" class="fullscreen-image">
+        </div>
+    </div>
+<button onclick="scrollToTop()" id="scrollTopBtn" title="Do góry">⬆</button>
+</body>
+</html>

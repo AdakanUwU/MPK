@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <base href="/MPK/">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Ikarus 280.70E - MPK Częstochowa</title>
+    <link rel="stylesheet" href="css/style.css"/>
+
+
+    <script src="js/ikony.js" defer></script> <!--wczytywanie ikon-->
+    <script src="js/tabela_link.js" defer></script> <!--wczytywanie klikalnych wierszy tabel-->
+    <script src="js/toogleMenu.js" defer></script><!--Skrypt do listy menu-->
+
+    <script src="js/w_gore.js" defer></script> <!--Skrypt do przycisku przesuwania do samej góry-->
+    <script src="js/zdjecia.js" defer></script> 
+    <script src="js/foto-blok.js" defer></script> <!--Blokada menu kontekstowego na zdjęciach-->
+
+    <style>
+        .kolumna-opis {
+            font-weight: bold;
+        }
+    </style>
+
+
+
+</head>
+<body>
+    <div class="pasek"> <!--Pasek nawigacyjny-->
+    <nav>
+        <label class="logo"><a href="/MPK/"><img src="img/logo_mpk.png" alt="Logo MPK"></a></label>
+        <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+        <ul id="menu">
+        <li><a class="pasek" href="/MPK/">Spis</a></li>
+        <li><a class="pasek" href="autobusy">Autobusy</a></li>
+        <li><a class="pasek" href="tramwaje">Tramwaje</a></li>
+        <li><a class="pasek" href="javascript:void(0)">Trasy</a></li>
+        <li><a class="pasek" href="javascript:void(0)">Pętle</a></li>
+        </ul>
+    </nav>
+    </div>
+
+    <div class="tresc"> <!--Główna treść strony-->
+        <h1>Ikarus 280.70E / Ikarus 280.70A</h1><hr />
+        <BR>
+        <img src="img/Ikarus280-70E/miniaturka.jpg" alt="Ikarus 280.70E nr 176" class="fullscreen-img miniatura">
+        <BR>
+
+        <div class="opis-pojazdu">
+            <p style="text-indent: 30px;">
+            W 1997 roku Miejskie Przedsiębiorstwo Komunikacyjne w Częstochowie zakupiło 17 przegubowych autobusów 
+            Ikarus 280.70E. Były to pojazdy wysokopodłogowe, wyposażone w silniki Rába D10UTS-180 oraz 
+            automatyczne skrzynie biegów ZF 4HP590. Autobusy te miały długość 16,5 metra i mogły przewozić do 
+            147 pasażerów, w tym 36 na miejscach siedzących.
+            </p><p style="text-indent: 30px;">
+            W Częstochowie pojazdy te sprawdzały się bardzo dobrze ze względu na prostotę w eksploatacji i posiadanie
+            już na stanie około 70 innych Ikarusów 280 (280.02, 280.26, 280.58). 
+            </p><p style="text-indent: 30px;">
+            W marcu 2010 roku MPK Częstochowa nabyło cztery używane przegubowe autobusy Ikarus 280.70A od MPK 
+            Poznań. Pojazdy te, wyprodukowane w 1994 roku, przeszły kapitalny remont w 2001 roku, przez co były w 
+            dobrym stanie technicznym. Zostały zakupione z myślą o obsłudze komunikacji zastępczej podczas remontu 
+            torowiska tramwajowego na odcinku ul. Bór – zajezdnia MPK. Wybór padł na Ikarusy ze względu na ich 
+            niższą masę (22,5 tony) w porównaniu do nowszych autobusów (np. MAN czy Mercedes o masie 28 ton), co 
+            miało znaczenie przy przejeździe przez nadwyrężony wiadukt w Alei Niepodległości. Przed wprowadzeniem 
+            do eksploatacji autobusy zostały przemalowane na barwy MPK Częstochowa i wyposażone w system informacji 
+            pasażerskiej.
+            </p><p style="text-indent: 30px;">
+            W grudniu 2012 roku MPK Częstochowa zakupiło sześć używanych autobuów Ikarus 280.70E od Miejskich 
+            Zakładów Autobusowych w Warszawie. Pojazdy te, wyprodukowane w 1997 roku, były wcześniej eksploatowane 
+            przez MZA Warszawa i oznaczone numerami taborowymi #5711, #5722, #5729, #5772, #5774 i #5793. Po 
+            przybyciu do Częstochowy otrzymały numery #150–#155. Autobusy te zostały przygotowane do eksploatacji 
+            poprzez drobne prace techniczne i kosmetyczne, chociaż autobus #155 został pomalowany w czerwono-białe
+            barwy. Kursowały on przez około 4-5 lat, a później odstawiono je do kasacji. Autobusy wyróżniały się na
+            tle oryginalnych częstochowskim skrzynią biegów Voith D851.3 (po za 152, który miał taką samą skrzynię
+            jak częstochowskie) oraz innym układem przycisków na pulpicie (również po za 152).
+            </p><p style="text-indent: 30px;">
+            Ikarusy 280.70E (częstochowskie) zaczęto odstawiać w 2018 roku, ostatnie sztuki zezłomowano w 2019 roku.
+            To jednak nie wyeliminowało wszystkich pojazdów tego typu z Częstochowy, gdyż pojazd #176 zostały
+            zachowany w celach historycznych. Od 2019 czeka na remont, którego ze względu na brak funduszy nie
+            można podejrzewać w najbliższym czasie.
+            </p>
+        </div>
+        
+        <BR>
+        <h2>Dane technicze:</h2><hr><br>
+        <TABLE class="dane-techniczne"> <!--Tabela pojazdów-->
+            <colgroup>
+                <col style="width: 50%;">
+                <col style="width: 50%;">
+            </colgroup>
+
+            <TR> <!--Nagłówek tabeli-->
+            <TH width="90%" colspan="2" style="font-size: 20px;">Ikarus 280.70E (częstochowskie + 152)</TH>
+            </TR>
+
+            <TR class="tabela-hover"> <!--Producent-->
+                <TD class="kolumna-opis">Producent</TD>
+                <TD>Ikarus</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Długość-->
+                <TD class="kolumna-opis">Długość</TD>
+                <TD>16 500 mm</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Szerokość-->
+                <TD class="kolumna-opis">Szerokość</TD>
+                <TD>2500 mm</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Wysokość-->
+                <TD class="kolumna-opis">Wysokość</TD>
+                <TD>3040 mm</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Liczba miejsc siedzących-->
+                <TD class="kolumna-opis">Masa</TD>
+                <TD>22 500 KG</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Układ drzwi-->
+                <TD class="kolumna-opis">Układ drzwi</TD>
+                <TD>2-2-2-2</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Wysokość podłogi przy drzwiach-->
+                <TD class="kolumna-opis">Wysokość podłogi przy drzwiach</TD>
+                <TD>920-920-920-920 [mm]</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Liczba miejsc siedzących-->
+                <TD class="kolumna-opis">Po przyklęku</TD>
+                <TD>Brak możliwości przyklęku</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Silnik-->
+                <TD class="kolumna-opis">Silnik (moc)</TD>
+                <TD>Rába D10 UTS-180 (184 kW)</TD>
+            </TR>  
+            <TR class="tabela-hover"> <!--Skrzynia biegów-->
+                <TD class="kolumna-opis">Skrzynia Biegów</TD>
+                <TD>ZF 4HP590</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Liczba miejsc siedzących-->
+                <TD class="kolumna-opis">Liczba miejsc siedzących</TD>
+                <TD>36</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Liczba miejsc stojących-->
+                <TD class="kolumna-opis">Liczba miejsc stojących</TD>
+                <TD>111</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Udział niskiej podłogi-->
+                <TD class="kolumna-opis">Udział niskiej podłogi</TD>
+                <TD>0% (wysokopodłogowy)</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Klimatyzacja-->
+                <TD class="kolumna-opis">Klimatyzacja</TD>
+                <TD>Nie</TD>
+            </TR>
+        </TABLE>
+
+        <BR>
+        <TABLE class="dane-techniczne"> <!--Tabela pojazdów-->
+            <colgroup>
+                <col style="width: 50%;">
+                <col style="width: 50%;">
+            </colgroup>
+
+            <TR> <!--Nagłówek tabeli-->
+            <TH width="90%" colspan="2" style="font-size: 20px;">Ikarus 280.70E (150-151, 153-155)</TH>
+            </TR>
+
+            <TR class="tabela-hover"> <!--Producent-->
+                <TD class="kolumna-opis">Producent</TD>
+                <TD>Ikarus</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Długość-->
+                <TD class="kolumna-opis">Długość</TD>
+                <TD>16 500 mm</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Szerokość-->
+                <TD class="kolumna-opis">Szerokość</TD>
+                <TD>2500 mm</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Wysokość-->
+                <TD class="kolumna-opis">Wysokość</TD>
+                <TD>3040 mm</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Liczba miejsc siedzących-->
+                <TD class="kolumna-opis">Masa</TD>
+                <TD>22 500 KG</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Układ drzwi-->
+                <TD class="kolumna-opis">Układ drzwi</TD>
+                <TD>2-2-2-2</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Wysokość podłogi przy drzwiach-->
+                <TD class="kolumna-opis">Wysokość podłogi przy drzwiach</TD>
+                <TD>920-920-920-920 [mm]</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Liczba miejsc siedzących-->
+                <TD class="kolumna-opis">Po przyklęku</TD>
+                <TD>Brak możliwości przyklęku</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Silnik-->
+                <TD class="kolumna-opis">Silnik (moc)</TD>
+                <TD>Rába D10 UTS-180 (184 kW)</TD>
+            </TR>  
+            <TR class="tabela-hover"> <!--Skrzynia biegów-->
+                <TD class="kolumna-opis">Skrzynia Biegów</TD>
+                <TD>Voith D851.3</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Liczba miejsc siedzących-->
+                <TD class="kolumna-opis">Liczba miejsc siedzących</TD>
+                <TD>36</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Liczba miejsc stojących-->
+                <TD class="kolumna-opis">Liczba miejsc stojących</TD>
+                <TD>110</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Udział niskiej podłogi-->
+                <TD class="kolumna-opis">Udział niskiej podłogi</TD>
+                <TD>0% (wysokopodłogowy)</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Klimatyzacja-->
+                <TD class="kolumna-opis">Klimatyzacja</TD>
+                <TD>Tak (kierowcy)</TD>
+            </TR>
+        </TABLE>
+
+        <BR>
+        <TABLE class="dane-techniczne"> <!--Tabela pojazdów-->
+            <colgroup>
+                <col style="width: 50%;">
+                <col style="width: 50%;">
+            </colgroup>
+
+            <TR> <!--Nagłówek tabeli-->
+            <TH width="90%" colspan="2" style="font-size: 20px;">Ikarus 280.70A (156-159)</TH>
+            </TR>
+
+            <TR class="tabela-hover"> <!--Producent-->
+                <TD class="kolumna-opis">Producent</TD>
+                <TD>Ikarus</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Długość-->
+                <TD class="kolumna-opis">Długość</TD>
+                <TD>16 500 mm</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Szerokość-->
+                <TD class="kolumna-opis">Szerokość</TD>
+                <TD>2500 mm</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Wysokość-->
+                <TD class="kolumna-opis">Wysokość</TD>
+                <TD>3040 mm</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Liczba miejsc siedzących-->
+                <TD class="kolumna-opis">Masa</TD>
+                <TD>22 500 KG</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Układ drzwi-->
+                <TD class="kolumna-opis">Układ drzwi</TD>
+                <TD>2-2-2-2</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Wysokość podłogi przy drzwiach-->
+                <TD class="kolumna-opis">Wysokość podłogi przy drzwiach</TD>
+                <TD>920-920-920-920 [mm]</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Liczba miejsc siedzących-->
+                <TD class="kolumna-opis">Po przyklęku</TD>
+                <TD>Brak możliwości przyklęku</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Silnik-->
+                <TD class="kolumna-opis">Silnik (moc)</TD>
+                <TD>Rába D10 UTS-180 (184 kW)</TD>
+            </TR>  
+            <TR class="tabela-hover"> <!--Skrzynia biegów-->
+                <TD class="kolumna-opis">Skrzynia Biegów</TD>
+                <TD>Voith D851.3</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Liczba miejsc siedzących-->
+                <TD class="kolumna-opis">Liczba miejsc siedzących</TD>
+                <TD>36</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Liczba miejsc stojących-->
+                <TD class="kolumna-opis">Liczba miejsc stojących</TD>
+                <TD>110</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Udział niskiej podłogi-->
+                <TD class="kolumna-opis">Udział niskiej podłogi</TD>
+                <TD>0% (wysokopodłogowy)</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Klimatyzacja-->
+                <TD class="kolumna-opis">Klimatyzacja</TD>
+                <TD>Nie</TD>
+            </TR>
+        </TABLE>
+
+        <BR>
+        <h2>Spis pojazdów:</h2><hr><br>
+
+        <TABLE class="spis" > <!--Tabela pojazdów-->
+            <TR> <!--Nagłówek tabeli-->
+            <TH width="90px">Numer</TH>
+            <TH width="200px">Malowanie</TH>
+            <TH width="55px">Rok prod.</TH>
+            <TH width="200px">Atrybuty</TH>
+            <TH width="">Uwagi</TH>
+            <TH width="100px">Rejestracja</TH>
+            <TH width="85px">Linki</TH>
+            </TR>
+
+            <TR class="tabela-hover">
+            <TD>150</TD>
+            <TD>Żółto-Czerwone</TD>
+            <TD>1997-2016</TD>
+            <TD><przeg> <biletkier></TD>
+            <TD><zz><BR>1997-2012 MZA Warszawa (5711), od 2012 w MPK Częstochowa</TD>
+            <TD>SC 9429J</TD>
+            <TD><A href="https://czgk.pl/categories.php?cat_id=3173" target="_blank">CZGK</A></TD>
+            </TR>
+
+
+            <TR class="tabela-hover">
+            <TD>151</TD>
+            <TD>Żółto-Czerwone</TD>
+            <TD>1997-2016</TD>
+            <TD><przeg> <biletkier></TD>
+            <TD><zz><BR>1997-2012 MZA Warszawa (5722), od 2012 w MPK Częstochowa</TD>
+            <TD>SC 9436J</TD>
+            <TD><A href="https://czgk.pl/categories.php?cat_id=3174" target="_blank">CZGK</A></TD>
+            </TR>
+
+            
+            <TR class="tabela-hover">
+            <TD>152</TD>
+            <TD>Żółto-Czerwone</TD>
+            <TD>1997-2016</TD>
+            <TD><przeg> <biletkier></TD>
+            <TD><zz><BR>1997-2012 MZA Warszawa (5729), od 2012 w MPK Częstochowa</TD>
+            <TD>SC 9437J</TD>
+            <TD><A href="https://czgk.pl/categories.php?cat_id=3175" target="_blank">CZGK</A></TD>
+            </TR>
+
+
+            <TR class="tabela-hover">
+            <TD>153</TD>
+            <TD>Żółto-Czerwone</TD>
+            <TD>1997-2018</TD>
+            <TD><przeg> <biletkier></TD>
+            <TD><zz><BR>1997-2012 MZA Warszawa (5772), od 2012 w MPK Częstochowa</TD>
+            <TD>SC 9438J</TD>
+            <TD><A href="https://czgk.pl/categories.php?cat_id=3176" target="_blank">CZGK</A></TD>
+            </TR>
+
+
+            <TR class="tabela-hover">
+            <TD>154</TD>
+            <TD>Żółto-Czerwone</TD>
+            <TD>1997-2018</TD>
+            <TD><przeg> <biletkier></TD>
+            <TD><zz><BR>1997-2012 MZA Warszawa (5774), od 2012 w MPK Częstochowa</TD>
+            <TD>SC 4501K</TD>
+            <TD><A href="https://czgk.pl/categories.php?cat_id=3177" target="_blank">CZGK</A></TD>
+            </TR>
+
+
+            <TR class="tabela-hover">
+            <TD>155</TD>
+            <TD>Czerwono-Białe</TD>
+            <TD>1997-2017</TD>
+            <TD><przeg> <biletkier></TD>
+            <TD><zz><BR>1997-2012 MZA Warszawa (5793), od 2012 w MPK Częstochowa</TD>
+            <TD>SC 4502K</TD>
+            <TD><A href="https://czgk.pl/categories.php?cat_id=3178" target="_blank">CZGK</A></TD>
+            </TR>
+
+            <TR class="tabela-hover">
+            <TD>156</TD>
+            <TD>Czerwono-Białe</TD>
+            <TD>1994-2016</TD>
+            <TD><przeg> <biletkier></TD>
+            <TD><zz><BR>280.70A<BR>1994-2010 MPK Poznań, od 2010 w MPK Częstochowa</TD>
+            <TD>SC 3058F</TD>
+            <TD><A href="https://czgk.pl/categories.php?cat_id=181" target="_blank">CZGK</A></TD>
+            </TR>
+
+            <TR class="tabela-hover">
+            <TD>157</TD>
+            <TD>Czerwono-Białe</TD>
+            <TD>1994-2015</TD>
+            <TD><przeg> <biletkier></TD>
+            <TD><zz><BR>280.70A<BR>1994-2010 MPK Poznań, od 2010 w MPK Częstochowa</TD>
+            <TD>SC 3059F</TD>
+            <TD><A href="https://czgk.pl/categories.php?cat_id=182" target="_blank">CZGK</A></TD>
+            </TR>
+
+            <TR class="tabela-hover">
+            <TD>158</TD>
+            <TD>Czerwono-Białe</TD>
+            <TD>1994-2015</TD>
+            <TD><przeg> <biletkier></TD>
+            <TD><zz><BR>280.70A<BR>1994-2010 MPK Poznań, od 2010 w MPK Częstochowa</TD>
+            <TD>SC 3061F</TD>
+            <TD><A href="https://czgk.pl/categories.php?cat_id=183" target="_blank">CZGK</A></TD>
+            </TR>
+
+            <TR class="tabela-hover">
+            <TD>159</TD>
+            <TD>Czerwono-Białe</TD>
+            <TD>1994-2017</TD>
+            <TD><przeg> <biletkier></TD>
+            <TD><zz><BR>280.70A<BR>1994-2010 MPK Poznań, od 2010 w MPK Częstochowa</TD>
+            <TD>SC 4502K</TD>
+            <TD><A href="https://czgk.pl/categories.php?cat_id=184" target="_blank">CZGK</A></TD>
+            </TR>
+
+            <TR class="tabela-hover">
+            <TD>160</TD>
+            <TD>Czerwono-Białe</TD>
+            <TD>1997-2018</TD>
+            <TD><przeg> <biletkier></TD>
+            <TD><zz><BR>Dawniej CEN 8460</TD>
+            <TD>SC 32333</TD>
+            <TD><A href="https://czgk.pl/categories.php?cat_id=256" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/445a98f7-410a-4f4a-8308-6f635beea64d" target="_blank"><gps1></A></TD>
+            </TR>
+
+            <TR class="tabela-hover">
+            <TD>161</TD>
+            <TD>Czerwono-Białe</TD>
+            <TD>1997-2019</TD>
+            <TD><przeg> <biletkier></TD>
+            <TD><zz><BR>Dawniej CEN 8468</TD>
+            <TD>SC 21576</TD>
+            <TD><A href="https://czgk.pl/categories.php?cat_id=255" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/63a1aaa0-af70-4919-9348-4d26d4cbe8d3" target="_blank"><gps1></A></TD>
+            </TR>
+
+            <TR class="tabela-hover">
+            <TD>162</TD>
+            <TD>Biało-Niebiesko-Fioletowy</TD>
+            <TD>1997-2018</TD>
+            <TD><przeg> <biletkier></TD>
+            <TD><zz><BR>Dawniej CEN 8462</TD>
+            <TD>SC 32260</TD>
+            <TD><A href="https://czgk.pl/categories.php?cat_id=254" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/bb8c4b1d-2847-4873-bd40-5c0c1e08799b" target="_blank"><gps1></A></TD>
+            </TR>
+
+            <TR class="tabela-hover">
+            <TD>163</TD>
+            <TD>Czerwono-Białe</TD>
+            <TD>1997-2018</TD>
+            <TD><przeg> <biletkier></TD>
+            <TD><zz><BR>Dawniej CEN 8469</TD>
+            <TD>SC 32292</TD>
+            <TD><A href="https://czgk.pl/categories.php?cat_id=253" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/95fbe0e9-c789-44c7-a34f-b9330ae9d509" target="_blank"><gps1></A></TD>
+            </TR>
+
+            <TR class="tabela-hover">
+            <TD>164</TD>
+            <TD>Czerwono-Białe</TD>
+            <TD>1997-2018</TD>
+            <TD><przeg> <biletkier></TD>
+            <TD><zz><BR>Dawniej CEN 8468</TD>
+            <TD>SC 32292</TD>
+            <TD><A href="https://czgk.pl/categories.php?cat_id=252" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/901d3772-f475-4afe-9718-bff7aef4528a" target="_blank"><gps1></A></TD>
+            </TR>
+
+            <TR class="tabela-hover">
+            <TD>165</TD>
+            <TD>Czerwono-Białe</TD>
+            <TD>1997-2019</TD>
+            <TD><przeg> <biletkier></TD>
+            <TD><zz><BR>Dawniej CEN 8467</TD>
+            <TD>SC 32178</TD>
+            <TD><A href="https://czgk.pl/categories.php?cat_id=251" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/0a32e15a-fc28-4ccf-aa70-6abd720517bb" target="_blank"><gps1></A></TD>
+            </TR>
+
+            <TR class="tabela-hover">
+            <TD>166</TD>
+            <TD>Czerwono-Białe</TD>
+            <TD>1997-2018</TD>
+            <TD><przeg> <biletkier></TD>
+            <TD><zz><BR>Dawniej CEN 8466</TD>
+            <TD>SC 32319</TD>
+            <TD><A href="https://czgk.pl/categories.php?cat_id=250" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/4ff0e481-c868-4eda-ab90-d690ebd81d84" target="_blank"><gps1></A></TD>
+            </TR>
+
+            <TR class="tabela-hover">
+            <TD>167</TD>
+            <TD>Czerwono-Białe</TD>
+            <TD>1997-2018</TD>
+            <TD><przeg> <biletkier></TD>
+            <TD><zz><BR>Dawniej CEN 8465</TD>
+            <TD>SC 32179</TD>
+            <TD><A href="https://czgk.pl/categories.php?cat_id=249" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/c964ca44-7cc8-4416-85f2-0fac673130e2" target="_blank"><gps1></A></TD>
+            </TR>
+
+            <TR class="tabela-hover">
+            <TD>168</TD>
+            <TD>Czerwono-Białe</TD>
+            <TD>1997-2019</TD>
+            <TD><przeg> <biletkier></TD>
+            <TD><zz><BR>Dawniej CEN 8479</TD>
+            <TD>SC 21574</TD>
+            <TD><A href="https://czgk.pl/categories.php?cat_id=248" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/defd79e3-f106-4637-8af1-2cd966abf1ea" target="_blank"><gps1></A></TD>
+            </TR>
+
+            <TR class="tabela-hover">
+            <TD>169</TD>
+            <TD>Czerwono-Białe</TD>
+            <TD>1997-2019</TD>
+            <TD><przeg> <biletkier></TD>
+            <TD><zz><BR>Dawniej CEN 8481</TD>
+            <TD>SC 32259</TD>
+            <TD><A href="https://czgk.pl/categories.php?cat_id=247" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/29e98e7d-45f4-4967-ade7-6dfe1b69e4a3" target="_blank"><gps1></A></TD>
+            </TR>
+
+            <TR class="tabela-hover">
+            <TD>170</TD>
+            <TD>Czerwono-Białe</TD>
+            <TD>1997-2018</TD>
+            <TD><przeg> <biletkier></TD>
+            <TD><zz><BR>Dawniej CEN 8482</TD>
+            <TD>SC 32166</TD>
+            <TD><A href="https://czgk.pl/categories.php?cat_id=246" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/95ed1d0b-cd80-42e8-abaf-e5faf80bcf99" target="_blank"><gps1></A></TD>
+            </TR>
+
+            <TR class="tabela-hover">
+            <TD>171</TD>
+            <TD>Czerwono-Białe</TD>
+            <TD>1997-2018</TD>
+            <TD><przeg> <biletkier></TD>
+            <TD><zz><BR>Dawniej CEN 8485</TD>
+            <TD>SC 32326</TD>
+            <TD><A href="https://czgk.pl/categories.php?cat_id=245" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/7075a150-8274-4bcf-b5a7-d7820fa62562" target="_blank"><gps1></A></TD>
+            </TR>
+
+            <TR class="tabela-hover">
+            <TD>172</TD>
+            <TD>Czerwono-Białe</TD>
+            <TD>1997-2019</TD>
+            <TD><przeg> <biletkier></TD>
+            <TD><zz><BR>Dawniej CEN 8484</TD>
+            <TD>SC 32334</TD>
+            <TD><A href="https://czgk.pl/categories.php?cat_id=244" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/f8292ccc-fc2f-4f01-b7ea-04d5b4818dca" target="_blank"><gps1></A></TD>
+            </TR>
+
+            <TR class="tabela-hover">
+            <TD>173</TD>
+            <TD>Biało-Niebiesko-Fioletowy</TD>
+            <TD>1997-2018</TD>
+            <TD><przeg> <biletkier></TD>
+            <TD><zz><BR>Dawniej CEN 8489</TD>
+            <TD>SC 32325</TD>
+            <TD><A href="https://czgk.pl/categories.php?cat_id=243" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/71906043-3968-41e7-99d4-e94028db6800" target="_blank"><gps1></A></TD>
+            </TR>
+
+            <TR class="tabela-hover">
+            <TD>174</TD>
+            <TD>Czerwono-Białe</TD>
+            <TD>1997-2018</TD>
+            <TD><przeg> <biletkier></TD>
+            <TD><zz><BR>Dawniej CEN 8490</TD>
+            <TD>SC 32160</TD>
+            <TD><A href="https://czgk.pl/categories.php?cat_id=242" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/3f8a35c0-2f54-4af4-8f33-4aa566b1c7eb" target="_blank"><gps1></A></TD>
+            </TR>
+
+            <TR class="tabela-hover">
+            <TD>175</TD>
+            <TD>Czerwono-Białe</TD>
+            <TD>1997-2019</TD>
+            <TD><przeg> <biletkier></TD>
+            <TD><zz><BR>Dawniej CEN 8491</TD>
+            <TD>SC 32327</TD>
+            <TD><A href="https://czgk.pl/categories.php?cat_id=241" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/42ac814e-6db3-4598-8f27-1250d28780d0" target="_blank"><gps1></A></TD>
+            </TR>
+
+            <TR class="tabela-hover">
+            <TD>176</TD>
+            <TD>Czerwono-Białe</TD>
+            <TD>1997</TD>
+            <TD><przeg> <biletkier></biletkier></TD>
+            <TD>Dawniej CEN 8492</TD>
+            <TD>SC 06027</TD>
+            <TD><A href="https://czgk.pl/categories.php?cat_id=240" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/3cea5fe9-22a9-4809-bdeb-b1f5f98cf259" target="_blank"><gps1></A></TD>
+            </TR>
+        </TABLE>
+
+        <BR>
+        <h2>Stan taboru na przestrzeni lat:</h2><hr><br>
+        <TABLE class="ilostan" > <!--Tabela pojazdów-->
+            <TR> <!--Nagłówek tabeli-->
+                <TH width="70px">Rok</TH>
+                <TH width="130px">Wpisane na stan</TH>
+                <TH width="130px">Skreślone ze stanu</TH>
+                <TH width="100px">Ilość na koniec roku</TH>
+            </TR>
+            <TR>
+                <TD>1997</TD>
+                <TD>17 (160-176)</TD>
+                <TD>-</TD>
+                <TD>17</TD>
+            </TR>
+            <TR>
+                <TD>1998-2009</TD>
+                <TD>-</TD>
+                <TD>-</TD>
+                <TD>17</TD>
+            </TR>
+            <TR>
+                <TD>2010</TD>
+                <TD>4 (156-159)</TD>
+                <TD>-</TD>
+                <TD>21</TD>
+            </TR>
+            <TR>
+                <TD>2011</TD>
+                <TD>6 (150-155)</TD>
+                <TD>-</TD>
+                <TD>27</TD>
+            </TR>
+            <TR>
+                <TD>2012-2014</TD>
+                <TD>-</TD>
+                <TD>-</TD>
+                <TD>27</TD>
+            </TR>
+            <TR>
+                <TD>2015</TD>
+                <TD>-</TD>
+                <TD>2 (157,158)</TD>
+                <TD>25</TD>
+            </TR>
+            <TR>
+                <TD>2016</TD>
+                <TD>-</TD>
+                <TD>4 (150-152,156)</TD>
+                <TD>21</TD>
+            </TR>
+            <TR>
+                <TD>2017</TD>
+                <TD>-</TD>
+                <TD>2 (155,159)</TD>
+                <TD>19</TD>
+            </TR>
+            <TR>
+                <TD>2018</TD>
+                <TD>-</TD>
+                <TD>12 (153-154,160,162-164,166-167,170-171,173-174)</TD>
+                <TD>7</TD>
+            </TR>
+            <TR>
+                <TD>2019</TD>
+                <TD>-</TD>
+                <TD>6 (161,165,168-169,172,175)</TD>
+                <TD>1</TD>
+            </TR>
+            <TR>
+                <TD>2020+</TD>
+                <TD>-</TD>
+                <TD>-</TD>
+                <TD>1</TD>
+            </TR>
+        </TABLE>
+
+        <BR>
+        <h2>Zdjęcia pojazdów:</h2><hr><br>
+        <div class="galeria">
+            <div class="opis-zdj">» 150</div>
+            <div class="opis-zdj">» 151</div>
+            <div class="opis-zdj">» 152</div>
+            <div class="opis-zdj">» 153</div>
+            <div class="opis-zdj">» 154</div>
+            <div class="opis-zdj">» 155</div>
+            <div class="opis-zdj">» 156</div>
+            <div class="opis-zdj">» 157</div>
+            <div class="opis-zdj">» 158</div>
+            <div class="opis-zdj">» 159</div>
+            <div class="opis-zdj">» 160</div>
+            <div class="opis-zdj">» 161</div>
+            <div class="opis-zdj">» 162</div>
+            <div class="opis-zdj">» 163</div>
+            <div class="opis-zdj">» 164</div>
+            <div class="opis-zdj">» 165</div>
+            <div class="opis-zdj">» 166</div>
+            <div class="opis-zdj">» 167</div>
+            <div class="opis-zdj">» 168</div>
+            <div class="opis-zdj">» 169</div>
+            <div class="opis-zdj">» 170</div>
+            <div class="opis-zdj">» 171</div>
+            <div class="opis-zdj">» 172</div>
+            <div class="opis-zdj">» 173</div>
+            <div class="opis-zdj">» 174</div>
+            <div class="opis-zdj">» 175</div>
+            <div class="opis-zdj">» 176</div>
+            <img src="img/Ikarus280-70E/176/1.jpg" alt="Ikarus 280.70E nr 176" class="fullscreen-img">
+        </div>
+
+        <!--Okno do otwierania zdjęć na całej stronie-->
+        <div id="fullscreenOverlay" class="fullscreen-overlay">
+            <span id="closeBtn">&times;</span>
+            <img id="fullscreenImage" class="fullscreen-image">
+        </div>
+    </div>
+<button onclick="scrollToTop()" id="scrollTopBtn" title="Do góry">⬆</button>
+</body>
+</html>
