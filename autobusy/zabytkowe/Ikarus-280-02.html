@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <base href="/MPK/">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Ikarus 280.02 - MPK Częstochowa</title>
+    <link rel="stylesheet" href="css/style.css"/>
+
+
+    <script src="js/ikony.js" defer></script> <!--wczytywanie ikon-->
+    <script src="js/tabela_link.js" defer></script> <!--wczytywanie klikalnych wierszy tabel-->
+    <script src="js/toogleMenu.js" defer></script><!--Skrypt do listy menu-->
+
+    <script src="js/w_gore.js" defer></script> <!--Skrypt do przycisku przesuwania do samej góry-->
+    <script src="js/zdjecia.js" defer></script> 
+    <script src="js/foto-blok.js" defer></script> <!--Blokada menu kontekstowego na zdjęciach-->
+
+    <style>
+        .kolumna-opis {
+            font-weight: bold;
+        }
+    </style>
+
+
+
+</head>
+<body>
+    <div class="pasek"> <!--Pasek nawigacyjny-->
+    <nav>
+        <label class="logo"><a href="/MPK/"><img src="img/logo_mpk.png" alt="Logo MPK"></a></label>
+        <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+        <ul id="menu">
+        <li><a class="pasek" href="/MPK/">Spis</a></li>
+        <li><a class="pasek" href="autobusy">Autobusy</a></li>
+        <li><a class="pasek" href="tramwaje">Tramwaje</a></li>
+        <li><a class="pasek" href="javascript:void(0)">Trasy</a></li>
+        <li><a class="pasek" href="javascript:void(0)">Pętle</a></li>
+        </ul>
+    </nav>
+    </div>
+
+    <div class="tresc"> <!--Główna treść strony-->
+        <h1>Ikarus 280.02</h1><hr />
+        <BR>
+        <img src="img/Ikarus280-02/miniaturka.jpg" alt="Ikarus 280.02 nr 288" class="fullscreen-img miniatura">
+        <BR>
+
+        <div class="opis-pojazdu">
+            <p style="text-indent: 30px;">
+            Ikarus 280.02 to przegubowy autobus węgierskiej produkcji, charakteryzujący się sześciocylindrowym 
+            silnikiem wysokoprężnym Rába D2156HM6U oraz manualną skrzynią biegów Csepel S6-90U. Wersja 280.02 
+            była pierwotnie przeznaczona na rynek NRD, co wpłynęło na jej specyfikację – posiadała m.in. 
+            sześciobiegową skrzynię biegów, otwartą kabinę kierowcy, zaledwie 2 otwieranymi oknami (3 i ostnie z lewej) 
+            oraz charakterystyczny układ wnętrza z miejscem na wózek przy czwartych drzwiach.
+            </p><p style="text-indent: 30px;">
+            Autobusy te kursowały po ulicach miasta przez 10 lat, gdy zaczęto wycofywać pierwsze pojazdy. Największa
+            partia wycofań nastąpiła w 1996/1997 gdy zezłomowano ponad połowę z pozostałch autobusów. Pozostałe
+            pojazdy przetrwały do początku XXI wieku, a ostatnie 5 pojazdów zezłomowano w 2003 roku.
+            </p><p style="text-indent: 30px;">
+            To jednak nie skończyło historii Ikarusów 280.02 w Częstochowie, ponieważ dzięki staranią CKMKM autobus 
+            288 kursował liniowo aż do 2019 roku a do 2022 pozostał jako rezerwa. W między czasie uczestniczył też
+            w wielu imprezach okolicznościowych, obecnie uznawany jest za najstarszy zachowany w Polsce egzemplaż
+            tego typu.
+            </p><p style="text-indent: 30px;">
+            Drugi do dzisiaj istniejacy pojazd to #291 który w latach 90 pozbawiono naczepy i przerobiono na pogotowie
+            techniczne o numerze 798.
+            </p>
+        </div>
+        
+        <BR>
+        <h2>Dane technicze:</h2><hr><br>
+        <TABLE class="dane-techniczne"> <!--Tabela pojazdów-->
+            <colgroup>
+                <col style="width: 50%;">
+                <col style="width: 50%;">
+            </colgroup>
+
+            <TR> <!--Nagłówek tabeli-->
+            <TH width="90%" colspan="2" style="font-size: 20px;">Ikarus 280.02</TH>
+            </TR>
+
+            <TR class="tabela-hover"> <!--Producent-->
+                <TD class="kolumna-opis">Producent</TD>
+                <TD>Ikarus</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Długość-->
+                <TD class="kolumna-opis">Długość</TD>
+                <TD>16 500 mm</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Szerokość-->
+                <TD class="kolumna-opis">Szerokość</TD>
+                <TD>2500 mm</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Wysokość-->
+                <TD class="kolumna-opis">Wysokość</TD>
+                <TD>3040 mm</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Liczba miejsc siedzących-->
+                <TD class="kolumna-opis">Masa</TD>
+                <TD>22 500 KG</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Układ drzwi-->
+                <TD class="kolumna-opis">Układ drzwi</TD>
+                <TD>2-2-2-2</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Wysokość podłogi przy drzwiach-->
+                <TD class="kolumna-opis">Wysokość podłogi przy drzwiach</TD>
+                <TD>920-920-920-920 [mm]</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Liczba miejsc siedzących-->
+                <TD class="kolumna-opis">Po przyklęku</TD>
+                <TD>Brak możliwości przyklęku</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Silnik-->
+                <TD class="kolumna-opis">Silnik (moc)</TD>
+                <TD>Rába D2156HM6U (141 kW)</TD>
+            </TR>  
+            <TR class="tabela-hover"> <!--Skrzynia biegów-->
+                <TD class="kolumna-opis">Skrzynia Biegów</TD>
+                <TD>Csepel S6-90U</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Liczba miejsc siedzących-->
+                <TD class="kolumna-opis">Liczba miejsc siedzących</TD>
+                <TD>36</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Liczba miejsc stojących-->
+                <TD class="kolumna-opis">Liczba miejsc stojących</TD>
+                <TD>121</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Udział niskiej podłogi-->
+                <TD class="kolumna-opis">Udział niskiej podłogi</TD>
+                <TD>0% (wysokopodłogowy)</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Klimatyzacja-->
+                <TD class="kolumna-opis">Klimatyzacja</TD>
+                <TD>Nie</TD>
+            </TR>
+        </TABLE>
+
+        <BR>
+        <h2>Spis pojazdów:</h2><hr><br>
+
+        <TABLE class="spis" > <!--Tabela pojazdów-->
+            <TR> <!--Nagłówek tabeli-->
+            <TH width="90px">Numer</TH>
+            <TH width="200px">Malowanie</TH>
+            <TH width="55px">Rok prod.</TH>
+            <TH width="200px">Atrybuty</TH>
+            <TH width="">Uwagi</TH>
+            <TH width="100px">Rejestracja</TH>
+            <TH width="85px">Linki</TH>
+            </TR>
+
+            <TR class="tabela-hover">
+            <TD>274</TD>
+            <TD>Ciemnoczerwone</TD>
+            <TD>1982-1996</TD>
+            <TD><przeg> <biletkier></TD>
+            <TD><zz><br></TD>
+            <TD>CZP 157C</TD>
+            <TD><A href="https://czgk.pl/categories.php?cat_id=3179" target="_blank">CZGK</A></TD>
+            </TR>
+
+            <TR class="tabela-hover">
+            <TD>275</TD>
+            <TD>Ciemnoczerwone</TD>
+            <TD>1982-1992</TD>
+            <TD><przeg> <biletkier></TD>
+            <TD><zz><br></TD>
+            <TD>CZP 158C</TD>
+            <TD><A href="https://czgk.pl/categories.php?cat_id=3180" target="_blank">CZGK</A></TD>
+            </TR>
+
+            <TR class="tabela-hover">
+            <TD>276</TD>
+            <TD>Ciemnoczerwone</TD>
+            <TD>1982-2002</TD>
+            <TD><przeg> <biletkier></TD>
+            <TD><zz><br>Dawniej CZP 159C.</TD>
+            <TD>CEC 2062</TD>
+            <TD><A href="https://czgk.pl/categories.php?cat_id=1857" target="_blank">CZGK</A></TD>
+            </TR>
+
+            <TR class="tabela-hover">
+            <TD>277</TD>
+            <TD>Ciemnoczerwone</TD>
+            <TD>1982-1996</TD>
+            <TD><przeg> <biletkier></TD>
+            <TD><zz><br>Dawniej CZP 160C</TD>
+            <TD>CEC 2063</TD>
+            <TD><A href="https://czgk.pl/categories.php?cat_id=1446" target="_blank">CZGK</A></TD>
+            </TR>
+
+            <TR class="tabela-hover">
+            <TD>278</TD>
+            <TD>Ciemnoczerwone</TD>
+            <TD>1982</TD>
+            <TD><przeg> <biletkier></TD>
+            <TD><ss>Przekazany do CSPSP Częstochowa w 1997.</ss><BR>Dawniej CZP 161C.</TD>
+            <TD>CEC 2061</TD>
+            <TD><A href="https://czgk.pl/categories.php?cat_id=3181" target="_blank">CZGK</A></TD>
+            </TR>
+
+            <TR class="tabela-hover">
+            <TD>279</TD>
+            <TD>Ciemnoczerwone</TD>
+            <TD>1982-1997</TD>
+            <TD><przeg> <biletkier></TD>
+            <TD><zz><br>Dawniej CZP 162C</TD>
+            <TD>CEC 2060</TD>
+            <TD><A href="https://czgk.pl/categories.php?cat_id=1447" target="_blank">CZGK</A></TD>
+            </TR>
+
+            <TR class="tabela-hover">
+            <TD>280</TD>
+            <TD>Ciemnoczerwone</TD>
+            <TD>1982-2003</TD>
+            <TD><przeg> <biletkier></TD>
+            <TD><zz><br>Dawniej CZP 163C</TD>
+            <TD>CEC 1059</TD>
+            <TD><A href="https://czgk.pl/categories.php?cat_id=3182" target="_blank">CZGK</A></TD>
+            </TR>
+
+            <TR class="tabela-hover">
+            <TD>281</TD>
+            <TD>Ciemnoczerwone</TD>
+            <TD>1982-1997</TD>
+            <TD><przeg> <biletkier></TD>
+            <TD><zz><br></TD>
+            <TD>CZP 164C</TD>
+            <TD><A href="https://czgk.pl/categories.php?cat_id=3183" target="_blank">CZGK</A></TD>
+            </TR>
+
+            <TR class="tabela-hover">
+            <TD>282</TD>
+            <TD>Ciemnoczerwone</TD>
+            <TD>1982-2003</TD>
+            <TD><przeg> <biletkier></TD>
+            <TD><zz><br></TD>
+            <TD>CZP 165C</TD>
+            <TD><A href="https://czgk.pl/categories.php?cat_id=3151" target="_blank">CZGK</A></TD>
+            </TR>
+
+            <TR class="tabela-hover">
+            <TD>283</TD>
+            <TD>Ciemnoczerwone</TD>
+            <TD>1982-1996</TD>
+            <TD><przeg> <biletkier></TD>
+            <TD><zz><br>Dawniej CZP 166C</TD>
+            <TD>CEJ 5594</TD>
+            <TD><A href="https://czgk.pl/categories.php?cat_id=3184" target="_blank">CZGK</A></TD>
+            </TR>
+
+            <TR class="tabela-hover">
+            <TD>284</TD>
+            <TD>Ciemnoczerwone</TD>
+            <TD>1982-1997</TD>
+            <TD><przeg> <biletkier></TD>
+            <TD><zz><br>Dawniej CZP 167C</TD>
+            <TD>CEC 2058</TD>
+            <TD><A href="https://czgk.pl/categories.php?cat_id=3185" target="_blank">CZGK</A></TD>
+            </TR>
+
+            <TR class="tabela-hover">
+            <TD>285</TD>
+            <TD>Ciemnoczerwone</TD>
+            <TD>1982-2003</TD>
+            <TD><przeg> <biletkier></TD>
+            <TD><zz><br></TD>
+            <TD>CZP 168C</TD>
+            <TD><A href="https://czgk.pl/categories.php?cat_id=3186" target="_blank">CZGK</A></TD>
+            </TR>
+
+            <TR class="tabela-hover">
+            <TD>286</TD>
+            <TD>Ciemnoczerwone</TD>
+            <TD>1982-2003</TD>
+            <TD><przeg> <biletkier></TD>
+            <TD><zz><br>Dawniej CZP 169C</TD>
+            <TD>CEC 2057</TD>
+            <TD><A href="https://czgk.pl/categories.php?cat_id=1389" target="_blank">CZGK</A></TD>
+            </TR>
+
+            <TR class="tabela-hover">
+            <TD>287</TD>
+            <TD>Ciemnoczerwone</TD>
+            <TD>1982-1997</TD>
+            <TD><przeg> <biletkier></TD>
+            <TD><zz><br>Dawniej CZP 170C</TD>
+            <TD>CEC 4406</TD>
+            <TD><A href="https://czgk.pl/categories.php?cat_id=3187" target="_blank">CZGK</A></TD>
+            </TR>
+
+            <TR class="tabela-hover">
+            <TD>288</TD>
+            <TD>Ciemnoczerwono-białe</TD>
+            <TD>1982</TD>
+            <TD><przeg> <biletkier></TD>
+            <TD>Dawniej CZP 171C, CEC 4407</TD>
+            <TD>SC 11024</TD>
+            <TD><A href="https://czgk.pl/categories.php?cat_id=175" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/44908f19-9344-4302-aadc-25bb0b2a786c" target="_blank"><gps1></A></TD>
+            </TR>
+
+            <TR class="tabela-hover">
+            <TD>289</TD>
+            <TD>Ciemnoczerwone</TD>
+            <TD>1982-1997</TD>
+            <TD><przeg> <biletkier></TD>
+            <TD><zz><br>Dawniej CZP 172C</TD>
+            <TD>CEC 2056</TD>
+            <TD><A href="https://czgk.pl/categories.php?cat_id=3188" target="_blank">CZGK</A></TD>
+            </TR>
+
+            <TR class="tabela-hover">
+            <TD>290</TD>
+            <TD>Ciemnoczerwone</TD>
+            <TD>1982-1992</TD>
+            <TD><przeg> <biletkier></TD>
+            <TD><zz></TD>
+            <TD>CZP 173C</TD>
+            <TD><A href="https://czgk.pl/categories.php?cat_id=3189" target="_blank">CZGK</A></TD>
+            </TR>
+
+            <TR class="tabela-hover">
+            <TD>291</TD>
+            <TD>Ciemnoczerwone</TD>
+            <TD>1982</TD>
+            <TD><przeg> <biletkier></TD>
+            <TD>Dawniej CZP 174C.<BR>Przebudowany na pogotowie techniczne #798.<BR><znr>Zmiana numeru >> 798</znr></TD>
+            <TD>SC 11068</TD>
+            <TD><A href="https://czgk.pl/categories.php?cat_id=3190" target="_blank">CZGK</A></TD>
+            </TR>
+
+            <TR class="tabela-hover">
+            <TD>292</TD>
+            <TD>Ciemnoczerwone</TD>
+            <TD>1982-1997</TD>
+            <TD><przeg> <biletkier></TD>
+            <TD><zz><br></TD>
+            <TD>CZP 175C</TD>
+            <TD><A href="https://czgk.pl/categories.php?cat_id=3191" target="_blank">CZGK</A></TD>
+            </TR>
+
+            <TR class="tabela-hover">
+            <TD>293</TD>
+            <TD>Ciemnoczerwone</TD>
+            <TD>1982-2003</TD>
+            <TD><przeg> <biletkier></TD>
+            <TD><zz><br></TD>
+            <TD>CZP 176C</TD>
+            <TD><A href="https://czgk.pl/categories.php?cat_id=3192" target="_blank">CZGK</A></TD>
+            </TR>
+
+            <TR class="tabela-hover">
+            <TD>294</TD>
+            <TD>Ciemnoczerwone</TD>
+            <TD>1982-1996</TD>
+            <TD><przeg> <biletkier></TD>
+            <TD><zz><br></TD>
+            <TD>CZP 177C</TD>
+            <TD><A href="https://czgk.pl/categories.php?cat_id=3193" target="_blank">CZGK</A></TD>
+            </TR>
+
+            <TR class="tabela-hover">
+            <TD>295</TD>
+            <TD>Ciemnoczerwone</TD>
+            <TD>1982-2002</TD>
+            <TD><przeg> <biletkier></TD>
+            <TD><zz><br>Dawniej CZP 178C</TD>
+            <TD>CEC 2055</TD>
+            <TD><A href="https://czgk.pl/categories.php?cat_id=3194" target="_blank">CZGK</A></TD>
+            </TR>
+
+            <TR class="tabela-hover">
+            <TD>296</TD>
+            <TD>Ciemnoczerwone</TD>
+            <TD>1982-1997</TD>
+            <TD><przeg> <biletkier></TD>
+            <TD><zz><br>Dawniej CZP 179C</TD>
+            <TD>CEG 8833</TD>
+            <TD><A href="https://czgk.pl/categories.php?cat_id=3195" target="_blank">CZGK</A></TD>
+            </TR>
+
+            <TR class="tabela-hover">
+            <TD>297</TD>
+            <TD>Ciemnoczerwone</TD>
+            <TD>1982-1997</TD>
+            <TD><przeg> <biletkier></TD>
+            <TD><zz><br>Dawniej CZP 180C</TD>
+            <TD>CEG 2054</TD>
+            <TD><A href="https://czgk.pl/categories.php?cat_id=3196" target="_blank">CZGK</A></TD>
+            </TR>
+
+            <TR class="tabela-hover">
+            <TD>298</TD>
+            <TD>Ciemnoczerwone</TD>
+            <TD>1982-2001</TD>
+            <TD><przeg> <biletkier></TD>
+            <TD><zz><br></TD>
+            <TD>CZP 155C</TD>
+            <TD><A href="https://czgk.pl/categories.php?cat_id=1324" target="_blank">CZGK</A></TD>
+            </TR>
+
+            <TR ALIGN="CENTER">
+            <TD>798</TD>
+            <TD>Czerwono-Białe z żółtym pasem</TD>
+            <TD>1982</TD>
+            <TD></TD>
+            <TD>Dawniej CZP 174C.<BR>Pogotowie techniczne.</TD>
+            <TD>SC 11068</TD>
+            <TD><A href="https://czgk.pl/categories.php?cat_id=790" target="_blank">CZGK</A></TD>
+            </TR>
+
+        </TABLE>
+
+        <BR>
+        <h2>Stan taboru na przestrzeni lat:</h2><hr><br>
+        <TABLE class="ilostan" > <!--Tabela pojazdów-->
+            <TR> <!--Nagłówek tabeli-->
+                <TH width="70px">Rok</TH>
+                <TH width="130px">Wpisane na stan</TH>
+                <TH width="130px">Skreślone ze stanu</TH>
+                <TH width="100px">Ilość na koniec roku</TH>
+            </TR>
+            <TR>
+                <TD>1982</TD>
+                <TD>25 (274-298)</TD>
+                <TD>-</TD>
+                <TD>25</TD>
+            </TR>
+            <TR>
+                <TD>1983-1991</TD>
+                <TD>-</TD>
+                <TD>-</TD>
+                <TD>25</TD>
+            </TR>
+            <TR>
+                <TD>1992</TD>
+                <TD>-</TD>
+                <TD>2 (275,290)</TD>
+                <TD>23</TD>
+            </TR>
+            <TR>
+                <TD>1993-1995</TD>
+                <TD>-</TD>
+                <TD>-</TD>
+                <TD>23</TD>
+            </TR>
+            <TR>
+                <TD>1996</TD>
+                <TD>-</TD>
+                <TD>4 (274,277,283,294)</TD>
+                <TD>19</TD>
+            </TR>
+            <TR>
+                <TD>1997</TD>
+                <TD>-</TD>
+                <TD>9 (278-279,281,284,287,289,292,296-297)</TD>
+                <TD>10</TD>
+            </TR>
+            <TR>
+                <TD>1998-2000</TD>
+                <TD>-</TD>
+                <TD>-</TD>
+                <TD>10</TD>
+            </TR>
+            <TR>
+                <TD>2001</TD>
+                <TD>-</TD>
+                <TD>1 (298)</TD>
+                <TD>9</TD>
+            </TR>
+            <TR>
+                <TD>2002</TD>
+                <TD>-</TD>
+                <TD>2 (276,295)</TD>
+                <TD>7</TD>
+            </TR>
+            <TR>
+                <TD>2003</TD>
+                <TD>-</TD>
+                <TD>5 (280,282,285-286,293)</TD>
+                <TD>2</TD>
+            </TR>
+            <TR>
+                <TD>2004+</TD>
+                <TD>-</TD>
+                <TD>-</TD>
+                <TD>2</TD>
+            </TR>
+        </TABLE>
+
+        <BR>
+        <h2>Zdjęcia pojazdów:</h2><hr><br>
+        <div class="galeria">
+            <div class="opis-zdj">» 274</div>
+            <div class="opis-zdj">» 275</div>
+            <div class="opis-zdj">» 276</div>
+            <div class="opis-zdj">» 277</div>
+            <div class="opis-zdj">» 278</div>
+            <div class="opis-zdj">» 279</div>
+            <div class="opis-zdj">» 280</div>
+            <div class="opis-zdj">» 281</div>
+            <div class="opis-zdj">» 282</div>
+            <div class="opis-zdj">» 283</div>
+            <div class="opis-zdj">» 284</div>
+            <div class="opis-zdj">» 285</div>
+            <div class="opis-zdj">» 286</div>
+            <div class="opis-zdj">» 287</div>
+            <div class="opis-zdj">» 288</div>
+            <div class="opis-zdj">» 289</div>
+            <div class="opis-zdj">» 290</div>
+            <div class="opis-zdj">» 291</div>
+            <div class="opis-zdj">» 292</div>
+            <div class="opis-zdj">» 293</div>
+            <div class="opis-zdj">» 294</div>
+            <div class="opis-zdj">» 295</div>
+            <div class="opis-zdj">» 296</div>
+            <div class="opis-zdj">» 297</div>
+            <div class="opis-zdj">» 298</div>
+        </div>
+
+        <!--Okno do otwierania zdjęć na całej stronie-->
+        <div id="fullscreenOverlay" class="fullscreen-overlay">
+            <span id="closeBtn">&times;</span>
+            <img id="fullscreenImage" class="fullscreen-image">
+        </div>
+    </div>
+<button onclick="scrollToTop()" id="scrollTopBtn" title="Do góry">⬆</button>
+</body>
+</html>

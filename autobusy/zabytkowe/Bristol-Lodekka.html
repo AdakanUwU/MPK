@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <base href="/MPK/">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Bristol Lodekka FLF - MPK Częstochowa</title>
+    <link rel="stylesheet" href="css/style.css"/>
+
+
+    <script src="js/ikony.js" defer></script> <!--wczytywanie ikon-->
+    <script src="js/tabela_link.js" defer></script> <!--wczytywanie klikalnych wierszy tabel-->
+    <script src="js/toogleMenu.js" defer></script><!--Skrypt do listy menu-->
+
+    <script src="js/w_gore.js" defer></script> <!--Skrypt do przycisku przesuwania do samej góry-->
+    <script src="js/zdjecia.js" defer></script> 
+    <script src="js/foto-blok.js" defer></script> <!--Blokada menu kontekstowego na zdjęciach-->
+
+    <style>
+        .kolumna-opis {
+            font-weight: bold;
+        }
+    </style>
+
+
+
+</head>
+<body>
+    <div class="pasek"> <!--Pasek nawigacyjny-->
+    <nav>
+        <label class="logo"><a href="/MPK/"><img src="img/logo_mpk.png" alt="Logo MPK"></a></label>
+        <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+        <ul id="menu">
+        <li><a class="pasek" href="/MPK/">Spis</a></li>
+        <li><a class="pasek" href="autobusy">Autobusy</a></li>
+        <li><a class="pasek" href="tramwaje">Tramwaje</a></li>
+        <li><a class="pasek" href="javascript:void(0)">Trasy</a></li>
+        <li><a class="pasek" href="javascript:void(0)">Pętle</a></li>
+        </ul>
+    </nav>
+    </div>
+
+    <div class="tresc"> <!--Główna treść strony-->
+        <h1>Bristol Lodekka FLF</h1><hr />
+        <BR>
+        <img src="img/Lodekka/miniaturka.jpg" alt="Ikarus 412.08A nr 74" class="fullscreen-img miniatura">
+        <BR>
+
+        <div class="opis-pojazdu">
+            <p style="text-indent: 30px;">
+            MPK w Częstochowie zdecydowało się kupić w 2018 piętrowego Bristola Lodekke FLF w celu obsługi
+            darmowej turystycznej linii 034. Pojazd jest oklejony w grafiki zwionae z Częstochową np. motywy
+            związane z jurą, częstochowski tramwaj czy Jasną Górę. Autobus dodatkowo używany jest na spejcalne
+            przejazdy i okazje np. atrakcja podczas dnia otwartego Zajezdni MPK.
+            </p>
+        </div>
+        
+        <BR>
+            <h2>Dane technicze:</h2><hr><br>
+        <TABLE class="dane-techniczne"> <!--Tabela pojazdów-->
+            <colgroup>
+                <col style="width: 50%;">
+                <col style="width: 50%;">
+            </colgroup>
+
+            <TR> <!--Nagłówek tabeli-->
+            <TH width="90%" colspan="2" style="font-size: 20px;">Bristol Lodekka FLF</TH>
+            </TR>
+
+            <TR class="tabela-hover"> <!--Producent-->
+                <TD class="kolumna-opis">Producent</TD>
+                <TD>Bristol Commercial Vehicles</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Długość-->
+                <TD class="kolumna-opis">Długość</TD>
+                <TD>9140 mm</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Szerokość-->
+                <TD class="kolumna-opis">Szerokość</TD>
+                <TD>2440 mm</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Wysokość-->
+                <TD class="kolumna-opis">Wysokość</TD>
+                <TD>4041 mm</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Liczba miejsc siedzących-->
+                <TD class="kolumna-opis">Masa</TD>
+                <TD>15 000 KG</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Układ drzwi-->
+                <TD class="kolumna-opis">Układ drzwi</TD>
+                <TD>Prawo: 0-1-0<BR>Lewo: 2-0-0</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Wysokość podłogi przy drzwiach-->
+                <TD class="kolumna-opis">Wysokość podłogi przy drzwiach</TD>
+                <TD>500-500-500 [mm]</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Liczba miejsc siedzących-->
+                <TD class="kolumna-opis">Po przyklęku</TD>
+                <TD>Brak możliwości przyklęku</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Silnik-->
+                <TD class="kolumna-opis">Silnik (moc)</TD>
+                <TD>- (- kW)</TD>
+            </TR>  
+            <TR class="tabela-hover"> <!--Skrzynia biegów-->
+                <TD class="kolumna-opis">Skrzynia Biegów</TD>
+                <TD>Bristol 5-speed manual</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Liczba miejsc siedzących-->
+                <TD class="kolumna-opis">Liczba miejsc siedzących</TD>
+                <TD>54</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Liczba miejsc stojących-->
+                <TD class="kolumna-opis">Liczba miejsc stojących</TD>
+                <TD>0</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Udział niskiej podłogi-->
+                <TD class="kolumna-opis">Udział niskiej podłogi</TD>
+                <TD>100% (dostęp do górnego pokładu po schodach)</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Klimatyzacja-->
+                <TD class="kolumna-opis">Klimatyzacja</TD>
+                <TD>Nie</TD>
+            </TR>
+        </TABLE>
+
+        <BR>
+        <h2>Spis pojazdów:</h2><hr><br>
+
+        <TABLE class="spis" > <!--Tabela pojazdów-->
+            <TR> <!--Nagłówek tabeli-->
+            <TH width="90px">Numer</TH>
+            <TH width="200px">Malowanie</TH>
+            <TH width="55px">Rok prod.</TH>
+            <TH width="200px">Atrybuty</TH>
+            <TH width="">Uwagi</TH>
+            <TH width="100px">Rejestracja</TH>
+            <TH width="85px">Linki</TH>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>299</TD>
+                <TD>Białe z motywami Częstochowy</TD>
+                <TD>1965</TD>
+                <TD><biletkier></TD>
+                <TD>Zabytek. Kupiony w 2018 roku.</TD>
+                <TD style="color: rgb(255, 179, 0);">SC 26E</TD>
+                <TD><A href="https://czgk.pl/categories.php?cat_id=7033" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/7510fe28-415e-4a85-8940-687069aead31" target="_blank"><gps1></A></TD>
+            </TR>
+        </TABLE>
+
+        <BR>
+        <h2>Stan taboru na przestrzeni lat:</h2><hr><br>
+        <TABLE class="ilostan" > <!--Tabela pojazdów-->
+            <TR> <!--Nagłówek tabeli-->
+                <TH width="70px">Rok</TH>
+                <TH width="130px">Wpisane na stan</TH>
+                <TH width="130px">Skreślone ze stanu</TH>
+                <TH width="100px">Ilość na koniec roku</TH>
+            </TR>
+            <TR>
+                <TD>2018</TD>
+                <TD>1 (299)</TD>
+                <TD>-</TD>
+                <TD>1</TD>
+            </TR>
+            <TR>
+                <TD>2019+</TD>
+                <TD>-</TD>
+                <TD>-</TD>
+                <TD>1</TD>
+            </TR>
+        </TABLE>
+
+        <BR>
+        <h2>Zdjęcia pojazdów:</h2><hr><br>
+        <div class="galeria">
+            <div class="opis-zdj">» 299</div>
+            <img src="img/Lodekka/299/1.jpg" alt="Bristol Lodekka FLF nr 299" class="fullscreen-img">
+            <img src="img/Lodekka/299/2.png" alt="Bristol Lodekka FLF nr 299" class="fullscreen-img">
+        </div>
+
+        <!--Okno do otwierania zdjęć na całej stronie-->
+        <div id="fullscreenOverlay" class="fullscreen-overlay">
+            <span id="closeBtn">&times;</span>
+            <img id="fullscreenImage" class="fullscreen-image">
+        </div>
+    </div>
+<button onclick="scrollToTop()" id="scrollTopBtn" title="Do góry">⬆</button>
+</body>
+</html>

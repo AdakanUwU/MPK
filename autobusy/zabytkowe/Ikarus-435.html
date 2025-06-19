@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <base href="/MPK/">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Ikarus 435.05C - MPK Częstochowa</title>
+    <link rel="stylesheet" href="css/style.css"/>
+
+
+    <script src="js/ikony.js" defer></script> <!--wczytywanie ikon-->
+    <script src="js/tabela_link.js" defer></script> <!--wczytywanie klikalnych wierszy tabel-->
+    <script src="js/toogleMenu.js" defer></script><!--Skrypt do listy menu-->
+
+    <script src="js/w_gore.js" defer></script> <!--Skrypt do przycisku przesuwania do samej góry-->
+    <script src="js/zdjecia.js" defer></script> 
+    <script src="js/foto-blok.js" defer></script> <!--Blokada menu kontekstowego na zdjęciach-->
+
+    <style>
+        .kolumna-opis {
+            font-weight: bold;
+        }
+    </style>
+
+
+
+</head>
+<body>
+    <div class="pasek"> <!--Pasek nawigacyjny-->
+    <nav>
+        <label class="logo"><a href="/MPK/"><img src="img/logo_mpk.png" alt="Logo MPK"></a></label>
+        <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+        <ul id="menu">
+        <li><a class="pasek" href="/MPK/">Spis</a></li>
+        <li><a class="pasek" href="autobusy">Autobusy</a></li>
+        <li><a class="pasek" href="tramwaje">Tramwaje</a></li>
+        <li><a class="pasek" href="javascript:void(0)">Trasy</a></li>
+        <li><a class="pasek" href="javascript:void(0)">Pętle</a></li>
+        </ul>
+    </nav>
+    </div>
+
+    <div class="tresc"> <!--Główna treść strony-->
+        <h1>Ikarus 435.05C</h1><hr />
+        <BR>
+        <!--<img src="img/Ikarus412/miniaturka.jpg" alt="Ikarus 412.08A nr 74" class="fullscreen-img miniatura">
+        <BR>-->
+
+        <div class="opis-pojazdu">
+            <p style="text-indent: 30px;">
+            W 1993 roku Miejskie Przedsiębiorstwo Komunikacyjne (MPK) w Częstochowie zakupiło pięć fabrycznie 
+            nowych autobusów przegubowych Ikarus 435.05C, które otrzymały numery taborowe od #360 do #364. 
+            Były to nowoczesne, średniopodłogowe pojazdy, które miały zastąpić starsze modele, takie jak Ikarus 280.02.
+            </p>
+            <p style="text-indent: 30px;">
+            Ikarusy 435 służyły na najbardziej obciążonych liniach komunikacyjnych w Częstochowie przez dwie dekady.
+            Ostatni z nich, o numerze #360, został wycofany z regularnej eksploatacji w styczniu 2016 roku i 
+            zachowany jako pojazd zabytkowy, jednak do dzisiaj czeka na renowację. Jest to ostatni pojazd MPK
+            pomalowany w Biało-Niebisko-Fioletowe malowanie.
+            </p>
+        </div>
+        
+        <BR>
+            <h2>Dane technicze:</h2><hr><br>
+        <TABLE class="dane-techniczne"> <!--Tabela pojazdów-->
+            <colgroup>
+                <col style="width: 50%;">
+                <col style="width: 50%;">
+            </colgroup>
+
+            <TR> <!--Nagłówek tabeli-->
+            <TH width="90%" colspan="2" style="font-size: 20px;">Ikarus 435.05C</TH>
+            </TR>
+
+            <TR class="tabela-hover"> <!--Producent-->
+                <TD class="kolumna-opis">Producent</TD>
+                <TD>Ikarus</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Długość-->
+                <TD class="kolumna-opis">Długość</TD>
+                <TD>17850 mm</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Szerokość-->
+                <TD class="kolumna-opis">Szerokość</TD>
+                <TD>2500 mm</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Wysokość-->
+                <TD class="kolumna-opis">Wysokość</TD>
+                <TD>3000 mm</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Liczba miejsc siedzących-->
+                <TD class="kolumna-opis">Masa</TD>
+                <TD>26 700 KG</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Układ drzwi-->
+                <TD class="kolumna-opis">Układ drzwi</TD>
+                <TD>2-2-2-2</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Wysokość podłogi przy drzwiach-->
+                <TD class="kolumna-opis">Wysokość podłogi przy drzwiach</TD>
+                <TD>760-760-760-930 [mm]</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Liczba miejsc siedzących-->
+                <TD class="kolumna-opis">Po przyklęku</TD>
+                <TD>Brak możliwości przyklęku</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Silnik-->
+                <TD class="kolumna-opis">Silnik (moc)</TD>
+                <TD>MAN D2865LUH07 (220kW)</TD>
+            </TR>  
+            <TR class="tabela-hover"> <!--Skrzynia biegów-->
+                <TD class="kolumna-opis">Skrzynia Biegów</TD>
+                <TD>ZF 4HP500 </TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Liczba miejsc siedzących-->
+                <TD class="kolumna-opis">Liczba miejsc siedzących</TD>
+                <TD>40</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Liczba miejsc stojących-->
+                <TD class="kolumna-opis">Liczba miejsc stojących</TD>
+                <TD>115</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Udział niskiej podłogi-->
+                <TD class="kolumna-opis">Udział niskiej podłogi</TD>
+                <TD>0% (średniopodłogowy)</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Klimatyzacja-->
+                <TD class="kolumna-opis">Klimatyzacja</TD>
+                <TD>Nie</TD>
+            </TR>
+        </TABLE>
+
+        <BR>
+        <h2>Spis pojazdów:</h2><hr><br>
+
+        <TABLE class="spis" > <!--Tabela pojazdów-->
+            <TR> <!--Nagłówek tabeli-->
+            <TH width="90px">Numer</TH>
+            <TH width="200px">Malowanie</TH>
+            <TH width="55px">Rok prod.</TH>
+            <TH width="200px">Atrybuty</TH>
+            <TH width="">Uwagi</TH>
+            <TH width="100px">Rejestracja</TH>
+            <TH width="85px">Linki</TH>
+            </TR>
+
+            <TR class="tabela-hover">
+            <TD>360</TD>
+            <TD>Biało-Niebiesko-Fioletowy</TD>
+            <TD>1993</TD>
+            <TD><przeg> <biletkier></TD>
+            <TD>Dawniej CEG 7426</TD>
+            <TD>SC 32905</TD>
+            <TD><A href="https://czgk.pl/categories.php?cat_id=282" target="_blank">CZGK</A></TD>
+            </TR>
+
+            <TR class="tabela-hover">
+            <TD>361</TD>
+            <TD>Biało-Niebiesko-Fioletowy</TD>
+            <TD>1993-2011</TD>
+            <TD><przeg> <biletkier></TD>
+            <TD><zz><br>Dawniej CEG 7429</TD>
+            <TD>SC 31517</TD>
+            <TD><A href="https://czgk.pl/categories.php?cat_id=283" target="_blank">CZGK</A></TD>
+            </TR>
+
+            <TR class="tabela-hover">
+            <TD>362</TD>
+            <TD>Biało-Niebiesko-Fioletowy</TD>
+            <TD>1993-2012</TD>
+            <TD><przeg> <biletkier></TD>
+            <TD><zz><br>W 2012 pokonany przez Chuck'a Norrisa.<BR>Dawniej CEG 7427</TD>
+            <TD>SC 33829</TD>
+            <TD><A href="https://czgk.pl/categories.php?cat_id=284" target="_blank">CZGK</A></TD>
+            </TR>
+
+            <TR class="tabela-hover">
+            <TD>363</TD>
+            <TD>Biało-Niebiesko-Fioletowy</TD>
+            <TD>1993-2013</TD>
+            <TD><przeg> <biletkier></TD>
+            <TD><zz><br>Dawniej CEG 7428</TD>
+            <TD>SC 37552</TD>
+            <TD><A href="https://czgk.pl/categories.php?cat_id=285" target="_blank">CZGK</A></TD>
+            </TR>
+
+            <TR class="tabela-hover">
+            <TD>364</TD>
+            <TD>Biało-Niebiesko-Fioletowy</TD>
+            <TD>1993-2015</TD>
+            <TD><przeg> <biletkier></TD>
+            <TD><zz><br>Dawniej CEG 7430</TD>
+            <TD>SC 31789</TD>
+            <TD><A href="https://czgk.pl/categories.php?cat_id=286" target="_blank">CZGK</A></TD>
+            </TR>
+        </TABLE>
+
+        <BR>
+        <h2>Stan taboru na przestrzeni lat:</h2><hr><br>
+        <TABLE class="ilostan" > <!--Tabela pojazdów-->
+            <TR> <!--Nagłówek tabeli-->
+                <TH width="70px">Rok</TH>
+                <TH width="130px">Wpisane na stan</TH>
+                <TH width="130px">Skreślone ze stanu</TH>
+                <TH width="100px">Ilość na koniec roku</TH>
+            </TR>
+            <TR>
+                <TD>1993</TD>
+                <TD>5 (360-364)</TD>
+                <TD>-</TD>
+                <TD>5</TD>
+            </TR>
+            <TR>
+                <TD>1994-2010</TD>
+                <TD>-</TD>
+                <TD>-</TD>
+                <TD>5</TD>
+            </TR>
+            <TR>
+                <TD>2011</TD>
+                <TD>-</TD>
+                <TD>1 (361)</TD>
+                <TD>4</TD>
+            </TR>
+            <TR>
+                <TD>2012</TD>
+                <TD>-</TD>
+                <TD>1 (362)</TD>
+                <TD>3</TD>
+            </TR>
+            <TR>
+                <TD>2013</TD>
+                <TD>-</TD>
+                <TD>1 (363)</TD>
+                <TD>2</TD>
+            </TR>
+            <TR>
+                <TD>2014</TD>
+                <TD>-</TD>
+                <TD>-</TD>
+                <TD>2</TD>
+            </TR>
+            <TR>
+                <TD>2015</TD>
+                <TD>-</TD>
+                <TD>1 (364)</TD>
+                <TD>1</TD>
+            </TR>
+            <TR>
+                <TD>2016+</TD>
+                <TD>-</TD>
+                <TD>-</TD>
+                <TD>1</TD>
+            </TR>
+        </TABLE>
+
+        <BR>
+        <h2>Zdjęcia pojazdów:</h2><hr><br>
+        <div class="galeria">
+            <div class="opis-zdj">» 360</div>
+            <div class="opis-zdj">» 361</div>
+            <div class="opis-zdj">» 362</div>
+            <div class="opis-zdj">» 363</div>
+            <div class="opis-zdj">» 364</div>
+        </div>
+
+        <!--Okno do otwierania zdjęć na całej stronie-->
+        <div id="fullscreenOverlay" class="fullscreen-overlay">
+            <span id="closeBtn">&times;</span>
+            <img id="fullscreenImage" class="fullscreen-image">
+        </div>
+    </div>
+<button onclick="scrollToTop()" id="scrollTopBtn" title="Do góry">⬆</button>
+</body>
+</html>
