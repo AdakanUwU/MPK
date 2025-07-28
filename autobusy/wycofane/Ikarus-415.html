@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <base href="/MPK/">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Ikarus 415.14 - MPK Częstochowa</title>
+    <link rel="stylesheet" href="css/style.css"/>
+
+
+    <script src="js/ikony.js" defer></script> <!--wczytywanie ikon-->
+    <script src="js/tabela_link.js" defer></script> <!--wczytywanie klikalnych wierszy tabel-->
+    <script src="js/toogleMenu.js" defer></script><!--Skrypt do listy menu-->
+
+    <script src="js/w_gore.js" defer></script> <!--Skrypt do przycisku przesuwania do samej góry-->
+    <script src="js/zdjecia.js" defer></script> 
+    <script src="js/foto-blok.js" defer></script> <!--Blokada menu kontekstowego na zdjęciach-->
+
+    <style>
+        .kolumna-opis {
+            font-weight: bold;
+        }
+    </style>
+
+
+
+</head>
+<body>
+    <div class="pasek"> <!--Pasek nawigacyjny-->
+    <nav>
+        <label class="logo"><a href="/MPK/"><img src="img/logo_mpk.png" alt="Logo MPK"></a></label>
+        <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+        <ul id="menu">
+        <li><a class="pasek" href="/MPK/">Spis</a></li>
+        <li><a class="pasek" href="autobusy">Autobusy</a></li>
+        <li><a class="pasek" href="tramwaje">Tramwaje</a></li>
+        <li><a class="pasek" href="javascript:void(0)">Trasy</a></li>
+        <li><a class="pasek" href="javascript:void(0)">Pętle</a></li>
+        </ul>
+    </nav>
+    </div>
+
+    <div class="tresc"> <!--Główna treść strony-->
+        <h1>Ikarus 415.14</h1><hr />
+        <BR>
+        <img src="img/Ikarus415/miniaturka.webp" alt="Ikarusy 415 nr 60 i 64" class="fullscreen-img miniatura">
+        <BR>
+
+        <div class="opis-pojazdu">
+            <p style="text-indent: 30px;">
+            W 1994 roku MPK w Częstochowie zamówiło nowe średniopodłogowe autobusy marki Ikarus. Wybór padł na model 
+            415, ponieważ przewoźnik posiadał już przegubowe autobusy Ikarus 435, będące wariantem tego samego typu 
+            konstrukcji. Pierwsze Ikarusy 415.14A dostarczono już w lutym 1995 roku, a całą pierwszą partię 
+            skompletowano do kwietnia tego roku. Otrzymały numery taborowe 60-65. Wyróżniały się one nietypowymi 
+            tablicami kierunkowymi w formie tzw. filmu - numer linii i kierunek były ustawiane na zwijanym 
+            materiale. W Częstochowie rozwiązanie to stosowano jedynie w tramwajach typu 105Na.
+            </p><p style="text-indent: 30px;">
+            Druga partia, składająca się z modeli 415.14E i 415.14C, została dostarczona do grudnia 1995 roku i 
+            otrzymała numery 66-72. Część pojazdów była montowana na terenie zakładów MPK przy ulicy Wilsona z 
+            podzespołów sprowadzanych z Węgier. W zakładach kompletowano również autobusy przeznaczone dla innych 
+            miast.
+            </p><p style="text-indent: 30px;">
+            Pomimo starszej konstrukcji i wyższej podłogi, Ikarusy 415 pozostawały w eksploatacji liniowej dłużej 
+            niż nowsze, niskopodłogowe modele 412. Pierwszy egzemplarz (nr 63) wycofano z ruchu i zezłomowano w 
+            2010 roku po kolizji ze śmieciarką. Planowe wycofywanie rozpoczęto jednak dopiero w 2015 roku - 
+            wtedy zlikwidowano wozy o numerach 60, 61, 62, 65 i 69. Pozostałe egzemplarze 
+            (64, 66, 67, 68, 70, 71 i 72) wycofano rok później. Niestety, żaden z pojazdów nie został zachowany 
+            jako historyczny.
+            </p>
+        </div>
+        
+        <BR>
+            <h2>Dane technicze:</h2><hr><br>
+                <TABLE class="dane-techniczne"> <!--Tabela pojazdów-->
+            <colgroup>
+                <col style="width: 50%;">
+                <col style="width: 50%;">
+            </colgroup>
+
+            <TR> <!--Nagłówek tabeli-->
+            <TH width="90%" colspan="2" style="font-size: 20px;">Ikarus 415.15A</TH>
+            </TR>
+
+            <TR class="tabela-hover"> <!--Producent-->
+                <TD class="kolumna-opis">Producent</TD>
+                <TD>Ikarus</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Długość-->
+                <TD class="kolumna-opis">Długość</TD>
+                <TD>11 500 mm</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Szerokość-->
+                <TD class="kolumna-opis">Szerokość</TD>
+                <TD>2500 mm</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Wysokość-->
+                <TD class="kolumna-opis">Wysokość</TD>
+                <TD>3000 mm</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Liczba miejsc siedzących-->
+                <TD class="kolumna-opis">Masa</TD>
+                <TD>17 000 KG</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Układ drzwi-->
+                <TD class="kolumna-opis">Układ drzwi</TD>
+                <TD>2-2-2</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Wysokość podłogi przy drzwiach-->
+                <TD class="kolumna-opis">Wysokość podłogi przy drzwiach</TD>
+                <TD>775-775-930 [mm]</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Liczba miejsc siedzących-->
+                <TD class="kolumna-opis">Po przyklęku</TD>
+                <TD>Brak możliwości przyklęku</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Silnik-->
+                <TD class="kolumna-opis">Silnik (moc)</TD>
+                <TD>- (- kW)</TD>
+            </TR>  
+            <TR class="tabela-hover"> <!--Skrzynia biegów-->
+                <TD class="kolumna-opis">Skrzynia Biegów</TD>
+                <TD>- </TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Liczba miejsc siedzących-->
+                <TD class="kolumna-opis">Liczba miejsc siedzących</TD>
+                <TD>27</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Liczba miejsc stojących-->
+                <TD class="kolumna-opis">Liczba miejsc stojących</TD>
+                <TD>71</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Udział niskiej podłogi-->
+                <TD class="kolumna-opis">Udział niskiej podłogi</TD>
+                <TD>0% (średniopodłogowy)</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Klimatyzacja-->
+                <TD class="kolumna-opis">Klimatyzacja</TD>
+                <TD>Nie</TD>
+            </TR>
+        </TABLE>
+        <BR>
+        <TABLE class="dane-techniczne"> <!--Tabela pojazdów-->
+            <colgroup>
+                <col style="width: 50%;">
+                <col style="width: 50%;">
+            </colgroup>
+
+            <TR> <!--Nagłówek tabeli-->
+            <TH width="90%" colspan="2" style="font-size: 20px;">Ikarus 415.15E</TH>
+            </TR>
+
+            <TR class="tabela-hover"> <!--Producent-->
+                <TD class="kolumna-opis">Producent</TD>
+                <TD>Ikarus</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Długość-->
+                <TD class="kolumna-opis">Długość</TD>
+                <TD>11 500 mm</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Szerokość-->
+                <TD class="kolumna-opis">Szerokość</TD>
+                <TD>2500 mm</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Wysokość-->
+                <TD class="kolumna-opis">Wysokość</TD>
+                <TD>3000 mm</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Liczba miejsc siedzących-->
+                <TD class="kolumna-opis">Masa</TD>
+                <TD>16 500 KG</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Układ drzwi-->
+                <TD class="kolumna-opis">Układ drzwi</TD>
+                <TD>2-2-2</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Wysokość podłogi przy drzwiach-->
+                <TD class="kolumna-opis">Wysokość podłogi przy drzwiach</TD>
+                <TD>775-775-930 [mm]</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Liczba miejsc siedzących-->
+                <TD class="kolumna-opis">Po przyklęku</TD>
+                <TD>Brak możliwości przyklęku</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Silnik-->
+                <TD class="kolumna-opis">Silnik (moc)</TD>
+                <TD>- (- kW)</TD>
+            </TR>  
+            <TR class="tabela-hover"> <!--Skrzynia biegów-->
+                <TD class="kolumna-opis">Skrzynia Biegów</TD>
+                <TD>- </TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Liczba miejsc siedzących-->
+                <TD class="kolumna-opis">Liczba miejsc siedzących</TD>
+                <TD>27</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Liczba miejsc stojących-->
+                <TD class="kolumna-opis">Liczba miejsc stojących</TD>
+                <TD>58</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Udział niskiej podłogi-->
+                <TD class="kolumna-opis">Udział niskiej podłogi</TD>
+                <TD>0% (średniopodłogowy)</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Klimatyzacja-->
+                <TD class="kolumna-opis">Klimatyzacja</TD>
+                <TD>Nie</TD>
+            </TR>
+        </TABLE>
+        <BR>
+        <TABLE class="dane-techniczne"> <!--Tabela pojazdów-->
+            <colgroup>
+                <col style="width: 50%;">
+                <col style="width: 50%;">
+            </colgroup>
+
+            <TR> <!--Nagłówek tabeli-->
+            <TH width="90%" colspan="2" style="font-size: 20px;">Ikarus 415.15C</TH>
+            </TR>
+
+            <TR class="tabela-hover"> <!--Producent-->
+                <TD class="kolumna-opis">Producent</TD>
+                <TD>Ikarus</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Długość-->
+                <TD class="kolumna-opis">Długość</TD>
+                <TD>11 500 mm</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Szerokość-->
+                <TD class="kolumna-opis">Szerokość</TD>
+                <TD>2500 mm</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Wysokość-->
+                <TD class="kolumna-opis">Wysokość</TD>
+                <TD>3000 mm</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Liczba miejsc siedzących-->
+                <TD class="kolumna-opis">Masa</TD>
+                <TD>17 500 KG</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Układ drzwi-->
+                <TD class="kolumna-opis">Układ drzwi</TD>
+                <TD>2-2-2</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Wysokość podłogi przy drzwiach-->
+                <TD class="kolumna-opis">Wysokość podłogi przy drzwiach</TD>
+                <TD>775-775-930 [mm]</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Liczba miejsc siedzących-->
+                <TD class="kolumna-opis">Po przyklęku</TD>
+                <TD>Brak możliwości przyklęku</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Silnik-->
+                <TD class="kolumna-opis">Silnik (moc)</TD>
+                <TD>- (- kW)</TD>
+            </TR>  
+            <TR class="tabela-hover"> <!--Skrzynia biegów-->
+                <TD class="kolumna-opis">Skrzynia Biegów</TD>
+                <TD>- </TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Liczba miejsc siedzących-->
+                <TD class="kolumna-opis">Liczba miejsc siedzących</TD>
+                <TD>27</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Liczba miejsc stojących-->
+                <TD class="kolumna-opis">Liczba miejsc stojących</TD>
+                <TD>71</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Udział niskiej podłogi-->
+                <TD class="kolumna-opis">Udział niskiej podłogi</TD>
+                <TD>0% (średniopodłogowy)</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Klimatyzacja-->
+                <TD class="kolumna-opis">Klimatyzacja</TD>
+                <TD>Nie</TD>
+            </TR>
+        </TABLE>
+
+        <BR>
+        <h2>Spis pojazdów:</h2><hr><br>
+
+        <h3>Ikarus 415.14A</h3><BR>
+
+        <TABLE class="spis" > <!--Tabela pojazdów-->
+            <TR> <!--Nagłówek tabeli-->
+            <TH width="90px">Numer</TH>
+            <TH width="200px">Malowanie</TH>
+            <TH width="55px">Rok prod.</TH>
+            <TH width="200px">Atrybuty</TH>
+            <TH width="">Uwagi</TH>
+            <TH width="100px">Rejestracja</TH>
+            <TH width="85px">Linki</TH>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>60</TD>
+                <TD>Czerwono-Białe</TD>
+                <TD>1995-2015</TD>
+                <TD><biletkier></TD>
+                <TD><zz> w 2015 roku.<BR>Dawniej CEJ 1314</TD>
+                <TD>SC 31373</TD>
+                <TD><A href="https://czgk.pl/categories.php?cat_id=257" target="_blank">CZGK</A></TD>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>61</TD>
+                <TD>Czerwono-Białe</TD>
+                <TD>1995-2015</TD>
+                <TD><biletkier></TD>
+                <TD><zz> w 2015 roku.<BR>Dawniej CEJ 1303</TD>
+                <TD>SC 40164</TD>
+                <TD><A href="https://czgk.pl/categories.php?cat_id=258" target="_blank">CZGK</A></TD>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>62</TD>
+                <TD>Czerwono-Białe</TD>
+                <TD>1995-2015</TD>
+                <TD><biletkier></TD>
+                <TD><zz> w 2015 roku.<BR>Dawniej CEJ 1304</TD>
+                <TD>SC 31516</TD>
+                <TD><A href="https://czgk.pl/categories.php?cat_id=259" target="_blank">CZGK</A></TD>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>63</TD>
+                <TD>Biało-Niebiesko-Fioletowy</TD>
+                <TD>1995-2010</TD>
+                <TD><biletkier></TD>
+                <TD><zz> w 2010 roku.<BR>Dawniej CEJ 1302</TD>
+                <TD>SC 40765</TD>
+                <TD><A href="https://czgk.pl/categories.php?cat_id=260" target="_blank">CZGK</A></TD>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>64</TD>
+                <TD>Czerwono-Białe</TD>
+                <TD>1995-2016</TD>
+                <TD><biletkier></TD>
+                <TD><zz> w 2016 roku.<BR>Dawniej CEJ 1305</TD>
+                <TD>SC 37554</TD>
+                <TD><A href="https://czgk.pl/categories.php?cat_id=261" target="_blank">CZGK</A></TD>
+            </TR>  
+            
+            <TR class="tabela-hover">
+                <TD>65</TD>
+                <TD>Czerwono-Białe</TD>
+                <TD>1995-2015</TD>
+                <TD><biletkier></TD>
+                <TD><zz> w 2015 roku.<BR>Dawniej CEJ 2443</TD>
+                <TD>SC 37818</TD>
+                <TD><A href="https://czgk.pl/categories.php?cat_id=262" target="_blank">CZGK</A></TD>
+            </TR>     
+        </TABLE><BR>
+
+        <h3>Ikarus 415.14E</h3><BR>
+
+        <TABLE class="spis" > <!--Tabela pojazdów-->
+            <TR> <!--Nagłówek tabeli-->
+            <TH width="90px">Numer</TH>
+            <TH width="200px">Malowanie</TH>
+            <TH width="55px">Rok prod.</TH>
+            <TH width="200px">Atrybuty</TH>
+            <TH width="">Uwagi</TH>
+            <TH width="100px">Rejestracja</TH>
+            <TH width="85px">Linki</TH>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>66</TD>
+                <TD>Czerwono-Białe</TD>
+                <TD>1995-2016</TD>
+                <TD><biletkier></TD>
+                <TD><zz> w 2016 roku.<BR>Dawniej CEJ 8654</TD>
+                <TD>SC 33297</TD>
+                <TD><A href="https://czgk.pl/categories.php?cat_id=263" target="_blank">CZGK</A></TD>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>67</TD>
+                <TD>Biało-Niebiesko-Fioletowy</TD>
+                <TD>1995-2016</TD>
+                <TD><biletkier></TD>
+                <TD><zz> w 2016 roku.<BR>Dawniej CEJ 8655</TD>
+                <TD>SC 37861</TD>
+                <TD><A href="https://czgk.pl/categories.php?cat_id=264" target="_blank">CZGK</A></TD>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>68</TD>
+                <TD>Czerwono-Białe</TD>
+                <TD>1995-2016</TD>
+                <TD><biletkier></TD>
+                <TD><zz> w 2016 roku.<BR>Dawniej CEJ 8656</TD>
+                <TD>SC 40659</TD>
+                <TD><A href="https://czgk.pl/categories.php?cat_id=265" target="_blank">CZGK</A></TD>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>69</TD>
+                <TD>Biało-Niebiesko-Fioletowy</TD>
+                <TD>1995-2015</TD>
+                <TD><biletkier></TD>
+                <TD><zz> w 2015 roku.<BR>Dawniej CEJ 8657</TD>
+                <TD>SC 33499</TD>
+                <TD><A href="https://czgk.pl/categories.php?cat_id=266" target="_blank">CZGK</A></TD>
+            </TR>
+            
+            <TR class="tabela-hover">
+                <TD>70</TD>
+                <TD>Biało-Niebiesko-Fioletowy</TD>
+                <TD>1995-2016</TD>
+                <TD><biletkier></TD>
+                <TD><zz> w 2016 roku.<BR>Dawniej CEJ 8658</TD>
+                <TD>SC 34037</TD>
+                <TD><A href="https://czgk.pl/categories.php?cat_id=267" target="_blank">CZGK</A></TD>
+            </TR>
+            
+            <TR class="tabela-hover">
+                <TD>71</TD>
+                <TD>Czerwono-Białe</TD>
+                <TD>1995-2016</TD>
+                <TD><biletkier></TD>
+                <TD><zz> w 2016 roku.<BR>Dawniej CEJ 8659</TD>
+                <TD>SC 33497</TD>
+                <TD><A href="https://czgk.pl/categories.php?cat_id=268" target="_blank">CZGK</A></TD>
+            </TR>
+        </TABLE><BR>
+
+        <h3>Ikarus 415.14C</h3><BR>
+
+        <TABLE class="spis" > <!--Tabela pojazdów-->
+            <TR> <!--Nagłówek tabeli-->
+            <TH width="90px">Numer</TH>
+            <TH width="200px">Malowanie</TH>
+            <TH width="55px">Rok prod.</TH>
+            <TH width="200px">Atrybuty</TH>
+            <TH width="">Uwagi</TH>
+            <TH width="100px">Rejestracja</TH>
+            <TH width="85px">Linki</TH>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>72</TD>
+                <TD>Czerwono-Białe</TD>
+                <TD>1995-2016</TD>
+                <TD><biletkier></TD>
+                <TD><zz> w 2016 roku.<BR>Dawniej CEJ 8660</TD>
+                <TD>SC 37420</TD>
+                <TD><A href="https://czgk.pl/categories.php?cat_id=269" target="_blank">CZGK</A></TD>
+            </TR>
+        </TABLE>
+
+        <BR>
+        <h2>Stan taboru na przestrzeni lat:</h2><hr><br>
+        <TABLE class="ilostan" > <!--Tabela pojazdów-->
+            <TR> <!--Nagłówek tabeli-->
+                <TH width="70px">Rok</TH>
+                <TH width="130px">Wpisane na stan</TH>
+                <TH width="130px">Skreślone ze stanu</TH>
+                <TH width="100px">Ilość na koniec roku</TH>
+            </TR>
+            <TR>
+                <TD>1995</TD>
+                <TD>13 (60-72)</TD>
+                <TD>-</TD>
+                <TD>13</TD>
+            </TR>
+            <TR>
+                <TD>1996-2009</TD>
+                <TD>-</TD>
+                <TD>-</TD>
+                <TD>13</TD>
+            </TR>
+            <TR>
+                <TD>2010</TD>
+                <TD>-</TD>
+                <TD>1 (63)</TD>
+                <TD>12</TD>
+            </TR>
+            <TR>
+                <TD>2011-2014</TD>
+                <TD>-</TD>
+                <TD>-</TD>
+                <TD>12</TD>
+            </TR>
+            <TR>
+                <TD>2015</TD>
+                <TD>-</TD>
+                <TD>5 (60-62, 65, 69)</TD>
+                <TD>7</TD>
+            </TR>
+            <TR>
+                <TD>2016</TD>
+                <TD>-</TD>
+                <TD>7 (64, 66-68, 70-72)</TD>
+                <TD>0</TD>
+            </TR>
+            <TR>
+                <TD>2017+</TD>
+                <TD>-</TD>
+                <TD>-</TD>
+                <TD>0</TD>
+            </TR>
+        </TABLE>
+
+        <BR>
+        <h2>Zdjęcia pojazdów:</h2><hr><br>
+        <div class="galeria">
+            <div class="opis-zdj">» 60</div>
+            <div class="opis-zdj">» 61</div>
+            <div class="opis-zdj">» 62</div>
+            <div class="opis-zdj">» 63</div>
+            <div class="opis-zdj">» 64</div>
+            <div class="opis-zdj">» 65</div>
+            <div class="opis-zdj">» 66</div>
+            <div class="opis-zdj">» 67</div>
+            <div class="opis-zdj">» 68</div>
+            <div class="opis-zdj">» 69</div>
+            <div class="opis-zdj">» 70</div>
+            <div class="opis-zdj">» 71</div>
+            <div class="opis-zdj">» 72</div>
+        </div>
+
+        <!--Okno do otwierania zdjęć na całej stronie-->
+        <div id="fullscreenOverlay" class="fullscreen-overlay">
+            <span id="closeBtn">&times;</span>
+            <img id="fullscreenImage" class="fullscreen-image">
+        </div>
+    </div>
+<button onclick="scrollToTop()" id="scrollTopBtn" title="Do góry">⬆</button>
+</body>
+</html>

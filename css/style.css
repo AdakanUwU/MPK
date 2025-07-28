@@ -141,7 +141,12 @@ a.pasek:hover {
   transition-duration: 0.5s;
 }
 
+.tresc-kafelki{
+  margin: 95px 12% 10px 12%;
+}
+
 .tresc{
+  overflow-x: auto;
   margin: 95px 12% 10px 12%;
 }
 
@@ -363,6 +368,36 @@ details summary::marker{
   text-align: center;
   font-size: 1rem;
   z-index: 1;
+}
+
+
+
+.separator-kafelki {
+  grid-column: 1 / -1; /* separator zajmuje całą szerokość siatki */
+  text-align: center;
+  position: relative;
+  margin: 15px 0;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: black;
+}
+
+.separator-kafelki::before,
+.separator-kafelki::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 40%;
+  height: 1px;
+  background-color: #ff8282;
+}
+
+.separator-kafelki::before {
+  left: 0;
+}
+
+.separator-kafelki::after {
+  right: 0;
 }
 
 /*Koniec*/

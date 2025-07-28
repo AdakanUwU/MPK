@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <base href="/MPK/">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Ikarus 556.16 - MPK Częstochowa</title>
+    <link rel="stylesheet" href="css/style.css"/>
+
+
+    <script src="js/ikony.js" defer></script> <!--wczytywanie ikon-->
+    <script src="js/tabela_link.js" defer></script> <!--wczytywanie klikalnych wierszy tabel-->
+    <script src="js/toogleMenu.js" defer></script><!--Skrypt do listy menu-->
+
+    <script src="js/w_gore.js" defer></script> <!--Skrypt do przycisku przesuwania do samej góry-->
+    <script src="js/zdjecia.js" defer></script> 
+    <script src="js/foto-blok.js" defer></script> <!--Blokada menu kontekstowego na zdjęciach-->
+
+    <style>
+        .kolumna-opis {
+            font-weight: bold;
+        }
+    </style>
+
+
+
+</head>
+<body>
+    <div class="pasek"> <!--Pasek nawigacyjny-->
+    <nav>
+        <label class="logo"><a href="/MPK/"><img src="img/logo_mpk.png" alt="Logo MPK"></a></label>
+        <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+        <ul id="menu">
+        <li><a class="pasek" href="/MPK/">Spis</a></li>
+        <li><a class="pasek" href="autobusy">Autobusy</a></li>
+        <li><a class="pasek" href="tramwaje">Tramwaje</a></li>
+        <li><a class="pasek" href="javascript:void(0)">Trasy</a></li>
+        <li><a class="pasek" href="javascript:void(0)">Pętle</a></li>
+        </ul>
+    </nav>
+    </div>
+
+    <div class="tresc"> <!--Główna treść strony-->
+        <h1>Ikarus 556.16</h1><hr />
+        <BR>
+        <img src="img/Ikarus556/miniaturka.webp" alt="Ikarus 556 nr 207" class="fullscreen-img miniatura">
+        <BR>
+
+        <div class="opis-pojazdu">
+            <p style="text-indent: 30px;">
+            Pierwsze Ikarusy 556.16 trafiły do MPK Czętochowa trafił w sierpniu 1970 roku, pojazdy otrzymały numery
+            200-209. Druga dostawa odbyła się w sierpniu 1971 roku, przyznano im numery 210-221. Ostatnia, 
+            najliczniejsza dostawa aż 32 sztuk, nastąpiła w lipcu 1972 roku i została ponumerowana 222-253.
+            </p><p style="text-indent: 30px;">
+            W 1976 roku autobus 240 został przerobiony na pojazd szkoleniowy, poprzez zabudowę pierwszych drzwi i 
+            dorobienie miejsca dla instruktora po prawej stronie miejsca kierowcy.
+            </p><p style="text-indent: 30px;">
+            Wszystkie 54 pojazdy zazłomowano do 1979 roku, w tym roku zezłomowano ostatni pojazd o numerze 253,
+            jednak większości autobusów pozbyto się w 1977-1978 roku.
+            </p>
+        </div>
+        
+        <BR>
+        <h2>Dane technicze:</h2><hr><br>
+        <TABLE class="dane-techniczne"> <!--Tabela pojazdów-->
+            <colgroup>
+                <col style="width: 50%;">
+                <col style="width: 50%;">
+            </colgroup>
+
+            <TR> <!--Nagłówek tabeli-->
+            <TH width="90%" colspan="2" style="font-size: 20px;">Ikarus 556.16</TH>
+            </TR>
+
+            <TR class="tabela-hover"> <!--Producent-->
+                <TD class="kolumna-opis">Producent</TD>
+                <TD>Ikarus</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Długość-->
+                <TD class="kolumna-opis">Długość</TD>
+                <TD>10 855 mm</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Szerokość-->
+                <TD class="kolumna-opis">Szerokość</TD>
+                <TD>2500 mm</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Wysokość-->
+                <TD class="kolumna-opis">Wysokość</TD>
+                <TD>2950 mm</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Liczba miejsc siedzących-->
+                <TD class="kolumna-opis">Masa</TD>
+                <TD>17 000 KG</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Układ drzwi-->
+                <TD class="kolumna-opis">Układ drzwi</TD>
+                <TD>2-3-4</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Wysokość podłogi przy drzwiach-->
+                <TD class="kolumna-opis">Wysokość podłogi przy drzwiach</TD>
+                <TD>?-?-? [mm]</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Liczba miejsc siedzących-->
+                <TD class="kolumna-opis">Po przyklęku</TD>
+                <TD>Brak możliwości przyklęku</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Silnik-->
+                <TD class="kolumna-opis">Silnik (moc)</TD>
+                <TD>MAN/Rába D2156HM6U (141 kW)</TD>
+            </TR>  
+            <TR class="tabela-hover"> <!--Skrzynia biegów-->
+                <TD class="kolumna-opis">Skrzynia Biegów</TD>
+                <TD>Csepel ASH-75-2</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Liczba miejsc siedzących-->
+                <TD class="kolumna-opis">Liczba miejsc siedzących</TD>
+                <TD>około 21</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Liczba miejsc stojących-->
+                <TD class="kolumna-opis">Liczba miejsc stojących</TD>
+                <TD>-</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Udział niskiej podłogi-->
+                <TD class="kolumna-opis">Udział niskiej podłogi</TD>
+                <TD>0% (wysokopodłogowy)</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Klimatyzacja-->
+                <TD class="kolumna-opis">Klimatyzacja</TD>
+                <TD>Nie</TD>
+            </TR>
+        </TABLE>
+
+        <BR>
+        <h2>Spis pojazdów:</h2><hr><br>
+
+        <p style="color: red; font-weight: bold; font-size: 20px;">Nie wszystkie informacje udało się uzyskać
+        </p><BR>
+
+        <TABLE class="spis" > <!--Tabela pojazdów-->
+            <TR> <!--Nagłówek tabeli-->
+            <TH width="90px">Numer</TH>
+            <TH width="200px">Malowanie</TH>
+            <TH width="55px">Rok prod.</TH>
+            <TH width="200px">Atrybuty</TH>
+            <TH width="">Uwagi</TH>
+            <TH width="100px">Rejestracja</TH>
+            <TH width="85px">Linki</TH>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>200 (!!)</TD>
+                <TD>Czerwono-Białe</TD>
+                <TD>1970-??</TD>
+                <TD></TD>
+                <TD><sp><BR><zz> najprawdopodbniej w 1977 roku.<BR>Rejestracja nieznana, prawdopodbnie 13-17-SF.</TD>
+                <TD>??</TD>
+                <TD rowspan="54"><A href="https://czgk.pl/categories.php?cat_id=2264" target="_blank">CZGK</A></TD>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>201 (!!)</TD>
+                <TD>Czerwono-Białe</TD>
+                <TD>1970-??</TD>
+                <TD></TD>
+                <TD><sp><BR><zz> najprawdopodbniej w 1977 roku.<BR>Rejestracja nieznana, prawdopodbnie 13-18-SF.</TD>
+                <TD>??</TD>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>202 (!!)</TD>
+                <TD>Czerwono-Białe</TD>
+                <TD>1970-??</TD>
+                <TD></TD>
+                <TD><sp><BR><zz> najprawdopodbniej w 1977 roku.<BR>Rejestracja nieznana, prawdopodbnie 13-19-SF.</TD>
+                <TD>??</TD>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>203 (!!)</TD>
+                <TD>Czerwono-Białe</TD>
+                <TD>1970-??</TD>
+                <TD></TD>
+                <TD><sp><BR><zz> najprawdopodbniej w 1977 roku.<BR>Rejestracja nieznana, prawdopodbnie 13-20-SF.</TD>
+                <TD>??</TD>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>204 (!!)</TD>
+                <TD>Czerwono-Białe</TD>
+                <TD>1970-??</TD>
+                <TD></TD>
+                <TD><sp><BR><zz> najprawdopodbniej w 1977 roku.<BR>Rejestracja nieznana, prawdopodbnie 13-21-SF.</TD>
+                <TD>??</TD>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>205</TD>
+                <TD>Czerwono-Białe</TD>
+                <TD>1970-1977</TD>
+                <TD></TD>
+                <TD><zz> w 1977 roku.</TD>
+                <TD>13-22-SF</TD>
+            </TR> 
+            
+            <TR class="tabela-hover">
+                <TD>206</TD>
+                <TD>Czerwono-Białe</TD>
+                <TD>1970-1977</TD>
+                <TD></TD>
+                <TD><zz> w 1977 roku.</TD>
+                <TD>13-23-SF</TD>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>207</TD>
+                <TD>Czerwono-Białe</TD>
+                <TD>1970-1977</TD>
+                <TD></TD>
+                <TD><zz> w 1977 roku.</TD>
+                <TD>13-26-SF</TD>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>208 (!!)</TD>
+                <TD>Czerwono-Białe</TD>
+                <TD>1970-??</TD>
+                <TD></TD>
+                <TD><sp><BR><zz> najprawdopodbniej w 1977 roku.<BR>Rejestracja nieznana.</TD>
+                <TD>??</TD>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>209 (!!)</TD>
+                <TD>Czerwono-Białe</TD>
+                <TD>1970-??</TD>
+                <TD></TD>
+                <TD><sp><BR><zz> najprawdopodbniej w 1977 roku.<BR>Rejestracja nieznana.</TD>
+                <TD>??</TD>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>210 (!!)</TD>
+                <TD>Czerwono-Białe</TD>
+                <TD>1971-??</TD>
+                <TD></TD>
+                <TD><sp><BR><zz> najprawdopodbniej w 1978 roku.<BR>Rejestracja nieznana.</TD>
+                <TD>??</TD>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>211 (!!)</TD>
+                <TD>Czerwono-Białe</TD>
+                <TD>1971-??</TD>
+                <TD></TD>
+                <TD><sp><BR><zz> najprawdopodbniej w 1978 roku.<BR>Rejestracja nieznana.</TD>
+                <TD>??</TD>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>212 (!!)</TD>
+                <TD>Czerwono-Białe</TD>
+                <TD>1971-??</TD>
+                <TD></TD>
+                <TD><sp><BR><zz> najprawdopodbniej w 1978 roku.<BR>Rejestracja nieznana.</TD>
+                <TD>??</TD>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>213 (!!)</TD>
+                <TD>Czerwono-Białe</TD>
+                <TD>1971-??</TD>
+                <TD></TD>
+                <TD><sp><BR><zz> najprawdopodbniej w 1978 roku.<BR>Rejestracja nieznana.</TD>
+                <TD>??</TD>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>214 (!!)</TD>
+                <TD>Czerwono-Białe</TD>
+                <TD>1971-??</TD>
+                <TD></TD>
+                <TD><sp><BR><zz> najprawdopodbniej w 1978 roku.<BR>Rejestracja nieznana.</TD>
+                <TD>??</TD>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>215 (!!)</TD>
+                <TD>Czerwono-Białe</TD>
+                <TD>1971-??</TD>
+                <TD></TD>
+                <TD><sp><BR><zz> najprawdopodbniej w 1978 roku.<BR>Rejestracja nieznana.</TD>
+                <TD>??</TD>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>216 (!!)</TD>
+                <TD>Czerwono-Białe</TD>
+                <TD>1971-??</TD>
+                <TD></TD>
+                <TD><sp><BR><zz> najprawdopodbniej w 1978 roku.<BR>Rejestracja nieznana.</TD>
+                <TD>??</TD>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>217 (!!)</TD>
+                <TD>Czerwono-Białe</TD>
+                <TD>1971-??</TD>
+                <TD></TD>
+                <TD><sp><BR><zz> najprawdopodbniej w 1978 roku.<BR>Rejestracja nieznana.</TD>
+                <TD>??</TD>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>218 (!!)</TD>
+                <TD>Czerwono-Białe</TD>
+                <TD>1971-??</TD>
+                <TD></TD>
+                <TD><sp><BR><zz> najprawdopodbniej w 1978 roku.<BR>Rejestracja nieznana.</TD>
+                <TD>??</TD>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>219</TD>
+                <TD>Czerwono-Białe</TD>
+                <TD>1971-1979</TD>
+                <TD></TD>
+                <TD><zz> w 1979 roku. 1971-1978 >> 27-74-SF</TD>
+                <TD>CZB 278C</TD>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>220 (!!)</TD>
+                <TD>Czerwono-Białe</TD>
+                <TD>1971-??</TD>
+                <TD></TD>
+                <TD><sp><BR><zz> najprawdopodbniej w 1978 roku.<BR>Rejestracja nieznana.</TD>
+                <TD>??</TD>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>221 (!!)</TD>
+                <TD>Czerwono-Białe</TD>
+                <TD>1971-??</TD>
+                <TD></TD>
+                <TD><sp><BR><zz> najprawdopodbniej w 1978 roku.<BR>Rejestracja nieznana.</TD>
+                <TD>??</TD>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>222 (!!)</TD>
+                <TD>Czerwono-Białe</TD>
+                <TD>1972-??</TD>
+                <TD></TD>
+                <TD><sp><BR><zz> najprawdopodbniej w 1978 roku.<BR>Rejestracja nieznana.</TD>
+                <TD>??</TD>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>223 (!!)</TD>
+                <TD>Czerwono-Białe</TD>
+                <TD>1972-??</TD>
+                <TD></TD>
+                <TD><sp><BR><zz> najprawdopodbniej w 1978 roku.<BR>Rejestracja nieznana.</TD>
+                <TD>??</TD>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>224 (!!)</TD>
+                <TD>Czerwono-Białe</TD>
+                <TD>1972-??</TD>
+                <TD></TD>
+                <TD><sp><BR><zz> najprawdopodbniej w 1978 roku.<BR>Rejestracja nieznana.</TD>
+                <TD>??</TD>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>225 (!!)</TD>
+                <TD>Czerwono-Białe</TD>
+                <TD>1972-??</TD>
+                <TD></TD>
+                <TD><sp><BR><zz> najprawdopodbniej w 1978 roku.<BR>Rejestracja nieznana.</TD>
+                <TD>??</TD>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>226 (!!)</TD>
+                <TD>Czerwono-Białe</TD>
+                <TD>1972-??</TD>
+                <TD></TD>
+                <TD><sp><BR><zz> najprawdopodbniej w 1978 roku.<BR>Rejestracja nieznana.</TD>
+                <TD>??</TD>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>227 (!!)</TD>
+                <TD>Czerwono-Białe</TD>
+                <TD>1972-??</TD>
+                <TD></TD>
+                <TD><sp><BR><zz> najprawdopodbniej w 1978 roku.<BR>Rejestracja nieznana.</TD>
+                <TD>??</TD>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>228 (!!)</TD>
+                <TD>Czerwono-Białe</TD>
+                <TD>1972-??</TD>
+                <TD></TD>
+                <TD><sp><BR><zz> najprawdopodbniej w 1978 roku.<BR>Rejestracja nieznana.</TD>
+                <TD>??</TD>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>229 (!!)</TD>
+                <TD>Czerwono-Białe</TD>
+                <TD>1972-??</TD>
+                <TD></TD>
+                <TD><sp><BR><zz> najprawdopodbniej w 1978 roku.<BR>Rejestracja nieznana.</TD>
+                <TD>??</TD>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>230 (!!)</TD>
+                <TD>Czerwono-Białe</TD>
+                <TD>1972-??</TD>
+                <TD></TD>
+                <TD><sp><BR><zz> najprawdopodbniej w 1978 roku.<BR>Rejestracja nieznana.</TD>
+                <TD>??</TD>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>231 (!!)</TD>
+                <TD>Czerwono-Białe</TD>
+                <TD>1972-??</TD>
+                <TD></TD>
+                <TD><sp><BR><zz> najprawdopodbniej w 1978 roku.<BR>Rejestracja nieznana.</TD>
+                <TD>??</TD>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>232</TD>
+                <TD>Czerwono-Białe</TD>
+                <TD>1972-1978</TD>
+                <TD></TD>
+                <TD><zz> w 1978 roku. 1972-1975 >> 45-59-SF</TD>
+                <TD>CZB 053C</TD>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>233</TD>
+                <TD>Czerwono-Białe</TD>
+                <TD>1972-1978</TD>
+                <TD></TD>
+                <TD><zz> w 1978 roku. 1972-1975 >> 45-60-SF</TD>
+                <TD>CZB 054C</TD>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>234 (!!)</TD>
+                <TD>Czerwono-Białe</TD>
+                <TD>1972-??</TD>
+                <TD></TD>
+                <TD><sp><BR><zz>. Dawna rejestracja nieznana.</TD>
+                <TD>CZB 055C</TD>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>235 (!!)</TD>
+                <TD>Czerwono-Białe</TD>
+                <TD>1972-??</TD>
+                <TD></TD>
+                <TD><sp><BR><zz>. Dawna rejestracja nieznana.</TD>
+                <TD>CZB 056C</TD>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>236 (!!)</TD>
+                <TD>Czerwono-Białe</TD>
+                <TD>1972-??</TD>
+                <TD></TD>
+                <TD><sp><BR><zz>. Dawna rejestracja nieznana.</TD>
+                <TD>CZB 057C</TD>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>237</TD>
+                <TD>Czerwono-Białe</TD>
+                <TD>1972-1978</TD>
+                <TD></TD>
+                <TD><zz> w 1978 roku. 1972-1975 >> 45-65-SF</TD>
+                <TD>CZB 058C</TD>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>238 (!!)</TD>
+                <TD>Czerwono-Białe</TD>
+                <TD>1972-??</TD>
+                <TD></TD>
+                <TD><sp><BR><zz>. Dawna rejestracja nieznana.</TD>
+                <TD>CZB 059C</TD>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>239 (!!)</TD>
+                <TD>Czerwono-Białe</TD>
+                <TD>1972-??</TD>
+                <TD></TD>
+                <TD><sp><BR><zz>. Dawna rejestracja nieznana.</TD>
+                <TD>CZB 060C</TD>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>240/726</TD>
+                <TD>Czerwono-Białe</TD>
+                <TD>1972-1978</TD>
+                <TD></TD>
+                <TD><zz> w 1978 roku. 1972-1977 >> 45-59-SF<BR>Od 1976 pojazd nauki jazdy o nr tab. 726</TD>
+                <TD>CZB 061C/ CZA 639C</TD>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>241 (!!)</TD>
+                <TD>Czerwono-Białe</TD>
+                <TD>1972-??</TD>
+                <TD></TD>
+                <TD><sp><BR><zz> najprawdopodbniej w 1978 roku.<BR>Rejestracja nieznana.</TD>
+                <TD>??</TD>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>242 (!!)</TD>
+                <TD>Czerwono-Białe</TD>
+                <TD>1972-??</TD>
+                <TD></TD>
+                <TD><sp><BR><zz> najprawdopodbniej w 1978 roku.<BR>Rejestracja nieznana.</TD>
+                <TD>??</TD>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>243 (!!)</TD>
+                <TD>Czerwono-Białe</TD>
+                <TD>1972-??</TD>
+                <TD></TD>
+                <TD><sp><BR><zz> najprawdopodbniej w 1978 roku.<BR>Rejestracja nieznana.</TD>
+                <TD>??</TD>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>244 (!!)</TD>
+                <TD>Czerwono-Białe</TD>
+                <TD>1972-??</TD>
+                <TD></TD>
+                <TD><sp><BR><zz> najprawdopodbniej w 1978 roku.<BR>Rejestracja nieznana.</TD>
+                <TD>??</TD>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>245 (!!)</TD>
+                <TD>Czerwono-Białe</TD>
+                <TD>1972-??</TD>
+                <TD></TD>
+                <TD><sp><BR><zz> najprawdopodbniej w 1978 roku.<BR>Rejestracja nieznana.</TD>
+                <TD>??</TD>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>246 (!!)</TD>
+                <TD>Czerwono-Białe</TD>
+                <TD>1972-??</TD>
+                <TD></TD>
+                <TD><sp><BR><zz> najprawdopodbniej w 1978 roku.<BR>Rejestracja nieznana.</TD>
+                <TD>??</TD>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>247 (!!)</TD>
+                <TD>Czerwono-Białe</TD>
+                <TD>1972-??</TD>
+                <TD></TD>
+                <TD><sp><BR><zz> najprawdopodbniej w 1978 roku.<BR>Rejestracja nieznana.</TD>
+                <TD>??</TD>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>248 (!!)</TD>
+                <TD>Czerwono-Białe</TD>
+                <TD>1972-??</TD>
+                <TD></TD>
+                <TD><sp><BR><zz> najprawdopodbniej w 1978 roku.<BR>Rejestracja nieznana.</TD>
+                <TD>??</TD>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>249 (!!)</TD>
+                <TD>Czerwono-Białe</TD>
+                <TD>1972-??</TD>
+                <TD></TD>
+                <TD><sp><BR><zz> najprawdopodbniej w 1978 roku.<BR>Rejestracja nieznana.</TD>
+                <TD>??</TD>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>250 (!!)</TD>
+                <TD>Czerwono-Białe</TD>
+                <TD>1972-??</TD>
+                <TD></TD>
+                <TD><sp><BR><zz> najprawdopodbniej w 1978 roku.<BR>Rejestracja nieznana.</TD>
+                <TD>??</TD>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>251 (!!)</TD>
+                <TD>Czerwono-Białe</TD>
+                <TD>1972-??</TD>
+                <TD></TD>
+                <TD><sp><BR><zz> najprawdopodbniej w 1978 roku.<BR>Rejestracja nieznana.</TD>
+                <TD>??</TD>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>252 (!!)</TD>
+                <TD>Czerwono-Białe</TD>
+                <TD>1972-??</TD>
+                <TD></TD>
+                <TD><sp><BR><zz> najprawdopodbniej w 1978 roku.<BR>Rejestracja nieznana.</TD>
+                <TD>??</TD>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>253 (!!)</TD>
+                <TD>Czerwono-Białe</TD>
+                <TD>1972-??</TD>
+                <TD></TD>
+                <TD><sp><BR><zz> najprawdopodbniej w 1978 roku.<BR>Rejestracja nieznana.</TD>
+                <TD>??</TD>
+            </TR>
+        </TABLE><BR>
+
+        
+        <h2>Stan taboru na przestrzeni lat:</h2><hr><br>
+        <TABLE class="ilostan" > <!--Tabela pojazdów-->
+            <TR> <!--Nagłówek tabeli-->
+                <TH width="70px">Rok</TH>
+                <TH width="130px">Wpisane na stan</TH>
+                <TH width="130px">Skreślone ze stanu</TH>
+                <TH width="100px">Ilość na koniec roku</TH>
+            </TR>
+            <TR>
+                <TD>1970</TD>
+                <TD>10 (200-209)</TD>
+                <TD>-</TD>
+                <TD>10</TD>
+            </TR>
+            <TR>
+                <TD>1971</TD>
+                <TD>12 (210-221)</TD>
+                <TD>-</TD>
+                <TD>22</TD>
+            </TR>
+            <TR>
+                <TD>1972</TD>
+                <TD>32 (222-253)</TD>
+                <TD>-</TD>
+                <TD>54</TD>
+            </TR>
+            <TR>
+                <TD>1973-1979</TD>
+                <TD>-</TD>
+                <TD>54</TD>
+                <TD>0</TD>
+            </TR>
+            <TR>
+                <TD>1980+</TD>
+                <TD>-</TD>
+                <TD>-</TD>
+                <TD>0</TD>
+            </TR>
+        </TABLE>
+
+        <BR>
+        <h2>Zdjęcia pojazdów:</h2><hr><br>
+        <div class="galeria">
+            Brak
+        </div>
+
+        <!--Okno do otwierania zdjęć na całej stronie-->
+        <div id="fullscreenOverlay" class="fullscreen-overlay">
+            <span id="closeBtn">&times;</span>
+            <img id="fullscreenImage" class="fullscreen-image">
+        </div>
+    </div>
+<button onclick="scrollToTop()" id="scrollTopBtn" title="Do góry">⬆</button>
+</body>
+</html>

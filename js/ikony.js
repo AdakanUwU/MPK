@@ -20,7 +20,8 @@ document.addEventListener("DOMContentLoaded", () => {
       tram: '<img src="ikony/tramwaj.svg" height="20" class="atr" title="Tramwaj">',
       zz: '<zezlomowany style="color: red; font-weight: bold">Zezłomowany</zezlomowany>',
       znr: '<znr style="color: orange; font-weight: bold">',
-      ss: '<ss style="color: mediumspringgreen; font-weight: bold">'
+      ss: '<ss style="color: mediumspringgreen; font-weight: bold">',
+      sp: '<sp style="color: orangered; font-weight: bold">!! ~ informacje spekulowane ~ !!</sp>'
     };
   
     // Funkcja do zamiany skrótów na obrazy
