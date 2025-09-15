@@ -26,19 +26,10 @@
 
 </head>
 <body>
-    <div class="pasek"> <!--Pasek nawigacyjny-->
-    <nav>
-        <label class="logo"><a href="/MPK/"><img src="img/logo_mpk.png" alt="Logo MPK"></a></label>
-        <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
-        <ul id="menu">
-        <li><a class="pasek" href="/MPK/">Spis</a></li>
-        <li><a class="pasek" href="autobusy">Autobusy</a></li>
-        <li><a class="pasek" href="tramwaje">Tramwaje</a></li>
-        <li><a class="pasek" href="javascript:void(0)">Trasy</a></li>
-        <li><a class="pasek" href="javascript:void(0)">Pętle</a></li>
-        </ul>
-    </nav>
-    </div>
+    <div id="nav"></div>
+    <script>fetch('nav.htm') .then(response => response.text()) 
+    .then(data => document.getElementById('nav').innerHTML = data);
+    </script>
 
     <div class="tresc"> <!--Główna treść strony-->
         <h1>Mercedes-Benz O345G Conecto</h1><hr />
@@ -59,8 +50,16 @@
                 Autobus o numerze 184 kursował jeszcze do 21 marca 2025, a do maja 2025 pozostawał w rezerwie 
                 (badanie stracił 17 czerwca 2025).
             </p><p style="text-indent: 30px;">
-                Pierwsze pojazdy wywziono na złom do Wancerzowa w drugiej połowie maja 2025 (177, 178, 182, 183), 
-                los pozostąłych nie jest dokładnie określony.
+                Pierwsze pojazdy nr 177 i 183 wywieziono na złom do Wancerzowa 22 maja 2025. Kolejne pojazdy nr
+                182 i 178 wywieziono 27 maja 2025. Ostatnie pojazdy nr 181 i 179 wywieziono dopiero 19 sierpnia
+                2025. Złomowaniem zajmuje się FHU Bajor Andrzej "Moto-Bajor" w Wancerzowie.
+            </p><p style="text-indent: 30px;">
+                Autobus o nr 184 i 180 zostały w lipcu 2025 odnowione i 21 lipca 2025 odnowiono im badanie 
+                techniczne. Podczas specjalnej linii 73 z okazji Rudniki Airshow nr 180 miał wyjechać jako
+                uzupełnienie kursów przez spory korek w Kościelcu, ale z powodu awarii lusterka za nim dojechał
+                na trasę został podmieniony na autobus nr 110. Nr 184 w sierpniu 2025 został sprzedany do firmy
+                Technobus Orchowo i tam całkowicie zniszczono wnętrze przerabiając je na nowe potrzeby. Nr 180 
+                pozostaje na zajezdni.
             </p>
         </div>
         

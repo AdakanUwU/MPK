@@ -26,19 +26,10 @@
 
 </head>
 <body>
-    <div class="pasek"> <!--Pasek nawigacyjny-->
-    <nav>
-        <label class="logo"><a href="/MPK/"><img src="img/logo_mpk.png" alt="Logo MPK"></a></label>
-        <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
-        <ul id="menu">
-        <li><a class="pasek" href="/MPK/">Spis</a></li>
-        <li><a class="pasek" href="autobusy">Autobusy</a></li>
-        <li><a class="pasek" href="tramwaje">Tramwaje</a></li>
-        <li><a class="pasek" href="javascript:void(0)">Trasy</a></li>
-        <li><a class="pasek" href="javascript:void(0)">Pętle</a></li>
-        </ul>
-    </nav>
-    </div>
+    <div id="nav"></div>
+    <script>fetch('nav.htm') .then(response => response.text()) 
+    .then(data => document.getElementById('nav').innerHTML = data);
+    </script>
 
     <div class="tresc"> <!--Główna treść strony-->
         <h1>Solaris Urbino 18 III</h1><hr />
@@ -75,7 +66,13 @@
                 Warszawa (numer taborowy A732), a w 2020 sprzedano go do Transdev Alpina we Frankfurcie nad Menem 
                 (numer 3736). Stamtąd pojazd odkupiło MPK Częstochowa. Autobus został pomalowany w barwy miejskiego 
                 przewoźnika.
-            </p>            
+            </p>  
+            <p style="text-indent: 30px;">
+                Pierwsze wycofania nastąpiły w sierpniu 2025 roku. W tym czasie autobusy 224 i 226 zostały
+                wyrejestrowane i odstawione do złomowania lub tam wywiezione. Plan na złomowanie kolejnych pojazdów
+                zakłada wycofanie wszystkich autobusów po dostarczeniu Solarisów Urbino 18 IV Electric.
+                220, 222 i 228 większość czasu stoją zepsute, a 223, 225, 227, 229 i 231 pozostają w ruchu.
+            </p>          
         </div>
         
         <BR>
@@ -144,7 +141,7 @@
             </TR>
             <TR class="tabela-hover"> <!--Klimatyzacja-->
                 <TD class="kolumna-opis">Klimatyzacja</TD>
-                <TD>Nie</TD>
+                <TD>Częściowo (kierowcy)</TD>
             </TR>
         </TABLE>
 

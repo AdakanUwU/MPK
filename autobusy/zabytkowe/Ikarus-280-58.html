@@ -26,19 +26,10 @@
 
 </head>
 <body>
-    <div class="pasek"> <!--Pasek nawigacyjny-->
-    <nav>
-        <label class="logo"><a href="/MPK/"><img src="img/logo_mpk.png" alt="Logo MPK"></a></label>
-        <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
-        <ul id="menu">
-        <li><a class="pasek" href="/MPK/">Spis</a></li>
-        <li><a class="pasek" href="autobusy">Autobusy</a></li>
-        <li><a class="pasek" href="tramwaje">Tramwaje</a></li>
-        <li><a class="pasek" href="javascript:void(0)">Trasy</a></li>
-        <li><a class="pasek" href="javascript:void(0)">Pętle</a></li>
-        </ul>
-    </nav>
-    </div>
+    <div id="nav"></div>
+    <script>fetch('nav.htm') .then(response => response.text()) 
+    .then(data => document.getElementById('nav').innerHTML = data);
+    </script>
 
     <div class="tresc"> <!--Główna treść strony-->
         <h1>Ikarus 280.58</h1><hr />
@@ -96,7 +87,7 @@
             </TR>
             <TR class="tabela-hover"> <!--Układ drzwi-->
                 <TD class="kolumna-opis">Układ drzwi</TD>
-                <TD>2-2-2-2</TD>
+                <TD>4-4-4-4</TD>
             </TR>
             <TR class="tabela-hover"> <!--Wysokość podłogi przy drzwiach-->
                 <TD class="kolumna-opis">Wysokość podłogi przy drzwiach</TD>

@@ -25,19 +25,10 @@
 
 </head>
 <body>
-    <div class="pasek"> <!--Pasek nawigacyjny-->
-    <nav>
-        <label class="logo"><a href="/MPK/"><img src="img/logo_mpk.png" alt="Logo MPK"></a></label>
-        <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
-        <ul id="menu">
-        <li><a class="pasek" href="/MPK/">Spis</a></li>
-        <li><a class="pasek" href="autobusy">Autobusy</a></li>
-        <li><a class="pasek" href="tramwaje">Tramwaje</a></li>
-        <li><a class="pasek" href="javascript:void(0)">Trasy</a></li>
-        <li><a class="pasek" href="javascript:void(0)">Pętle</a></li>
-        </ul>
-    </nav>
-    </div>
+    <div id="nav"></div>
+    <script>fetch('nav.htm') .then(response => response.text()) 
+    .then(data => document.getElementById('nav').innerHTML = data);
+    </script>
 
     <div class="tresc"> <!--Główna treść strony-->
         <h1>Mercedes-Benz Sprinter MidCity</h1><hr />
@@ -51,6 +42,10 @@
             Sprinter. Tym razem padło na miejsko-podmiejski wariant MidCity, który oznaczono numerem 407. Pojazd 
             niezostał pomalowany w schemat MPK i początkowo jeździł na linii zastępczej 92. Później skierowany 
             został do obsługi 16 oraz okzajonalnie  do przewozu dzieci i niepełnosprawnych.
+            </p><p style="text-indent: 30px;">
+            Drugi bus tego samego typu zakupiono w 2025 roku z Holandii, posiada srebrne malowanie i został oznaczony
+            numerem 416. Skieorwany został do obsługi linii 16. Zakupiony został w celu możliwości pozbycia się
+            z ruchu leciwych busów <a href="javascript:void(0)">Iveco Daily 65C15</a>.
             </p>
         </div>
         
@@ -104,7 +99,7 @@
             </TR>  
             <TR class="tabela-hover"> <!--Skrzynia biegów-->
                 <TD class="kolumna-opis">Skrzynia Biegów</TD>
-                <TD>Brak Danych</TD>
+                <TD>Mercedes-Benz W 7 B 700</TD>
             </TR>
             <TR class="tabela-hover"> <!--Liczba miejsc siedzących-->
                 <TD class="kolumna-opis">Liczba miejsc siedzących</TD>
@@ -149,6 +144,16 @@
                 <TD>SC 407CN</TD>
                 <TD><A href="https://czgk.pl/categories.php?cat_id=9141" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/7c6ff130-ff0d-4c6d-95ba-15857630df81" target="_blank"><gps1></A></TD>
             </TR>
+
+            <TR class="tabela-hover">
+                <TD>416</TD>
+                <TD>Srebrne</TD>
+                <TD>2018</TD>
+                <TD><niskopodlogowy> <biletkier></TD>
+                <TD>2018-2025 Marcus Haarlem (46-BLJ-5), od 2023 MPK w Częstochowie.</TD>
+                <TD>SC 407CN</TD>
+                <TD><A href="https://czgk.pl/categories.php?cat_id=9141" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/7c6ff130-ff0d-4c6d-95ba-15857630df81" target="_blank"><gps1></A></TD>
+            </TR>
         </TABLE>
 
         <BR>
@@ -168,13 +173,24 @@
                 <TD>1</TD>
             </TR>
             <TR>
-                <TD>2024+</TD>
+                <TD>2024</TD>
+                <TD>-</TD>
+                <TD>-</TD>
+                <TD>1</TD>
+            </TR>
+            <TR>
+                <TD>2025</TD>
+                <TD>1 (416)</TD>
+                <TD>-</TD>
+                <TD>1</TD>
+            </TR>
+            <TR>
+                <TD>2026+</TD>
                 <TD>-</TD>
                 <TD>-</TD>
                 <TD>1</TD>
             </TR>
         </TABLE>
-
 
         <BR>
         <h2>Zdjęcia pojazdów:</h2><hr><br>
@@ -183,6 +199,7 @@
             <img src="img/MB-sprinter-midcity/407/1.jpg" alt="Mercedes-Benz 516 CDI/VDL Sprinter MidCity MLF 80-16 nr 407" class="fullscreen-img">
             <img src="img/MB-sprinter-midcity/407/2.jpg" alt="Mercedes-Benz 516 CDI/VDL Sprinter MidCity MLF 80-16 nr 407" class="fullscreen-img">        
             <img src="img/MB-sprinter-midcity/407/3.jpg" alt="Mercedes-Benz 516 CDI/VDL Sprinter MidCity MLF 80-16 nr 407" class="fullscreen-img">        
+            <div class="opis-zdj">» 416</div>
         </div>
 
         <!--Okno do otwierania zdjęć na całej stronie-->

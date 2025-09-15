@@ -4,7 +4,7 @@
     <base href="/MPK/">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Solaris Urbino 12 IIV - MPK Częstochowa</title>
+    <title>Solaris Urbino 12 IV - MPK Częstochowa</title>
     <link rel="stylesheet" href="css/style.css"/>
 
 
@@ -16,21 +16,20 @@
     <script src="js/zdjecia.js" defer></script> 
     <script src="js/foto-blok.js" defer></script> <!--Blokada menu kontekstowego na zdjęciach-->
 
+    <!--Sekacja ładnych embed 🌸 (^///^)-->
+    <meta property="og:title" content="Solaris Urbino 12 IV"> <!--Model-->
+    <meta property="og:description" content="Zamówione w 2016 roku w ramach programu Moja Przyjazd Komunikacja,
+    w liczbie 40 sztuk. Dostarczone w 2017 roku, ponumerowane 039-053, 059-073 i 075-084. Wyposażone zostały w 
+    kierunkowe wyświetlacze LED z przodu, boku i tyle, we wnątrz dwie tablice LCD."> <!--Opisik krótszy-->
+    <meta property="og:image" content="https://adakanuwu.github.io/MPK/img/SU12IV/miniaturka.jpg"> <!-- tutaj miniaturkę-->
+    <meta property="og:type" content="website"> <!--Tego Adulka nie rusza :3-->
+
 </head>
 <body>
-    <div class="pasek"> <!--Pasek nawigacyjny-->
-    <nav>
-        <label class="logo"><a href="/MPK/"><img src="img/logo_mpk.png" alt="Logo MPK"></a></label>
-        <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
-        <ul id="menu">
-        <li><a class="pasek" href="/MPK/">Spis</a></li>
-        <li><a class="pasek" href="autobusy">Autobusy</a></li>
-        <li><a class="pasek" href="tramwaje">Tramwaje</a></li>
-        <li><a class="pasek" href="javascript:void(0)">Trasy</a></li>
-        <li><a class="pasek" href="javascript:void(0)">Pętle</a></li>
-        </ul>
-    </nav>
-    </div>
+    <div id="nav"></div>
+    <script>fetch('nav.htm') .then(response => response.text()) 
+    .then(data => document.getElementById('nav').innerHTML = data);
+    </script>
 
     <div class="tresc"> <!--Główna treść strony-->
         <h1>Solaris Urbino 12 IV</h1><hr />

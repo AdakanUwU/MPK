@@ -18,19 +18,10 @@
     <script src="js/filtrowanie.js" defer></script>             
 </head>
 <body>
-  <div class="pasek"> <!--Pasek nawigacyjny-->
-    <nav>
-      <label class="logo"><a href="/MPK/"><img src="img/logo_mpk.png" alt="Logo MPK"></a></label>
-      <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
-      <ul id="menu">
-        <li><a class="pasek" href="javascript:void(0)">Spis</a></li>
-        <li><a class="pasek" href="autobusy">Autobusy</a></li>
-        <li><a class="pasek" href="tramwaje">Tramwaje</a></li>
-        <li><a class="pasek" href="javascript:void(0)">Trasy</a></li>
-        <li><a class="pasek" href="javascript:void(0)">Pętle</a></li>
-      </ul>
-    </nav>
-  </div>
+    <div id="nav"></div>
+    <script>fetch('nav.htm') .then(response => response.text()) 
+    .then(data => document.getElementById('nav').innerHTML = data);
+    </script>
 
   <div class="tresc-glowna"> <!--Główna treśćstrony-->
     <div class="skroty">
@@ -1599,7 +1590,7 @@
             <TD><A href="https://czgk.pl/categories.php?cat_id=240" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/3cea5fe9-22a9-4809-bdeb-b1f5f98cf259" target="_blank"><gps1></A></TD>
         </TR>
 
-        <TR class="tabela_link" data-href="autobusy/Mercedes-Benz-O345G" id="mercedes-o345G-tabela">
+        <!--<TR class="tabela_link" data-href="autobusy/Mercedes-Benz-O345G" id="mercedes-o345G-tabela">
             <TD>177</TD>
             <TD>Mercedes-Benz O345G Conecto</TD>
             <TD>Czerwono-Białe</TD>
@@ -1630,9 +1621,9 @@
             <TD>Wycofany na przełomie lutego i marca 2025.</TD>
             <TD>SC 82124</TD>
             <TD><A href="https://czgk.pl/categories.php?cat_id=330" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/28fa4e5e-8adf-46ba-ae1f-69ee79264d49" target="_blank"><gps1></A></TD>
-        </TR>
+        </TR>-->
 
-        <TR class="tabela_link" data-href="autobusy/Mercedes-Benz-O345G">
+        <TR class="tabela_link" data-href="autobusy/Mercedes-Benz-O345G" id="mercedes-o345G-tabela">
             <TD>180</TD>
             <TD>Mercedes-Benz O345G Conecto</TD>
             <TD>Czerwono-Białe</TD>
@@ -1643,7 +1634,7 @@
             <TD><A href="https://czgk.pl/categories.php?cat_id=331" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/a43eb101-cce4-4dd6-8719-0769fef34630" target="_blank"><gps1></A></TD>
         </TR>
 
-        <TR class="tabela_link" data-href="autobusy/Mercedes-Benz-O345G">
+        <!--<TR class="tabela_link" data-href="autobusy/Mercedes-Benz-O345G">
             <TD>181</TD>
             <TD>Mercedes-Benz O345G Conecto</TD>
             <TD>Czerwono-Białe</TD>
@@ -1685,7 +1676,7 @@
             <TD>Najpewniej wycofany od 21 marca 2025. (ostatni dzień jazdy na linii 12)</TD>
             <TD>SC 82129</TD>
             <TD><A href="https://czgk.pl/categories.php?cat_id=335" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/9cd857ca-d2cf-41a1-9831-11c3556983ed" target="_blank"><gps1></A></TD>
-        </TR>
+        </TR>-->
 
         <TR class="tabela_link" data-href="autobusy/Mercedes-Benz-O530G" id="mercedes-o530g-tabela">
             <TD>185</TD>
@@ -1973,7 +1964,7 @@
             <TD><A href="https://czgk.pl/categories.php?cat_id=5229" target="_blank">CZGK</A> </TD>
         </TR>
 
-        <TR class="tabela_link" data-href="ng313cng" id="man-ng313cng-tabela">
+        <!--<TR class="tabela_link" data-href="ng313cng" id="man-ng313cng-tabela">
             <TD>217</TD>
             <TD>MAN NG313 Lion`s City CNG</TD>
             <TD>Czerwono-Białe</TD>
@@ -1982,7 +1973,7 @@
             <TD>2006-2018 OMV Nürnberg (DB Frankenbus),<BR>od 2018 w MPK w Częstochowie.</TD>
             <TD>SC 0540U</TD>
             <TD><A href="https://czgk.pl/categories.php?cat_id=7068" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/c335ec21-7b42-49ff-8169-991a3908d805" target="_blank"><gps1></A></TD>
-        </TR>
+        </TR>-->
 
         <TR class="tabela_link" data-href="autobusy/Solaris-Urbino-18-III" id="SU18III-1-tabela">
             <TD>218</TD>
@@ -2942,7 +2933,7 @@
             <TD><A href="https://czgk.pl/categories.php?cat_id=512" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/8d9351b4-db41-4e61-aeed-28406a3cd246" target="_blank"><gps1></A></TD>
         </TR>
 
-        <TR class="tabela_link" data-href="Ikarus280_A">
+        <TR class="tabela_link" data-href="autobusy/wycofane/Ikarus-280-26">
             <TD>703</TD>
             <TD>Ikarus 280/A</TD>
             <TD>Czerwono-Białe z żółtym pasem</TD>
