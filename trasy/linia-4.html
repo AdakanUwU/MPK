@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <base href="/MPK/">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Linia 4 - MPK Częstochowa</title>
+    <link rel="stylesheet" href="css/style.css"/>
+
+    <script src="js/ikony.js" defer></script> <!--wczytywanie ikon-->
+    <script src="js/tabela_link.js" defer></script> <!--wczytywanie klikalnych wierszy tabel-->
+    <script src="js/toogleMenu.js" defer></script><!--Skrypt do listy menu-->
+
+    <script src="js/w_gore.js" defer></script> <!--Skrypt do przycisku przesuwania do samej góry-->
+    <script src="js/foto-blok.js" defer></script> <!--Blokada menu kontekstowego na zdjęciach-->
+
+    <!--Sekacja ładnych embed 🌸 (^///^)-->
+    <meta property="og:title" content="Linia 3 - MPK Częstochowa"> <!--Model-->
+    <meta property="og:description" content="Stadion Raków↔Fieldorfa-Nila"> <!--Opisik krótszy-->
+    <!--<meta property="og:image" content=""> (bez miniaturki, bo co dać do lini mrr) tutaj miniaturkę-->
+    <meta property="og:type" content="website"> <!--Tego Adulka nie rusza :3-->
+
+</head>
+<body>
+    <div id="nav"></div>
+    <script>fetch('nav.htm') .then(response => response.text()) 
+    .then(data => document.getElementById('nav').innerHTML = data);
+    </script>
+
+    <div class="tresc-trasy"> <!--Główna treść strony-->
+        <div class="linia-info">
+            <div class="linia-numer">4</div> <!--Duży numer linii-->
+            <div class="linia-strzalka">↕</div> <!--Strzałka stała-->
+            <div class="linia-kierunki">
+                <div>Zajezdnia MPK</div>
+                <div>Fieldorfa-Nila</div>
+            </div>
+        </div><span style="float: right;">Aktualnie nie kursuje</span><br>
+        <hr><BR>
+
+        <table class="linia-tabela">
+            <tr>
+                <th width="275px">Okres</th>
+                <th>Trasa</th>
+            </tr>
+             <tr>
+                <td>12 sierpnia 2024 - 25 sierpnia 2024</td>
+                <td>Zajezdnia MPK ↔ Fieldorfa-Nila</td>
+            </tr>
+        </table><br>
+
+        <h3>Uwaga:</h3><hr>
+        <uwaga style="font-size: 17px">Linia została uruchomiona w czasie prac na torowisku Estakada - Raków Dworzec 
+        PKP, w zamian za linię 1 i 2 na odcinku, gdzie obie dzieliły swoją trasę (Fieldorfa-Nila ↔ Zajezdnia MPK) 
+        a na dalszym odcinku uruchomiono AzT nr 03.</uwaga>
+    </div>
+
+<button onclick="scrollToTop()" id="scrollTopBtn" title="Do góry">⬆</button>
+</body>
+</html>

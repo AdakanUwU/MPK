@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <base href="/MPK/">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Linia 2 - MPK Częstochowa</title>
+    <link rel="stylesheet" href="css/style.css"/>
+
+    <script src="js/ikony.js" defer></script> <!--wczytywanie ikon-->
+    <script src="js/tabela_link.js" defer></script> <!--wczytywanie klikalnych wierszy tabel-->
+    <script src="js/toogleMenu.js" defer></script><!--Skrypt do listy menu-->
+
+    <script src="js/w_gore.js" defer></script> <!--Skrypt do przycisku przesuwania do samej góry-->
+    <script src="js/foto-blok.js" defer></script> <!--Blokada menu kontekstowego na zdjęciach-->
+
+    <!--Sekacja ładnych embed 🌸 (^///^)-->
+    <meta property="og:title" content="Linia 2 - MPK Częstochowa"> <!--Model-->
+    <meta property="og:description" content="Raków - Dworzec PKP↔Fieldorfa-Nila"> <!--Opisik krótszy-->
+    <!--<meta property="og:image" content=""> (bez miniaturki, bo co dać do lini mrr) tutaj miniaturkę-->
+    <meta property="og:type" content="website"> <!--Tego Adulka nie rusza :3-->
+
+</head>
+<body>
+    <div id="nav"></div>
+    <script>fetch('nav.htm') .then(response => response.text()) 
+    .then(data => document.getElementById('nav').innerHTML = data);
+    </script>
+
+    <div class="tresc-trasy"> <!--Główna treść strony-->
+        <div class="linia-info">
+            <div class="linia-numer">2</div> <!--Duży numer linii-->
+            <div class="linia-strzalka">↕</div> <!--Strzałka stała-->
+            <div class="linia-kierunki">
+                <div>Raków - Dworzec PKP</div>
+                <div>Fieldorfa-Nila</div>
+            </div>
+        </div><span style="float: right;">Od 26 sierpnia 2024</span><br>
+        <hr><BR>
+
+        <table class="linia-tabela">
+            <tr>
+                <th width="275px">Okres</th>
+                <th>Trasa</th>
+            </tr>
+             <tr>
+                <td>Od 26 sierpnia 2024</td>
+                <td>Fieldorfa-Nila ↔ Raków - Dworzec PKP</td>
+            </tr>
+            <tr>
+                <td>15 lipca 2024 - 11 sierpnia 2024</td>
+                <td>Zajezdnia MPK ↔ Raków - Dworzec PKP</td>
+            </tr>
+            <tr>
+                <td>1 lipca 2024 - 14 lipca 2024</td>
+                <td>Promenada Niemena ↔ Raków - Dworzec PKP</td>
+            </tr>
+            <tr>
+                <td>1 września 2021 - 30 czerwca 2024</td>
+                <td>Fieldorfa-Nila ↔ Raków - Dworzec PKP</td>
+            </tr>
+            <tr>
+                <td>?? ?? 1997 - ?? ?? 2020</td>
+                <td>Fieldorfa - Nila → Raków - Dworzec PKP (Do 2006 Al. Pokoju - PKP)</td>
+            </tr>
+            <tr>
+                <td>?? ?? 1997 - ?? ?? 2001</td>
+                <td>Kucelin → Kiedrzyńska</td>
+            </tr>
+            <tr>
+                <td>1971</td>
+                <td>Al. Pokoju - PKP ↔ Osiedle Tysiąclecia</td>
+            </tr>
+            <tr>
+                <td>?? ?? 1959 - ?? ?? 1971</td>
+                <td>Raków ↔ Tysiąclecie (1959-1969 - Zawady)</td>
+            </tr>
+        </table>
+
+    </div>
+
+<button onclick="scrollToTop()" id="scrollTopBtn" title="Do góry">⬆</button>
+</body>
+</html>

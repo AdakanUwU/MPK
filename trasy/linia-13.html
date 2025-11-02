@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <base href="/MPK/">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Linia 13 - MPK Częstochowa</title>
+    <link rel="stylesheet" href="css/style.css"/>
+
+    <script src="js/ikony.js" defer></script> <!--wczytywanie ikon-->
+    <script src="js/tabela_link.js" defer></script> <!--wczytywanie klikalnych wierszy tabel-->
+    <script src="js/toogleMenu.js" defer></script><!--Skrypt do listy menu-->
+
+    <script src="js/w_gore.js" defer></script> <!--Skrypt do przycisku przesuwania do samej góry-->
+    <script src="js/foto-blok.js" defer></script> <!--Blokada menu kontekstowego na zdjęciach-->
+
+    <!--Sekacja ładnych embed 🌸 (^///^)-->
+    <meta property="og:title" content="Linia 13 - MPK Częstochowa"> <!--Model-->
+    <meta property="og:description" content="Wierzchowisko / Kiedrzyn ↔ Kucelin / Walcownia / Huta - Wydział Transportu"> <!--Opisik krótszy-->
+    <!--<meta property="og:image" content=""> (bez miniaturki, bo co dać do lini mrr) tutaj miniaturkę-->
+    <meta property="og:type" content="website"> <!--Tego Adulka nie rusza :3-->
+
+</head>
+<body>
+    <div id="nav"></div>
+    <script>fetch('nav.htm') .then(response => response.text()) 
+    .then(data => document.getElementById('nav').innerHTML = data);
+    </script>
+
+    <div class="tresc-trasy"> <!--Główna treść strony-->
+        <div class="linia-info">
+            <div class="linia-numer">13</div> <!--Duży numer linii-->
+            <div class="linia-strzalka">↕</div> <!--Strzałka stała-->
+            <div class="linia-kierunki">
+                <div>Wierzchowisko / Kiedrzyn</div>
+                <div>Kucelin / Walcownia / Huta - Wydział Transportu</div>
+            </div>
+        </div><span style="float: right;">Od 3 listopada 2022</span><br>
+        <hr><BR>
+
+        <table class="linia-tabela">
+            <tr>
+                <th width="275px">Okres</th>
+                <th>Trasa</th>
+            </tr>
+            <tr>
+                <td>Od 3 listopada 2022</td>
+                <td>Wierzchowisko / Kiedrzyn ↔ Kucelin / Walcownia / Huta - Wydział Transportu (Huta - Zakład Transportu)</td>
+            </tr>
+            <tr>
+                <td>1 sierpnia 2020 - 2 listopada 2022</td>
+                <td>Wierzchowisko / Kiedrzyn ↔ Kucelin - Szpital / Walcownia / Huta - Wydział Transportu</td>
+            </tr>
+            <tr>
+                <td>2019 - 31 lipca 2020</td>
+                <td>Kiedrzyn ↔ Kucelin - Szpital / Walcownia / Huta - Wydział Transportu</td>
+            </tr>
+            <tr>
+                <td>?? - 2019</td>
+                <td>Kiedrzyn ↔ Kucelin - Huta / Walcownia / Huta - Wydział Transportu</td>
+            </tr>
+            <tr>
+                <td>2012 - 2013</td>
+                <td>Kiedrzyn ↔ Kucelin - Szpital / Walcownia</td>
+            </tr>
+            <tr>
+                <td>2006 - 2012</td>
+                <td>Tysiąclecie - Szpital ↔ Kucelin - Szpital / Walcownia</td>
+            </tr>
+            <tr>
+                <td>?? - 2006</td>
+                <td>PCK - Szpital ↔ Kucelin - Szpital / Walcownia</td>
+            </tr>
+            <tr>
+                <td>1977 - ??</td>
+                <td>Os. PCK ↔ Kucelin / Walcownia</td>
+            </tr>
+            <tr>
+                <td>1 luty 1964 - 1977</td>
+                <td>Szpital Tysiąclecia ↔ Zawodzie</td>
+            </tr>
+            <tr>
+                <td>1956 - 1964</td>
+                <td>Plac Daszyńskiego ↔ Wrzosowa</td>
+            </tr>
+
+        </table><br>
+    </div>
+
+<button onclick="scrollToTop()" id="scrollTopBtn" title="Do góry">⬆</button>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <base href="/MPK/">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Linia 11 - MPK Częstochowa</title>
+    <link rel="stylesheet" href="css/style.css"/>
+
+    <script src="js/ikony.js" defer></script> <!--wczytywanie ikon-->
+    <script src="js/tabela_link.js" defer></script> <!--wczytywanie klikalnych wierszy tabel-->
+    <script src="js/toogleMenu.js" defer></script><!--Skrypt do listy menu-->
+
+    <script src="js/w_gore.js" defer></script> <!--Skrypt do przycisku przesuwania do samej góry-->
+    <script src="js/foto-blok.js" defer></script> <!--Blokada menu kontekstowego na zdjęciach-->
+
+    <!--Sekacja ładnych embed 🌸 (^///^)-->
+    <meta property="og:title" content="Linia 11 - MPK Częstochowa"> <!--Model-->
+    <meta property="og:description" content="KSSE Kusięcka/Legionów ↔ Dźbów-KSSE Skorki"> <!--Opisik krótszy-->
+    <!--<meta property="og:image" content=""> (bez miniaturki, bo co dać do lini mrr) tutaj miniaturkę-->
+    <meta property="og:type" content="website"> <!--Tego Adulka nie rusza :3-->
+
+</head>
+<body>
+    <div id="nav"></div>
+    <script>fetch('nav.htm') .then(response => response.text()) 
+    .then(data => document.getElementById('nav').innerHTML = data);
+    </script>
+
+    <div class="tresc-trasy"> <!--Główna treść strony-->
+        <div class="linia-info">
+            <div class="linia-numer">11</div> <!--Duży numer linii-->
+            <div class="linia-strzalka">↕</div> <!--Strzałka stała-->
+            <div class="linia-kierunki">
+                <div>KSSE Kusięcka / Legionów</div>
+                <div>Dźbów - KSSE Skorki</div>
+            </div>
+        </div><span style="float: right;">Od 1 lipca 2024</span><br>
+        <hr><BR>
+
+        <table class="linia-tabela">
+            <tr>
+                <th width="275px">Okres</th>
+                <th>Trasa</th>
+            </tr>
+            <tr>
+                <td>Od 1 lipca 2024</td>
+                <td>KSSE Kusięcka / Legionów ↔ Dźbów - KSSE Skorki</td>
+            </tr>
+            <tr>
+                <td>13 grudnia 2023 - 30 czerwca 2024</td>
+                <td>KSSE Kusięcka / Legionów ↔ Cmentarz Św. Rocha</td>
+            </tr>
+            <tr>
+                <td>18 luty 2023 - 12 grudnia 2023</td>
+                <td>KSSE Kusięcka / Legionów ↔ Zaciszańska</td>
+            </tr>
+            <tr>
+                <td>1 października 2017 - 17 luty 2023</td>
+                <td>KSSE Kusięcka / Legionów ↔ Cmentarz Św. Rocha</td>
+            </tr>
+            <tr>
+                <td>2015 - 30 września 2017</td>
+                <td>Gazownia / Legionów ↔ Cmentarz Św. Rocha</td>
+            </tr>
+            <tr>
+                <td>2006 - ?? ?? ??</td>
+                <td>Hallera / Legionów ↔ Cmentarz Św. Rocha</td>
+            </tr>
+            <tr>
+                <td>?? - 2006</td>
+                <td>Hellera / Koksownia ↔ Jadwigi - Cmentarz Rocha</td>
+            </tr>
+            <tr>
+                <td>1977 - ??</td>
+                <td>Walcownia / Koksownia ↔ Herbska</td>
+            </tr>
+            <tr>
+                <td>1 luty 1964 - 1977</td>
+                <td>Złota / Koksownia ↔ Św. Barbary</td>
+            </tr>
+            <tr>
+                <td>1956 - 1964</td>
+                <td>Plac Daszyńskiego ↔ Rędziny</td>
+            </tr>
+
+
+        </table><br>
+
+        <BR><BR>
+
+        <div class="linia-info">
+            <div class="linia-numer bis">11BIS</div> <!--Duży numer linii-->
+            <div class="linia-strzalka">↕</div> <!--Strzałka stała-->
+            <div class="linia-kierunki">
+                <div>Koksownia</div>
+                <div>III Aleja</div>
+            </div>
+        </div><span style="float: right;">1 marca 1977 (lub wcześniej) - ?? (nie później niż 2003)</span><br>
+        <hr><BR>
+
+        <table class="linia-tabela">
+            <tr>
+                <th width="275px">Okres</th>
+                <th>Trasa</th>
+            </tr>
+            <tr>
+                <td>1 marca 1977 (lub wcześniej) - ?? (nie później niż 2003)</td>
+                <td>Koksownia ↔ III Aleja</td>
+            </tr>
+
+        </table><br>
+
+        <h3>Uwaga:</h3><hr>
+        <uwaga style="font-size: 17px">Linia szczytowa.
+        </uwaga>
+    </div>
+
+<button onclick="scrollToTop()" id="scrollTopBtn" title="Do góry">⬆</button>
+</body>
+</html>

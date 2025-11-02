@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <base href="/MPK/">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Linia 12 - MPK Częstochowa</title>
+    <link rel="stylesheet" href="css/style.css"/>
+
+    <script src="js/ikony.js" defer></script> <!--wczytywanie ikon-->
+    <script src="js/tabela_link.js" defer></script> <!--wczytywanie klikalnych wierszy tabel-->
+    <script src="js/toogleMenu.js" defer></script><!--Skrypt do listy menu-->
+
+    <script src="js/w_gore.js" defer></script> <!--Skrypt do przycisku przesuwania do samej góry-->
+    <script src="js/foto-blok.js" defer></script> <!--Blokada menu kontekstowego na zdjęciach-->
+
+    <!--Sekacja ładnych embed 🌸 (^///^)-->
+    <meta property="og:title" content="Linia 12 - MPK Częstochowa"> <!--Model-->
+    <meta property="og:description" content="Szybowa / Gnaszyn - Dworzec PKP ↔ Raków - Dworzec PKP"> <!--Opisik krótszy-->
+    <!--<meta property="og:image" content=""> (bez miniaturki, bo co dać do lini mrr) tutaj miniaturkę-->
+    <meta property="og:type" content="website"> <!--Tego Adulka nie rusza :3-->
+
+</head>
+<body>
+    <div id="nav"></div>
+    <script>fetch('nav.htm') .then(response => response.text()) 
+    .then(data => document.getElementById('nav').innerHTML = data);
+    </script>
+
+    <div class="tresc-trasy"> <!--Główna treść strony-->
+        <div class="linia-info">
+            <div class="linia-numer">12</div> <!--Duży numer linii-->
+            <div class="linia-strzalka">↕</div> <!--Strzałka stała-->
+            <div class="linia-kierunki">
+                <div>Szybowa / Gnaszyn - Dworzec PKP</div>
+                <div>Raków - Dworzec PKP</div>
+            </div>
+        </div><span style="float: right;">Od 24 lutego 2024</span><br>
+        <hr><BR>
+
+        <table class="linia-tabela">
+            <tr>
+                <th width="275px">Okres</th>
+                <th>Trasa</th>
+            </tr>
+            <tr>
+                <td>Od 24 lutego 2024</td>
+                <td>Szybowa / Gnaszyn - Dworzec PKP ↔ Raków - Dworzec PKP</td>
+            </tr>
+            <tr>
+                <td>21 października 2021 - 23 luty 2024</td>
+                <td>Gnaszyn Dospel ↔ Raków - Dworzec PKP</td>
+            </tr>
+            <tr>
+                <td>?? - 20 października 2021</td>
+                <td>Gnaszyn - Dworzec PKP ↔ Raków - Dworzec PKP</td>
+            </tr>
+            <tr>
+                <td>?? - ??</td>
+                <td>Gnaszyn Dospel ↔ Raków - Dworzec PKP</td>
+            </tr>
+            <tr>
+                <td>2006 - ??</td>
+                <td>Gnaszyn ↔ Raków - Dworzec PKP</td>
+            </tr>
+            <tr>
+                <td>1984 - 2006</td>
+                <td>Gnaszyn Tapety ↔ Dworzec PKP Raków (Al. Pokoju PKP)</td>
+            </tr>
+            <tr>
+                <td>1972 - 1984</td>
+                <td>Lwowska ↔ Al. Pokoju PKP</td>
+            </tr>
+            <tr>
+                <td>1 luty 1964 - 1972</td>
+                <td>Liszka ↔ Al. Pokoju</td>
+            </tr>
+            <tr>
+                <td>1956 - 1964</td>
+                <td>Plac Daszyńskiego ↔ Kucelin</td>
+            </tr>
+
+        </table><br>
+
+        <BR><BR>
+
+        <div class="linia-info">
+            <div class="linia-numer bis">12BIS</div> <!--Duży numer linii-->
+            <div class="linia-strzalka">↕</div> <!--Strzałka stała-->
+            <div class="linia-kierunki">
+                <div>Lisiniec</div>
+                <div>Aleja Pokoju PKP</div>
+            </div>
+        </div><span style="float: right;">1 marca 1977 (lub wcześniej) - ?? (nie później niż 2003)</span><br>
+        <hr><BR>
+
+        <table class="linia-tabela">
+            <tr>
+                <th width="275px">Okres</th>
+                <th>Trasa</th>
+            </tr>
+            <tr>
+                <td>1 marca 1977 (lub wcześniej) - ?? (nie później niż 2003)</td>
+                <td>Lisiniec ↔ Al. Pokoju PKP</td>
+            </tr>
+
+        </table><br>
+    </div>
+
+<button onclick="scrollToTop()" id="scrollTopBtn" title="Do góry">⬆</button>
+</body>
+</html>

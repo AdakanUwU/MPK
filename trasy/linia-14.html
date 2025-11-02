@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <base href="/MPK/">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Linia 14 - MPK Częstochowa</title>
+    <link rel="stylesheet" href="css/style.css"/>
+
+    <script src="js/ikony.js" defer></script> <!--wczytywanie ikon-->
+    <script src="js/tabela_link.js" defer></script> <!--wczytywanie klikalnych wierszy tabel-->
+    <script src="js/toogleMenu.js" defer></script><!--Skrypt do listy menu-->
+
+    <script src="js/w_gore.js" defer></script> <!--Skrypt do przycisku przesuwania do samej góry-->
+    <script src="js/foto-blok.js" defer></script> <!--Blokada menu kontekstowego na zdjęciach-->
+
+    <!--Sekacja ładnych embed 🌸 (^///^)-->
+    <meta property="og:title" content="Linia 14 - MPK Częstochowa"> <!--Model-->
+    <meta property="og:description" content="Nierada / Nierada - Szkoła / Malownicza ↔ Rząsawa / Rząsawa - Dworzec PKP"> <!--Opisik krótszy-->
+    <!--<meta property="og:image" content=""> (bez miniaturki, bo co dać do lini mrr) tutaj miniaturkę-->
+    <meta property="og:type" content="website"> <!--Tego Adulka nie rusza :3-->
+
+</head>
+<body>
+    <div id="nav"></div>
+    <script>fetch('nav.htm') .then(response => response.text()) 
+    .then(data => document.getElementById('nav').innerHTML = data);
+    </script>
+
+    <div class="tresc-trasy"> <!--Główna treść strony-->
+        <div class="linia-info">
+            <div class="linia-numer">14</div> <!--Duży numer linii-->
+            <div class="linia-strzalka">↕</div> <!--Strzałka stała-->
+            <div class="linia-kierunki">
+                <div>Nierada / Nierada - Szkoła / Malownicza</div>
+                <div>Rząsawa / Rząsawa - Dworzec PKP</div>
+            </div>
+        </div><span style="float: right;">Od 1 października 2022</span><br>
+        <hr><BR>
+
+        <table class="linia-tabela">
+            <tr>
+                <th width="275px">Okres</th>
+                <th>Trasa</th>
+            </tr>
+            <tr>
+                <td>Od 1 października 2022</td>
+                <td>Nierada / Nierada - Szkoła / Malownicza ↔ Rząsawa / Rząsawa - Dworzec PKP</td>
+            </tr>
+            <tr>
+                <td>2006 - 30 września 2022</td>
+                <td>Korkowa / Brzeziny ↔ Rząsawa / Rząsawa - Dworzec PKP</td>
+            </tr>
+            <tr>
+                <td>2002 - 2006</td>
+                <td>Kokrowa - Pętla / Brzeziny - Pętla ↔ Rząsawa / Rząsawa - PKP</td>
+            </tr>
+            <tr>
+                <td>?? - 2002</td>
+                <td>Malownicza ↔ Rząsawa / Rząsawa - PKP</td>
+            </tr>
+            <tr>
+                <td>1 lutego 1964 - ??</td>
+                <td>ZGH "Sabinów" ↔ Wyczerpy Dolne</td>
+            </tr>
+            <tr>
+                <td>1956 - 1964</td>
+                <td>Plac Daszyńskiego ↔ Błeszno</td>
+            </tr>
+
+        </table><br>
+
+        <BR><BR>
+
+        <div class="linia-info">
+            <div class="linia-numer bis">14BIS</div> <!--Duży numer linii-->
+            <div class="linia-strzalka">↕</div> <!--Strzałka stała-->
+            <div class="linia-kierunki">
+                <div>Wyczerpy Górne</div>
+                <div>Zacisze</div>
+            </div>
+        </div><span style="float: right;">1964 - 2002</span><br>
+        <hr><BR>
+
+        <table class="linia-tabela">
+            <tr>
+                <th width="275px">Okres</th>
+                <th>Trasa</th>
+            </tr>
+            <tr>
+                <td>1964 - 2002</td>
+                <td>Wyczerpy Górne ↔ Zacisze</td>
+            </tr>
+
+        </table><br>
+    </div>
+
+<button onclick="scrollToTop()" id="scrollTopBtn" title="Do góry">⬆</button>
+</body>
+</html>

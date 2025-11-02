@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Trasy - MPK Częstochowa</title>
+    <link rel="stylesheet" href="css/style.css"/>
+
+    <base href="/MPK/">
+
+    <script src="js/ikony.js" defer></script> <!--wczytywanie ikon-->
+    <script src="js/tabela_link.js" defer></script> <!--wczytywanie klikalnych wierszy tabel-->
+    <script src="js/toogleMenu.js" defer></script><!--Skrypt do listy menu-->
+
+    <script src="js/w_gore.js" defer></script> <!--Skrypt do przycisku przesuwania do samej góry-->
+    <script src="js/foto-blok.js" defer></script> <!--Blokada menu kontekstowego na zdjęciach-->
+
+</head>
+<body>
+    <div id="nav"></div>
+    <script>fetch('nav.htm') .then(response => response.text()) 
+    .then(data => document.getElementById('nav').innerHTML = data);
+    </script>
+
+    <div class="tresc-trasy"> <!--Główna treść strony-->
+
+        <h1>Numery linii:</h3><hr>
+
+        <div class="menu-trasy">
+            <a class="numer-linii-blank">
+                <div class="numer-linii-blank"></div>
+            </a>
+
+            <a href="trasy/linia-1" class="numer-linii">
+                <div class="numer-linii">1</div>
+            </a>
+
+            <a href="trasy/linia-2" class="numer-linii">
+                <div class="numer-linii">2</div>
+            </a>
+
+            <a href="trasy/linia-3" class="numer-linii">
+                <div class="numer-linii">3</div>
+            </a>
+
+            <a href="trasy/linia-4" class="numer-linii-old">
+                <div class="numer-linii-old">4</div>
+            </a>
+
+            <a class="numer-linii-off">
+                <div class="numer-linii-off">5</div>
+            </a>
+
+            <a class="numer-linii-off">
+                <div class="numer-linii-off">6</div>
+            </a>
+
+            <a class="numer-linii-off">
+                <div class="numer-linii-off">7</div>
+            </a>
+
+            <a class="numer-linii-off">
+                <div class="numer-linii-off">8</div>
+            </a>
+
+            <a href="trasy/linia-09" class="numer-linii">
+                <div class="numer-linii">09</div>
+            </a>
+
+            <a href="trasy/linia-10" class="numer-linii">
+                <div class="numer-linii">10</div>
+            </a>
+
+            <a href="trasy/linia-11" class="numer-linii">
+                <div class="numer-linii">11</div>
+            </a>
+
+            <a href="trasy/linia-12" class="numer-linii">
+                <div class="numer-linii">12</div>
+            </a>
+
+            <a href="trasy/linia-13" class="numer-linii">
+                <div class="numer-linii">13</div>
+            </a>
+
+            <a href="trasy/linia-14" class="numer-linii">
+                <div class="numer-linii">14</div>
+            </a>
+
+            <a href="trasy/linia-15" class="numer-linii">
+                <div class="numer-linii">15</div>
+            </a>
+
+            <a href="trasy/linia-16" class="numer-linii">
+                <div class="numer-linii">16</div>
+            </a>
+
+            <a href="trasy/linia-17" class="numer-linii">
+                <div class="numer-linii">17</div>
+            </a>
+
+            <a href="trasy/linia-18" class="numer-linii">
+                <div class="numer-linii">18</div>
+            </a>
+
+            <a href="trasy/linia-19" class="numer-linii">
+                <div class="numer-linii">19</div>
+            </a>
+
+            <a href="trasy/linia-20" class="numer-linii">
+                <div class="numer-linii">20</div>
+            </a>
+
+            <a href="trasy/linia-21" class="numer-linii-old">
+                <div class="numer-linii-old">21</div>
+            </a>
+
+            <a href="trasy/linia-22" class="numer-linii">
+                <div class="numer-linii">22</div>
+            </a>
+
+            <a href="trasy/linia-23" class="numer-linii">
+                <div class="numer-linii">23</div>
+            </a>
+
+            <a href="trasy/linia-24" class="numer-linii">
+                <div class="numer-linii">24</div>
+            </a>
+
+            <a href="trasy/linia-25" class="numer-linii">
+                <div class="numer-linii">25</div>
+            </a>
+
+            <a href="trasy/linia-26" class="numer-linii">
+                <div class="numer-linii">26</div>
+            </a>
+
+            <a href="trasy/linia-27" class="numer-linii">
+                <div class="numer-linii">27</div>
+            </a>
+
+            <a href="trasy/linia-28" class="numer-linii">
+                <div class="numer-linii">28</div>
+            </a>
+
+            <a href="trasy/linia-29" class="numer-linii">
+                <div class="numer-linii">29</div>
+            </a>
+
+            <a href="trasy/linia-30" class="numer-linii">
+                <div class="numer-linii">30</div>
+            </a>
+
+            <a href="trasy/linia-31" class="numer-linii">
+                <div class="numer-linii">31</div>
+            </a>
+
+            <a href="trasy/linia-32" class="numer-linii">
+                <div class="numer-linii">32</div>
+            </a>
+
+            <a href="trasy/linia-33" class="numer-linii">
+                <div class="numer-linii">33</div>
+            </a>
+
+            <a href="trasy/linia-34" class="numer-linii">
+                <div class="numer-linii">34</div>
+            </a>
+
+            <a href="trasy/linia-35" class="numer-linii">
+                <div class="numer-linii">35</div>
+            </a>
+
+            <a href="trasy/linia-36" class="numer-linii-old">
+                <div class="numer-linii-old">36</div>
+            </a>
+
+            <a href="trasy/linia-37" class="numer-linii">
+                <div class="numer-linii">37</div>
+            </a>
+
+            <a href="trasy/linia-38" class="numer-linii">
+                <div class="numer-linii">38</div>
+            </a>
+
+            <a href="trasy/linia-39" class="numer-linii-old">
+                <div class="numer-linii-old">39</div>
+            </a>
+
+            <a href="trasy/linia-40" class="numer-linii-old">
+                <div class="numer-linii-old">40</div>
+            </a>
+
+            <a class="numer-linii-off">
+                <div class="numer-linii-off">41</div>
+            </a>
+
+            <a class="numer-linii-off">
+                <div class="numer-linii-off">42</div>
+            </a>
+
+            <a class="numer-linii-off">
+                <div class="numer-linii-off">43</div>
+            </a>
+
+            <a class="numer-linii-off">
+                <div class="numer-linii-off">44</div>
+            </a>
+
+            <a class="numer-linii-off">
+                <div class="numer-linii-off">45</div>
+            </a>
+
+            <a class="numer-linii-off">
+                <div class="numer-linii-off">46</div>
+            </a>
+
+            <a class="numer-linii-off">
+                <div class="numer-linii-off">47</div>
+            </a>
+
+            <a class="numer-linii-off">
+                <div class="numer-linii-off">48</div>
+            </a>
+
+            <a class="numer-linii-off">
+                <div class="numer-linii-off">49</div>
+            </a>
+
+            <a href="trasy/linia-50" class="numer-linii-old">
+                <div class="numer-linii-old">50</div>
+            </a>
+
+            <a href="trasy/linia-51" class="numer-linii-old">
+                <div class="numer-linii-old">51</div>
+            </a>
+
+            <a href="trasy/linia-52" class="numer-linii-old">
+                <div class="numer-linii-old">52</div>
+            </a>
+
+            <a href="trasy/linia-53" class="numer-linii-old">
+                <div class="numer-linii-old">53</div>
+            </a>
+
+            <a href="trasy/linia-54" class="numer-linii-old">
+                <div class="numer-linii-old">54</div>
+            </a>
+
+            <a href="trasy/linia-55" class="numer-linii-old">
+                <div class="numer-linii-old">55</div>
+            </a>
+
+            <a href="trasy/linia-56" class="numer-linii-old">
+                <div class="numer-linii-old">56</div>
+            </a>
+
+            <a href="trasy/linia-57" class="numer-linii-old">
+                <div class="numer-linii-old">57</div>
+            </a>
+
+            <a href="trasy/linia-58" class="numer-linii-old">
+                <div class="numer-linii-old">58</div>
+            </a>
+
+            <a href="trasy/linia-59" class="numer-linii-old">
+                <div class="numer-linii-old">59</div>
+            </a>
+
+            <a href="trasy/linia-60" class="numer-linii-old">
+                <div class="numer-linii-old">60</div>
+            </a>
+
+            <a href="trasy/linia-61" class="numer-linii-old">
+                <div class="numer-linii-old">61</div>
+            </a>
+
+            <a href="trasy/linia-62" class="numer-linii-old">
+                <div class="numer-linii-old">62</div>
+            </a>
+
+            <a href="trasy/linia-63" class="numer-linii-old">
+                <div class="numer-linii-old">63</div>
+            </a>
+
+            <a href="trasy/linia-64" class="numer-linii-old">
+                <div class="numer-linii-old">64</div>
+            </a>
+
+            <a ref="trasy/linia-65" class="numer-linii-old">
+                <div class="numer-linii-old">65</div>
+            </a>
+
+            <a href="trasy/linia-66" class="numer-linii-old">
+                <div class="numer-linii-old">66</div>
+            </a>
+
+            <a href="trasy/linia-67" class="numer-linii-old">
+                <div class="numer-linii-old">67</div>
+            </a>
+
+            <a href="trasy/linia-68" class="numer-linii-old">
+                <div class="numer-linii-old">68</div>
+            </a>
+
+            <a href="trasy/linia-69" class="numer-linii-old">
+                <div class="numer-linii-old">69</div>
+            </a>
+
+            <a href="trasy/linia-70" class="numer-linii-old">
+                <div class="numer-linii-old">70</div>
+            </a>
+
+            <a href="trasy/linia-71" class="numer-linii-old">
+                <div class="numer-linii-old">71</div>
+            </a>
+
+            <a href="trasy/linia-72" class="numer-linii-old">
+                <div class="numer-linii-old">72</div>
+            </a>
+
+            <a href="trasy/linia-73" class="numer-linii-old">
+                <div class="numer-linii-old">73</div>
+            </a>
+
+            <a class="numer-linii-off">
+                <div class="numer-linii-off">74</div>
+            </a>
+
+            <a class="numer-linii-off">
+                <div class="numer-linii-off">75</div>
+            </a>
+
+            <a class="numer-linii-off">
+                <div class="numer-linii-off">76</div>
+            </a>
+
+            <a href="trasy/linia-77" class="numer-linii-old">
+                <div class="numer-linii-old">77</div>
+            </a>
+
+            <a class="numer-linii-off">
+                <div class="numer-linii-off">78</div>
+            </a>
+
+            <a class="numer-linii-off">
+                <div class="numer-linii-off">79</div>
+            </a>
+
+            <a href="trasy/linia-80" class="numer-linii">
+                <div class="numer-linii">80</div>
+            </a>
+
+            <a href="trasy/linia-81" class="numer-linii-old">
+                <div class="numer-linii-old">81</div>
+            </a>
+
+            <a href="trasy/linia-82" class="numer-linii-old">
+                <div class="numer-linii-old">82</div>
+            </a>
+
+            <a href="trasy/linia-83" class="numer-linii-old">
+                <div class="numer-linii-old">83</div>
+            </a>
+
+            <a href="trasy/linia-84" class="numer-linii-old">
+                <div class="numer-linii-old">84</div>
+            </a>
+
+            <a class="numer-linii-off">
+                <div class="numer-linii-off">85</div>
+            </a>
+
+            <a class="numer-linii-off">
+                <div class="numer-linii-off">86</div>
+            </a>
+
+            <a class="numer-linii-off">
+                <div class="numer-linii-off">87</div>
+            </a>
+
+            <a class="numer-linii-off">
+                <div class="numer-linii-off">88</div>
+            </a>
+
+            <a class="numer-linii-off">
+                <div class="numer-linii-off">89</div>
+            </a>
+
+            <a href="trasy/linia-90" class="numer-linii-old">
+                <div class="numer-linii-old">90</div>
+            </a>
+
+            <a href="trasy/linia-91" class="numer-linii-old">
+                <div class="numer-linii-old">91</div>
+            </a>
+
+            <a href="trasy/linia-92" class="numer-linii-old">
+                <div class="numer-linii-old">92</div>
+            </a>
+
+            <a href="trasy/linia-93" class="numer-linii-old">
+                <div class="numer-linii-old">93</div>
+            </a>
+
+            <a href="trasy/linia-94" class="numer-linii-old">
+                <div class="numer-linii-old">94</div>
+            </a>
+
+            <a href="trasy/linia-95" class="numer-linii-old">
+                <div class="numer-linii-old">95</div>
+            </a>
+
+            <a  href="trasy/linia-96" class="numer-linii-old">
+                <div class="numer-linii-old">96</div>
+            </a>
+
+            <a href="trasy/linia-97" class="numer-linii-old">
+                <div class="numer-linii-old">97</div>
+            </a>
+
+            <a href="trasy/linia-98" class="numer-linii-old">
+                <div class="numer-linii-old">98</div>
+            </a>
+
+            <a href="trasy/linia-99" class="numer-linii-old">
+                <div class="numer-linii-old">99</div>
+            </a>
+        </div>
+
+    </div>
+
+<button onclick="scrollToTop()" id="scrollTopBtn" title="Do góry">⬆</button>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <base href="/MPK/">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Linia 19 - MPK Częstochowa</title>
+    <link rel="stylesheet" href="css/style.css"/>
+
+    <script src="js/ikony.js" defer></script> <!--wczytywanie ikon-->
+    <script src="js/tabela_link.js" defer></script> <!--wczytywanie klikalnych wierszy tabel-->
+    <script src="js/toogleMenu.js" defer></script><!--Skrypt do listy menu-->
+
+    <script src="js/w_gore.js" defer></script> <!--Skrypt do przycisku przesuwania do samej góry-->
+    <script src="js/foto-blok.js" defer></script> <!--Blokada menu kontekstowego na zdjęciach-->
+
+    <!--Sekacja ładnych embed 🌸 (^///^)-->
+    <meta property="og:title" content="Linia 19 - MPK Częstochowa"> <!--Model-->
+    <meta property="og:description" content="Żabiniec ↔ Brzeziny"> <!--Opisik krótszy-->
+    <!--<meta property="og:image" content=""> (bez miniaturki, bo co dać do lini mrr) tutaj miniaturkę-->
+    <meta property="og:type" content="website"> <!--Tego Adulka nie rusza :3-->
+
+</head>
+<body>
+    <div id="nav"></div>
+    <script>fetch('nav.htm') .then(response => response.text()) 
+    .then(data => document.getElementById('nav').innerHTML = data);
+    </script>
+
+    <div class="tresc-trasy"> <!--Główna treść strony-->
+        <div class="linia-info">
+            <div class="linia-numer">19</div> <!--Duży numer linii-->
+            <div class="linia-strzalka">↕</div> <!--Strzałka stała-->
+            <div class="linia-kierunki">
+                <div>Żabiniec</div>
+                <div>Brzeziny</div>
+            </div>
+        </div><span style="float: right;">Od 1 marca 2025</span><br>
+        <hr><BR>
+
+        <table class="linia-tabela">
+            <tr>
+                <th width="275px">Okres</th>
+                <th>Trasa</th>
+            </tr>
+            <tr>
+                <td>Od 1 marca 2025</td>
+                <td>Żabiniec ↔ Rzeziny</td>
+            </tr>
+            <tr>
+                <td>1 lipca 2024 - 28 luty 2025</td>
+                <td>Żabiniec ↔ Brzeziny / Poczesna Bociania Górka</td>
+            </tr>
+            <tr>
+                <td>3 listopada 2022 - 30 czerwca 2024</td>
+                <td>Żabiniec ↔ Kucelin / Walcownia / Huta - Wydział Transportu (Huta - Zakład Transportu)</td>
+            </tr>
+            <tr>
+                <td>2019 - 2 listopada 2022</td>
+                <td>Żabiniec ↔ Kucelin - Szpital / Walcownia</td>
+            </tr>
+            <tr>
+                <td>1 lipca 2002 - 2019</td>
+                <td>Żabiniec ↔ Kucelin - Huta (do 2013 Kucelin - Szpital) / Walcownia</td>
+            </tr>
+            <tr>
+                <td>1978 - ??</td>
+                <td>Żabiniec ↔ Bugajska</td>
+            </tr>
+            <tr>
+                <td>1 stycznia 1977 - 1778</td>
+                <td>Grabówka ↔ Bugajska</td>
+            </tr>
+        </table><br>
+
+        <BR><BR>
+
+        <div class="linia-info">
+            <div class="linia-numer bis">19BIS</div> <!--Duży numer linii-->
+            <div class="linia-strzalka">↕</div> <!--Strzałka stała-->
+            <div class="linia-kierunki">
+                <div>Żabiniec</div>
+                <div>Bugajska</div>
+            </div>
+        </div><span style="float: right;">1 stycznia 1977 - 1878</span><br>
+        <hr><BR>
+
+        <table class="linia-tabela">
+            <tr>
+                <th width="275px">Okres</th>
+                <th>Trasa</th>
+            </tr>
+            <tr>
+                <td>1 stycznia 1977 - 1878</td>
+                <td>Żabiniec ↔ Bugajska</td>
+            </tr>
+        </table><br>
+
+        <h3>Uwaga:</h3><hr>
+        <uwaga style="font-size: 17px">W 1978 linie 19 przemianowano na 26, a 19bis na 19.
+        </uwaga>
+    </div>
+
+<button onclick="scrollToTop()" id="scrollTopBtn" title="Do góry">⬆</button>
+</body>
+</html>

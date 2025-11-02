@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <base href="/MPK/">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Linia 15 - MPK Częstochowa</title>
+    <link rel="stylesheet" href="css/style.css"/>
+
+    <script src="js/ikony.js" defer></script> <!--wczytywanie ikon-->
+    <script src="js/tabela_link.js" defer></script> <!--wczytywanie klikalnych wierszy tabel-->
+    <script src="js/toogleMenu.js" defer></script><!--Skrypt do listy menu-->
+
+    <script src="js/w_gore.js" defer></script> <!--Skrypt do przycisku przesuwania do samej góry-->
+    <script src="js/foto-blok.js" defer></script> <!--Blokada menu kontekstowego na zdjęciach-->
+
+    <!--Sekacja ładnych embed 🌸 (^///^)-->
+    <meta property="og:title" content="Linia 15 - MPK Częstochowa"> <!--Model-->
+    <meta property="og:description" content="Kukuczki ↔ Kucelin / Walcownia / Huta - Wydział Transportu"> <!--Opisik krótszy-->
+    <!--<meta property="og:image" content=""> (bez miniaturki, bo co dać do lini mrr) tutaj miniaturkę-->
+    <meta property="og:type" content="website"> <!--Tego Adulka nie rusza :3-->
+
+</head>
+<body>
+    <div id="nav"></div>
+    <script>fetch('nav.htm') .then(response => response.text()) 
+    .then(data => document.getElementById('nav').innerHTML = data);
+    </script>
+
+    <div class="tresc-trasy"> <!--Główna treść strony-->
+        <div class="linia-info">
+            <div class="linia-numer">15</div> <!--Duży numer linii-->
+            <div class="linia-strzalka">↕</div> <!--Strzałka stała-->
+            <div class="linia-kierunki">
+                <div>Kukuczki</div>
+                <div>Kucelin / Walcownia / Huta - Wydział Transportu</div>
+            </div>
+        </div><span style="float: right;">Od 1 lipca 2024</span><br>
+        <hr><BR>
+
+        <table class="linia-tabela">
+            <tr>
+                <th width="275px">Okres</th>
+                <th>Trasa</th>
+            </tr>
+            <tr>
+                <td>Od 1 lipca 2024</td>
+                <td>Kukuczki ↔ Kucelin / Walcownia / Huta - Wydział Transportu (Huta - Zakład Transportu)</td>
+            </tr>
+            <tr>
+                <td>18 marca 2024 - 30 czerwca 2024</td>
+                <td>Kukuczki ↔ Korkowa / Poczesna Bociania Górka</td>
+            </tr>
+            <tr>
+                <td>2012 - 17 marca 2024</td>
+                <td>Kukuczki ↔ Korkowa</td>
+            </tr>
+            <tr>
+                <td>1 kwietnia 2003 - 2012</td>
+                <td>Kukuczki ↔ Bór - Wypalanki (do 2006 Bór Wypalanki)</td>
+            </tr>
+            <tr>
+                <td>1 lipca 2002 - 31 marca 2003</td>
+                <td>Gombrowicza ↔ Bór Wypalanki</td>
+            </tr>
+            <tr>
+                <td>1980 - 2002</td>
+                <td>Kukuczki ↔ Dworzec Stradom</td>
+            </tr>
+            <tr>
+                <td>1 marca 1977 - 1980</td>
+                <td>16 Stycznia ↔ Dworzec Stradom</td>
+            </tr>
+            <tr>
+                <td>1964 - 1977</td>
+                <td>Tysiąclecie ↔ Osiedle Sosabowskiego</td>
+            </tr>
+            <tr>
+                <td>1959 - 1960</td>
+                <td>Lisiniec ↔ Koksownia</td>
+            </tr>
+            <tr>
+                <td>1956 - 1959</td>
+                <td>Rynek Wieluński ↔ Złota</td>
+            </tr>
+
+        </table><br>
+
+        <BR><BR>
+
+        <div class="linia-info">
+            <div class="linia-numer bis">15BIS</div> <!--Duży numer linii-->
+            <div class="linia-strzalka">↕</div> <!--Strzałka stała-->
+            <div class="linia-kierunki">
+                <div>Krajewskiego (obecnie Fieldorfa-Nila)</div>
+                <div>16 stycznia (obecnie Promenada Niemena)</div>
+            </div>
+        </div><span style="float: right;">1982-1983</span><br>
+        <hr><BR>
+
+        <table class="linia-tabela">
+            <tr>
+                <th width="275px">Okres</th>
+                <th>Trasa</th>
+            </tr>
+            <tr>
+                <td>1982-1983</td>
+                <td>Krajewskiego ↔ 16 stycznia</td>
+            </tr>
+
+        </table><br>
+    </div>
+
+<button onclick="scrollToTop()" id="scrollTopBtn" title="Do góry">⬆</button>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <base href="/MPK/">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Linia 18 - MPK Częstochowa</title>
+    <link rel="stylesheet" href="css/style.css"/>
+
+    <script src="js/ikony.js" defer></script> <!--wczytywanie ikon-->
+    <script src="js/tabela_link.js" defer></script> <!--wczytywanie klikalnych wierszy tabel-->
+    <script src="js/toogleMenu.js" defer></script><!--Skrypt do listy menu-->
+
+    <script src="js/w_gore.js" defer></script> <!--Skrypt do przycisku przesuwania do samej góry-->
+    <script src="js/foto-blok.js" defer></script> <!--Blokada menu kontekstowego na zdjęciach-->
+
+    <!--Sekacja ładnych embed 🌸 (^///^)-->
+    <meta property="og:title" content="Linia 18 - MPK Częstochowa"> <!--Model-->
+    <meta property="og:description" content="Piłsudzkiego ↔ Batalionów Chłopskich"> <!--Opisik krótszy-->
+    <!--<meta property="og:image" content=""> (bez miniaturki, bo co dać do lini mrr) tutaj miniaturkę-->
+    <meta property="og:type" content="website"> <!--Tego Adulka nie rusza :3-->
+
+</head>
+<body>
+    <div id="nav"></div>
+    <script>fetch('nav.htm') .then(response => response.text()) 
+    .then(data => document.getElementById('nav').innerHTML = data);
+    </script>
+
+    <div class="tresc-trasy"> <!--Główna treść strony-->
+        <div class="linia-info">
+            <div class="linia-numer">18</div> <!--Duży numer linii-->
+            <div class="linia-strzalka">↕</div> <!--Strzałka stała-->
+            <div class="linia-kierunki">
+                <div>Piłsudskiego</div>
+                <div>Batalionów Chłopskich</div>
+            </div>
+        </div><span style="float: right;">Od 26 stycznia 2021</span><br>
+        <hr><BR>
+
+        <table class="linia-tabela">
+            <tr>
+                <th width="275px">Okres</th>
+                <th>Trasa</th>
+            </tr>
+            <tr>
+                <td>Od 26 stycznia 2021</td>
+                <td>Piłsudzkiego ↔ Batalionów Chłopskioch</td>
+            </tr>
+            <tr>
+                <td>1 września 2016 - 25 stycznia 2021</td>
+                <td>Dworzec Główny PKP ↔ Hektarowa / Batalionów Chłopskioch</td>
+            </tr>
+            <tr>
+                <td>1 lipca 2003 - 2 września 2011</td>
+                <td>Cmentarz Św. Rocha (do 2006 Jadwigi - Cm. Rocha) ↔ Bursztynowa (do 2006 Bursztynowa - Las)</td>
+            </tr>
+            <tr>
+                <td>1 marca 2003 - 30 czerwca 2003</td>
+                <td>Dworzec PKP Stradom ↔ Bursztynowa - Las</td>
+            </tr>
+            <tr>
+                <td>1 lipca 2002 - 28 lutego 2003</td>
+                <td>Parkitka - Szpital ↔ Bursztynowa - Las</td>
+            </tr>
+            <tr>
+                <td>16 stycznia 1971 - 30 czerwca 2002</td>
+                <td>Lisiniecka (Jadwigi - Cm. Rocha) ↔ Mirów</td>
+            </tr>
+            <tr>
+                <td>wrzesień 1970 - 15 stycznia 1971</td>
+                <td>Lisieniecka (Cm. Rocha) ↔ Kiedrzyn / Lubojna</td>
+            </tr>
+            <tr>
+                <td>1958 - I połowa 1959</td>
+                <td>7 Kamienic ↔ Kiedrzyn</td>
+            </tr>
+
+        </table><br>
+    </div>
+
+<button onclick="scrollToTop()" id="scrollTopBtn" title="Do góry">⬆</button>
+</body>
+</html>

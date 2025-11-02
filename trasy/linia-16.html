@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <base href="/MPK/">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Linia 16 - MPK Częstochowa</title>
+    <link rel="stylesheet" href="css/style.css"/>
+
+    <script src="js/ikony.js" defer></script> <!--wczytywanie ikon-->
+    <script src="js/tabela_link.js" defer></script> <!--wczytywanie klikalnych wierszy tabel-->
+    <script src="js/toogleMenu.js" defer></script><!--Skrypt do listy menu-->
+
+    <script src="js/w_gore.js" defer></script> <!--Skrypt do przycisku przesuwania do samej góry-->
+    <script src="js/foto-blok.js" defer></script> <!--Blokada menu kontekstowego na zdjęciach-->
+
+    <!--Sekacja ładnych embed 🌸 (^///^)-->
+    <meta property="og:title" content="Linia 16 - MPK Częstochowa"> <!--Model-->
+    <meta property="og:description" content="Bialska ↔ Sucharskiego"> <!--Opisik krótszy-->
+    <!--<meta property="og:image" content=""> (bez miniaturki, bo co dać do lini mrr) tutaj miniaturkę-->
+    <meta property="og:type" content="website"> <!--Tego Adulka nie rusza :3-->
+
+</head>
+<body>
+    <div id="nav"></div>
+    <script>fetch('nav.htm') .then(response => response.text()) 
+    .then(data => document.getElementById('nav').innerHTML = data);
+    </script>
+
+    <div class="tresc-trasy"> <!--Główna treść strony-->
+        <div class="linia-info">
+            <div class="linia-numer">16</div> <!--Duży numer linii-->
+            <div class="linia-strzalka">↕</div> <!--Strzałka stała-->
+            <div class="linia-kierunki">
+                <div>Bialska</div>
+                <div>Sucharskiego</div>
+            </div>
+        </div><span style="float: right;">Od 6 kwietnia 2024</span><br>
+        <hr><BR>
+
+        <table class="linia-tabela">
+            <tr>
+                <th width="275px">Okres</th>
+                <th>Trasa</th>
+            </tr>
+            <tr>
+                <td>Od 6 kwietnia 2024</td>
+                <td>Bialska ↔ Sucharskiego</td>
+            </tr>
+            <tr>
+                <td>3 grudnia 2014 - 1 lipca 2020</td>
+                <td>Kukuczki ↔ Stradom - Dworzec PKP</td>
+            </tr>
+            <tr>
+                <td>1 lipca 2003 - 2 grudnia 2014</td>
+                <td>Kukuczki ↔ Dworzec Główny PKP</td>
+            </tr>
+            <tr>
+                <td>październik 1991 - 30 czerwca 2003</td>
+                <td>Kukuczki ↔ Bór Wypalanki</td>
+            </tr>
+            <tr>
+                <td>1986 - październik 1991</td>
+                <td>Cmentarz Kule ↔ Bór Wypalanki</td>
+            </tr>
+            <tr>
+                <td>1977 - 1986</td>
+                <td>Rolnicza ↔ Bór</td>
+            </tr>
+            <tr>
+                <td>16 stycznia 1971 - 1977</td>
+                <td>Rolnicza FUM (Fabryka Urządzeń Mechanicznych) ↔ Dworzec PKP Stradom</td>
+            </tr>
+            <tr>
+                <td>1956 - 15 stycznia 1971</td>
+                <td>Plac Daszyńskiego - Mstów</td>
+            </tr>
+
+        </table><br>
+    </div>
+
+<button onclick="scrollToTop()" id="scrollTopBtn" title="Do góry">⬆</button>
+</body>
+</html>

@@ -47,7 +47,7 @@ label.logo {
   color: white;
   font-size: 35px;
   line-height: 80px;
-  padding: 0 100px;
+  padding: 0 60px;
   font-weight: bold;
 }
 
@@ -142,6 +142,10 @@ a.pasek:hover {
 }
 
 .tresc-kafelki{
+  margin: 95px 12% 10px 12%;
+}
+
+.tresc-trasy{
   margin: 95px 12% 10px 12%;
 }
 
@@ -313,19 +317,19 @@ details summary::marker{
   padding: 0;
 }
 
-@media (max-width: 1250px) {
+@media (max-width: 1260px) {
   .menu-container {
     grid-template-columns: repeat(3, 300px);
   }
 }
 
-@media (max-width: 930px) {
+@media (max-width: 948px) {
   .menu-container {
     grid-template-columns: repeat(2, 300px);
   }
 }
 
-@media (max-width: 620px) {
+@media (max-width: 630px) {
   .menu-container {
     grid-template-columns: repeat(1, 300px);
   }
@@ -635,3 +639,182 @@ zz {
 }
 
 
+.menu-trasy {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr); /* 10 kolumn w rzędzie */
+  gap: 15px;
+  justify-content: center;
+  margin: 30px auto 0;
+  max-width: calc(10 * 110px + 9 * 15px); /* 10 kafelków x max szerokość + odstępy */
+}
+
+@media (max-width: 1200px) {
+  .menu-trasy {
+    grid-template-columns: repeat(10, minmax(60px, 1fr)); /* skalowanie kafelków */
+  }
+}
+
+@media (max-width: 800px) {
+  .menu-trasy {
+    grid-template-columns: repeat(5, 1fr); /* zmiana na 5 kolumn */
+  }
+  .numer-linii {
+    max-width: none; /* wypełniają kolumny w pełni */
+  }
+}
+
+
+.numer-linii {
+  position: relative;
+  max-width: 100px;
+  aspect-ratio: 7 / 4;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  background-color: #ff8282;
+  border: none;
+  outline: 2px solid #ff4444;
+
+  color: white;
+  font-size: 40px;
+  align-content: center;
+  text-align: center;
+}
+
+.numer-linii:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.numer-linii-old {
+  position: relative;
+  max-width: 100px;
+  aspect-ratio: 7 / 4;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  background-color: #e3acac;
+  border: none;
+  outline: 2px solid #ac5050;
+
+  color: white;
+  font-size: 40px;
+  align-content: center;
+  text-align: center;
+}
+
+.numer-linii-old:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.numer-linii-blank {
+  position: relative;
+  max-width: 100px;
+  aspect-ratio: 7 / 4;
+  overflow: hidden;
+  border-radius: 8px;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.numer-linii-off {
+  position: relative;
+  max-width: 100px;
+  aspect-ratio: 7 / 4;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  background-color: #adadad;
+  border: none;
+  outline: 2px solid #3c3c3c;
+
+  color: rgb(223, 223, 223);
+  font-size: 40px;
+  align-content: center;
+  text-align: center;
+  cursor: not-allowed;
+}
+
+.linia-info {
+  display: flex; /* całość w poziomie */
+  height: 92px;
+  gap: 10px;
+  align-items: stretch; /* wszystkie elementy mają taką samą wysokość */
+}
+
+.linia-numer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 161px;  /* ustalona szerokość numeru */
+  height: 100%;  /* wysokość dopasowana do całego kontenera */
+  font-size: 4.5rem;
+  border-radius: 8px;
+  background-color: #ff8282;
+  outline: 4px solid #ff4444;
+  color: white;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.bis { /*linia wariant bis*/
+  font-size: 3.7rem;
+}
+
+.linia-strzalka {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;  /* szerokość strzałki */
+  font-size: 5rem;
+}
+
+.linia-kierunki {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1; /* zajmuje resztę szerokości */
+}
+
+.linia-kierunki > div {
+  text-align: left;
+  font-size: 2.5rem;
+}
+
+.linia-tabela{
+  margin: 0 auto; /* wyśrodkowanie poziome */
+  border-collapse: collapse;
+  width: 98%;
+  text-align: center;
+  background-color: #fff;
+  border: 2px solid #000000;
+  overflow-x: auto;
+}
+
+.linia-tabela th{
+  border: 1px solid black;
+  background-color: #ff8282;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  font-size: 20px;
+}
+
+.linia-tabela td{
+  border: 1px solid black;
+  background-color: white;
+  padding: 3px;
+  font-size: 17px;
+}

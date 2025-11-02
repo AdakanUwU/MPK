@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <base href="/MPK/">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Linia 09 - MPK Częstochowa</title>
+    <link rel="stylesheet" href="css/style.css"/>
+
+    <script src="js/ikony.js" defer></script> <!--wczytywanie ikon-->
+    <script src="js/tabela_link.js" defer></script> <!--wczytywanie klikalnych wierszy tabel-->
+    <script src="js/toogleMenu.js" defer></script><!--Skrypt do listy menu-->
+
+    <script src="js/w_gore.js" defer></script> <!--Skrypt do przycisku przesuwania do samej góry-->
+    <script src="js/foto-blok.js" defer></script> <!--Blokada menu kontekstowego na zdjęciach-->
+
+    <!--Sekacja ładnych embed 🌸 (^///^)-->
+    <meta property="og:title" content="Linia 09 - MPK Częstochowa"> <!--Model-->
+    <meta property="og:description" content="Promenada Niemena↔Hala Częstochowa↔Zajezdnia MPK"> <!--Opisik krótszy-->
+    <!--<meta property="og:image" content=""> (bez miniaturki, bo co dać do lini mrr) tutaj miniaturkę-->
+    <meta property="og:type" content="website"> <!--Tego Adulka nie rusza :3-->
+
+</head>
+<body>
+    <div id="nav"></div>
+    <script>fetch('nav.htm') .then(response => response.text()) 
+    .then(data => document.getElementById('nav').innerHTML = data);
+    </script>
+
+    <div class="tresc-trasy"> <!--Główna treść strony-->
+        <div class="linia-info">
+            <div class="linia-numer">09</div> <!--Duży numer linii-->
+            <div class="linia-strzalka">↕</div> <!--Strzałka stała-->
+            <div class="linia-kierunki">
+                <div>Promenada Niemena/Zajezdnia MPK</div>
+                <div>Hala Częstochowa</div>
+            </div>
+        </div><span style="float: right;">Linia na specjalne okazje</span><br>
+        <hr><BR>
+
+        <table class="linia-tabela">
+            <tr>
+                <th width="275px"></th>
+                <th>Trasa</th>
+            </tr>
+            <tr>
+                <td rowspan="2">Obecne</td>
+                <td>Promenada Niemena ↔ Hala Częstochowa</td>
+            </tr>
+            <tr>
+                <td>Zajezdnia MPK ↔ Hala Częstochowa</td>
+            </tr>
+            <tr>
+                <td rowspan="2">Dawne</td>
+                <td>Promenada Niemena ↔ Żużlowa</td>
+            </tr>
+            <tr>
+                <td>Zajezdnia MPK ↔ Żużlowa</td>
+            </tr>
+
+        </table><br>
+
+        <h3>Uwaga:</h3><hr>
+        <uwaga style="font-size: 17px">Linia uruchomiona z okazji meczów siatkarskich Norwid Częstochowa
+        na Hali Częstochowa.
+        </uwaga>
+    </div>
+
+<button onclick="scrollToTop()" id="scrollTopBtn" title="Do góry">⬆</button>
+</body>
+</html>

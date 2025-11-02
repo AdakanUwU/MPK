@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <base href="/MPK/">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>MAN NL202/NL222 - MPK Częstochowa</title>
+    <link rel="stylesheet" href="css/style.css"/>
+
+
+    <script src="js/ikony.js" defer></script> <!--wczytywanie ikon-->
+    <script src="js/tabela_link.js" defer></script> <!--wczytywanie klikalnych wierszy tabel-->
+    <script src="js/toogleMenu.js" defer></script><!--Skrypt do listy menu-->
+
+    <script src="js/w_gore.js" defer></script> <!--Skrypt do przycisku przesuwania do samej góry-->
+    <script src="js/zdjecia.js" defer></script> 
+    <script src="js/foto-blok.js" defer></script> <!--Blokada menu kontekstowego na zdjęciach-->
+
+    <style>
+        .kolumna-opis {
+            font-weight: bold;
+        }
+    </style>
+
+
+
+</head>
+<body>
+    <div id="nav"></div>
+    <script>fetch('nav.htm') .then(response => response.text()) 
+    .then(data => document.getElementById('nav').innerHTML = data);
+    </script>
+
+    <div class="tresc"> <!--Główna treść strony-->
+        <h1>MAN NL202/NL222</h1><hr />
+        <BR>
+        <!--<img src="img/NG323/miniaturka.jpg" alt="MAN NG272 nr" class="fullscreen-img miniatura">
+        <BR>-->
+
+        <div class="opis-pojazdu">
+            <p style="text-indent: 30px;">
+                W 2000 roku MPK w Częstochowie kupiło 8 niskopodłogowych autobusów MAN NL222. Pojazdy były 
+                pierwszymi autobusami w MPK z napisami na boku w formie naklejek a nie malowanych od schematu.
+                Fabryczni wyposażono jest w wyświetlacze flip-dot, które z biegiem czasu wymieniano na nowsze - 
+                ledowe. Oznaczone je numerami 85-92. Pomalowane były w standardowy ówcześnie schemat 
+                niebiesko-fioletowych  pasów na białej karoserii, wyróżniał się za to dopasowaniem fioletowego 
+                paska do zagiętej linii okien.
+            </p><p style="text-indent: 30px;">
+                Podczas eksploatacji numery 85, 86, 90 i 91 zostały pomaloane na nowszy czerwono-biały schemat,
+                z czego 90 wyróżniał się cieńkim czerwonym paskiem nad oknami zamiast całością czerwoną jak w
+                pozostałych. Dodatkowo w 2016 roku autobus nr 89 został pomalowany w graffity promujące rodziny
+                zastępcze, a około 2019 roku autobus nr 85 został pomalowany przez uczniów SP26, oba jeździły w 
+                ten sposób do końca eksploatacji.
+            </p><p style="text-indent: 30px;">
+                W 2004 roku MPK zakupiło 6 używanych MANów NL202 wyprodukowanych w 1993 roku z ASEAG Aachen.
+                Ostrzymały numery 102-107. Pomalowano je w uproszczony fioletowo-niebieski schemat (proste pasy, 
+                bez zygazaka), a w późniejszym czasie przemalowano autobusy nr 102-105 na czerwono-biało.
+            </p><p style="text-indent: 30px;">
+                W 2007 roku kupiono jedną sztukę MANa NL202 z 1994 roku od firmy KVB München, otrzymał numer 59
+                i uproszczony fioletowo-niebieski schemat, później przemalowany na czerwono-biały.
+            </p><p style="text-indent: 30px;">
+                Ostatnie używane MANy 2 generacji kupiono w 2017 roku. Od 2016 roku oba egzemplarze wypożyczano od
+                firmy "Lazar / PKS Południe Zendek", a rok później odkupiono je. Pierwszy z nich to MAN NL222 z
+                1996 roku oznaczony numerem 401, od początku wypożyczenia kursował w pomarańczowo-białym 
+                malowaniu. Drugi z nich to MAN NL202 z 1995 roku oznaczony numerem 407. Początkowo kursował w
+                czerwono-szaro-białym malowaniu, jednak potem dostał schemat podobny do nr 90.
+            </p><p style="text-indent: 30px;">
+                Złomowania autobusów zaczęły się w 2010 roku, kiedy pozbyt się pojazdu nr 106. Następnie dopiero
+                po 6 latach skasowano pojazdy nr 102-105, 107 oraz 59, co spowodowało że w tym roku pozbyto się
+                wszystkich kupionych MANów NL202, a w 2019 wypożyczone MANy nr 401 i 407. W tym samym roku
+                również pierwszy oryginalnie Częstochowskie MANy NL222 trafił na złom, były to pojazdy nr 85,
+                86 i 87. W 2021 zezłomowano ostatnie pojazdy nr 88-92, co ostatecznie zakończyło eksploatacje
+                MANów drugiej generacji w Częstochowie. Żaden pojazd nie został zachowany.
+            </p>
+
+        </div>
+        
+        <BR>
+            <h2>Dane technicze:</h2><hr><br>
+        <TABLE class="dane-techniczne"> <!--Tabela pojazdów-->
+            <colgroup>
+                <col style="width: 50%;">
+                <col style="width: 50%;">
+            </colgroup>
+
+            <TR> <!--Nagłówek tabeli-->
+            <TH width="90%" colspan="2" style="font-size: 20px;">MAN NL222 (nr 85-89)</TH>
+            </TR>
+
+            <TR class="tabela-hover"> <!--Producent-->
+                <TD class="kolumna-opis">Producent</TD>
+                <TD>MAN Nutzfahrzeuge</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Długość-->
+                <TD class="kolumna-opis">Długość</TD>
+                <TD>11 675 mm</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Szerokość-->
+                <TD class="kolumna-opis">Szerokość</TD>
+                <TD>2500 mm</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Wysokość-->
+                <TD class="kolumna-opis">Wysokość</TD>
+                <TD>2872 mm</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Liczba miejsc siedzących-->
+                <TD class="kolumna-opis">Masa</TD>
+                <TD>18 000 KG</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Układ drzwi-->
+                <TD class="kolumna-opis">Układ drzwi</TD>
+                <TD>2-2-2</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Wysokość podłogi przy drzwiach-->
+                <TD class="kolumna-opis">Wysokość podłogi przy drzwiach</TD>
+                <TD>317-340-588 [mm]</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Liczba miejsc siedzących-->
+                <TD class="kolumna-opis">Po przyklęku</TD>
+                <TD>-80 mm</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Silnik-->
+                <TD class="kolumna-opis">Silnik (moc)</TD>
+                <TD>MAN D0826LUH12 (162kW)</TD>
+            </TR>  
+            <TR class="tabela-hover"> <!--Skrzynia biegów-->
+                <TD class="kolumna-opis">Skrzynia Biegów</TD>
+                <TD>Voith D854.3</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Liczba miejsc siedzących-->
+                <TD class="kolumna-opis">Liczba miejsc siedzących</TD>
+                <TD>30</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Liczba miejsc stojących-->
+                <TD class="kolumna-opis">Liczba miejsc stojących</TD>
+                <TD>66</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Udział niskiej podłogi-->
+                <TD class="kolumna-opis">Udział niskiej podłogi</TD>
+                <TD>60%</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Klimatyzacja-->
+                <TD class="kolumna-opis">Klimatyzacja</TD>
+                <TD>Nie</TD>
+            </TR>
+        </TABLE>
+
+        <BR>
+        <TABLE class="dane-techniczne"> <!--Tabela pojazdów-->
+            <colgroup>
+                <col style="width: 50%;">
+                <col style="width: 50%;">
+            </colgroup>
+
+            <TR> <!--Nagłówek tabeli-->
+            <TH width="90%" colspan="2" style="font-size: 20px;">MAN NL222 (nr 90-92 i 401)</TH>
+            </TR>
+
+            <TR class="tabela-hover"> <!--Producent-->
+                <TD class="kolumna-opis">Producent</TD>
+                <TD>MAN Nutzfahrzeuge</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Długość-->
+                <TD class="kolumna-opis">Długość</TD>
+                <TD>11 675 mm</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Szerokość-->
+                <TD class="kolumna-opis">Szerokość</TD>
+                <TD>2500 mm</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Wysokość-->
+                <TD class="kolumna-opis">Wysokość</TD>
+                <TD>2872 mm</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Liczba miejsc siedzących-->
+                <TD class="kolumna-opis">Masa</TD>
+                <TD>18 000 KG</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Układ drzwi-->
+                <TD class="kolumna-opis">Układ drzwi</TD>
+                <TD>2-2-2<BR>Nr 401 2-2-0</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Wysokość podłogi przy drzwiach-->
+                <TD class="kolumna-opis">Wysokość podłogi przy drzwiach</TD>
+                <TD>317-340-588 [mm]</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Liczba miejsc siedzących-->
+                <TD class="kolumna-opis">Po przyklęku</TD>
+                <TD>-80 mm</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Silnik-->
+                <TD class="kolumna-opis">Silnik (moc)</TD>
+                <TD>MAN D0826LUH12 (162kW)</TD>
+            </TR>  
+            <TR class="tabela-hover"> <!--Skrzynia biegów-->
+                <TD class="kolumna-opis">Skrzynia Biegów</TD>
+                <TD>ZF 5HP500</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Liczba miejsc siedzących-->
+                <TD class="kolumna-opis">Liczba miejsc siedzących</TD>
+                <TD>30</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Liczba miejsc stojących-->
+                <TD class="kolumna-opis">Liczba miejsc stojących</TD>
+                <TD>66</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Udział niskiej podłogi-->
+                <TD class="kolumna-opis">Udział niskiej podłogi</TD>
+                <TD>60%</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Klimatyzacja-->
+                <TD class="kolumna-opis">Klimatyzacja</TD>
+                <TD>Nie</TD>
+            </TR>
+        </TABLE>
+
+        <BR>
+        <TABLE class="dane-techniczne"> <!--Tabela pojazdów-->
+            <colgroup>
+                <col style="width: 50%;">
+                <col style="width: 50%;">
+            </colgroup>
+
+            <TR> <!--Nagłówek tabeli-->
+            <TH width="90%" colspan="2" style="font-size: 20px;">MAN NL202 (nr 59, 102-107 i 407)</TH>
+            </TR>
+
+            <TR class="tabela-hover"> <!--Producent-->
+                <TD class="kolumna-opis">Producent</TD>
+                <TD>MAN Nutzfahrzeuge</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Długość-->
+                <TD class="kolumna-opis">Długość</TD>
+                <TD>11 675 mm</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Szerokość-->
+                <TD class="kolumna-opis">Szerokość</TD>
+                <TD>2500 mm</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Wysokość-->
+                <TD class="kolumna-opis">Wysokość</TD>
+                <TD>2872 mm</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Liczba miejsc siedzących-->
+                <TD class="kolumna-opis">Masa</TD>
+                <TD>18 000 KG</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Układ drzwi-->
+                <TD class="kolumna-opis">Układ drzwi</TD>
+                <TD>2-2-0</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Wysokość podłogi przy drzwiach-->
+                <TD class="kolumna-opis">Wysokość podłogi przy drzwiach</TD>
+                <TD>317-340-x [mm]</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Liczba miejsc siedzących-->
+                <TD class="kolumna-opis">Po przyklęku</TD>
+                <TD>-80 mm</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Silnik-->
+                <TD class="kolumna-opis">Silnik (moc)</TD>
+                <TD>MAN D0826LUH03 (150kW)</TD>
+            </TR>  
+            <TR class="tabela-hover"> <!--Skrzynia biegów-->
+                <TD class="kolumna-opis">Skrzynia Biegów</TD>
+                <TD>Voith D854.2</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Liczba miejsc siedzących-->
+                <TD class="kolumna-opis">Liczba miejsc siedzących</TD>
+                <TD>30</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Liczba miejsc stojących-->
+                <TD class="kolumna-opis">Liczba miejsc stojących</TD>
+                <TD>66</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Udział niskiej podłogi-->
+                <TD class="kolumna-opis">Udział niskiej podłogi</TD>
+                <TD>60%</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Klimatyzacja-->
+                <TD class="kolumna-opis">Klimatyzacja</TD>
+                <TD>Nie</TD>
+            </TR>
+        </TABLE>
+
+        <BR>
+        <h2>Spis pojazdów:</h2><hr><br>
+
+        <h3>MAN NL222</h3><BR>
+
+        <TABLE class="spis" > <!--Tabela pojazdów-->
+            <TR> <!--Nagłówek tabeli-->
+            <TH width="90px">Numer</TH>
+            <TH width="200px">Malowanie</TH>
+            <TH width="55px">Rok prod.</TH>
+            <TH width="200px">Atrybuty</TH>
+            <TH width="">Uwagi</TH>
+            <TH width="100px">Rejestracja</TH>
+            <TH width="85px">Linki</TH>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>85</TD>
+                <TD>Czerwono-Białe</TD>
+                <TD>2000-2019</TD>
+                <TD><niskopodlogowy> <biletkier></TD>
+                <TD><zz> w 2019 roku<BR>2000-2001 SC 04989 lub SC 04994</TD>
+                <TD>SC 10161</TD>
+                <TD><A href="https://czgk.pl/categories.php?cat_id=391" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/eaa45347-7a21-45d9-b801-0c595730b599" target="_blank"><gps1></A></TD>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>86</TD>
+                <TD>Czerwono-Białe</TD>
+                <TD>2000-2019</TD>
+                <TD><niskopodlogowy> <biletkier></TD>
+                <TD><zz> w 2019 roku</TD>
+                <TD>SC 04988</TD>
+                <TD><A href="https://czgk.pl/categories.php?cat_id=392" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/0f2a0404-062b-4039-8504-3a30c90896f8" target="_blank"><gps1></A></TD>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>87</TD>
+                <TD>Biało-Fioletowo-Niebieskie</TD>
+                <TD>2000-2019</TD>
+                <TD><niskopodlogowy> <biletkier></TD>
+                <TD><zz> w 2019 roku</TD>
+                <TD>SC 04992</TD>
+                <TD><A href="https://czgk.pl/categories.php?cat_id=393" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/392e9ee7-d2a8-47b8-b92e-dc63b5cb8350" target="_blank"><gps1></A></TD>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>88</TD>
+                <TD>Biało-Fioletowo-Niebieskie</TD>
+                <TD>2000-2021</TD>
+                <TD><niskopodlogowy> <biletkier></TD>
+                <TD><zz> w 2021 roku</TD>
+                <TD>SC 04991</TD>
+                <TD><A href="https://czgk.pl/categories.php?cat_id=394" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/46a14184-3d27-49e2-817c-971355ea24af" target="_blank"><gps1></A></TD>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>89</TD>
+                <TD>Biało-Fioletowo-Niebieskie</TD>
+                <TD>2000-2021</TD>
+                <TD><niskopodlogowy> <biletkier></TD>
+                <TD><zz> w 2021 roku</TD>
+                <TD>SC 04990</TD>
+                <TD><A href="https://czgk.pl/categories.php?cat_id=395" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/0ce43553-c43f-46af-a30b-7d5b734380e4" target="_blank"><gps1></A></TD>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>90</TD>
+                <TD>Czerwono-Białe z czerwonym pasem ponad oknami</TD>
+                <TD>2000-2021</TD>
+                <TD><niskopodlogowy> <biletkier></TD>
+                <TD><zz> w 2021 roku<BR>2000-2012 SC 04993</TD>
+                <TD>SC 2643J</TD>
+                <TD><A href="https://czgk.pl/categories.php?cat_id=396" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/6d0dd915-ea06-4b30-acdb-4a6b0ebdbda5" target="_blank"><gps1></A></TD>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>91</TD>
+                <TD>Czerwono-Białe</TD>
+                <TD>2000-2021</TD>
+                <TD><niskopodlogowy> <biletkier></TD>
+                <TD><zz> w 2021 roku</TD>
+                <TD>SC 04995</TD>
+                <TD><A href="https://czgk.pl/categories.php?cat_id=397" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/304e8174-6822-4315-bf5b-e160c124b1a1" target="_blank"><gps1></A></TD>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>92</TD>
+                <TD>Biało-Fioletowo-Niebieskie</TD>
+                <TD>2000-2021</TD>
+                <TD><niskopodlogowy> <biletkier></TD>
+                <TD><zz> w 2021 roku</TD>
+                <TD>SC 15579</TD>
+                <TD><A href="https://czgk.pl/categories.php?cat_id=398" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/0c416487-ba47-4121-be94-1250996bb694" target="_blank"><gps1></A></TD>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>401</TD>
+                <TD>Pomarańczowo-Białym</TD>
+                <TD>1996-2019</TD>
+                <TD><niskopodlogowy> <biletkier></TD>
+                <TD><zz> w 2019 roku<BR>1996-2007 - MoBiel Bielefeld [619, BI-AA 619]<BR>2007-2009 Lieberenz Essen [E-SL 8833]<BR>2009-2011 Alga Sittensen<BR>2011-2017 Lazar/PKS Południe Zendek [816, STA 32617],<BR>wyp. 2012-2013 ŚKA Wałbrzych [9],<BR>wyp. 2016-2017 MPK Częstochowa [401]<BR><BR>Od 2017 MPK Częstochowa</TD>
+                <TD>SC 15579</TD>
+                <TD><A href="https://czgk.pl/categories.php?cat_id=6729" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/89d87072-f83d-41d3-b2a3-40e72a80e68c" target="_blank"><gps1></A></TD>
+            </TR>
+        </TABLE><BR>
+
+        <h3>MAN NL202</h3><BR>
+
+        <TABLE class="spis" > <!--Tabela pojazdów-->
+            <TR> <!--Nagłówek tabeli-->
+            <TH width="90px">Numer</TH>
+            <TH width="200px">Malowanie</TH>
+            <TH width="55px">Rok prod.</TH>
+            <TH width="200px">Atrybuty</TH>
+            <TH width="">Uwagi</TH>
+            <TH width="100px">Rejestracja</TH>
+            <TH width="85px">Linki</TH>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>59</TD>
+                <TD>Czerwono-białe</TD>
+                <TD>1994-2016</TD>
+                <TD><niskopodlogowy> <biletkier></TD>
+                <TD><zz> w 2016 roku<BR>1994-2007 KVB München, od 2007 MPK Częstochowa</TD>
+                <TD>SC 86521</TD>
+                <TD><A href="https://czgk.pl/categories.php?cat_id=399" target="_blank">CZGK</A></TD>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>102</TD>
+                <TD>Czerwono-białe</TD>
+                <TD>1993-2016</TD>
+                <TD><niskopodlogowy> <biletkier></TD>
+                <TD><zz> w 2016 roku<BR>1993-2004 ASEAG Aachen [771], od 2004 MPK Częstochowa</TD>
+                <TD>SC 55325</TD>
+                <TD><A href="https://czgk.pl/categories.php?cat_id=400" target="_blank">CZGK</A></TD>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>103</TD>
+                <TD>Czerwono-białe</TD>
+                <TD>1993-2016</TD>
+                <TD><niskopodlogowy> <biletkier></TD>
+                <TD><zz> w 2016 roku<BR>1993-2004 ASEAG Aachen [770], od 2004 MPK Częstochowa</TD>
+                <TD>SC 55860</TD>
+                <TD><A href="https://czgk.pl/categories.php?cat_id=401" target="_blank">CZGK</A></TD>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>104</TD>
+                <TD>Czerwono-białe</TD>
+                <TD>1993-2016</TD>
+                <TD><niskopodlogowy> <biletkier></TD>
+                <TD><zz> w 2016 roku<BR>1993-2004 ASEAG Aachen [767], od 2004 MPK Częstochowa</TD>
+                <TD>SC 55861</TD>
+                <TD><A href="https://czgk.pl/categories.php?cat_id=402" target="_blank">CZGK</A></TD>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>105</TD>
+                <TD>Czerwono-białe</TD>
+                <TD>1993-2016</TD>
+                <TD><niskopodlogowy> <biletkier></TD>
+                <TD><zz> w 2016 roku<BR>1993-2004 ASEAG Aachen [772], od 2004 MPK Częstochowa</TD>
+                <TD>SC 55862</TD>
+                <TD><A href="https://czgk.pl/categories.php?cat_id=403" target="_blank">CZGK</A></TD>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>106</TD>
+                <TD>Biało-Fioletowo-Niebieskie</TD>
+                <TD>1993-2010</TD>
+                <TD><niskopodlogowy> <biletkier></TD>
+                <TD><zz> w 2010 roku<BR>1993-2004 ASEAG Aachen [772], od 2004 MPK Częstochowa</TD>
+                <TD>SC 55913</TD>
+                <TD><A href="https://czgk.pl/categories.php?cat_id=404" target="_blank">CZGK</A></TD>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>107</TD>
+                <TD>Biało-Fioletowo-Niebieskie</TD>
+                <TD>1993-2016</TD>
+                <TD><niskopodlogowy> <biletkier></TD>
+                <TD><zz> w 2016 roku<BR>1993-2004 ASEAG Aachen [764], od 2004 MPK Częstochowa</TD>
+                <TD>SC 55914</TD>
+                <TD><A href="https://czgk.pl/categories.php?cat_id=405" target="_blank">CZGK</A></TD>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>407</TD>
+                <TD>Czerwono-Białe z czerwonym pasem ponad oknami</TD>
+                <TD>1995-2019</TD>
+                <TD><niskopodlogowy> <biletkier></TD>
+                <TD><zz> w 2019 roku<BR>1995-2013 - KVG Zittau [870, ZI-V 870]<BR>2013 Pfeil Hatzfeld (Eder) [KB-AA 900]<BR>2014-2016 Fintzen Satrup [SL-HF 700]<BR>2016-2017 Lazar/PKS Południe Zendek [STA 58710],<BR>wyp. 2016-2017 MPK Częstochowa [401]<BR><BR>Od 2017 MPK Częstochowa</TD>
+                <TD>SC 7718S</TD>
+                <TD><A href="https://czgk.pl/categories.php?cat_id=6730" target="_blank">CZGK</A></TD>
+            </TR>
+        </TABLE>
+
+        <BR>
+        <h2>Stan taboru na przestrzeni lat:</h2><hr><br>
+        <TABLE class="ilostan" > <!--Tabela pojazdów-->
+            <TR> <!--Nagłówek tabeli-->
+                <TH width="70px">Rok</TH>
+                <TH width="130px">Wpisane na stan</TH>
+                <TH width="130px">Skreślone ze stanu</TH>
+                <TH width="100px">Ilość na koniec roku</TH>
+            </TR>
+            <TR>
+                <TD>2000</TD>
+                <TD>8 (85-92)</TD>
+                <TD>-</TD>
+                <TD>8</TD>
+            </TR>
+            <TR>
+                <TD>2001-2003</TD>
+                <TD>-</TD>
+                <TD>-</TD>
+                <TD>8</TD>
+            </TR>
+            <TR>
+                <TD>2004</TD>
+                <TD>6 (102-107)</TD>
+                <TD>-</TD>
+                <TD>14</TD>
+            </TR>
+            <TR>
+                <TD>2005-2006</TD>
+                <TD>-</TD>
+                <TD>-</TD>
+                <TD>14</TD>
+            </TR>
+            <TR>
+                <TD>2007</TD>
+                <TD>1 (59)</TD>
+                <TD>-</TD>
+                <TD>15</TD>
+            </TR>
+            <TR>
+                <TD>2008-2009</TD>
+                <TD>-</TD>
+                <TD>-</TD>
+                <TD>15</TD>
+            </TR>
+            <TR>
+                <TD>2010</TD>
+                <TD>-</TD>
+                <TD>1 (106)</TD>
+                <TD>14</TD>
+            </TR>
+            <TR>
+                <TD>2011-2015</TD>
+                <TD>-</TD>
+                <TD>-</TD>
+                <TD>14</TD>
+            </TR>
+            <TR>
+                <TD>2016</TD>
+                <TD>2 (wyp.401,407)</TD>
+                <TD>6 (59,102-105,107)</TD>
+                <TD>10</TD>
+            </TR>
+            <TR>
+                <TD>2017</TD>
+                <TD>2 (kup. 401, 407)</TD>
+                <TD>-</TD>
+                <TD>10</TD>
+            </TR>
+            <TR>
+                <TD>2018</TD>
+                <TD>-</TD>
+                <TD>-</TD>
+                <TD>10</TD>
+            </TR>
+            <TR>
+                <TD>2019</TD>
+                <TD>-</TD>
+                <TD>5 (85-87,401,407)</TD>
+                <TD>5</TD>
+            </TR>
+            <TR>
+                <TD>2020</TD>
+                <TD>-</TD>
+                <TD>-</TD>
+                <TD>5</TD>
+            </TR>
+            <TR>
+                <TD>2021</TD>
+                <TD>-</TD>
+                <TD>5 (88-92)</TD>
+                <TD>0</TD>
+            </TR>
+            <TR>
+                <TD>2022+</TD>
+                <TD>-</TD>
+                <TD>-</TD>
+                <TD>0</TD>
+            </TR>
+        </TABLE>
+
+        <BR>
+        <ul>
+            <li>wyp. - wypożyczono</li>
+            <li>kup. - kupiono</li>
+        </ul>
+
+        <BR>
+        <h2>Zdjęcia pojazdów:</h2><hr><br>
+        <div class="galeria">
+            <div class="opis-zdj">» 53</div>
+            <div class="opis-zdj">» 85</div>
+            <div class="opis-zdj">» 86</div>
+            <div class="opis-zdj">» 87</div>
+            <div class="opis-zdj">» 88</div>
+            <div class="opis-zdj">» 89</div>
+            <div class="opis-zdj">» 90</div> 
+            <div class="opis-zdj">» 91</div> 
+            <div class="opis-zdj">» 92</div>
+            <div class="opis-zdj">» 102</div>
+            <div class="opis-zdj">» 103</div> 
+            <div class="opis-zdj">» 104</div> 
+            <div class="opis-zdj">» 105</div>
+            <div class="opis-zdj">» 106</div>
+            <div class="opis-zdj">» 107</div> 
+            <div class="opis-zdj">» 401</div> 
+            <div class="opis-zdj">» 407</div>
+        </div>
+
+        <!--Okno do otwierania zdjęć na całej stronie-->
+        <div id="fullscreenOverlay" class="fullscreen-overlay">
+            <span id="closeBtn">&times;</span>
+            <img id="fullscreenImage" class="fullscreen-image">
+        </div>
+    </div>
+<button onclick="scrollToTop()" id="scrollTopBtn" title="Do góry">⬆</button>
+</body>
+</html>

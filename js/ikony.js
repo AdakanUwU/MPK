@@ -21,7 +21,8 @@ document.addEventListener("DOMContentLoaded", () => {
       zz: '<zezlomowany style="color: red; font-weight: bold">Zezłomowany</zezlomowany>',
       znr: '<znr style="color: orange; font-weight: bold">',
       ss: '<ss style="color: mediumspringgreen; font-weight: bold">',
-      sp: '<sp style="color: orangered; font-weight: bold">!! ~ informacje spekulowane ~ !!</sp>'
+      sp: '<sp style="color: orangered; font-weight: bold">!! ~ informacje spekulowane ~ !!</sp>',
+      wyp: '<wyp style="color: darkcyan ; font-weight: bold">'
     };
   
     // Funkcja do zamiany skrótów na obrazy
