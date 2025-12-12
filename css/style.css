@@ -1,3 +1,5 @@
+
+
 @font-face {
   font-family: 'Lato';
   src: local('Lato Regular'), local('Lato'), 
@@ -10,12 +12,11 @@
 @font-face {
   font-family: 'Lato';
   src: local('Lato Bold'), local('Lato-Bold'),
-       url('https://fonts.gstatic.com/s/lato/v22/S6u9w4BMUTPHh6UVSwiPHA.woff2') format('woff2');
+       url('https://fonts.gstatic.com/s/lato/v25/S6u9w4BMUTPHh6UVSwiPGQ.woff2') format('woff2');
   font-weight: bold;
   font-style: normal;
   font-display: swap;
 }
-
 
 
 * {
@@ -564,12 +565,15 @@ hr {
   max-width: 250px;
   margin-left: 25px;
   height: auto;
+  max-height: 168px;
   object-fit: cover;
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.2);
   transition: transform 0.3s;
   border: 2px outset #303030;
 }
+
+
 
 .galeria img:hover {
   transform: scale(1.05);

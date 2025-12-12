@@ -8,13 +8,13 @@
   </url>
   <url>
     <loc>https://adakanuwu.github.io/MPK/autobusy</loc>
-    <lastmod>2025-11-01</lastmod>
+    <lastmod>2025-11-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://adakanuwu.github.io/MPK/index</loc>
-    <lastmod>2025-10-06</lastmod>
+    <lastmod>2025-12-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -26,7 +26,7 @@
   </url>
   <url>
     <loc>https://adakanuwu.github.io/MPK/trasy</loc>
-    <lastmod>2025-09-16</lastmod>
+    <lastmod>2025-11-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -56,7 +56,7 @@
   </url>
   <url>
     <loc>https://adakanuwu.github.io/MPK/autobusy/MAN-NG363</loc>
-    <lastmod>2025-09-10</lastmod>
+    <lastmod>2025-11-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -74,12 +74,6 @@
   </url>
   <url>
     <loc>https://adakanuwu.github.io/MPK/autobusy/Mercedes-Benz-Conecto-NG</loc>
-    <lastmod>2025-09-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://adakanuwu.github.io/MPK/autobusy/Mercedes-Benz-O345G</loc>
     <lastmod>2025-09-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -110,7 +104,7 @@
   </url>
   <url>
     <loc>https://adakanuwu.github.io/MPK/autobusy/Mercedes-Benz-Sprinter-MidCity</loc>
-    <lastmod>2025-09-10</lastmod>
+    <lastmod>2025-11-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -122,13 +116,19 @@
   </url>
   <url>
     <loc>https://adakanuwu.github.io/MPK/autobusy/Solaris-Urbino-12-IV</loc>
-    <lastmod>2025-10-26</lastmod>
+    <lastmod>2025-11-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://adakanuwu.github.io/MPK/autobusy/Solaris-Urbino-18-III</loc>
     <lastmod>2025-10-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://adakanuwu.github.io/MPK/autobusy/Solaris-Urbino-18-IV-Electric</loc>
+    <lastmod>2025-12-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -147,6 +147,12 @@
   <url>
     <loc>https://adakanuwu.github.io/MPK/autobusy/Solbus-SM18HL-Hybryda</loc>
     <lastmod>2025-10-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://adakanuwu.github.io/MPK/autobusy/wycofane/Ikarus-260-04</loc>
+    <lastmod>2025-12-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -200,7 +206,13 @@
   </url>
   <url>
     <loc>https://adakanuwu.github.io/MPK/autobusy/wycofane/MAN-NL222</loc>
-    <lastmod>2025-11-01</lastmod>
+    <lastmod>2025-11-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://adakanuwu.github.io/MPK/autobusy/wycofane/Mercedes-Benz-O345G</loc>
+    <lastmod>2025-11-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -212,7 +224,7 @@
   </url>
   <url>
     <loc>https://adakanuwu.github.io/MPK/autobusy/zabytkowe/Bristol-Lodekka</loc>
-    <lastmod>2025-09-10</lastmod>
+    <lastmod>2025-11-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -236,13 +248,19 @@
   </url>
   <url>
     <loc>https://adakanuwu.github.io/MPK/autobusy/zabytkowe/Ikarus-412</loc>
-    <lastmod>2025-09-16</lastmod>
+    <lastmod>2025-11-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://adakanuwu.github.io/MPK/autobusy/zabytkowe/Ikarus-435</loc>
     <lastmod>2025-09-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://adakanuwu.github.io/MPK/tramwaje/Konstal-105Na</loc>
+    <lastmod>2025-11-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -266,13 +284,13 @@
   </url>
   <url>
     <loc>https://adakanuwu.github.io/MPK/trasy/linia-11</loc>
-    <lastmod>2025-09-16</lastmod>
+    <lastmod>2025-11-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://adakanuwu.github.io/MPK/trasy/linia-12</loc>
-    <lastmod>2025-09-16</lastmod>
+    <lastmod>2025-11-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -302,7 +320,7 @@
   </url>
   <url>
     <loc>https://adakanuwu.github.io/MPK/trasy/linia-17</loc>
-    <lastmod>2025-10-06</lastmod>
+    <lastmod>2025-11-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -314,7 +332,7 @@
   </url>
   <url>
     <loc>https://adakanuwu.github.io/MPK/trasy/linia-19</loc>
-    <lastmod>2025-11-02</lastmod>
+    <lastmod>2025-11-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -332,7 +350,13 @@
   </url>
   <url>
     <loc>https://adakanuwu.github.io/MPK/trasy/linia-4</loc>
-    <lastmod>2025-09-15</lastmod>
+    <lastmod>2025-11-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://adakanuwu.github.io/MPK/trasy/linia-40</loc>
+    <lastmod>2025-12-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

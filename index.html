@@ -40,7 +40,6 @@
                 <li><a href="#man-nl243cng-2-tabela">MAN NL243 Lion`S City CNG nr 148</a></li>
                 <li><a href="#man-nl293-tabela">MAN NL293 Lion`s City nr 149-160</a></li>
                 <li><a href="#ikarus280-70E-tabela">Ikarus 280.70E nr 176</a></li>
-                <li><a href="#mercedes-o345G-tabela">Mercedes-Benz O345G Conecto nr 180</a></li>
                 <li><a href="#mercedes-o530g-tabela">Mercedes-Benz O530G Citaro nr 185-195</a></li>
                 <li><a href="#SM18HL-tabela">Solbus SM18HL Hybrid CNG nr 196-210</a></li>
                 <li><a href="#SU18III-1-tabela">Solaris Urbnio 18 III nr 218</a></li>
@@ -68,7 +67,7 @@
         </details>
     </div>
     <BR>
-    <TABLE class="spis" > <!--Tabela pojazdów-->
+    <TABLE class="spis" id="pojazdy"> <!--Tabela pojazdów-->
         <tr>
             <th width="90px">Numer</th>
             <th width="250px">Model<br><input placeholder="Wpisz model lub producenta..." type="text" id="filtrModel" onkeyup="filtrujTabele()" style="width:90%"></th>
@@ -1578,6 +1577,17 @@
             <TD><A href="https://czgk.pl/categories.php?cat_id=7312" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/245d09f8-e7d8-4114-9fef-9f51efebd0c2" target="_blank"><gps1></A></TD>
         </TR>
 
+        <TR class="tabela_link" data-href="autobusy/Solaris-Urbino-18-IV-Electric">
+            <TD>161</TD>
+            <TD>Solaris Urbino 18 IV electric</TD>
+            <TD>Czerwono-Biało-Szare</TD>
+            <TD>2025</TD>
+            <TD><przeg> <ev> <niskopodlogowy> <ac> <kamery> <usb> <wifi> <biletomat> <biletkier></TD>
+            <TD></TD>
+            <TD>P27 00P16</TD>
+            <TD><!--<A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/725a1f1e-206e-4511-94b3-54abe8b68fed" target="_blank"><gps1></A>--></TD>
+        </TR>
+
         <TR class="tabela_link" data-href="autobusy/zabytkowe/Ikarus-280-70E" id="ikarus280-70E-tabela">
             <TD>176</TD>
             <TD>Ikarus 280.70E</TD>
@@ -1588,94 +1598,6 @@
             <TD>SC 06027</TD>
             <TD><A href="https://czgk.pl/categories.php?cat_id=240" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/3cea5fe9-22a9-4809-bdeb-b1f5f98cf259" target="_blank"><gps1></A></TD>
         </TR>
-
-        <!--<TR class="tabela_link" data-href="autobusy/Mercedes-Benz-O345G" id="mercedes-o345G-tabela">
-            <TD>177</TD>
-            <TD>Mercedes-Benz O345G Conecto</TD>
-            <TD>Czerwono-Białe</TD>
-            <TD>2006</TD>
-            <TD><przeg> <biletkier></TD>
-            <TD>Wycofany na przełomie lutego i marca 2025.</TD>
-            <TD>SC 82122</TD>
-            <TD><A href="https://czgk.pl/categories.php?cat_id=328" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/ac81881d-2340-4a6b-8ede-59f88f414127" target="_blank"><gps1></A></TD>
-        </TR>
-
-        <TR class="tabela_link" data-href="autobusy/Mercedes-Benz-O345G">
-            <TD>178</TD>
-            <TD>Mercedes-Benz O345G Conecto</TD>
-            <TD>Czerwono-Białe</TD>
-            <TD>2006</TD>
-            <TD><przeg> <biletkier></TD>
-            <TD>Wycofany</TD>
-            <TD>SC 82123</TD>
-            <TD><A href="https://czgk.pl/categories.php?cat_id=329" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/c3e10cf3-6f07-4e1d-a164-1c85bfb1638a" target="_blank"><gps1></A></TD>
-        </TR>
-
-        <TR class="tabela_link" data-href="autobusy/Mercedes-Benz-O345G">
-            <TD>179</TD>
-            <TD>Mercedes-Benz O345G Conecto</TD>
-            <TD>Czerwono-Białe</TD>
-            <TD>2006</TD>
-            <TD><przeg> <biletkier></TD>
-            <TD>Wycofany na przełomie lutego i marca 2025.</TD>
-            <TD>SC 82124</TD>
-            <TD><A href="https://czgk.pl/categories.php?cat_id=330" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/28fa4e5e-8adf-46ba-ae1f-69ee79264d49" target="_blank"><gps1></A></TD>
-        </TR>-->
-
-        <TR class="tabela_link" data-href="autobusy/Mercedes-Benz-O345G" id="mercedes-o345G-tabela">
-            <TD>180</TD>
-            <TD>Mercedes-Benz O345G Conecto</TD>
-            <TD>Czerwono-Białe</TD>
-            <TD>2006</TD>
-            <TD><przeg> <biletkier></TD>
-            <TD>Wycofany na przełomie lutego i marca 2025.</TD>
-            <TD>SC 82125</TD>
-            <TD><A href="https://czgk.pl/categories.php?cat_id=331" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/a43eb101-cce4-4dd6-8719-0769fef34630" target="_blank"><gps1></A></TD>
-        </TR>
-
-        <!--<TR class="tabela_link" data-href="autobusy/Mercedes-Benz-O345G">
-            <TD>181</TD>
-            <TD>Mercedes-Benz O345G Conecto</TD>
-            <TD>Czerwono-Białe</TD>
-            <TD>2006</TD>
-            <TD><przeg> <biletkier></TD>
-            <TD>Wycofany na przełomie lutego i marca 2025.</TD>
-            <TD>SC 82126</TD>
-            <TD><A href="https://czgk.pl/categories.php?cat_id=332" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/8c6ab9bd-5047-4ffb-8f17-b0cc7f7c7f42" target="_blank"><gps1></A></TD>
-        </TR>
-
-        <TR class="tabela_link" data-href="autobusy/Mercedes-Benz-O345G">
-            <TD>182</TD>
-            <TD>Mercedes-Benz O345G Conecto</TD>
-            <TD>Czerwono-Białe</TD>
-            <TD>2006</TD>
-            <TD><przeg> <biletkier></TD>
-            <TD>Wycofany</TD>
-            <TD>SC 82127</TD>
-            <TD><A href="https://czgk.pl/categories.php?cat_id=333" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/b335b21c-62d8-49f1-a53d-9ff876208770" target="_blank"><gps1></A></TD>
-        </TR>
-
-        <TR class="tabela_link" data-href="autobusy/Mercedes-Benz-O345G">
-            <TD>183</TD>
-            <TD>Mercedes-Benz O345G Conecto</TD>
-            <TD>Czerwono-Białe</TD>
-            <TD>2006</TD>
-            <TD><przeg> <biletkier></TD>
-            <TD>Wycofany od 2023.</TD>
-            <TD>SC 82128</TD>
-            <TD><A href="https://czgk.pl/categories.php?cat_id=334" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/bd17b221-8f4b-41ea-9af9-e13a426755d9" target="_blank"><gps1></A></TD>
-        </TR>
-
-        <TR class="tabela_link" data-href="autobusy/Mercedes-Benz-O345G">
-            <TD>184</TD>
-            <TD>Mercedes-Benz O345G Conecto</TD>
-            <TD>Czerwono-Białe</TD>
-            <TD>2006</TD>
-            <TD><przeg> <biletkier></TD>
-            <TD>Najpewniej wycofany od 21 marca 2025. (ostatni dzień jazdy na linii 12)</TD>
-            <TD>SC 82129</TD>
-            <TD><A href="https://czgk.pl/categories.php?cat_id=335" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/9cd857ca-d2cf-41a1-9831-11c3556983ed" target="_blank"><gps1></A></TD>
-        </TR>-->
 
         <TR class="tabela_link" data-href="autobusy/Mercedes-Benz-O530G" id="mercedes-o530g-tabela">
             <TD>185</TD>
@@ -2536,7 +2458,7 @@
             <TD><A href="https://czgk.pl/categories.php?cat_id=9465" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/22dec186-d7fa-4cef-9f50-33eb693172ac" target="_blank"><gps1></A></TD>
         </TR>
     
-        <TR class="tabela_link" data-href="105Na" id="konstal-105na-1-tabela">
+        <TR class="tabela_link" data-href="tramwaje/Konstal-105Na" id="konstal-105na-1-tabela">
             <TD>611</TD>
             <TD>Konstal 105Na</TD>
             <TD>Czerwono-Kremowe</TD>
@@ -2547,7 +2469,7 @@
             <TD><A href="https://czgk.pl/categories.php?cat_id=25" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/470497c7-f4e8-40ca-8933-2c9d1f9f086c" target="_blank"><gps1></A></TD>
         </TR>
 
-        <TR class="tabela_link" data-href="105Na">
+        <TR class="tabela_link" data-href="tramwaje/Konstal-105Na">
             <TD>612</TD>
             <TD>Konstal 105Na</TD>
             <TD>Czerwono-Kremowe</TD>
@@ -2558,7 +2480,7 @@
             <TD><A href="https://czgk.pl/categories.php?cat_id=26" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/470497c7-f4e8-40ca-8933-2c9d1f9f086c" target="_blank"><gps1></A></TD>
         </TR>
 
-        <TR class="tabela_link" data-href="105Na">
+        <TR class="tabela_link" data-href="tramwaje/Konstal-105Na">
             <TD>613</TD>
             <TD>Konstal 105Na</TD>
             <TD>Czerwono-Kremowe</TD>
@@ -2569,7 +2491,7 @@
             <TD><A href="https://czgk.pl/categories.php?cat_id=27" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/3589101a-a7ef-45b8-8e26-a3349228ab2d" target="_blank"><gps1></A></TD>
         </TR>
 
-        <TR class="tabela_link" data-href="105Na">
+        <TR class="tabela_link" data-href="tramwaje/Konstal-105Na">
             <TD>614</TD>
             <TD>Konstal 105Na</TD>
             <TD>Czerwono-Kremowe</TD>
@@ -2580,7 +2502,7 @@
             <TD><A href="https://czgk.pl/categories.php?cat_id=28" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/3589101a-a7ef-45b8-8e26-a3349228ab2d" target="_blank"><gps1></A></TD>
         </TR>
 
-        <TR class="tabela_link" data-href="105Na">
+        <TR class="tabela_link" data-href="tramwaje/Konstal-105Na">
             <TD>615</TD>
             <TD>Konstal 105Na</TD>
             <TD>Czerwono-Kremowe</TD>
@@ -2591,7 +2513,7 @@
             <TD><A href="https://czgk.pl/categories.php?cat_id=29" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/4dc44f62-04db-4574-8b88-7e0494aa511d" target="_blank"><gps1></A></TD>
         </TR>
 
-        <TR class="tabela_link" data-href="105Na">
+        <TR class="tabela_link" data-href="tramwaje/Konstal-105Na">
             <TD>616</TD>
             <TD>Konstal 105Na</TD>
             <TD>Czerwono-Kremowe</TD>
@@ -2690,7 +2612,7 @@
             <TD><A href="https://czgk.pl/categories.php?cat_id=72" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/050390fd-03aa-47e5-a940-b9f94caa19cf" target="_blank"><gps1></A></TD>
         </TR>
 
-        <TR class="tabela_link" data-href="105Na" id="konstal-105na-2-tabela">
+        <TR class="tabela_link" data-href="tramwaje/Konstal-105Na" id="konstal-105na-2-tabela">
             <TD>644</TD>
             <TD>Konstal 105Na</TD>
             <TD>Czerwono-Kremowe</TD>
@@ -2701,7 +2623,7 @@
             <TD><A href="https://czgk.pl/categories.php?cat_id=40" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/6f0742fa-62d3-441b-bdb5-303abeec266e" target="_blank"><gps1></A></TD>
         </TR>
 
-        <TR class="tabela_link" data-href="105Na">
+        <TR class="tabela_link" data-href="tramwaje/Konstal-105Na">
             <TD>645</TD>
             <TD>Konstal 105Na</TD>
             <TD>Czerwono-Kremowe</TD>
@@ -2712,7 +2634,7 @@
             <TD><A href="https://czgk.pl/categories.php?cat_id=41" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/6f0742fa-62d3-441b-bdb5-303abeec266e" target="_blank"><gps1></A></TD>
         </TR>
 
-        <TR class="tabela_link" data-href="105Na">
+        <TR class="tabela_link" data-href="tramwaje/Konstal-105Na">
             <TD>648</TD>
             <TD>Konstal 105Na</TD>
             <TD>Czerwono-Kremowe</TD>
@@ -2723,7 +2645,7 @@
             <TD><A href="https://czgk.pl/categories.php?cat_id=44" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/2aa0a871-2fe7-4366-a907-a3dffd8c6d83" target="_blank"><gps1></A></TD>
         </TR>
 
-        <TR class="tabela_link" data-href="105Na">
+        <TR class="tabela_link" data-href="tramwaje/Konstal-105Na">
             <TD>649</TD>
             <TD>Konstal 105Na</TD>
             <TD>Czerwono-Kremowe</TD>
@@ -2751,7 +2673,7 @@
             <TD>Czerwono-Czarne</TD>
             <TD>2020</TD>
             <TD><tram> <przeg> <niskopodlogowy> <ac> <kamery> <usb> <wifi> <biletomat> <biletkier></TD>
-            <TD>22 grudnia 2023 roku tramwaj rozbił się, czeka na naprawę.</TD>
+            <TD>22 grudnia 2023 roku tramwaj rozbił się, wrócił do ruchu w ostanim kwartale 2025.</TD>
             <TD></TD>
             <TD><A href="https://czgk.pl/categories.php?cat_id=8170" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/0b316025-7eb6-4593-93b8-ebff22a73f8c" target="_blank"><gps1></A></TD>
         </TR>
@@ -2844,7 +2766,7 @@
             <TD><A href="https://czgk.pl/categories.php?cat_id=8178" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/4de91b39-eb8f-437f-9ad3-832e051f8332" target="_blank"><gps1></A></TD>
         </TR>
 
-        <TR class="tabela_link" data-href="105Na" id="konstal-105na-3-tabela">
+        <TR class="tabela_link" data-href="tramwaje/Konstal-105Na" id="konstal-105na-3-tabela">
             <TD>684</TD>
             <TD>Konstal 105Na</TD>
             <TD>Czerwono-Kremowe</TD>
@@ -2855,7 +2777,7 @@
             <TD><A href="https://czgk.pl/categories.php?cat_id=58" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/03383443-8bec-4253-8b6d-d9bce6c84579" target="_blank"><gps1></A></TD>
         </TR>
 
-        <TR class="tabela_link" data-href="105Na">
+        <TR class="tabela_link" data-href="tramwaje/Konstal-105Na">
             <TD>688</TD>
             <TD>Konstal 105Na</TD>
             <TD>Czerwono-Kremowe</TD>
@@ -2866,7 +2788,7 @@
             <TD><A href="https://czgk.pl/categories.php?cat_id=62" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/03383443-8bec-4253-8b6d-d9bce6c84579" target="_blank"><gps1></A></TD>
         </TR>
 
-        <TR class="tabela_link" data-href="105Na">
+        <TR class="tabela_link" data-href="tramwaje/Konstal-105Na">
             <TD>695</TD>
             <TD>Konstal 105Na</TD>
             <TD>Czerwono-Kremowe</TD>
@@ -2877,7 +2799,7 @@
             <TD><A href="https://czgk.pl/categories.php?cat_id=69" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/6d0e4f48-121a-42e6-bbe3-4a15075b1782" target="_blank"><gps1></A></TD>
         </TR>
 
-        <TR class="tabela_link" data-href="105Na">
+        <TR class="tabela_link" data-href="tramwaje/Konstal-105Na">
             <TD>697</TD>
             <TD>Konstal 105Na</TD>
             <TD>Czerwono-Kremowe</TD>
@@ -2888,7 +2810,7 @@
             <TD><A href="https://czgk.pl/categories.php?cat_id=71" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/6d0e4f48-121a-42e6-bbe3-4a15075b1782" target="_blank"><gps1></A></TD>
         </TR>
 
-        <TR class="tabela_link" data-href="#tech" id="tech">
+        <TR class="tabela_link" data-href="#tech" tech="true" id="tech">
             <TD>700</TD>
             <TD>Renualt??</TD>
             <TD>Srebrny</TD>
@@ -2899,7 +2821,7 @@
             <TD><A href="https://czgk.pl/categories.php?cat_id=512" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/8e7ed683-e084-4c20-8718-f4df84912b40" target="_blank"><gps1></A></TD>
         </TR>
 
-        <TR class="tabela_link" data-href="#tech">
+        <TR class="tabela_link" data-href="#tech" tech="true">
             <TD>701</TD>
             <TD>Dacia Sandero??</TD>
             <TD>Niebieski</TD>
@@ -2910,7 +2832,7 @@
             <TD><A href="https://czgk.pl/categories.php?cat_id=512" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/8d9351b4-db41-4e61-aeed-28406a3cd246" target="_blank"><gps1></A></TD>
         </TR>
 
-        <TR class="tabela_link" data-href="autobusy/wycofane/Ikarus-280-26">
+        <TR class="tabela_link" data-href="autobusy/wycofane/Ikarus-280-26" tech="true">
             <TD>703</TD>
             <TD>Ikarus 280/A</TD>
             <TD>Czerwono-Białe z żółtym pasem</TD>
@@ -2921,7 +2843,7 @@
             <TD><A href="https://czgk.pl/categories.php?cat_id=789" target="_blank">CZGK</A></TD>
         </TR>
 
-        <TR class="tabela_link" data-href="#tech">
+        <TR class="tabela_link" data-href="#tech" tech="true">
             <TD>704</TD>
             <TD>Przyczepa</TD>
             <TD>Szare</TD>
@@ -2932,7 +2854,7 @@
             <TD><A href="https://czgk.pl/categories.php?cat_id=512" target="_blank">CZGK</A></TD>
         </TR>
 
-        <TR class="tabela_link" data-href="#tech">
+        <TR class="tabela_link" data-href="#tech" tech="true">
             <TD>706</TD>
             <TD>Mobilny Agregat Prądotwórczy</TD>
             <TD>Żółte z czerwonymi pasami</TD>
@@ -2943,7 +2865,7 @@
             <TD><A href="https://czgk.pl/categories.php?cat_id=512" target="_blank">CZGK</A></TD>
         </TR>
 
-        <TR class="tabela_link" data-href="#tech">
+        <TR class="tabela_link" data-href="#tech" tech="true">
             <TD>711</TD>
             <TD>Mała Cysterna</TD>
             <TD>Szare (zielone rury)</TD>
@@ -2954,7 +2876,7 @@
             <TD><A href="https://czgk.pl/categories.php?cat_id=512" target="_blank">CZGK</A></TD>
         </TR>
 
-        <TR class="tabela_link" data-href="#tech">
+        <TR class="tabela_link" data-href="#tech" tech="true">
             <TD>713</TD>
             <TD>JCB 4CX</TD>
             <TD>Żółte</TD>
@@ -2965,7 +2887,7 @@
             <TD><A href="https://czgk.pl/categories.php?cat_id=512" target="_blank">CZGK</A></TD>
         </TR>
 
-        <TR class="tabela_link" data-href="#tech">
+        <TR class="tabela_link" data-href="#tech" tech="true">
             <TD>715</TD>
             <TD>Mała koparka</TD>
             <TD>Szare</TD>
@@ -2976,7 +2898,7 @@
             <TD><A href="https://czgk.pl/categories.php?cat_id=512" target="_blank">CZGK</A></TD>
         </TR>
 
-        <TR class="tabela_link" data-href="#tech">
+        <TR class="tabela_link" data-href="#tech" tech="true">
             <TD>716</TD>
             <TD>Przyczepa</TD>
             <TD>Szare</TD>
@@ -2987,7 +2909,7 @@
             <TD><A href="https://czgk.pl/categories.php?cat_id=512" target="_blank">CZGK</A></TD>
         </TR>
 
-        <TR class="tabela_link" data-href="#tech">
+        <TR class="tabela_link" data-href="#tech" tech="true">
             <TD>717</TD>
             <TD>Беларусь ЮМЗ-6АЛ</TD>
             <TD>Biało-rdzawoczerwone</TD>
@@ -2998,7 +2920,7 @@
             <TD><A href="https://czgk.pl/categories.php?cat_id=512" target="_blank">CZGK</A></TD>
         </TR>
 
-        <TR class="tabela_link" data-href="#tech">
+        <TR class="tabela_link" data-href="#tech" tech="true">
             <TD>718</TD>
             <TD>Przyczepa na tłuczeń</TD>
             <TD>Szare</TD>
@@ -3009,7 +2931,7 @@
             <TD><A href="https://czgk.pl/categories.php?cat_id=512" target="_blank">CZGK</A></TD>
         </TR>
 
-        <TR class="tabela_link" data-href="#tech">
+        <TR class="tabela_link" data-href="#tech" tech="true">
             <TD>719</TD>
             <TD>Wzózek widłowy</TD>
             <TD>Żółte</TD>
@@ -3020,7 +2942,7 @@
             <TD><A href="https://czgk.pl/categories.php?cat_id=512" target="_blank">CZGK</A></TD>
         </TR>
 
-        <TR class="tabela_link" data-href="#tech">
+        <TR class="tabela_link" data-href="#tech" tech="true">
             <TD>720</TD>
             <TD>Wzózek widłowy</TD>
             <TD>Żółte</TD>
@@ -3031,7 +2953,7 @@
             <TD><A href="https://czgk.pl/categories.php?cat_id=512" target="_blank">CZGK</A></TD>
         </TR>
 
-        <TR class="tabela_link" data-href="#tech">
+        <TR class="tabela_link" data-href="#tech" tech="true">
             <TD>722</TD>
             <TD>Star 200</TD>
             <TD>Żółta kabina<BR>niebieska ładownia</TD>
@@ -3042,7 +2964,7 @@
             <TD><A href="https://czgk.pl/categories.php?cat_id=512" target="_blank">CZGK</A></TD>
         </TR>
 
-        <TR class="tabela_link" data-href="#tech">
+        <TR class="tabela_link" data-href="#tech" tech="true">
             <TD>724</TD>
             <TD>Dźwig</TD>
             <TD>Żółto-pomarańczowe</TD>
@@ -3053,7 +2975,7 @@
             <TD><A href="https://czgk.pl/categories.php?cat_id=512" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/610b5f22-2c0f-4498-bb62-d555d43c49d1" target="_blank"><gps1></A></TD>
         </TR>
 
-        <TR class="tabela_link" data-href="#tech">
+        <TR class="tabela_link" data-href="#tech" tech="true">
             <TD>727</TD>
             <TD>Wózek widłowy</TD>
             <TD>Żółte</TD>
@@ -3064,7 +2986,7 @@
             <TD><A href="https://czgk.pl/categories.php?cat_id=512" target="_blank">CZGK</A></TD>
         </TR>
 
-        <TR class="tabela_link" data-href="#tech">
+        <TR class="tabela_link" data-href="#tech" tech="true">
             <TD>728</TD>
             <TD>Przyczepa</TD>
             <TD>Żółte</TD>
@@ -3075,7 +2997,7 @@
             <TD><A href="https://czgk.pl/categories.php?cat_id=512" target="_blank">CZGK</A></TD>
         </TR>
         
-        <TR class="tabela_link" data-href="#tech">
+        <TR class="tabela_link" data-href="#tech" tech="true">
             <TD>731</TD>
             <TD>Ursus C-385</TD>
             <TD>Turkusowe</TD>
@@ -3086,7 +3008,7 @@
             <TD><A href="https://czgk.pl/categories.php?cat_id=512" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/79fb4440-c9e9-4361-8142-4149c24f03c2" target="_blank"><gps1></A></TD>
         </TR>
 
-        <TR class="tabela_link" data-href="#tech">
+        <TR class="tabela_link" data-href="#tech" tech="true">
             <TD>734</TD>
             <TD></TD>
             <TD>Żółte z czerwonymi pasami</TD>
@@ -3097,7 +3019,7 @@
             <TD><A href="https://czgk.pl/categories.php?cat_id=512" target="_blank">CZGK</A></TD>
         </TR>
         
-        <TR class="tabela_link" data-href="#tech">
+        <TR class="tabela_link" data-href="#tech" tech="true">
             <TD>735</TD>
             <TD>Jelcz 272 MEX</TD>
             <TD>Turkusowe z żółtym pasem, pomarańczowy tył</TD>
@@ -3108,7 +3030,7 @@
             <TD><A href="https://czgk.pl/categories.php?cat_id=512" target="_blank">CZGK</A></TD>
         </TR>
 
-        <TR class="tabela_link" data-href="#tech">
+        <TR class="tabela_link" data-href="#tech" tech="true">
             <TD>736</TD>
             <TD>Daewoo Lublin 3</TD>
             <TD>Pomarańczowe</TD>
@@ -3119,7 +3041,7 @@
             <TD><A href="https://czgk.pl/categories.php?cat_id=512" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/c1b77662-fab1-45a7-a483-f5eedfa14ed3" target="_blank"><gps1></A></TD>
         </TR>
 
-        <TR class="tabela_link" data-href="#tech">
+        <TR class="tabela_link" data-href="#tech" tech="true">
             <TD>742</TD>
             <TD>Star 15.227</TD>
             <TD>Pomarańczowe</TD>
@@ -3130,7 +3052,7 @@
             <TD><A href="https://czgk.pl/categories.php?cat_id=512" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/663f4ec0-5423-4839-9db6-489d743f5524" target="_blank"><gps1></A></TD>
         </TR>
 
-        <TR class="tabela_link" data-href="#tech">
+        <TR class="tabela_link" data-href="#tech" tech="true">
             <TD>745</TD>
             <TD>Multicar M25</TD>
             <TD>Żółte</TD>
@@ -3141,7 +3063,7 @@
             <TD><A href="https://czgk.pl/categories.php?cat_id=512" target="_blank">CZGK</A></TD>
         </TR>
 
-        <TR class="tabela_link" data-href="#tech">
+        <TR class="tabela_link" data-href="#tech" tech="true">
             <TD>750</TD>
             <TD>Mercedes-Benz?</TD>
             <TD>Białe</TD>
@@ -3152,7 +3074,7 @@
             <TD><A href="https://czgk.pl/categories.php?cat_id=512" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/223ef3fb-0cf0-4d3b-bb44-a01138537d6f" target="_blank"><gps1></A></TD>
         </TR>
 
-        <TR class="tabela_link" data-href="#tech">
+        <TR class="tabela_link" data-href="#tech" tech="true">
             <TD>751</TD>
             <TD>Mobilny Agregar Prądotwórczy</TD>
             <TD>Żółte</TD>
@@ -3163,7 +3085,7 @@
             <TD><A href="https://czgk.pl/categories.php?cat_id=512" target="_blank">CZGK</A></TD>
         </TR>
 
-        <TR class="tabela_link" data-href="#tech">
+        <TR class="tabela_link" data-href="#tech" tech="true">
             <TD>752</TD>
             <TD>Tarpan</TD>
             <TD>Czerwone</TD>
@@ -3174,7 +3096,7 @@
             <TD><A href="https://czgk.pl/categories.php?cat_id=512" target="_blank">CZGK</A></TD>
         </TR>
         
-        <TR class="tabela_link" data-href="#tech">
+        <TR class="tabela_link" data-href="#tech" tech="true">
             <TD>753</TD>
             <TD>Podbijarka torowa PD90</TD>
             <TD>Żółte</TD>
@@ -3185,7 +3107,7 @@
             <TD><A href="https://czgk.pl/categories.php?cat_id=512" target="_blank">CZGK</A></TD>
         </TR>
                 
-        <TR class="tabela_link" data-href="#tech">
+        <TR class="tabela_link" data-href="#tech" tech="true">
             <TD>755</TD>
             <TD>Star 28</TD>
             <TD>Żółto-niebieskie</TD>
@@ -3196,7 +3118,7 @@
             <TD><A href="https://czgk.pl/categories.php?cat_id=512" target="_blank">CZGK</A></TD>
         </TR>
 
-        <TR class="tabela_link" data-href="#tech">
+        <TR class="tabela_link" data-href="#tech" tech="true">
             <TD>756</TD>
             <TD>Żuk A11</TD>
             <TD>Żółto-szare z niebieską kratą chłodnicy</TD>
@@ -3207,7 +3129,7 @@
             <TD><A href="https://czgk.pl/categories.php?cat_id=512" target="_blank">CZGK</A></TD>
         </TR>
 
-        <TR class="tabela_link" data-href="#tech">
+        <TR class="tabela_link" data-href="#tech" tech="true">
             <TD>757</TD>
             <TD>Mercedes-Benz Sprinter Mk I 3xx</TD>
             <TD>Białe z żołtym pasem</TD>
@@ -3218,7 +3140,7 @@
             <TD><A href="https://czgk.pl/categories.php?cat_id=512" target="_blank">CZGK</A></TD>
         </TR>
         
-        <TR class="tabela_link" data-href="#tech">
+        <TR class="tabela_link" data-href="#tech" tech="true">
             <TD>758</TD>
             <TD>FIAT Doblò</TD>
             <TD>Białe</TD>
@@ -3229,7 +3151,7 @@
             <TD><A href="https://czgk.pl/categories.php?cat_id=512" target="_blank">CZGK</A></TD>
         </TR>
 
-        <TR class="tabela_link" data-href="#tech">
+        <TR class="tabela_link" data-href="#tech" tech="true">
             <TD>760</TD>
             <TD>Multicar M25</TD>
             <TD>Żółte</TD>
@@ -3240,7 +3162,7 @@
             <TD><A href="https://czgk.pl/categories.php?cat_id=512" target="_blank">CZGK</A></TD>
         </TR>
 
-        <TR class="tabela_link" data-href="#tech">
+        <TR class="tabela_link" data-href="#tech" tech="true">
             <TD>761</TD>
             <TD>Ford ?</TD>
             <TD>Żółte</TD>
@@ -3251,7 +3173,7 @@
             <TD><A href="https://czgk.pl/categories.php?cat_id=512" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/3ae57bf3-1687-4275-a7a8-f7c059e371dd" target="_blank"><gps1></A></TD>
         </TR>
 
-        <TR class="tabela_link" data-href="#tech">
+        <TR class="tabela_link" data-href="#tech" tech="true">
             <TD>765</TD>
             <TD>Star</TD>
             <TD>Żółte z szarą ładownią</TD>
@@ -3262,7 +3184,7 @@
             <TD><A href="https://czgk.pl/categories.php?cat_id=512" target="_blank">CZGK</A></TD>
         </TR>
 
-        <TR class="tabela_link" data-href="#tech">
+        <TR class="tabela_link" data-href="#tech" tech="true">
             <TD>766</TD>
             <TD>Jelcz</TD>
             <TD>Żółto-niebieskie</TD>
@@ -3273,7 +3195,7 @@
             <TD><A href="https://czgk.pl/categories.php?cat_id=512" target="_blank">CZGK</A></TD>
         </TR>
         
-        <TR class="tabela_link" data-href="#tech">
+        <TR class="tabela_link" data-href="#tech" tech="true">
             <TD>769</TD>
             <TD>Tatra 813</TD>
             <TD>Turkusowe z żółtym pasem</TD>
@@ -3284,7 +3206,7 @@
             <TD><A href="https://czgk.pl/categories.php?cat_id=512" target="_blank">CZGK</A></TD>
         </TR>
 
-        <TR class="tabela_link" data-href="#tech">
+        <TR class="tabela_link" data-href="#tech" tech="true">
             <TD>770</TD>
             <TD>Jelcz 351M R-101</TD>
             <TD>Żółte (pomarańczowy dźwig)</TD>
@@ -3295,7 +3217,7 @@
             <TD><A href="https://czgk.pl/categories.php?cat_id=512" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/6fc3a78b-9b02-4fac-a460-4a3a78abbb7a" target="_blank"><gps1></A></TD>
         </TR>
 
-        <TR class="tabela_link" data-href="#tech">
+        <TR class="tabela_link" data-href="#tech" tech="true">
             <TD>771</TD>
             <TD>Ciężarówka z dźwigiem</TD>
             <TD>Żółte</TD>
@@ -3306,7 +3228,7 @@
             <TD><A href="https://czgk.pl/categories.php?cat_id=512" target="_blank">CZGK</A></TD>
         </TR>
 
-        <TR class="tabela_link" data-href="#tech">
+        <TR class="tabela_link" data-href="#tech" tech="true">
             <TD>775</TD>
             <TD>Mobilny Agregat Prądotwórczy</TD>
             <TD>Żółte</TD>
@@ -3317,7 +3239,7 @@
             <TD><A href="https://czgk.pl/categories.php?cat_id=512" target="_blank">CZGK</A></TD>
         </TR>
 
-        <TR class="tabela_link" data-href="#tech">
+        <TR class="tabela_link" data-href="#tech" tech="true">
             <TD>777</TD>
             <TD>Ford Transit</TD>
             <TD>Białe</TD>
@@ -3328,7 +3250,7 @@
             <TD><A href="https://czgk.pl/categories.php?cat_id=512" target="_blank">CZGK</A></TD>
         </TR>
 
-        <TR class="tabela_link" data-href="#tech">
+        <TR class="tabela_link" data-href="#tech" tech="true">
             <TD>778</TD>
             <TD>MAN TGS 41.510</TD>
             <TD>Białe</TD>
@@ -3339,7 +3261,7 @@
             <TD><A href="https://czgk.pl/categories.php?cat_id=512" target="_blank">CZGK</A></TD>
         </TR>
 
-        <TR class="tabela_link" data-href="#tech">
+        <TR class="tabela_link" data-href="#tech" tech="true">
             <TD>784</TD>
             <TD>Jelcz </TD>
             <TD>Żółte z niebieską kratą chłodnicy</TD>
@@ -3350,7 +3272,7 @@
             <TD><A href="https://czgk.pl/categories.php?cat_id=512" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/625fece3-2a0d-46aa-86c7-150356475e2f" target="_blank"><gps1></A></TD>
         </TR>
 
-        <TR class="tabela_link" data-href="#tech">
+        <TR class="tabela_link" data-href="#tech" tech="true">
             <TD>785</TD>
             <TD>Daewoo Lublin 3</TD>
             <TD>Turkusowe</TD>
@@ -3361,7 +3283,7 @@
             <TD><A href="https://czgk.pl/categories.php?cat_id=512" target="_blank">CZGK</A></TD>
         </TR>
 
-        <TR class="tabela_link" data-href="#tech">
+        <TR class="tabela_link" data-href="#tech" tech="true">
             <TD>786</TD>
             <TD>Daewoo </TD>
             <TD>Białe</TD>
@@ -3372,7 +3294,7 @@
             <TD><A href="https://czgk.pl/categories.php?cat_id=512" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/ddfda1d6-8880-40aa-811c-29787dd4ca79" target="_blank"><gps1></A></TD>
         </TR>
 
-        <TR class="tabela_link" data-href="#tech">
+        <TR class="tabela_link" data-href="#tech" tech="true">
             <TD>788</TD>
             <TD>Ford  </TD>
             <TD>Żółte</TD>
@@ -3383,7 +3305,7 @@
             <TD><A href="https://czgk.pl/categories.php?cat_id=512" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/2de8e761-e209-4dcb-b98d-66cf64a219ee" target="_blank"><gps1></A></TD>
         </TR>
 
-        <TR class="tabela_link" data-href="#tech">
+        <TR class="tabela_link" data-href="#tech" tech="true">
             <TD>789</TD>
             <TD>Żuk A11</TD>
             <TD>Żółto-niebieskie</TD>
@@ -3394,7 +3316,7 @@
             <TD><A href="https://czgk.pl/categories.php?cat_id=512" target="_blank">CZGK</A></TD>
         </TR>
 
-        <TR class="tabela_link" data-href="#tech">
+        <TR class="tabela_link" data-href="#tech" tech="true">
             <TD>790</TD>
             <TD>Żuk A11</TD>
             <TD>Żółto-niebieskie</TD>
@@ -3405,7 +3327,7 @@
             <TD><A href="https://czgk.pl/categories.php?cat_id=512" target="_blank">CZGK</A></TD>
         </TR>
 
-        <TR class="tabela_link" data-href="#tech">
+        <TR class="tabela_link" data-href="#tech" tech="true">
             <TD>791</TD>
             <TD>Żuk A11</TD>
             <TD>Żółto-niebieskie</TD>
@@ -3416,7 +3338,7 @@
             <TD><A href="https://czgk.pl/categories.php?cat_id=512" target="_blank">CZGK</A></TD>
         </TR>
 
-        <TR class="tabela_link" data-href="#tech">
+        <TR class="tabela_link" data-href="#tech" tech="true">
             <TD>792</TD>
             <TD>Żuk A11</TD>
             <TD>Żółto-niebieskie</TD>
@@ -3427,7 +3349,7 @@
             <TD><A href="https://czgk.pl/categories.php?cat_id=512" target="_blank">CZGK</A></TD>
         </TR>
 
-        <TR class="tabela_link" data-href="#tech">
+        <TR class="tabela_link" data-href="#tech" tech="true">
             <TD>794</TD>
             <TD>Żuk A07</TD>
             <TD>Fioletowe z żółtym i niebieskim ukośnym pasem oraz żółtą kratą chłodnicy</TD>
@@ -3438,7 +3360,7 @@
             <TD><A href="https://czgk.pl/categories.php?cat_id=512" target="_blank">CZGK</A></TD>
         </TR>
 
-        <TR class="tabela_link" data-href="#tech">
+        <TR class="tabela_link" data-href="#tech" tech="true">
             <TD>795</TD>
             <TD>Żuk A07</TD>
             <TD>Żołte z szarym, niebieskim i granatowym ukośnym pasem oraz niebieską kratą chłodnicy</TD>
@@ -3449,7 +3371,7 @@
             <TD><A href="https://czgk.pl/categories.php?cat_id=512" target="_blank">CZGK</A></TD>
         </TR>
 
-        <TR class="tabela_link" data-href="#tech">
+        <TR class="tabela_link" data-href="#tech" tech="true">
             <TD>796</TD>
             <TD>Żuk A06</TD>
             <TD>Żołte z szarym, niebieskim i granatowym ukośnym pasem oraz niebieską kratą chłodnicy</TD>
@@ -3460,7 +3382,7 @@
             <TD><A href="https://czgk.pl/categories.php?cat_id=512" target="_blank">CZGK</A></TD>
         </TR>
 
-        <TR class="tabela_link" data-href="#tech">
+        <TR class="tabela_link" data-href="#tech" tech="true">
             <TD>797</TD>
             <TD>Star 200</TD>
             <TD>Żołte</TD>
@@ -3471,7 +3393,7 @@
             <TD><A href="https://czgk.pl/categories.php?cat_id=512" target="_blank">CZGK</A> <A href="https://live.mpk.czest.pl/#/busstops/28c75147-7496-477e-bc9c-4f7197614119/gps/872195ab-3336-4798-9045-b6b286619c80" target="_blank"><gps1></A></TD>
         </TR>
 
-        <TR class="tabela_link" data-href="ikarus280_02">
+        <TR class="tabela_link" data-href="ikarus280_02" tech="true">
             <TD>798</TD>
             <TD>Ikarus 280.02</TD>
             <TD>Żołte</TD>
@@ -3482,7 +3404,7 @@
             <TD><A href="https://czgk.pl/categories.php?cat_id=512" target="_blank">CZGK</A></TD>
         </TR>
 
-        <TR class="tabela_link" data-href="#tech">
+        <TR class="tabela_link" data-href="#tech" tech="true">
             <TD>803</TD>
             <TD>Pług 803</TD>
             <TD>Żołto-niebieskie</TD>
@@ -3493,7 +3415,7 @@
             <TD><A href="https://czgk.pl/categories.php?cat_id=512" target="_blank">CZGK</A></TD>
         </TR>
 
-        <TR class="tabela_link" data-href="#tech">
+        <TR class="tabela_link" data-href="#tech" tech="true">
             <TD>804</TD>
             <TD>Pług 804</TD>
             <TD>Żołto-niebieskie</TD>
@@ -3504,7 +3426,7 @@
             <TD><A href="https://czgk.pl/categories.php?cat_id=512" target="_blank">CZGK</A></TD>
         </TR>
 
-        <TR class="tabela_link" data-href="#tech">
+        <TR class="tabela_link" data-href="#tech" tech="true">
             <TD></TD>
             <TD>ARI 458</TD>
             <TD>Czerwono-Biało-Szare</TD>
@@ -3515,7 +3437,7 @@
             <TD><A href="https://czgk.pl/categories.php?cat_id=512" target="_blank">CZGK</A></TD>
         </TR>
 
-        <TR class="tabela_link" data-href="#tech">
+        <TR class="tabela_link" data-href="#tech" tech="true">
             <TD></TD>
             <TD>FSO Lublin III</TD>
             <TD>Białe</TD>
@@ -3526,7 +3448,7 @@
             <TD><A href="https://czgk.pl/categories.php?cat_id=512" target="_blank">CZGK</A></TD>
         </TR>
 
-        <TR class="tabela_link" data-href="#tech">
+        <TR class="tabela_link" data-href="#tech" tech="true">
             <TD></TD>
             <TD>Przyczepa rowerowa</TD>
             <TD>Srebrne</TD>
@@ -3538,7 +3460,6 @@
         </TR>
     </TABLE>
 
-</div>
 <button onclick="scrollToTop()" id="scrollTopBtn" title="Do góry">⬆</button>
 </body>
 </html>
