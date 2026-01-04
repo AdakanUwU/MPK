@@ -652,6 +652,29 @@ zz {
   max-width: calc(10 * 110px + 9 * 15px); /* 10 kafelków x max szerokość + odstępy */
 }
 
+.nagłówek-linie{
+  display: flex; 
+  height: 19px; 
+  align-items: stretch;
+}
+
+.nagłowek-linie-aktualizacja {
+    float: right;
+  }
+
+@media (max-width: 625px) {
+  .nagłówek-linie{
+    display: inline; 
+    height: 19px; 
+    align-items: stretch;
+  }
+
+  .nagłowek-linie-aktualizacja {
+    float: left;
+  }
+}
+
+
 @media (max-width: 1200px) {
   .menu-trasy {
     grid-template-columns: repeat(10, minmax(60px, 1fr)); /* skalowanie kafelków */
@@ -666,7 +689,6 @@ zz {
     max-width: none; /* wypełniają kolumny w pełni */
   }
 }
-
 
 .numer-linii {
   position: relative;
@@ -751,6 +773,13 @@ zz {
   align-content: center;
   text-align: center;
   cursor: not-allowed;
+}
+
+@media (max-width: 1100px) and (min-width: 801px), (max-width: 550px){
+  .numer-linii, .numer-linii-old, .numer-linii-off {
+    font-size: 25px;
+    font-weight: bold;
+  }
 }
 
 .linia-info {
