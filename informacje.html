@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Trasy - MPK Częstochowa</title>
+    <link rel="stylesheet" href="css/style.css"/>
+
+    <base href="/MPK/">
+
+    <script src="js/ikony.js" defer></script> <!--wczytywanie ikon-->
+    <script src="js/tabela_link.js" defer></script> <!--wczytywanie klikalnych wierszy tabel-->
+    <script src="js/toogleMenu.js" defer></script><!--Skrypt do listy menu-->
+
+    <script src="js/w_gore.js" defer></script> <!--Skrypt do przycisku przesuwania do samej góry-->
+    <script src="js/foto-blok.js" defer></script> <!--Blokada menu kontekstowego na zdjęciach-->
+
+</head>
+<body>
+    <div id="nav"></div>
+    <script>fetch('nav.htm') .then(response => response.text()) 
+    .then(data => document.getElementById('nav').innerHTML = data);
+    </script>
+
+    <div class="tresc"> <!--Główna treść strony-->
+        <h2>Informacje ogólne:</h2><hr><BR>
+        <div class="opis-pojazdu">
+            Strona zbiera dane o pojazdach należących i używanych przez MPK w Częstochowie S.A. (i dawniej 
+            MPK w Częstochowie Sp. z o.o., MZK w Częstochowie, MPK w Częstochowie), takie jak ilostan pojazdów,
+            informacje o nich (silnik, wymiary itp.), zdjęcia, historię i ciekawostki. Dodatkowo na stronie
+            tworzony jest też spis linii obecnych i historycznych, gdzie są spisane kierunki od powstania
+            danej linii (jeśli da się znaleźć takie dane).
+            
+        </div><BR>
+
+        <h2>Pochodzenie danych:</h2><hr><BR>
+        <div class="opis-pojazdu">
+            • Obeserwacje własne i własne źródła <BR>
+            • Phototrans (<a href="https://phototrans.eu" target="_blank">phototrans.eu</a>) <BR>
+            • Częstochowska Galeria Komunikacyjna (<a href="https://czgk.pl" target="_blank">czgk.pl</a>) <BR>
+            • Książka "Historia komunikacji miejskiej w Częstochowie" autorstwa Tomasza Haładyja <BR>
+            • Bezpośrednie zapytania do MPK w Częstochowie <BR>
+            • Historia MPK w Częsotochowie (<a href="https://mpk.czest.pl/o-firmie/historia" target="_blank">mpk.czest.pl</a>) <BR>
+            • Artykuły ze stron m.in: <a href="https://www.transport-publiczny.pl" target="_blank">Transport Publiczny</a>, <a href="https://www.czestochowa.pl" target="_blank">Urząd Miasta Częstochowa</a>, <a href="https://czestochowa.wyborcza.pl" target="_blank">Gazeta Wyborcza</a>, <a href="https://transinfo.pl" target="_blank">TransInfo</a>, <a href="https://www.transport-publiczny.pl" target="_blank">Transport Publiczny</a>, <a href="https://dziennikzachodni.pl" target="_blank">Dziennik Zachodni</a>, <a href="https://plus.gazetawroclawska.pl" target="_blank">Gazeta Wrocławska</a> <BR>
+            • Zapisy Częstochowskiego Serwisu Intrnetowego Miłośników Komunikacji Miejskiej (<a href="https://komunikacja.cz">komunikacja.cz</a>, <a href="https://web.archive.org/web/20060721015425/http://linietrasy.w.interia.pl/">Liniowiec (webarchive)</a>)<BR>
+                
+            <BR>
+            • kt4dt (Phototrans: <a href="https://phototrans.pl/16,3336,0.html">https://phototrans.pl/16,3336,0.html</a>):
+                <a href="autobusy/Autosan-A1010T">Autosan A1010T #300</a> - Silnik i skrzynia biegów;
+                <a href="autobusy/Bristol-Lodekka">Bristol Lodekka FLF #299</a> - Silnik;
+                <a href="autobusy/wycofane/Ikarus-415">Ikarus 415.14A i 41C</a> - Silnik i skrzynia biegów;
+                <a href="autobusy/wycofane/MAN-NG272">MAN NG272 #365-368</a> - Silnik i skrzynia biegów;
+                <a href="javascript:blank()">MAN NL263</a> - Silnik i skrzynia biegów;
+                <a href="autobusy/wycofane/MAN-NL222">MAN NL202 #407</a> - Silnik i skrzynia biegów;
+                <a href="autobusy/wycofane/MAN-EL283">MAN NG272 #403-405</a> - Silnik i skrzynia biegów;
+                <a href="autobusy/wycofane/MAN-NG313-CNG">MAN NG313 CNG #217</a> - Skrzynia biegów;
+                <a href="autobusy/wycofane/Iveco-Daily-65C15-Vehixel-Cytios-4-39">Iveco Daily 65C15 / Vehixel Cytios 4/39 #411-412</a> - Skrzynia biegów;
+
+        </div><BR>
+
+        <h2>Pochodzenie zdjęć:</h2><hr><BR>
+        <div class="opis-pojazdu">
+            Wszystkie zdjęcia umieszczone na stronie są wykonane przeze mnie, nielicząc niektórych miniaturek pochodzących z 
+            <a href="https://mpk.czest.pl/galeria">Galerii MPK</a> oraz <a href="https://mpk.czest.pl/o-firmie/galeria-historyczna">Galerii Historycznej MPK</a>,
+            te zdjęcia mają umieszczony podpis "Z galerii MPK" bądź "Z kronik MPK". Zdjęcia czarnobiałe zostały pokolorowane przez różne
+            narządzia do tego.
+            <BR>
+            W przypadku braku zdjęcia na miniaturce znajduje się grafika z szarnym znakiem x i napisem "Placeholder". Pojazdy bez zdjęć nie
+            mają utworzonej strony.
+        </div><BR>
+
+        <h2>Inne:</h2><hr><BR>
+        <div class="opis-pojazdu">
+            Przy większości pojazdów znajdują się linki do odpowiednika w <a href="https://czgk.pl">Częstochowskiej Galerii Komunikacyjnej</a>,
+            jednak dla dodatkowych i bardziej precyzyjnych informacji (np. nr VINy, poprzedni właściciele) polecam skorzystać z 
+            <a href="https://phototrans.pl/24,67,0.html">phototrans.eu</a>.
+
+            <BR><BR>
+            Przy obecnie kursujących pojazdach znajdują się odnośniki do lokalizacji GPS, jednak te dane nie są kontrolowane przeze mnie, dlatego
+            nie mam wpływu na brak danych przy wielu pojazdach (zazwyczaj jest to nie działający/wyłączony nadajnik lub pojazd nie jest w ruchu).
+        </div><BR>
+
+        <h2>O mnie:</h2><hr><BR>
+        <div class="opis-pojazdu">
+            Email: <a href="mailto:ada.slabikowska@outlook.jp">e-mail</a><BR>
+            Discord: adakanuwu<BR>
+            Phototrans: <a href="https://phototrans.pl/16,3536,0.html">Link</a><BR>
+            Busphoto: <a href="https://busphoto.eu/author/14156/">Link</a>
+
+            <BR><BR>
+            Jestem miłośniczką komunikacji i fotografii z Częstochowy. Ze względu na brak porządnej stronie skoncentrowanej na taborze
+            Częstochowskiego MPK zdecydowałam się wykorzystać moje nieznaczne umiejętności HTML do stworzenia tej strony. Bardzo lubię
+            archiwizować i dokumentować, dlatego staram się umieszczać na stronie wszystko co wiem. Stronę w obecnym kształcie tworzę 
+            od kwietnia 2025 a zewzględu na brak możliwości jej hostowania jest postawiona na darmowym Github Sites.
+
+
+        </div><BR>
+
+    </div>
+
+<button onclick="scrollToTop()" id="scrollTopBtn" title="Do góry">⬆</button>
+</body>
+</html>
