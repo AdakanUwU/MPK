@@ -12,6 +12,8 @@ jobs:
     steps:
       - name: Pobierz repo
         uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Ustaw Node
         uses: actions/setup-node@v3
@@ -30,4 +32,4 @@ jobs:
           git config user.email "actions@github.com"
           git add history.json
           git commit -m "Automatyczna aktualizacja history.json" || echo "Brak zmian"
-          git push
+          git push}}
