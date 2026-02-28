@@ -30,6 +30,8 @@ jobs:
         run: |
           git config user.name "GitHub Actions"
           git config user.email "actions@github.com"
-          git add history.json
-          git commit -m "Automatyczna aktualizacja history.json" || echo "Brak zmian"
-          git push}}
+          git add api/history.json
+          git commit -m "Update history"
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
