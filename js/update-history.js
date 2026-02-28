@@ -1,4 +1,4 @@
-app.get('/api/daily-vehicles/:year?/:month?/:day?', async (req, res) => {
+async function updateHistory() {
     try {
 
         // ⬇️ Ładujemy wszystkie dane równolegle (bez zmiany logiki)
@@ -112,4 +112,4 @@ app.get('/api/daily-vehicles/:year?/:month?/:day?', async (req, res) => {
         console.error(err);
         res.status(500).send("Błąd podczas zbierania danych");
     }
-});
+}
