@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lant="pl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="../css/archive.css">
+    <title>Archiwum kursowania pojazdów - MPK Częstochowa</title>
+
+    <script src="../js/toogleMenu.js" defer=""></script> <!--Menu składane paska nav-->
+    <script src="../js/w_gore.js" defer></script> <!--Przycisk w górę-->
+
+</head>
+
+<body>
+    <div id="nav"></div>
+    <script>fetch('nav.htm') .then(response => response.text()) 
+    .then(data => document.getElementById('nav').innerHTML = data);
+    </script>
+
+
+    <div class="tresc">
+        <h1>Pojazdy</h1>
+        <hr>
+
+        <table id="vehicles-table">
+            <thead>
+                <tr>
+                    <th width="10%">Numer</th>
+                    <th width="250px">Model</th>
+                    <th width="200px">Ostatnia aktywność</th>
+                    <th width="90px">Linie</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+
+        <script>
+            async function init() {
+                const historyRes = await fetch('/api/history');
+                const history = await historyRes.json();
+
+                const metaRes = await fetch('https://raw.githubusercontent.com/AdakanUwU/MPK/refs/heads/main/MPK/vehicles2.json');
+                const meta = await metaRes.json();
+
+                const metaMap = {};
+                meta.forEach(v => metaMap[v.sideNo] = v);
+
+                const tbody = document.querySelector("#vehicles-table tbody");
+
+                const vehicles = Object.keys(history)
+					.map(v => v.trim()) // czyści spacje
+					.filter((v, i, arr) => arr.indexOf(v) === i) // usuwa duplikaty po trim
+					.sort((a, b) => {
+						const numA = parseInt(a.split('+')[0]);
+						const numB = parseInt(b.split('+')[0]);
+						return numA - numB;
+					});
+					console.log(Object.keys(history));
+
+                vehicles.forEach(sideNo => {
+                    const tr = document.createElement("tr");
+
+                    const vehicleMeta = metaMap[sideNo];
+
+                    const displayNo = vehicleMeta?.displayNo || sideNo;
+                    const model = vehicleMeta?.name || "Nieznany";
+
+                    const dates = Object.keys(history[sideNo]).sort().reverse();
+                    const lastDate = dates[0];
+                    const lastLines = history[sideNo][lastDate].join(", ");
+
+                    tr.innerHTML = `
+                <td><a href="/archive/vehicle.html?sideNo=${encodeURIComponent(sideNo)}">${displayNo}</a></td>
+                <td>${model}</td>
+                <td>${lastDate}</td>
+                <td>${lastLines}</td>
+            `;
+
+                    tbody.appendChild(tr);
+                });
+            }
+
+            init();
+        </script>
+    </div>
+
+    <button onclick="scrollToTop()" id="scrollTopBtn" title="Do góry">⬆</button>
+</body>
+
+</html>

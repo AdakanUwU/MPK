@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lant="pl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/archive.css">
+    <title>Archiwum kursowania danego dnia - MPK Częstochowa</title>
+
+    <script src="../js/toogleMenu.js" defer=""></script> <!--Menu składane paska nav-->
+    <script src="../js/w_gore.js" defer></script> <!--Przycisk w górę-->
+
+</head>
+
+<body>
+    <div id="nav"></div>
+    <script>fetch('nav.htm').then(response => response.text())
+            .then(data => document.getElementById('nav').innerHTML = data);
+    </script>
+
+    <div class="tresc">
+        <h1 style="padding: 0; margin: 0;">Szukanie po dacie</h1>
+        <hr>
+        <BR>
+
+        <input type="date" id="date-picker" min="2026-01-20">
+        <script>   
+        const setDateRestrictions = () => {
+            const datePicker = document.getElementById('date-picker');
+            const today = new Date();
+
+            datePicker.max = today.toISOString().split('T')[0]; // Ustawiamy max
+        };
+        setDateRestrictions();
+        </script>
+
+        <table id="date-table">
+            <thead>
+                <tr>
+                    <th>Linia</th>
+                    <th width="90%">Pojazdy</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+
+        <script>
+            let historyData = {};
+            let metaMap = {};
+
+            async function init() {
+                const historyRes = await fetch('/api/history');
+                historyData = await historyRes.json();
+
+                const metaRes = await fetch('https://raw.githubusercontent.com/AdakanUwU/MPK/refs/heads/main/MPK/vehicles2.json');
+                const meta = await metaRes.json();
+
+                meta.forEach(v => metaMap[v.sideNo] = v);
+            }
+
+            document.getElementById("date-picker").addEventListener("change", e => {
+                const date = e.target.value;
+                const tbody = document.querySelector("#date-table tbody");
+                tbody.innerHTML = "";
+
+                const linesMap = {};
+
+                for (const vehicle in historyData) {
+                    if (historyData[vehicle][date]) {
+                        historyData[vehicle][date].forEach(line => {
+                            if (!linesMap[line]) linesMap[line] = [];
+                            linesMap[line].push(vehicle);
+                        });
+                    }
+                }
+
+                const sortedLines = Object.keys(linesMap)
+                    .sort((a, b) => parseInt(a) - parseInt(b));
+
+                sortedLines.forEach(line => {
+                    const tr = document.createElement("tr");
+
+                    const tdLine = document.createElement("td");
+                    tdLine.textContent = line;
+
+                    const tdVehicles = document.createElement("td");
+
+                    const formattedVehicles = linesMap[line]
+                        .sort((a, b) => parseInt(a) - parseInt(b))
+                        .map(sideNo => {
+                            const vehicleMeta = metaMap[sideNo];
+                            return vehicleMeta?.displayNo || sideNo;
+                        });
+
+                    tdVehicles.textContent = formattedVehicles.join(", ");
+
+                    tr.appendChild(tdLine);
+                    tr.appendChild(tdVehicles);
+                    tbody.appendChild(tr);
+                });
+            });
+
+            init();
+        </script>
+
+    </div>
+</body>
+
+</html>

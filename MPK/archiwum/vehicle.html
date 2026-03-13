@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/archive.css">
+    <title>Archiwum kursowania pojazdów - MPK Częstochowa</title>
+
+    <script src="../js/toogleMenu.js" defer=""></script> <!--Menu składane paska nav-->
+    <script src="../js/w_gore.js" defer></script> <!--Przycisk w górę-->
+
+</head>
+
+<body>
+    <div id="nav"></div>
+    <script>fetch('nav.htm').then(response => response.text())
+            .then(data => document.getElementById('nav').innerHTML = data);
+    </script>
+
+    <div class="tresc">
+
+
+        <h1 id="vehicle-title"></h1>
+        <hr>
+        <table id="vehicle-table">
+            <thead>
+                <tr>
+                    <th>Data</th>
+                    <th>Linie</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+
+        <script>
+            const params = new URLSearchParams(window.location.search);
+            const sideNo = params.get("sideNo");
+
+            async function init() {
+                const historyRes = await fetch('/api/history');
+                const history = await historyRes.json();
+
+                const metaRes = await fetch('https://raw.githubusercontent.com/AdakanUwU/MPK/refs/heads/main/MPK/vehicles2.json');
+                const meta = await metaRes.json();
+                const metaMap = {};
+                meta.forEach(v => metaMap[v.sideNo] = v);
+
+                const displayNo = metaMap[sideNo]?.displayNo || sideNo;
+                const nameV = metaMap[sideNo]?.name || "Nieznana nazwa modelu";
+                document.getElementById("vehicle-title").textContent = nameV + " nr " + displayNo;
+                document.title = "Archiwum kursowania - " + nameV + " nr " + displayNo + " - MPK Częstochowa";
+
+                const tbody = document.querySelector("#vehicle-table tbody");
+
+                const dates = Object.keys(history[sideNo]).sort().reverse();
+
+                dates.forEach(date => {
+                    const tr = document.createElement("tr");
+
+                    tr.innerHTML = `
+            <td style="font-weight: bold;">${date}</td>
+            <td>${history[sideNo][date].join(", ")}</td>
+        `;
+
+                    tbody.appendChild(tr);
+                });
+            }
+
+            init();
+        </script>
+    </div>
+    
+    <button onclick="scrollToTop()" id="scrollTopBtn" title="Do góry">⬆</button>
+</body>
+
+</html>

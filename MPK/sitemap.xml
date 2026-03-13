@@ -8,7 +8,7 @@
   </url>
   <url>
     <loc>https://adakanuwu.github.io/MPK/autobusy</loc>
-    <lastmod>2026-02-15</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -20,7 +20,7 @@
   </url>
   <url>
     <loc>https://adakanuwu.github.io/MPK/informacje</loc>
-    <lastmod>2026-02-15</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -33,6 +33,42 @@
   <url>
     <loc>https://adakanuwu.github.io/MPK/trasy</loc>
     <lastmod>2026-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://adakanuwu.github.io/MPK/archiwum/dates</loc>
+    <lastmod>2026-03-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://adakanuwu.github.io/MPK/archiwum/index</loc>
+    <lastmod>2026-03-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://adakanuwu.github.io/MPK/archiwum/line</loc>
+    <lastmod>2026-03-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://adakanuwu.github.io/MPK/archiwum/lines</loc>
+    <lastmod>2026-03-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://adakanuwu.github.io/MPK/archiwum/vehicle</loc>
+    <lastmod>2026-03-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://adakanuwu.github.io/MPK/archiwum/vehicles</loc>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -134,7 +170,7 @@
   </url>
   <url>
     <loc>https://adakanuwu.github.io/MPK/autobusy/Solaris-Urbino-18-IV-Electric</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -242,7 +278,7 @@
   </url>
   <url>
     <loc>https://adakanuwu.github.io/MPK/autobusy/zabytkowe/Ikarus-280-02</loc>
-    <lastmod>2025-12-31</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

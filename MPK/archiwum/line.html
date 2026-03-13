@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lant="pl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/archive.css">
+    <title>Archiwum linii - MPK Częstochowa</title>
+
+    <script src="../js/toogleMenu.js" defer=""></script> <!--Menu składane paska nav-->
+    <script src="../js/w_gore.js" defer></script> <!--Przycisk w górę-->
+
+</head>
+
+<body>
+    <div class="tresc">
+        <div style="display: flex; height: 19px; align-items: stretch;">
+            <h1 id="line-title"></h1>
+        </div><span style="float: right"><a href="javascript:history.back()">Powrót do lini...</a></span>
+        <br>
+        <hr>
+
+        <table id="line-table">
+            <thead>
+                <tr>
+                    <th>Data</th>
+                    <th width="80%">Pojazdy</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+
+        <script>
+            const params = new URLSearchParams(window.location.search);
+            const selectedLine = params.get("line");
+
+            async function init() {
+
+                const historyRes = await fetch('/api/history');
+                const history = await historyRes.json();
+
+                const metaRes = await fetch('https://raw.githubusercontent.com/AdakanUwU/MPK/refs/heads/main/MPK/vehicles2.json');
+                const meta = await metaRes.json();
+
+                const metaMap = {};
+                meta.forEach(v => metaMap[v.sideNo] = v);
+
+                document.getElementById("line-title").textContent = "Linia " + selectedLine;
+                document.title = "Archiwum dla linii " + selectedLine + " - MPK Częstochowa";
+
+                const tbody = document.querySelector("#line-table tbody");
+
+                const datesMap = {};
+
+                // Zbieramy daty i pojazdy dla tej linii
+                for (const vehicle in history) {
+                    for (const date in history[vehicle]) {
+                        if (history[vehicle][date].includes(selectedLine)) {
+                            if (!datesMap[date]) datesMap[date] = [];
+                            datesMap[date].push(vehicle);
+                        }
+                    }
+                }
+
+                const sortedDates = Object.keys(datesMap).sort().reverse();
+
+                sortedDates.forEach(date => {
+
+                    const formattedVehicles = datesMap[date]
+                        .sort((a, b) => parseInt(a) - parseInt(b))
+                        .map(sideNo => {
+                            const vehicleMeta = metaMap[sideNo];
+                            return vehicleMeta?.displayNo || sideNo;
+                        })
+                        .join(", ");
+
+                    const tr = document.createElement("tr");
+
+                    tr.innerHTML = `
+            <td style="font-weight: bold;">${date}</td>
+            <td>${formattedVehicles}</td>
+        `;
+
+                    tbody.appendChild(tr);
+                });
+            }
+
+            init();
+        </script>
+    </div>
+</body>
+
+</html>

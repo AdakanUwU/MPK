@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lant="pl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="../css/archive.css">
+    <title>Archiwum kursowania linii - MPK Częstochowa</title>
+
+    <script src="../js/toogleMenu.js" defer=""></script> <!--Menu składane paska nav-->
+    <script src="../js/w_gore.js" defer></script> <!--Przycisk w górę-->
+
+</head>
+
+<body>
+    <div id="nav"></div>
+    <script>fetch('nav.htm') .then(response => response.text()) 
+    .then(data => document.getElementById('nav').innerHTML = data);
+    </script>
+
+    <div class="tresc">
+
+        <h1 style="padding: 0; margin: 0;">Wybór linii</h1>
+        <hr>
+        <BR>
+
+        <div id="line-grid"></div>
+
+
+        <script>
+            let historyData = {};
+
+            async function init() {
+                const res = await fetch('/api/history');
+                historyData = await res.json();
+
+                const linesSet = new Set();
+
+                for (const vehicle in historyData) {
+                    for (const date in historyData[vehicle]) {
+                        historyData[vehicle][date].forEach(line => linesSet.add(line));
+                    }
+                }
+
+                const sortedLines = [...linesSet]
+                    .sort((a, b) => parseInt(a) - parseInt(b));
+
+                const grid = document.getElementById('line-grid');
+                grid.innerHTML = "";
+
+                const table = document.createElement("table");
+                table.id = "lines-table";
+
+                const tbody = document.createElement("tbody");
+
+                const columns = 10; // ile numerów w jednym wierszu
+                let row;
+
+                sortedLines.forEach((line, index) => {
+
+                    if (index % columns === 0) {
+                        row = document.createElement("tr");
+                        tbody.appendChild(row);
+                    }
+
+                    const td = document.createElement("td");
+
+                    const link = document.createElement("a");
+                    link.href = `/archive/line.html?line=${line}`;
+                    link.textContent = line;
+                    link.className = "line-button";
+
+                    td.appendChild(link);
+                    row.appendChild(td);
+                });
+
+                table.appendChild(tbody);
+                grid.appendChild(table);
+            }
+
+            init();
+        </script>
+    </div>
+</body>
+
+</html>
