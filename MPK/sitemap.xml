@@ -8,7 +8,7 @@
   </url>
   <url>
     <loc>https://adakanuwu.github.io/MPK/autobusy</loc>
-    <lastmod>2026-03-13</lastmod>
+    <lastmod>2026-03-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -86,7 +86,7 @@
   </url>
   <url>
     <loc>https://adakanuwu.github.io/MPK/autobusy/Autosan-M12LFE</loc>
-    <lastmod>2025-12-31</lastmod>
+    <lastmod>2026-03-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -229,8 +229,44 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://adakanuwu.github.io/MPK/autobusy/wycofane/Jelcz-021</loc>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://adakanuwu.github.io/MPK/autobusy/wycofane/Jelcz-043</loc>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://adakanuwu.github.io/MPK/autobusy/wycofane/Jelcz-L11</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://adakanuwu.github.io/MPK/autobusy/wycofane/Jelcz-M121MB</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://adakanuwu.github.io/MPK/autobusy/wycofane/Jelcz-M181MB3</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://adakanuwu.github.io/MPK/autobusy/wycofane/Jelcz-PR110D</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://adakanuwu.github.io/MPK/autobusy/wycofane/MAN-EL283</loc>
-    <lastmod>2026-02-14</lastmod>
+    <lastmod>2026-03-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -271,6 +307,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://adakanuwu.github.io/MPK/autobusy/wypozyczone/DAB-12-1200B</loc>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://adakanuwu.github.io/MPK/autobusy/zabytkowe/Bristol-Lodekka</loc>
     <lastmod>2026-02-14</lastmod>
     <changefreq>monthly</changefreq>
@@ -302,7 +344,7 @@
   </url>
   <url>
     <loc>https://adakanuwu.github.io/MPK/autobusy/zabytkowe/Ikarus-435</loc>
-    <lastmod>2025-09-10</lastmod>
+    <lastmod>2026-03-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
