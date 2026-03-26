@@ -252,6 +252,14 @@ a.pasek:hover {
   }
 }
 
+@media (min-width: 2100px) {
+  .tresc {
+    overflow-x: auto;
+    margin: 95px auto 10px auto;
+    width: 1650px;
+  }
+}
+
 .tresc ul {
   list-style: disc;
   margin-left: 60px;
@@ -609,7 +617,8 @@ hr {
 .miniatura {
   display: flex;
   margin: auto;
-  width: 700px;
+  width: 70%;
+  max-width: 900px;
   border-radius: 25px;
   padding: 10px;
 }
