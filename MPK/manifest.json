@@ -1,8 +1,8 @@
 {
-  "id": "/MPK/",
+  "id": "https://komunikacja.cc/MPK/",
   "name": "Miłośniczy Portal Komunikacyjny w Częstochowie",
   "short_name": "MPK Częstochowa",
-  "start_url": "/MPK/",
+  "start_url": "https://komunikacja.cc/MPK/",
   "display": "standalone",
   "display_override": ["standalone", "window-controls-overlay"],
   "protocol_handlers": [
