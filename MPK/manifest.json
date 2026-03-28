@@ -4,6 +4,13 @@
   "short_name": "MPK Częstochowa",
   "start_url": "/MPK/",
   "display": "standalone",
+  "display_override": ["standalone", "window-controls-overlay"],
+  "protocol_handlers": [
+  {
+    "protocol": "web+mpk",
+    "url": "/MPK/?action=%s"
+  }
+  ],
   "background_color": "#ffffff",
   "theme_color": "#ff8282",
   "icons": [
