@@ -1,7 +1,7 @@
 self.addEventListener('install', (event) => {
   console.log('Service Worker: zainstalowany');
   event.waitUntil(
-    caches.open('static-v1').then((cache) => cache.addAll(['../index.html', '..css//style.css']))
+    caches.open('static-v1').then((cache) => cache.addAll(['../index.html', '../css/style.css']))
   );
 });
 
