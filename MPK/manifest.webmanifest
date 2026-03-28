@@ -1,0 +1,41 @@
+{
+  "id": "https://komunikacja.cc/MPK/",
+  "name": "Miłośniczy Portal Komunikacyjny w Częstochowie",
+  "short_name": "MPK Częstochowa",
+  "start_url": "https://komunikacja.cc/MPK/",
+  "display": "standalone",
+  "display_override": ["standalone", "window-controls-overlay"],
+  "protocol_handlers": [
+  {
+    "protocol": "web+mpk",
+    "url": "/MPK/?action=%s"
+  }
+  ],
+  "background_color": "#ff8282",
+  "theme_color": "#ff8282",
+  "icons": [
+    {
+      "src": "img/Favicon/192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "img/Favicon/512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "img/Screenshots/desktop.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide"
+    },
+    {
+      "src": "img/Screenshots/mobile.png",
+      "sizes": "375x667",
+      "type": "image/png"
+    }
+  ]
+}
