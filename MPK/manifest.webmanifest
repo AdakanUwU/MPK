@@ -2,6 +2,7 @@
   "id": "https://komunikacja.cc/MPK/",
   "name": "Miłośniczy Portal Komunikacyjny w Częstochowie",
   "short_name": "MPK Częstochowa",
+  "scope": "https://komunikacja.cc/MPK/",
   "start_url": "https://komunikacja.cc/MPK/",
   "display": "standalone",
   "display_override": ["standalone", "window-controls-overlay"],
