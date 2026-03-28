@@ -20,7 +20,7 @@
   </url>
   <url>
     <loc>https://adakanuwu.github.io/MPK/informacje</loc>
-    <lastmod>2026-03-22</lastmod>
+    <lastmod>2026-03-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -230,7 +230,7 @@
   </url>
   <url>
     <loc>https://adakanuwu.github.io/MPK/autobusy/wycofane/Jelcz-021</loc>
-    <lastmod>2026-03-17</lastmod>
+    <lastmod>2026-03-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -349,14 +349,20 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://adakanuwu.github.io/MPK/tramwaje/Konstal-102Na</loc>
+    <lastmod>2026-03-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://adakanuwu.github.io/MPK/tramwaje/Konstal-105Na</loc>
-    <lastmod>2026-03-25</lastmod>
+    <lastmod>2026-03-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://adakanuwu.github.io/MPK/tramwaje/Konstal-4N1</loc>
-    <lastmod>2026-03-26</lastmod>
+    <lastmod>2026-03-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

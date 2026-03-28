@@ -22,7 +22,8 @@ document.addEventListener("DOMContentLoaded", () => {
       znr: '<znr style="color: orange; font-weight: bold">',
       ss: '<ss style="color: mediumspringgreen; font-weight: bold">',
       sp: '<sp style="color: orangered; font-weight: bold">!! ~ informacje spekulowane ~ !!</sp>',
-      wyp: '<wyp style="color: darkcyan ; font-weight: bold">'
+      wyp: '<wyp style="color: darkcyan ; font-weight: bold">',
+      spa: '&#8203;'
     };
   
     // Funkcja do zamiany skrótów na obrazy

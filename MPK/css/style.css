@@ -133,6 +133,19 @@ label.logo img {
   height: 85%;
 }
 
+#logo_krotkie {
+  display: none;
+}
+
+@media (max-width: 415px) {
+  #logo_dlugie {
+    display: none;
+  }
+  #logo_krotkie {
+    display: inline;
+  }
+}
+
 nav ul {
   float: right;
   margin-right: 30px;
