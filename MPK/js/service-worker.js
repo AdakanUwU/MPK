@@ -71,7 +71,8 @@ self.addEventListener("install", (e) => {
           const link = el.getAttribute("href") || el.getAttribute("data-href");
 
           if (link) {
-            allAssets.add(new URL(link, navUrl).href);
+            const fullUrl = new URL(link, "/MPK/").href;
+            allAssets.add(fullUrl);
           }
         });
 
@@ -80,7 +81,14 @@ self.addEventListener("install", (e) => {
       }
 
       // 3. zapis wszystkiego do cache
-      await cache.addAll([...allAssets]);
+      for (const url of allAssets) {
+        try {
+          const res = await fetch(url);
+          if (res.ok) await cache.put(url, res.clone());
+        } catch(e) {
+          console.warn("Nie zapisano:", url);
+        }
+      }
     })()
   );
 

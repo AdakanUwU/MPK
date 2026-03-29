@@ -245,6 +245,11 @@ a.pasek:hover {
     width: 1650px;
   }
 }
+@media (max-width: 768px) {
+  .tresc-trasy{
+    margin: 95px 25px 10px 25px;
+  }
+}
 
 .tresc{
   overflow-x: auto;
