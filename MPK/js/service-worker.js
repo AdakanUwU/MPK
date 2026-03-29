@@ -23,9 +23,19 @@ self.addEventListener("install", (e) => {
           const pageRes = await fetch(url);
           const html = await pageRes.text();
 
-          allAssets.add(url); // sama strona
+          allAssets.add(url);
 
           const doc = new DOMParser().parseFromString(html, "text/html");
+
+          // normalne linki
+          doc.querySelectorAll("a[href]").forEach(el => {
+            allAssets.add(new URL(el.getAttribute("href"), url).href);
+          });
+
+          // data-href
+          doc.querySelectorAll("[data-href]").forEach(el => {
+            allAssets.add(new URL(el.getAttribute("data-href"), url).href);
+          });
 
           // CSS
           doc.querySelectorAll("link[href]").forEach(el => {
@@ -45,6 +55,28 @@ self.addEventListener("install", (e) => {
         } catch (err) {
           console.log("Błąd przy:", url);
         }
+      }
+
+      try {
+        const navUrl = "/MPK/nav.htm";
+
+        const navRes = await fetch(navUrl);
+        const navHtml = await navRes.text();
+
+        allAssets.add(navUrl);
+
+        const navDoc = new DOMParser().parseFromString(navHtml, "text/html");
+
+        navDoc.querySelectorAll("a[href], [data-href]").forEach(el => {
+          const link = el.getAttribute("href") || el.getAttribute("data-href");
+
+          if (link) {
+            allAssets.add(new URL(link, navUrl).href);
+          }
+        });
+
+      } catch (err) {
+        console.log("Błąd nav.htm");
       }
 
       // 3. zapis wszystkiego do cache
