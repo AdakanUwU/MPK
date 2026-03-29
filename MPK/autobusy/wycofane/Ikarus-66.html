@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <base href="/MPK/">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Ikarus 66 - MPK Częstochowa</title>
+    <link rel="stylesheet" href="css/style.css"/>
+    
+    <meta name="theme-color" content="#ff8282"> <!--Kolor strony-->
+
+    <link rel="icon" type="image/png" sizes="16x16" href="img/Favicon/16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/Favicon/32.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="img/Favicon/48.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/Favicon/180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="img/Favicon/192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="img/Favicon/512.">
+
+
+    <script src="js/ikony.js" defer></script> <!--wczytywanie ikon-->
+    <script src="js/tabela_link.js" defer></script> <!--wczytywanie klikalnych wierszy tabel-->
+    <script src="js/toogleMenu.js" defer></script><!--Skrypt do listy menu-->
+
+    <script src="js/w_gore.js" defer></script> <!--Skrypt do przycisku przesuwania do samej góry-->
+    <script src="js/zdjecia.js" defer></script> 
+    <script src="js/foto-blok.js" defer></script> <!--Blokada menu kontekstowego na zdjęciach-->
+
+    <style>
+        .kolumna-opis {
+            font-weight: bold;
+        }
+    </style>
+
+    <meta property="og:title" content='Ikarus 66 - MPK Częstochowa'> <!--Model-->
+    <meta property="og:image" content="https://komunikacja.cc/MPK/img/Ikarus66/miniaturka.webp"> <!--Tutaj miniaturka-->
+    
+    <meta property="og:site_name" content="MPK Częstochowa"> <!--Nazwa strony-->
+    <meta property="og:type" content="website"> <!--Tego nie ruszać-->
+
+</head>
+<body>
+    <div id="nav"></div>
+    <script>fetch('nav.htm') .then(response => response.text()) 
+    .then(data => document.getElementById('nav').innerHTML = data);
+    </script>
+
+    <div class="tresc"> <!--Główna treść strony-->
+        <h1>Ikarus 66</h1><hr />
+        <BR>
+        <!--<img src="img/Ikarus620/miniaturka.webp" alt="Ikarus 620 nr 207" class="fullscreen-img miniatura">
+        <BR>-->
+
+        <div class="opis-pojazdu">
+            <p style="text-indent: 30px;">
+            Pierwsze Ikarusy 66 pojawił się w Częstochowie w 1966 roku, kursowały zarówno na liniach jak
+            i turystycznie, chociaż fabrycznie był projektowany głównie jako autobus międzymiastowy.
+            Przyjeżdżały w dwóch partiach w 1966-1967 i 1971-1972. Kursowały do 1980, kiedy
+            zezłomowano ostatniego nr 186. Pomalowane były na biało-czerwono. 
+            </p><p style="text-indent: 30px;">
+            Autobus wyróżniał się przedewszystkim swoją nowoczesną sylwetką. Wyposażony w sporą panormaiczną
+            szybę czołową wraz z zaokrągleniami już od przodu wyróżniał się na ulicy na tle bardziej płaskich
+            pojazdów. Całość konstrukcji jest opływowa a przód lekko pod kątem co obniża mu opór powietrza.
+            Innowacją było zamontowanie silnika na tyle, w latach 60 było to niestosowane rozwiązanie, w
+            charkakterystycznym wystającym dziobie z dużą kratą wentylacyjną. To umiejscowienie sprawiało,
+            że cały pojazd był bardziej komfortowy dla pasażerów, ale przedewszystkim dla kierowcy, którzy
+            standardowo zawsze siedzieli tuż obok silnika (co dawało dużo ciepła, hałasu, często wyciek
+            spalin i ogólnie zmniejsząło przestrzeń pracy).
+            </p>
+        </div>
+        
+        <BR>
+        <h2>Dane technicze:</h2><hr><br>
+        <TABLE class="dane-techniczne"> <!--Tabela pojazdów-->
+            <colgroup>
+                <col style="width: 50%;">
+                <col style="width: 50%;">
+            </colgroup>
+
+            <TR> <!--Nagłówek tabeli-->
+            <TH width="90%" colspan="2" style="font-size: 20px;">Ikarus 66</TH>
+            </TR>
+
+            <TR class="tabela-hover"> <!--Producent-->
+                <TD class="kolumna-opis">Producent</TD>
+                <TD>Ikarus</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Długość-->
+                <TD class="kolumna-opis">Długość</TD>
+                <TD>11 400 mm</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Szerokość-->
+                <TD class="kolumna-opis">Szerokość</TD>
+                <TD>2500 mm</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Wysokość-->
+                <TD class="kolumna-opis">Wysokość</TD>
+                <TD>3000 mm</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Liczba miejsc siedzących-->
+                <TD class="kolumna-opis">Masa</TD>
+                <TD>?? KG</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Układ drzwi-->
+                <TD class="kolumna-opis">Układ drzwi</TD>
+                <TD>3-3-0</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Wysokość podłogi przy drzwiach-->
+                <TD class="kolumna-opis">Wysokość podłogi przy drzwiach</TD>
+                <TD>935-935-x [mm]</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Liczba miejsc siedzących-->
+                <TD class="kolumna-opis">Po przyklęku</TD>
+                <TD>Brak możliwości przyklęku</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Silnik-->
+                <TD class="kolumna-opis">Silnik (moc)</TD>
+                <TD>Csepel D-614 (107 kW)</TD>
+            </TR>  
+            <TR class="tabela-hover"> <!--Skrzynia biegów-->
+                <TD class="kolumna-opis">Skrzynia Biegów</TD>
+                <TD>ATRA ASH65-3</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Liczba miejsc siedzących-->
+                <TD class="kolumna-opis">Liczba miejsc siedzących</TD>
+                <TD>??</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Liczba miejsc stojących-->
+                <TD class="kolumna-opis">Liczba miejsc stojących</TD>
+                <TD>??</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Udział niskiej podłogi-->
+                <TD class="kolumna-opis">Udział niskiej podłogi</TD>
+                <TD>0% (wysokopodłogowy)</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Klimatyzacja-->
+                <TD class="kolumna-opis">Klimatyzacja</TD>
+                <TD>Nie</TD>
+            </TR>
+        </TABLE>
+
+        <BR>
+        <h2>Spis pojazdów:</h2><hr><br>
+
+        <TABLE class="spis" > <!--Tabela pojazdów-->
+            <TR> <!--Nagłówek tabeli-->
+            <TH width="90px">Numer</TH>
+            <TH width="200px">Malowanie</TH>
+            <TH width="55px">Rok prod.</TH>
+            <TH width="200px">Atrybuty</TH>
+            <TH width="">Uwagi</TH>
+            <TH width="100px">Rejestracja</TH>
+            <TH width="85px">Linki</TH>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>155</TD>
+                <TD>Czerwono-Białe</TD>
+                <TD>1966-1974</TD>
+                <TD></TD>
+                <TD><zz> w 1974 roku.</TD>
+                <TD>SF-85-07</TD>
+                <TD rowspan="50"><A href="https://czgk.pl/categories.php?cat_id=8349" target="_blank">CZGK</A></TD>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>180</TD>
+                <TD>Czerwono-Białe</TD>
+                <TD>1967-1975</TD>
+                <TD></TD>
+                <TD><zz> w 1975 roku.</TD>
+                <TD>97-17-SF</TD>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>181</TD>
+                <TD>Czerwono-Białe</TD>
+                <TD>1967-1975</TD>
+                <TD></TD>
+                <TD><zz> w 1975 roku.</TD>
+                <TD>97-18-SF</TD>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>182</TD>
+                <TD>Czerwono-Białe</TD>
+                <TD>1967-1975</TD>
+                <TD></TD>
+                <TD><zz> w 1975 roku.</TD>
+                <TD>97-19-SF</TD>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>183</TD>
+                <TD>Czerwono-Białe</TD>
+                <TD>1971-1978</TD>
+                <TD></TD>
+                <TD><zz> w 1978 roku. Dawniej 25-31-SF.</TD>
+                <TD>CZG 610C</TD>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>184</TD>
+                <TD>Czerwono-Białe</TD>
+                <TD>1971-1978</TD>
+                <TD></TD>
+                <TD><zz> w 1978 roku. Dawniej 25-32-SF.</TD>
+                <TD>CZG 611C</TD>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>185</TD>
+                <TD>Czerwono-Białe</TD>
+                <TD>1971-1978</TD>
+                <TD></TD>
+                <TD><zz> w 1978 roku. Dawniej 25-33-SF.</TD>
+                <TD>CZG 612C</TD>
+            </TR>
+
+           <TR class="tabela-hover">
+                <TD>186</TD>
+                <TD>Czerwono-Białe</TD>
+                <TD>1972-1980</TD>
+                <TD></TD>
+                <TD><zz> w 1980 roku. Dawniej SV-10-89.</TD>
+                <TD>CZG 613C</TD>
+            </TR> 
+        </TABLE><BR>
+
+        
+        <h2>Stan taboru na przestrzeni lat:</h2><hr><br>
+        <TABLE class="ilostan" > <!--Tabela pojazdów-->
+            <TR> <!--Nagłówek tabeli--><!--
+                <TH width="70px">Rok</TH>
+                <TH width="130px">Wpisane na stan</TH>
+                <TH width="130px">Skreślone ze stanu</TH>
+                <TH width="100px">Ilość na koniec roku</TH>
+            </TR>
+            <TR>
+                <TD>1970</TD>
+                <TD>10 (200-209)</TD>
+                <TD>-</TD>
+                <TD>10</TD>
+            </TR>
+            <TR>
+                <TD>1971</TD>
+                <TD>12 (210-221)</TD>
+                <TD>-</TD>
+                <TD>22</TD>
+            </TR>
+            <TR>
+                <TD>1972</TD>
+                <TD>32 (222-253)</TD>
+                <TD>-</TD>
+                <TD>54</TD>
+            </TR>
+            <TR>
+                <TD>1973-1979</TD>
+                <TD>-</TD>
+                <TD>54</TD>
+                <TD>0</TD>
+            </TR>
+            <TR>
+                <TD>1980+</TD>
+                <TD>-</TD>
+                <TD>-</TD>
+                <TD>0</TD>
+            </TR>
+        </TABLE>-->
+
+        <BR>
+        <h2>Zdjęcia pojazdów:</h2><hr><br>
+        <div class="galeria">
+            Brak
+        </div>
+
+        <!--Okno do otwierania zdjęć na całej stronie-->
+        <div id="fullscreenOverlay" class="fullscreen-overlay">
+            <span id="closeBtn">&times;</span>
+            <img id="fullscreenImage" class="fullscreen-image">
+        </div>
+    </div>
+<button onclick="scrollToTop()" id="scrollTopBtn" title="Do góry">⬆</button>
+</body>
+</html>

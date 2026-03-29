@@ -26,7 +26,7 @@
   </url>
   <url>
     <loc>https://adakanuwu.github.io/MPK/tramwaje</loc>
-    <lastmod>2026-03-28</lastmod>
+    <lastmod>2026-03-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -217,8 +217,20 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://adakanuwu.github.io/MPK/autobusy/wycofane/Ikarus-60</loc>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://adakanuwu.github.io/MPK/autobusy/wycofane/Ikarus-620</loc>
     <lastmod>2026-03-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://adakanuwu.github.io/MPK/autobusy/wycofane/Ikarus-66</loc>
+    <lastmod>2026-03-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -405,6 +417,12 @@
   <url>
     <loc>https://adakanuwu.github.io/MPK/tramwaje/Pesa-2010N-10</loc>
     <lastmod>2026-03-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://adakanuwu.github.io/MPK/tramwaje/T2</loc>
+    <lastmod>2026-03-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

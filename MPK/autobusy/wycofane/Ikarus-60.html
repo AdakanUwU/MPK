@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <base href="/MPK/">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Ikarus 60 - MPK Częstochowa</title>
+    <link rel="stylesheet" href="css/style.css"/>
+    
+    <meta name="theme-color" content="#ff8282"> <!--Kolor strony-->
+
+    <link rel="icon" type="image/png" sizes="16x16" href="img/Favicon/16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/Favicon/32.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="img/Favicon/48.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/Favicon/180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="img/Favicon/192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="img/Favicon/512.">
+
+
+    <script src="js/ikony.js" defer></script> <!--wczytywanie ikon-->
+    <script src="js/tabela_link.js" defer></script> <!--wczytywanie klikalnych wierszy tabel-->
+    <script src="js/toogleMenu.js" defer></script><!--Skrypt do listy menu-->
+
+    <script src="js/w_gore.js" defer></script> <!--Skrypt do przycisku przesuwania do samej góry-->
+    <script src="js/zdjecia.js" defer></script> 
+    <script src="js/foto-blok.js" defer></script> <!--Blokada menu kontekstowego na zdjęciach-->
+
+    <style>
+        .kolumna-opis {
+            font-weight: bold;
+        }
+    </style>
+
+    <meta property="og:title" content='Ikarus 60 - MPK Częstochowa'> <!--Model-->
+    <meta property="og:image" content="https://komunikacja.cc/MPK/img/Ikarus60/miniaturka.webp"> <!--Tutaj miniaturka-->
+    
+    <meta property="og:site_name" content="MPK Częstochowa"> <!--Nazwa strony-->
+    <meta property="og:type" content="website"> <!--Tego nie ruszać-->
+
+</head>
+<body>
+    <div id="nav"></div>
+    <script>fetch('nav.htm') .then(response => response.text()) 
+    .then(data => document.getElementById('nav').innerHTML = data);
+    </script>
+
+    <div class="tresc"> <!--Główna treść strony-->
+        <h1>Ikarus 60</h1><hr />
+        <BR>
+        <img src="img/Ikarus60/miniaturka.webp" alt="Prezentacja nowych Ikarusów 60" class="fullscreen-img miniatura">
+        <BR>
+
+        <div class="opis-pojazdu">
+            <p style="text-indent: 30px;">
+            W Częstochowie ze znanych informacji wynika, że znajdował się tylko jeden egzemplarz,
+            wyprodukowany w nieznanym roku (pomiędzy 1952-1959) a zezłomowany w 1965. W rzeczywistości
+            napewno było ich więcej, jednak o innych nie ma żadnych informacji.
+            </p><p style="text-indent: 30px;">
+            W dużej mierze
+            Ikarus 60 opierał się na swoim poprzedniku - <a href="autobusy/wycofane/MÁVAG-Tr5">MÁVAGu-Tr5</a>.
+            Zmodyfikowano w stosunku do niego umiejscowienie silnika, który wcałości znalazł się w karosierii,
+            po przez zrobienie ściany czołowej pionową. 
+            </p>
+        </div>
+        
+        <BR>
+        <h2>Dane technicze:</h2><hr><br>
+        <TABLE class="dane-techniczne"> <!--Tabela pojazdów-->
+            <colgroup>
+                <col style="width: 50%;">
+                <col style="width: 50%;">
+            </colgroup>
+
+            <TR> <!--Nagłówek tabeli-->
+            <TH width="90%" colspan="2" style="font-size: 20px;">Ikarus 60</TH>
+            </TR>
+
+            <TR class="tabela-hover"> <!--Producent-->
+                <TD class="kolumna-opis">Producent</TD>
+                <TD>Ikarus</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Długość-->
+                <TD class="kolumna-opis">Długość</TD>
+                <TD>9 450 mm</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Szerokość-->
+                <TD class="kolumna-opis">Szerokość</TD>
+                <TD>2500 mm</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Wysokość-->
+                <TD class="kolumna-opis">Wysokość</TD>
+                <TD>2965 mm</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Liczba miejsc siedzących-->
+                <TD class="kolumna-opis">Masa</TD>
+                <TD>7930 KG</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Układ drzwi-->
+                <TD class="kolumna-opis">Układ drzwi</TD>
+                <TD>0-4-4</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Wysokość podłogi przy drzwiach-->
+                <TD class="kolumna-opis">Wysokość podłogi przy drzwiach</TD>
+                <TD>x-??-?? [mm]</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Liczba miejsc siedzących-->
+                <TD class="kolumna-opis">Po przyklęku</TD>
+                <TD>Brak możliwości przyklęku</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Silnik-->
+                <TD class="kolumna-opis">Silnik (moc)</TD>
+                <TD>Csepel D-613 (91,5 kW)</TD>
+            </TR>  
+            <TR class="tabela-hover"> <!--Skrzynia biegów-->
+                <TD class="kolumna-opis">Skrzynia Biegów</TD>
+                <TD>Brak danych</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Liczba miejsc siedzących-->
+                <TD class="kolumna-opis">Liczba miejsc siedzących</TD>
+                <TD>24</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Liczba miejsc stojących-->
+                <TD class="kolumna-opis">Liczba miejsc stojących</TD>
+                <TD>36</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Udział niskiej podłogi-->
+                <TD class="kolumna-opis">Udział niskiej podłogi</TD>
+                <TD>0% (wysokopodłogowy)</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Klimatyzacja-->
+                <TD class="kolumna-opis">Klimatyzacja</TD>
+                <TD>Nie</TD>
+            </TR>
+        </TABLE>
+
+        <BR>
+        <h2>Spis pojazdów:</h2><hr><br>
+
+        <p style="color: red; font-weight: bold; font-size: 20px;">Nie wszystkie informacje udało się uzyskać
+        </p><BR>
+
+        <TABLE class="spis" > <!--Tabela pojazdów-->
+            <TR> <!--Nagłówek tabeli-->
+            <TH width="90px">Numer</TH>
+            <TH width="200px">Malowanie</TH>
+            <TH width="55px">Rok prod.</TH>
+            <TH width="200px">Atrybuty</TH>
+            <TH width="">Uwagi</TH>
+            <TH width="100px">Rejestracja</TH>
+            <TH width="85px">Linki</TH>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>23</TD>
+                <TD>-??-</TD>
+                <TD>??-1965</TD>
+                <TD></TD>
+                <TD><zz> w 1965 roku.</TD>
+                <TD>SF-0651 </TD>
+                <TD></TD>
+            </TR>
+        </TABLE><BR>
+
+        
+        <h2>Stan taboru na przestrzeni lat:</h2><hr><br>
+        <TABLE class="ilostan" > <!--Tabela pojazdów-->
+            <TR> <!--Nagłówek tabeli--><!--
+                <TH width="70px">Rok</TH>
+                <TH width="130px">Wpisane na stan</TH>
+                <TH width="130px">Skreślone ze stanu</TH>
+                <TH width="100px">Ilość na koniec roku</TH>
+            </TR>
+            <TR>
+                <TD>1970</TD>
+                <TD>10 (200-209)</TD>
+                <TD>-</TD>
+                <TD>10</TD>
+            </TR>
+            <TR>
+                <TD>1971</TD>
+                <TD>12 (210-221)</TD>
+                <TD>-</TD>
+                <TD>22</TD>
+            </TR>
+            <TR>
+                <TD>1972</TD>
+                <TD>32 (222-253)</TD>
+                <TD>-</TD>
+                <TD>54</TD>
+            </TR>
+            <TR>
+                <TD>1973-1979</TD>
+                <TD>-</TD>
+                <TD>54</TD>
+                <TD>0</TD>
+            </TR>
+            <TR>
+                <TD>1980+</TD>
+                <TD>-</TD>
+                <TD>-</TD>
+                <TD>0</TD>
+            </TR>
+        </TABLE>-->
+
+        <BR>
+        <h2>Zdjęcia pojazdów:</h2><hr><br>
+        <div class="galeria">
+            Brak
+        </div>
+
+        <!--Okno do otwierania zdjęć na całej stronie-->
+        <div id="fullscreenOverlay" class="fullscreen-overlay">
+            <span id="closeBtn">&times;</span>
+            <img id="fullscreenImage" class="fullscreen-image">
+        </div>
+    </div>
+<button onclick="scrollToTop()" id="scrollTopBtn" title="Do góry">⬆</button>
+</body>
+</html>

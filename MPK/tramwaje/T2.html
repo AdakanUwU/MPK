@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <base href="/MPK/">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Düsseldorf T2 - MPK Częstochowa</title>
+    <link rel="stylesheet" href="css/style.css"/>
+    
+    <meta name="theme-color" content="#ff8282"> <!--Kolor strony-->
+
+    <link rel="icon" type="image/png" sizes="16x16" href="img/Favicon/16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/Favicon/32.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="img/Favicon/48.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/Favicon/180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="img/Favicon/192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="img/Favicon/512.">
+
+    <script src="js/ikony.js" defer></script> <!--wczytywanie ikon-->
+    <script src="js/tabela_link.js" defer></script> <!--wczytywanie klikalnych wierszy tabel-->
+    <script src="js/toogleMenu.js" defer></script><!--Skrypt do listy menu-->
+
+    <script src="js/w_gore.js" defer></script> <!--Skrypt do przycisku przesuwania do samej góry-->
+    <script src="js/zdjecia.js" defer></script> 
+    <script src="js/foto-blok.js" defer></script> <!--Blokada menu kontekstowego na zdjęciach-->
+
+    
+    <meta property="og:title" content='Düsseldorf T2 - MPK Częstochowa'> <!--Model-->
+    <meta property="og:image" content="https://komunikacja.cc/MPK/img/T2/miniaturka.webp"> <!--Tutaj miniaturka-->
+    
+    <meta property="og:site_name" content="MPK Częstochowa"> <!--Nazwa strony-->
+    <meta property="og:type" content="website"> <!--Tego nie ruszać-->
+</head>
+<body>
+    <div id="nav"></div>
+    <script>fetch('nav.htm') .then(response => response.text()) 
+    .then(data => document.getElementById('nav').innerHTML = data);
+    </script>
+
+    <div class="tresc"> <!--Główna treść strony-->
+        <h1>Düsseldorf T2</h1><hr />
+        <BR>
+        <img src="img/T2/miniaturka.webp" alt="T2 #220" class="fullscreen-img miniatura">
+        <BR>
+
+        <div class="opis-pojazdu">
+            <p style="text-indent: 30px;">
+            Tramwaj Düsseldorf T2 został pozyskany w okolicach 1958 roku do Częstochowy z Katowic,
+            gdzie znajdował się od II Wojny Światowej. Oryginalnie kursował dla Rheinbahn w Desseldorfie.
+            Wyprodukowany najpradwodpodobniej w 1902 roku przez Waggonfabrik Uerdingen. W latach 50
+            przeznaczono jeden z 10 wagonów w Katowicach na roboczy a później oddano go do Częstochowy.
+            Oznaczono jako nr 220 i do 1963 był używany jako tramwaj roboczy. Omyłkowo skasowano go gdy
+            miał przejść naprawę główną i zastąpiono zbudowaną przez pracowników MPK "eNką" o tym samym 
+            numerze, oznaczoną po prostu jako <a href="tramwaje/Konstal-4N1">Konstal 4N1</a>. Podwozie
+            z T2 poslużyło do skonstruowania pługu nr 803. Znany jest tylko jeden inny egzeplaż tego 
+            tramwaju i znajduje się on w Luksemburgu.
+            </p>
+        </div>
+
+        <BR>
+        <h2>Dane technicze:</h2><hr><br>
+        <TABLE class="dane-techniczne"> <!--Tabela pojazdów-->
+            <colgroup>
+                <col style="width: 50%;">
+                <col style="width: 50%;">
+            </colgroup>
+
+            <TR> <!--Nagłówek tabeli-->
+            <TH width="90%" colspan="2" style="font-size: 20px;">T2</TH>
+            </TR>
+
+            <TR class="tabela-hover"> <!--Producent-->
+                <TD class="kolumna-opis">Producent</TD>
+                <TD>Waggonfabrik Uerdingen</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Długość-->
+                <TD class="kolumna-opis">Długość</TD>
+                <TD>10 400 mm</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Szerokość-->
+                <TD class="kolumna-opis">Szerokość</TD>
+                <TD>2160 mm</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Wysokość-->
+                <TD class="kolumna-opis">Wysokość</TD>
+                <TD>3300 mm</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Masa-->
+                <TD class="kolumna-opis">Masa</TD>
+                <TD>14 000 KG</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Układ drzwi-->
+                <TD class="kolumna-opis">Układ drzwi</TD>
+                <TD>2-2</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Wysokość podłogi przy drzwiach-->
+                <TD class="kolumna-opis">Wysokość podłogi przy drzwiach</TD>
+                <TD>945-945 [mm]</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Silnik-->
+                <TD class="kolumna-opis">Silnik (moc)</TD>
+                <TD>LT-31 (2x 60kW)</TD>
+            </TR>  
+            <TR class="tabela-hover"> <!--Liczba miejsc siedzących-->
+                <TD class="kolumna-opis">Liczba miejsc siedzących</TD>
+                <TD>16</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Liczba miejsc stojących-->
+                <TD class="kolumna-opis">Liczba miejsc stojących</TD>
+                <TD>60</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Udział niskiej podłogi-->
+                <TD class="kolumna-opis">Udział niskiej podłogi</TD>
+                <TD>0% (wysokopodłogowych)</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Klimatyzacja-->
+                <TD class="kolumna-opis">Klimatyzacja</TD>
+                <TD>Nie</TD>
+            </TR>
+        </TABLE>
+
+        <BR>
+        <h2>Spis pojazdów:</h2><hr><br>
+
+        <TABLE class="spis" > <!--Tabela pojazdów-->
+            <TR> <!--Nagłówek tabeli-->
+            <TH width="90px">Numer</TH>
+            <TH width="200px">Malowanie</TH>
+            <TH width="55px">Rok prod.</TH>
+            <TH width="200px">Atrybuty</TH>
+            <TH width="">Uwagi</TH>
+            <TH width="100px">Skład:</TH>
+            <TH width="85px">Linki</TH>
+            </TR>
+
+        <TR class="tabela-hover">
+            <TD>220</TD>
+            <TD>-??-</TD>
+            <TD>1901-1963</TD>
+            <TD><tram></TD>
+            <TD><zz> w 1963 roku.<BR>Uzyskany z Katowic.</TD>
+            <TD>601+???</TD>
+            <TD></TD>
+        </TR>
+        </TABLE>
+
+        <BR>
+        <h2>Stan taboru na przestrzeni lat:</h2><hr><br>
+        <TABLE class="ilostan" > <!--Tabela pojazdów-->
+            <TR> <!--Nagłówek tabeli-->
+                <TH width="70px">Rok</TH>
+                <TH width="130px">Wpisane na stan</TH>
+                <TH width="130px">Skreślone ze stanu</TH>
+                <TH width="100px">Ilość na koniec roku</TH>
+            </TR>
+
+            <TR ALIGN="center">
+                <TD>1958</TD>
+                <TD>1 (220)</TD>
+                <TD>-</TD>
+                <TD>1</TD>
+            </TR>
+            <TR ALIGN="center">
+                <TD>1959-1962</TD>
+                <TD>-</TD>
+                <TD>-</TD>
+                <TD>1</TD>
+            </TR>
+            <TR ALIGN="center">
+                <TD>1963</TD>
+                <TD>-</TD>
+                <TD>1</TD>
+                <TD>0</TD>
+            </TR>
+            <TR ALIGN="center">
+                <TD>1964+</TD>
+                <TD>-</TD>
+                <TD>-</TD>
+                <TD>0</TD>
+            </TR>
+        </TABLE>
+
+
+        <BR>
+        <h2>Zdjęcia pojazdów:</h2><hr><br>
+        <div class="galeria">
+
+            <!--<img src="img/M10LFE/519/1.jpg" alt="Autosan M10LFE nr 519" class="fullscreen-img">-->
+        </div>
+        <!--Okno do otwierania zdjęć na całej stronie-->
+        <div id="fullscreenOverlay" class="fullscreen-overlay">
+            <span id="closeBtn">&times;</span>
+            <img id="fullscreenImage" class="fullscreen-image">
+        </div>
+    </div>
+<button onclick="scrollToTop()" id="scrollTopBtn" title="Do góry">⬆</button>
+</body>
+</html>
