@@ -8,19 +8,19 @@
   </url>
   <url>
     <loc>https://adakanuwu.github.io/MPK/autobusy</loc>
-    <lastmod>2026-03-28</lastmod>
+    <lastmod>2026-03-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://adakanuwu.github.io/MPK/index</loc>
-    <lastmod>2026-03-28</lastmod>
+    <lastmod>2026-03-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://adakanuwu.github.io/MPK/informacje</loc>
-    <lastmod>2026-03-28</lastmod>
+    <lastmod>2026-03-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -290,7 +290,7 @@
   </url>
   <url>
     <loc>https://adakanuwu.github.io/MPK/autobusy/wycofane/MAN-NL222</loc>
-    <lastmod>2026-03-28</lastmod>
+    <lastmod>2026-03-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -307,8 +307,26 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://adakanuwu.github.io/MPK/autobusy/wypozyczone/AMZ-CS10E</loc>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://adakanuwu.github.io/MPK/autobusy/wypozyczone/DAB-12-1200B</loc>
     <lastmod>2026-03-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://adakanuwu.github.io/MPK/autobusy/wypozyczone/Ikarus-120e</loc>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://adakanuwu.github.io/MPK/autobusy/wypozyczone/MAN-NG734</loc>
+    <lastmod>2026-03-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -368,7 +386,7 @@
   </url>
   <url>
     <loc>https://adakanuwu.github.io/MPK/tramwaje/Konstal-4ND1</loc>
-    <lastmod>2026-03-28</lastmod>
+    <lastmod>2026-03-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -398,109 +416,109 @@
   </url>
   <url>
     <loc>https://adakanuwu.github.io/MPK/trasy/linia-1</loc>
-    <lastmod>2026-03-25</lastmod>
+    <lastmod>2026-03-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://adakanuwu.github.io/MPK/trasy/linia-10</loc>
-    <lastmod>2026-03-25</lastmod>
+    <lastmod>2026-03-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://adakanuwu.github.io/MPK/trasy/linia-11</loc>
-    <lastmod>2026-03-25</lastmod>
+    <lastmod>2026-03-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://adakanuwu.github.io/MPK/trasy/linia-12</loc>
-    <lastmod>2026-03-25</lastmod>
+    <lastmod>2026-03-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://adakanuwu.github.io/MPK/trasy/linia-13</loc>
-    <lastmod>2026-03-25</lastmod>
+    <lastmod>2026-03-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://adakanuwu.github.io/MPK/trasy/linia-14</loc>
-    <lastmod>2026-03-25</lastmod>
+    <lastmod>2026-03-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://adakanuwu.github.io/MPK/trasy/linia-15</loc>
-    <lastmod>2026-03-25</lastmod>
+    <lastmod>2026-03-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://adakanuwu.github.io/MPK/trasy/linia-16</loc>
-    <lastmod>2026-03-25</lastmod>
+    <lastmod>2026-03-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://adakanuwu.github.io/MPK/trasy/linia-17</loc>
-    <lastmod>2026-03-25</lastmod>
+    <lastmod>2026-03-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://adakanuwu.github.io/MPK/trasy/linia-18</loc>
-    <lastmod>2026-03-25</lastmod>
+    <lastmod>2026-03-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://adakanuwu.github.io/MPK/trasy/linia-19</loc>
-    <lastmod>2026-03-25</lastmod>
+    <lastmod>2026-03-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://adakanuwu.github.io/MPK/trasy/linia-2</loc>
-    <lastmod>2026-03-25</lastmod>
+    <lastmod>2026-03-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://adakanuwu.github.io/MPK/trasy/linia-20</loc>
-    <lastmod>2026-03-25</lastmod>
+    <lastmod>2026-03-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://adakanuwu.github.io/MPK/trasy/linia-21</loc>
-    <lastmod>2026-03-25</lastmod>
+    <lastmod>2026-03-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://adakanuwu.github.io/MPK/trasy/linia-22</loc>
-    <lastmod>2026-03-25</lastmod>
+    <lastmod>2026-03-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://adakanuwu.github.io/MPK/trasy/linia-3</loc>
-    <lastmod>2026-03-25</lastmod>
+    <lastmod>2026-03-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://adakanuwu.github.io/MPK/trasy/linia-4</loc>
-    <lastmod>2026-03-25</lastmod>
+    <lastmod>2026-03-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://adakanuwu.github.io/MPK/trasy/linia-40</loc>
-    <lastmod>2026-03-25</lastmod>
+    <lastmod>2026-03-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
