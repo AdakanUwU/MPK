@@ -239,6 +239,13 @@ a.pasek:hover {
   margin: 95px 12% 10px 12%;
 }
 
+@media (min-width: 2100px) {
+  .tresc-trasy {
+    margin: 95px auto 10px auto;
+    width: 1650px;
+  }
+}
+
 .tresc{
   overflow-x: auto;
   margin: 95px 12% 10px 12%;
@@ -906,7 +913,6 @@ zz {
   font-size: 3.7rem;
 }
 
-
 .linia-strzalka {
   display: flex;
   align-items: center;
@@ -914,6 +920,26 @@ zz {
   width: 80px;  /* szerokość strzałki */
   font-size: 5rem;
 }
+
+@media (max-width:1000px) {
+  .linia-info {
+    height: 40px
+  }
+  .linia-numer {
+    width: 50px;
+    font-size: 2rem;
+  }
+
+  .bis {
+    font-size: 1rem;
+  }
+
+  .linia-strzalka {
+  width: 25px;  /* szerokość strzałki */
+  font-size: 2.5rem;
+  }
+}
+
 
 .linia-kierunki {
   display: flex;

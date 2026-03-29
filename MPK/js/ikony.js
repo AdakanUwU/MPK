@@ -23,7 +23,9 @@ document.addEventListener("DOMContentLoaded", () => {
       ss: '<ss style="color: mediumspringgreen; font-weight: bold">',
       sp: '<sp style="color: orangered; font-weight: bold">!! ~ informacje spekulowane ~ !!</sp>',
       wyp: '<wyp style="color: darkcyan ; font-weight: bold">',
-      spa: '&#8203;'
+      spa: '&#8203;',
+      scrl: '<marquee scrollamount="10">',
+      scrle: '</marquee>'
     };
   
     // Funkcja do zamiany skrótów na obrazy

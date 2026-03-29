@@ -1,13 +1,25 @@
-if ('serviceWorker' in navigator) {
-  // Czekamy, aż strona się załaduje
-  window.addEventListener('load', () => {
-    navigator.serviceWorker.register('/MPK/js/service-worker.js')
-      .then(registration => {
-        console.log('Service Worker zarejestrowany:', registration.scope);
-      })
-      .catch(error => {
-        console.error('Błąd rejestracji Service Workera:', error);
-      });
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", async () => {
+    const reg = await navigator.serviceWorker.register("/MPK/service-worker.js", {
+      scope: "/MPK/"
+    });
+
+    console.log("SW działa w /MPK/");
+
+    reg.onupdatefound = () => {
+      const newWorker = reg.installing;
+
+      newWorker.onstatechange = () => {
+        if (newWorker.state === "installed") {
+          if (navigator.serviceWorker.controller) {
+            console.log("Nowa wersja – odświeżam...");
+            window.location.reload();
+          } else {
+            console.log("Offline gotowy!");
+          }
+        }
+      };
+    };
   });
 }
 

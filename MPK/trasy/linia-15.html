@@ -20,7 +20,7 @@
     <meta property="og:title" content="Linia 15 - MPK Częstochowa"> <!--Model-->
     <meta property="og:description" content="Kukuczki ↔ Kucelin / Walcownia / Huta - Wydział Transportu"> <!--Opisik krótszy-->
     <!--<meta property="og:image" content=""> (bez miniaturki, bo co dać do lini mrr) tutaj miniaturkę-->
-    <meta property="og:type" content="website"> <!--Tego Adulka nie rusza :3-->
+    <meta property="og:type" content="website"> 
 
 </head>
 <body>
@@ -29,13 +29,23 @@
     .then(data => document.getElementById('nav').innerHTML = data);
     </script>
 
+    <script>
+        function isElementOverflowing(element) {
+        var overflowX = element.offsetWidth < element.scrollWidth,
+        overflowY = element.offsetHeight < element.scrollHeight;
+
+    return (overflowX || overflowY);
+}
+
+    </script>
+
     <div class="tresc-trasy"> <!--Główna treść strony-->
         <div class="linia-info">
             <div class="linia-numer">15</div> <!--Duży numer linii-->
             <div class="linia-strzalka">↕</div> <!--Strzałka stała-->
             <div class="linia-kierunki">
                 <div>Kukuczki</div>
-                <div>Kucelin / Walcownia / Huta - Wydział Transportu</div>
+                <div><scrl>Kucelin / Walcownia / Huta - Wydział Transportu<scrle></div>
             </div>
         </div><span style="float: right;">Od 1 lipca 2024</span><br>
         <hr><BR>
