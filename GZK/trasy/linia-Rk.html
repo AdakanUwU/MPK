@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <base href="/GZK/">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Linia Rk - GZK Rędziny - MPK w Częstochowie</title>
+    <link rel="stylesheet" href="css/style.css"/>
+    
+    <meta name="theme-color" content="#ff8282"> <!--Kolor strony-->
+
+    <script src="js/ikony.js" defer></script> <!--wczytywanie ikon-->
+    <script src="js/tabela_link.js" defer></script> <!--wczytywanie klikalnych wierszy tabel-->
+    <script src="js/toogleMenu.js" defer></script><!--Skrypt do listy menu-->
+
+    <script src="js/w_gore.js" defer></script> <!--Skrypt do przycisku przesuwania do samej góry-->
+    <script src="js/foto-blok.js" defer></script> <!--Blokada menu kontekstowego na zdjęciach-->
+
+    
+    <!--Sekacja ładnych embed 🌸 (^///^)-->
+    <meta property="og:title" content="Linia Rk - GZK Rędziny"> <!--Model-->
+    <meta property="og:description" content="Częstochowa-Piłsudskiego↔Karolina"> <!--Opisik krótszy-->
+    <!--<meta property="og:image" content=""> (bez miniaturki, bo co dać do lini mrr) tutaj miniaturkę-->
+    <meta property="og:type" content="website"> 
+    <meta property="og:site_name" content="MPK Częstochowa"> <!--Nazwa strony-->
+
+</head>
+<body>
+    <div id="nav"></div>
+    <script>fetch('nav.htm') .then(response => response.text()) 
+    .then(data => document.getElementById('nav').innerHTML = data);
+    </script>
+
+    <div class="tresc-trasy"> <!--Główna treść strony-->
+        <div class="linia-info">
+            <div class="linia-numer">Rk</div> <!--Duży numer linii-->
+            <div class="linia-strzalka">↕</div> <!--Strzałka stała-->
+            <div class="linia-kierunki">
+                <div>Częstochowa-Piłsudskiego</div>
+                <div>Karolina</div>
+            </div>
+        </div><span style="float: right;">Od 1 marca 1992</span><br>
+        <hr><BR>
+
+        <table class="linia-tabela">
+            <tr>
+                <th width="30%">Okres</th>
+                <th>Trasa</th>
+            </tr>
+            <tr>
+                <td>Od 1 marca 1992</td>
+                <td>Częstochowa-Piłsudskiego ↔ Karolina</td>
+            </tr>
+        </table><br><br>
+
+        <div class="linia-info">
+            <div class="linia-numer">RkZ</div> <!--Duży numer linii-->
+            <div class="linia-strzalka">↕</div> <!--Strzałka stała-->
+            <div class="linia-kierunki">
+                <div>Częstochowa-Piłsudskiego</div>
+                <div>Karolina p.Kościelec-Zajazd</div>
+            </div>
+        </div><span style="float: right;">?? - ??</span><br>
+        <hr><BR>
+
+            
+        <table class="linia-tabela">
+            <tr>
+                <th width="30%">Okres</th>
+                <th>Trasa</th>
+            </tr>
+            <tr>
+                <td>?? - ??</td>
+                <td>Częstochowa-Piłsudskiego ↔ Karolina</td>
+            </tr>
+        </table><Br>
+
+        <h3>Uwaga:</h3><hr>
+        <uwaga style="font-size: 17px">Linia kursuje tą samą trasą przez Kościelec-Zajazd
+        </uwaga>
+
+    </div>
+
+<button onclick="scrollToTop()" id="scrollTopBtn" title="Do góry">⬆</button>
+</body>
+</html>

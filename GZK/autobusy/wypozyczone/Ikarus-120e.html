@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <base href="/MPK/">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Ikarsu 120e - MPK Częstochowa</title>
+    <link rel="stylesheet" href="css/style.css"/>
+    
+    <meta name="theme-color" content="#ff8282"> <!--Kolor strony-->
+
+    <link rel="icon" type="image/png" sizes="16x16" href="img/Favicon/16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/Favicon/32.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="img/Favicon/48.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/Favicon/180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="img/Favicon/192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="img/Favicon/512.">
+
+    <script src="js/ikony.js" defer></script> <!--wczytywanie ikon-->
+    <script src="js/tabela_link.js" defer></script> <!--wczytywanie klikalnych wierszy tabel-->
+    <script src="js/toogleMenu.js" defer></script><!--Skrypt do listy menu-->
+
+    <script src="js/w_gore.js" defer></script> <!--Skrypt do przycisku przesuwania do samej góry-->
+    <script src="js/zdjecia.js" defer></script> 
+    <script src="js/foto-blok.js" defer></script> <!--Blokada menu kontekstowego na zdjęciach-->
+
+
+    <meta property="og:title" content='Ikarsu 120e - MPK Częstochowa'> <!--Model-->
+    <meta property="og:image" content="https://komunikacja.cc/MPK/img/Ikarsu-120e/miniaturka.webp"> <!--Tutaj miniaturka-->
+    
+    <meta property="og:site_name" content="MPK Częstochowa"> <!--Nazwa strony-->
+    <meta property="og:type" content="website"> <!--Tego nie ruszać-->
+</head>
+<body>
+    <div id="nav"></div>
+    <script>fetch('nav.htm') .then(response => response.text()) 
+    .then(data => document.getElementById('nav').innerHTML = data);
+    </script>
+
+    <div class="tresc"> <!--Główna treść strony-->
+        <h1>Ikarsu 120e</h1><hr />
+        <BR>
+        <!--<img src="img/AMZ-CS10E/miniaturka.webp" alt="AMZ CS10E" class="fullscreen-img miniatura">
+        <BR>-->
+
+        <div class="opis-pojazdu">
+            <p style="text-indent: 30px;">
+            Wypożyczony na testy w okresie 22 października - 2 listopada 2022. Jest to kontyunacja
+            węgierskiej marki Ikarus, jednak z oryginalną firmą ma mniej wspólnego. Produkowany
+            we współpracy Ikarusa z Electrobus Europe. Jest to pierwszy elektryczny autobus
+            bateryjny tego producenta.
+            </p><p style="text-indent: 30px;">
+            Wyniki testów raczej nie były złe, ale przy żadnym przetargu Ikarus nie zgłosił się
+            jako chętny producent.
+            </p>
+        </div>
+        
+        <BR>
+            <h2>Dane technicze:</h2><hr><br>
+        <TABLE class="dane-techniczne"> <!--Tabela pojazdów-->
+            <colgroup>
+                <col style="width: 50%;">
+                <col style="width: 50%;">
+            </colgroup>
+
+            <TR> <!--Nagłówek tabeli-->
+            <TH width="90%" colspan="2" style="font-size: 20px;">Ikarsu 120e</TH>
+            </TR>
+
+            <TR class="tabela-hover"> <!--Producent-->
+                <TD class="kolumna-opis">Producent</TD>
+                <TD>Electrobus Europe/Ikarus</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Długość-->
+                <TD class="kolumna-opis">Długość</TD>
+                <TD>12 191 mm</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Szerokość-->
+                <TD class="kolumna-opis">Szerokość</TD>
+                <TD>2550 mm</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Wysokość-->
+                <TD class="kolumna-opis">Wysokość</TD>
+                <TD>3300 mm</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Liczba miejsc siedzących-->
+                <TD class="kolumna-opis">Masa</TD>
+                <TD>18 600 KG</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Układ drzwi-->
+                <TD class="kolumna-opis">Układ drzwi</TD>
+                <TD>2-2-2</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Wysokość podłogi przy drzwiach-->
+                <TD class="kolumna-opis">Wysokość podłogi przy drzwiach</TD>
+                <TD>360-360-360 [mm]</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Liczba miejsc siedzących-->
+                <TD class="kolumna-opis">Po przyklęku</TD>
+                <TD>Brak danych</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Silnik-->
+                <TD class="kolumna-opis">Silnik (moc)</TD>
+                <TD>CRRC t-Drive MD2021 (165 kW)</TD>
+            </TR>  
+            <TR class="tabela-hover"> <!--Skrzynia biegów-->
+                <TD class="kolumna-opis">Skrzynia Biegów</TD>
+                <TD>Nie dotyczy</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Liczba miejsc siedzących-->
+                <TD class="kolumna-opis">Liczba miejsc siedzących</TD>
+                <TD>29</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Liczba miejsc stojących-->
+                <TD class="kolumna-opis">Liczba miejsc stojących</TD>
+                <TD>57</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Udział niskiej podłogi-->
+                <TD class="kolumna-opis">Udział niskiej podłogi</TD>
+                <TD>100% (niskopodłogowy)</TD>
+            </TR>
+            <TR class="tabela-hover"> <!--Klimatyzacja-->
+                <TD class="kolumna-opis">Klimatyzacja</TD>
+                <TD>Tak</TD>
+            </TR>
+        </TABLE>
+
+        <BR>
+        <h2>Spis pojazdów:</h2><hr><br>
+
+        <TABLE class="spis" > <!--Tabela pojazdów-->
+            <TR> <!--Nagłówek tabeli-->
+            <TH width="90px">Numer</TH>
+            <TH width="200px">Malowanie</TH>
+            <TH width="55px">Rok prod.</TH>
+            <TH width="200px">Atrybuty</TH>
+            <TH width="">Uwagi</TH>
+            <TH width="100px">Rejestracja</TH>
+            <TH width="85px">Linki</TH>
+            </TR>
+    
+            <TR class="tabela-hover">
+                <TD></TD>
+                <TD>Białe</TD>
+                <TD>2021</TD>
+                <TD><ev> <niskopodlogowy> <ac> <kamery> <usb> <biletkier></TD>
+                <TD>Wypożyczony na testy 22 października - 2 listopada 2022.</TD>
+                <TD>WZ 136EX</TD>
+                <TD><A href="https://czgk.pl/categories.php?cat_id=9139" target="_blank">CZGK</A></TD>
+            </TR>    
+        </TABLE>
+
+        <BR>
+        <h2>Stan taboru na przestrzeni lat:</h2><hr><br>
+        <TABLE class="ilostan" > <!--Tabela pojazdów-->
+            <TR> <!--Nagłówek tabeli-->
+                <TH width="70px">Rok</TH>
+                <TH width="130px">Wpisane na stan</TH>
+                <TH width="130px">Skreślone ze stanu</TH>
+                <TH width="100px">Ilość na koniec roku</TH>
+            </TR>
+    
+            <TR>
+                <TD>2022</TD>
+                <TD>1</TD>
+                <TD>1</TD>
+                <TD>0</TD>
+            </TR>
+        </TABLE>
+
+
+        <BR>
+        <h2>Zdjęcia pojazdów:</h2><hr><br>
+        <div class="galeria">
+        </div>
+
+        <!--Okno do otwierania zdjęć na całej stronie-->
+        <div id="fullscreenOverlay" class="fullscreen-overlay">
+            <span id="closeBtn">&times;</span>
+            <img id="fullscreenImage" class="fullscreen-image">
+        </div>
+    </div>
+<button onclick="scrollToTop()" id="scrollTopBtn" title="Do góry">⬆</button>
+</body>
+</html>

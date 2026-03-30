@@ -109,8 +109,8 @@ body {
 
 
 nav {
-  background-color: rgb(255, 130, 130);
-  list-style: none;
+  background-color: rgb(0, 119, 71);
+  list-style: none; 
   height: 80px;
   width: 100%;
   position: fixed;
@@ -169,10 +169,10 @@ a.pasek {
 }
 
 a.pasek:hover {
-  background-color: rgb(255, 205, 205);
+  background-color: rgb(100, 232, 180);
   transition-duration: 0.3s;
   border-radius: 8px;
-  color: rgb(48, 48, 48);
+  color: rgb(21, 21, 21);
 }
 
 /* Hamburger button */
@@ -187,14 +187,14 @@ a.pasek:hover {
 }
 
 /* Responsive styles */
-@media (max-width: 1080px) {
+@media (max-width: 990px) {
   .hamburger {
     display: block;
   }
 
   nav ul {
     flex-direction: column;
-    background-color: rgb(255, 130, 130);
+    background-color: rgb(0, 119, 71);
     position: absolute;
     top: 80px;
     left: 0;
@@ -226,7 +226,7 @@ a.pasek:hover {
 }
 
 .tresc-glowna a{
-  color: #ff8282;
+  color: rgb(0, 119, 71);;
   transition-duration: 0.5s;
 }
 
@@ -261,7 +261,7 @@ a.pasek:hover {
 }
 
 .tresc a{
-  color: #ff8282;
+  color: rgb(0, 119, 71);;
   transition-duration: 0.5s;
 }
 
@@ -271,7 +271,7 @@ a.pasek:hover {
 }
 
 .tresc a{
-  color: #ff8282;
+  color: rgb(0, 119, 71);;
   transition-duration: 0.5s;
 }
 
@@ -306,9 +306,10 @@ a.pasek:hover {
 
 .spis th{
   border: 1px solid black;
-  background-color: #ff8282;
+  background-color: rgb(0, 119, 71);
   padding-top: 3px;
   padding-bottom: 3px;
+  color: white;
 }
 
 .spis td{
@@ -341,7 +342,7 @@ a.pasek:hover {
 
 .tabela_link:hover td {
   transition: background-color 0.2s ease;
-  background-color: rgba(255, 130, 130, 0.25);
+  background-color: rgba(130, 255, 180, 0.25);
 }
 
 .gps{
@@ -367,7 +368,7 @@ details summary {
   font-size: 30px;
   cursor: pointer;
   font-weight: bold;
-  color: #ff8282;
+  color: rgb(0, 119, 71);
   margin-bottom: 5px;
 }
 
@@ -382,7 +383,7 @@ details summary::marker{
   z-index: 999;
   border: none;
   outline: none;
-  background-color: #ff8282;
+  background-color: rgb(0, 119, 71);
   color: white;
   cursor: pointer;
   width: 35px;
@@ -507,7 +508,7 @@ details summary::marker{
   top: 50%;
   width: 40%;
   height: 1px;
-  background-color: #ff8282;
+  background-color: rgb(0, 119, 71);
 }
 
 .separator-kafelki::before {
@@ -523,7 +524,7 @@ details summary::marker{
 
 hr {
   border-style: solid;
-  border-color: #ff8282;
+  border-color: rgb(0, 119, 71);
 }
 
 .dane-techniczne{
@@ -537,7 +538,7 @@ hr {
 
 .dane-techniczne th{
   border: 1px solid black;
-  background-color: #ff8282;
+  background-color: rgb(0, 119, 71);
   padding-top: 3px;
   padding-bottom: 3px;
 }
@@ -555,7 +556,7 @@ hr {
 
 .tabela-hover:hover td {
   transition: background-color 0.2s ease;
-  background-color: rgba(255, 130, 130, 0.25);
+  background-color: rgba(130, 255, 180, 0.25);
 }
 
 /* POJAWIANIE SIĘ ZDJĘCIA */
@@ -692,7 +693,7 @@ hr {
 
 .galeria img:hover {
   transform: scale(1.05);
-  border: 2px outset #ff8282;
+  border: 2px outset rgb(0, 119, 71);
 }
 
 .opis-zdj{
@@ -711,7 +712,7 @@ hr {
 
 .ilostan th{
   border: 1px solid black;
-  background-color: #ff8282;
+  background-color: rgb(0, 119, 71);
   padding-top: 3px;
   padding-bottom: 3px;
 }
@@ -816,9 +817,9 @@ zz {
   color: inherit;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 
-  background-color: #ff8282;
+  background-color: rgb(0, 119, 71);
   border: none;
-  outline: 2px solid #ff4444;
+  outline: 2px solid rgb(0, 63, 38);
 
   color: white;
   font-size: 40px;
@@ -842,9 +843,9 @@ zz {
   color: inherit;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 
-  background-color: #e3acac;
+  background-color: rgb(63, 248, 174);
   border: none;
-  outline: 2px solid #ac5050;
+  outline: 2px solid rgb(0, 119, 71);
 
   color: white;
   font-size: 40px;
@@ -912,8 +913,8 @@ zz {
   height: 100%;  /* wysokość dopasowana do całego kontenera */
   font-size: 4.5rem;
   border-radius: 8px;
-  background-color: #ff8282;
-  outline: 4px solid #ff4444;
+  background-color: rgb(0, 119, 71);
+  outline: 4px solid rgb(0, 55, 33);
   color: white;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
@@ -980,10 +981,11 @@ zz {
 
 .linia-tabela th{
   border: 1px solid black;
-  background-color: #ff8282;
+  background-color: rgb(0, 119, 71);
   padding-top: 3px;
   padding-bottom: 3px;
   font-size: 20px;
+  color: white;
 }
 
 .linia-tabela td{

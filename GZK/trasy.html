@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Trasy GZK Rędziny - MPK w Częstochowie</title>
+    <link rel="stylesheet" href="css/style.css"/>
+
+    <base href="/GZK/">
+    <meta name="theme-color" content="#007747">
+
+    <link rel="icon" type="image/png" sizes="16x16" href="img/Favicon/16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/Favicon/32.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="img/Favicon/48.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/Favicon/180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="img/Favicon/192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="img/Favicon/512.">
+
+    <script src="js/ikony.js" defer></script> <!--wczytywanie ikon-->
+    <script src="js/tabela_link.js" defer></script> <!--wczytywanie klikalnych wierszy tabel-->
+    <script src="js/toogleMenu.js" defer></script><!--Skrypt do listy menu-->
+
+    <script src="js/w_gore.js" defer></script> <!--Skrypt do przycisku przesuwania do samej góry-->
+    <script src="js/foto-blok.js" defer></script> <!--Blokada menu kontekstowego na zdjęciach-->
+
+</head>
+<body>
+    <div id="nav"></div>
+    <script>fetch('nav.htm') .then(response => response.text()) 
+    .then(data => document.getElementById('nav').innerHTML = data);
+    </script>
+
+    <div class="tresc-trasy"> <!--Główna treść strony-->
+        <div class="nagłówek-linie">
+            <h1>Nazwy linii:</h1>
+        </div><span class="nagłowek-linie-aktualizacja">Ostatnia aktualizacja: 30 marca 2026</span><br>
+        <hr>
+        
+
+        <div class="menu-trasy">
+            <a href="trasy/linia-R" class="numer-linii">
+                <div class="numer-linii">R</div>
+            </a>
+
+            <a href="trasy/linia-Rk" class="numer-linii">
+                <div class="numer-linii">Rk</div>
+            </a>
+
+            <a href="trasy/linia-Rm" class="numer-linii">
+                <div class="numer-linii">Rm</div>
+            </a>
+
+            <a href="trasy/linia-RL" class="numer-linii">
+                <div class="numer-linii">RL</div>
+            </a>
+        </div>
+
+    </div>
+
+
+<button onclick="scrollToTop()" id="scrollTopBtn" title="Do góry">⬆</button>
+</body>
+</html>

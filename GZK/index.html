@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>GZK Rędziny - Miłośniczy Portal Komunikacyjny w Częstochowie</title>
+    <link rel="stylesheet" href="css/style.css"/>
+    
+    <meta name="theme-color" content="#007747"> <!--Kolor strony-->
+
+    <!--Aplikacja mobilna-->
+    <script src="/app.js"></script>
+    <link rel="manifest" href="manifest.webmanifest">
+    <script>
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+        navigator.serviceWorker.register('js/service-worker.js')
+            .then(registration => {
+            console.log('Service Worker zarejestrowany:', registration.scope);
+            })
+            .catch(error => {
+            console.error('Rejestracja Service Workera nie powiodła się:', error);
+            });
+        });
+    }
+    </script>
+    <!--Aplikacja mobilna-->
+
+    <link rel="icon" type="image/png" sizes="16x16" href="img/Favicon/16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/Favicon/32.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="img/Favicon/48.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/Favicon/180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="img/Favicon/192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="img/Favicon/512.">
+
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <base href="/GZK/">
+
+    <script src="js/ikony.js" defer></script> <!--wczytywanie ikon-->
+    <script src="js/tabela_link.js" defer></script> <!--wczytywanie klikalnych wierszy tabel-->
+
+    <script src="js/toogleMenu.js" defer></script><!--Skrypt do listy menu-->
+
+    <script src="js/w_gore.js" defer></script> <!--Skrypt do przycisku przesuwania do samej góry-->
+
+    <script src="js/filtrowanie.js" defer></script>             
+</head>
+<body>
+    <div id="nav"></div>
+    <script>fetch('nav.htm') .then(response => response.text()) 
+    .then(data => document.getElementById('nav').innerHTML = data);
+    </script>
+
+  <div class="tresc-glowna"> <!--Główna treśćstrony-->
+    <!--<div class="skroty">
+        <details>
+            <summary>Skróty do pojazdów:<o style="font-size: 12px">&nbsp&nbsp(kliknij aby rozwinąć)</o></summary>
+            <ul class="skroty">
+                <li><a href="#SU12III-tabela">Solaris Urbnio 12 III nr 001-010</a></li>
+                <li><a href="#SM12HL-tabela">Solbus SM12 HL Hybrid CNG nr 011-035</a></li>
+            </ul>
+        </details>
+    </div>-->
+    <BR>
+    <TABLE class="spis" id="pojazdy"> <!--Tabela pojazdów-->
+        <tr>
+            <th width="90px">Numer</th>
+            <th width="250px">Model<br><input placeholder="Wpisz model lub producenta..." type="text" id="filtrModel" onkeyup="filtrujTabele()" style="width:90%"></th>
+            <th width="200px">Malowanie<br><select id="filtrMalowanie" onchange="filtrujTabele()" style="width:95%"><option value="">-- Dowolne --</option></select></th>
+            <th width="55px">Rok prod.<br><input placeholder="Rok..." type="text" id="filtrRok" onkeyup="filtrujTabele()" style="width:90%"></th>
+            <th width="200px">Atrybuty<br><select id="filtrAtrybuty" onchange="filtrujTabele()" style="width:95%"><option value="">-- Każde --</option></select>
+            </th> 
+            <th>Uwagi</th>
+            <th width="100px">Rejestracja</th>
+            <th width="85px">Linki</th>
+        </tr>
+        
+        <TR class="tabela_link" data-href="autobusy/wycofane/Jelcz-PR110">
+            <TD>1</TD>
+            <TD>Jelcz PR110M</TD>
+            <TD>Kremowo-Zielone</TD>
+            <TD>1991-2011</TD>
+            <TD><biletkier></TD>
+            <TD><zz> w 2011 roku.<BR>Prezentacja w zajezdni w 1991 roku. Dawniej D50 0926, CZA 281R.</TD>
+            <TD>SCZ 01FT</TD>
+            <TD><A href="https://czgk.pl/categories.php?cat_id=293" target="_blank">CZGK</A> </TD>
+        </TR>
+
+        <TR class="tabela_link" data-href="autobusy/wycofane/Jelcz-PR110">
+            <TD>2</TD>
+            <TD>Jelcz PR110M</TD>
+            <TD>Kremowo-Zielone</TD>
+            <TD>1991-2011</TD>
+            <TD><biletkier></TD>
+            <TD><zz> w 2011 roku.<BR>Prezentacja w zajezdni w 1991 roku. Dawniej D50 0859, CZA 282R.</TD>
+            <TD>SCZ 02FT</TD>
+            <TD><A href="https://czgk.pl/categories.php?cat_id=294" target="_blank">CZGK</A> </TD>
+        </TR>
+
+        <TR class="tabela_link" data-href="autobusy/wycofane/Jelcz-PR110">
+            <TD>3</TD>
+            <TD>Jelcz PR110M</TD>
+            <TD>Kremowo-Zielone</TD>
+            <TD>1991-2011</TD>
+            <TD><biletkier></TD>
+            <TD><zz> w 2011 roku.<BR>Prezentacja w zajezdni w 1991 roku. Dawniej D50 0856, CZA 279R.</TD>
+            <TD>SCZ 03FT</TD>
+            <TD><A href="https://czgk.pl/categories.php?cat_id=295" target="_blank">CZGK</A> </TD>
+        </TR>
+
+        <TR class="tabela_link" data-href="autobusy/wycofane/Jelcz-PR110">
+            <TD>4</TD>
+            <TD>Jelcz PR110M</TD>
+            <TD>Kremowo-Zielone</TD>
+            <TD>1991-2010</TD>
+            <TD><biletkier></TD>
+            <TD><zz> w 2010 roku.<BR>Prezentacja w zajezdni w 1991 roku. Dawniej D50 0927, CZA 284R.</TD>
+            <TD>SCZ 03FT</TD>
+            <TD><A href="https://czgk.pl/categories.php?cat_id=296" target="_blank">CZGK</A> </TD>
+        </TR>
+
+        <TR class="tabela_link" data-href="autobusy/wycofane/Jelcz-PR110">
+            <TD>5</TD>
+            <TD>Jelcz PR110M</TD>
+            <TD>Kremowo-Zielone</TD>
+            <TD>1991-2011</TD>
+            <TD><biletkier></TD>
+            <TD><zz> w 2011 roku.<BR>Prezentacja w zajezdni w 1991 roku. Dawniej D50 0855, CZA 278R.</TD>
+            <TD>SCZ 05FT</TD>
+            <TD><A href="https://czgk.pl/categories.php?cat_id=297" target="_blank">CZGK</A> </TD>
+        </TR>
+
+        <TR class="tabela_link" data-href="autobusy/wycofane/Jelcz-PR110">
+            <TD>6</TD>
+            <TD>Jelcz PR110M</TD>
+            <TD>Kremowo-Zielone</TD>
+            <TD>1991-2011</TD>
+            <TD><biletkier></TD>
+            <TD><zz> w 2011 roku.<BR>Dawniej CZZ 4279.</TD>
+            <TD>SCZ 06FT</TD>
+            <TD><A href="https://czgk.pl/categories.php?cat_id=298" target="_blank">CZGK</A> </TD>
+        </TR>
+
+        <TR class="tabela_link" data-href="autobusy/wycofane/Jelcz-PR110">
+            <TD>7</TD>
+            <TD>Jelcz PR110M</TD>
+            <TD>Kremowo-Zielone</TD>
+            <TD>1991-2010</TD>
+            <TD><biletkier></TD>
+            <TD><zz> w 2010 roku.<BR>Dawniej CZZ 4280.</TD>
+            <TD>SCZ 07FT</TD>
+            <TD><A href="https://czgk.pl/categories.php?cat_id=299" target="_blank">CZGK</A> </TD>
+        </TR>
+
+        <TR class="tabela_link" data-href="autobusy/wycofane/Jelcz-120M">
+            <TD>8</TD>
+            <TD>Jelcz 120M</TD>
+            <TD>Kremowo-Zielone<BR>(skos na tyle)</TD>
+            <TD>1992-2011</TD>
+            <TD><biletkier></TD>
+            <TD><zz> w 2010 roku.<BR>Dawniej CZZ 4445.</TD>
+            <TD>SCZ 08FT</TD>
+            <TD><A href="https://czgk.pl/categories.php?cat_id=301" target="_blank">CZGK</A> </TD>
+        </TR>
+
+        <TR class="tabela_link" data-href="autobusy/wycofane/Jelcz-120M">
+            <TD>9</TD>
+            <TD>Jelcz 120M</TD>
+            <TD>Kremowo-Zielone</TD>
+            <TD>1993-06.<spa>2010</TD>
+            <TD><biletkier></TD>
+            <TD><zz> w czerwcu 2010 roku.<BR>Dawniej CED 5262.</TD>
+            <TD>SCZ 09FT</TD>
+            <TD><A href="https://czgk.pl/categories.php?cat_id=302" target="_blank">CZGK</A> </TD>
+        </TR>
+
+        <TR class="tabela_link" data-href="autobusy/wycofane/Jelcz-120M">
+            <TD>10</TD>
+            <TD>Jelcz 120M</TD>
+            <TD>Kremowo-Zielone</TD>
+            <TD>1994-07.<spa>2010</TD>
+            <TD><biletkier></TD>
+            <TD><zz> w lipcu 2010 roku.<BR>Dawniej CED 8945.</TD>
+            <TD>SCZ 10FT</TD>
+            <TD><A href="https://czgk.pl/categories.php?cat_id=303" target="_blank">CZGK</A> </TD>
+        </TR>
+
+        <TR class="tabela_link" data-href="autobusy/wycofane/Jelcz-120M">
+            <TD>11</TD>
+            <TD>Jelcz 120M</TD>
+            <TD>Kremowo-Zielone</TD>
+            <TD>1996-2010</TD>
+            <TD><biletkier></TD>
+            <TD><zz> w 2010 roku.<BR>Dawniej CEK 6047.</TD>
+            <TD>SCZ 11FT</TD>
+            <TD><A href="https://czgk.pl/categories.php?cat_id=304" target="_blank">CZGK</A> </TD>
+        </TR>
+
+        <TR class="tabela_link" data-href="autobusy/wycofane/Jelcz-PR110">
+            <TD>12</TD>
+            <TD>Jelcz PR110U</TD>
+            <TD>Kremowo-Zielone</TD>
+            <TD>1981-2010</TD>
+            <TD><biletkier></TD>
+            <TD><zz> w 2011 roku.<BR>Dawniej CES 6318.<BR>NG Jelcz - 1990, Odbudowa Kapena - 2000</TD>
+            <TD>SCZ 12FT</TD>
+            <TD><A href="https://czgk.pl/categories.php?cat_id=300" target="_blank">CZGK</A> </TD>
+        </TR>
+
+        <TR class="tabela_link" data-href="autobusy/Solaris-Urbino-10-III">
+            <TD>13</TD>
+            <TD>Solaris Urbino 10 III</TD>
+            <TD>Kremowo-Zielone</TD>
+            <TD>2006</TD>
+            <TD><niskopodlogowy> <kamery> <biletkier></TD>
+            <TD>Pierwszy Solaris III generacji w Rędzinach. Prezentacja w zajezdni 20 października 2006.<BR><ss>Sprzedany do ZKM Sochaczew [42] w 2019 roku.</ss></TD>
+            <TD>SCZ 13XX</TD>
+            <TD><A href="https://czgk.pl/categories.php?cat_id=305" target="_blank">CZGK</A> </TD>
+        </TR>
+
+        <TR class="tabela_link" data-href="autobusy/Solaris-Urbino-10-III">
+            <TD>14</TD>
+            <TD>Solaris Urbino 10 III</TD>
+            <TD>Kremowo-Zielone</TD>
+            <TD>2006</TD>
+            <TD><niskopodlogowy> <kamery> <biletkier></TD>
+            <TD>Prezentacja w zajezdni 20 października 2006.<BR><ss>Sprzedany do ZKM Sochaczew [43] w 2019 roku.</ss></TD>
+            <TD>SCZ 14XX</TD>
+            <TD><A href="https://czgk.pl/categories.php?cat_id=306" target="_blank">CZGK</A> </TD>
+        </TR>
+
+        <TR class="tabela_link" data-href="autobusy/Solaris-Urbino-10-III">
+            <TD>15</TD>
+            <TD>Solaris Urbino 10 III</TD>
+            <TD>Kremowo-Zielone</TD>
+            <TD>2006</TD>
+            <TD><niskopodlogowy> <kamery> <biletkier></TD>
+            <TD>Prezentacja w zajezdni 20 października 2006.</TD>
+            <TD>SCZ 15XX</TD>
+            <TD><A href="https://czgk.pl/categories.php?cat_id=307" target="_blank">CZGK</A> </TD>
+        </TR>
+
+        <TR class="tabela_link" data-href="autobusy/Solaris-Urbino-10-III">
+            <TD>16</TD>
+            <TD>Solaris Urbino 10 III</TD>
+            <TD>Kremowo-Zielone</TD>
+            <TD>2006</TD>
+            <TD><niskopodlogowy> <kamery> <biletkier></TD>
+            <TD>Prezentacja w zajezdni 20 października 2006.<BR><ss>Sprzedany do ZKM Sochaczew [44] w 2019 roku.</ss></TD>
+            <TD>SCZ 16XX</TD>
+            <TD><A href="https://czgk.pl/categories.php?cat_id=308" target="_blank">CZGK</A> </TD>
+        </TR>
+
+        <TR class="tabela_link" data-href="autobusy/Solaris-Urbino-10-III">
+            <TD>17</TD>
+            <TD>Solaris Urbino 10 III</TD>
+            <TD>Kremowo-Zielone</TD>
+            <TD>2006</TD>
+            <TD><niskopodlogowy> <kamery> <biletkier></TD>
+            <TD>Prezentacja w zajezdni 20 października 2006.<BR><ss>Sprzedany do ZKM Sochaczew [45] w 2019 roku.</ss></TD>
+            <TD>SCZ 17XX</TD>
+            <TD><A href="https://czgk.pl/categories.php?cat_id=309" target="_blank">CZGK</A> </TD>
+        </TR>
+
+        <TR class="tabela_link" data-href="autobusy/Solaris-Urbino-10-III">
+            <TD>18</TD>
+            <TD>Solaris Urbino 10 III</TD>
+            <TD>Kremowo-Zielone</TD>
+            <TD>2006</TD>
+            <TD><niskopodlogowy> <kamery> <biletkier></TD>
+            <TD>Prezentacja w zajezdni 20 października 2006.</TD>
+            <TD>SCZ 18XX</TD>
+            <TD><A href="https://czgk.pl/categories.php?cat_id=310" target="_blank">CZGK</A> </TD>
+        </TR>
+
+        <TR class="tabela_link" data-href="autobusy/Solaris-Urbino-10-III">
+            <TD>19</TD>
+            <TD>Solaris Urbino 10 III</TD>
+            <TD>Kremowo-Zielone</TD>
+            <TD>2010</TD>
+            <TD><niskopodlogowy> <kamery> <biletkier></TD>
+            <TD></TD>
+            <TD>SCZ VS19</TD>
+            <TD><A href="https://czgk.pl/categories.php?cat_id=311" target="_blank">CZGK</A> </TD>
+        </TR>
+
+        <TR class="tabela_link" data-href="autobusy/Solaris-Urbino-10-III">
+            <TD>20</TD>
+            <TD>Solaris Urbino 10 III</TD>
+            <TD>Kremowo-Zielone</TD>
+            <TD>2010</TD>
+            <TD><niskopodlogowy> <kamery> <biletkier></TD>
+            <TD></TD>
+            <TD>SCZ VS20</TD>
+            <TD><A href="https://czgk.pl/categories.php?cat_id=312" target="_blank">CZGK</A> </TD>
+        </TR>
+
+        <TR class="tabela_link" data-href="autobusy/Solaris-Urbino-10-III">
+            <TD>21</TD>
+            <TD>Solaris Urbino 10 III</TD>
+            <TD>Zielone-Kremowo-Czarne</TD>
+            <TD>2010</TD>
+            <TD><niskopodlogowy> <kamery> <biletkier></TD>
+            <TD></TD>
+            <TD>SCZ VS21</TD>
+            <TD><A href="https://czgk.pl/categories.php?cat_id=313" target="_blank">CZGK</A> </TD>
+        </TR>
+
+        <TR class="tabela_link" data-href="autobusy/Solaris-Urbino-10-III">
+            <TD>22</TD>
+            <TD>Solaris Urbino 10 III</TD>
+            <TD>Kremowo-Zielone</TD>
+            <TD>2010</TD>
+            <TD><niskopodlogowy> <kamery> <biletkier></TD>
+            <TD></TD>
+            <TD>SCZ VS22</TD>
+            <TD><A href="https://czgk.pl/categories.php?cat_id=314" target="_blank">CZGK</A> </TD>
+        </TR>
+
+        <TR class="tabela_link" data-href="autobusy/MAN-NL253-Hybrid">
+            <TD>23</TD>
+            <TD>MAN NL253 Lion's City Hybrid</TD>
+            <TD>Zielone-Kremowo-Czarne</TD>
+            <TD>2017</TD>
+            <TD><niskopodlogowy> <kamery> <ac> <biletkier></TD>
+            <TD>Prezentacja w zajezdni 29 czerwca 2017.</TD>
+            <TD>SCZ 55023</TD>
+            <TD><A href="https://czgk.pl/categories.php?cat_id=6352" target="_blank">CZGK</A> </TD>
+        </TR>
+
+        <TR class="tabela_link" data-href="autobusy/MAN-NL253-Hybrid">
+            <TD>24</TD>
+            <TD>MAN NL253 Lion's City Hybrid</TD>
+            <TD>Zielone-Kremowo-Czarne</TD>
+            <TD>2017</TD>
+            <TD><niskopodlogowy> <kamery> <ac> <biletkier></TD>
+            <TD>Prezentacja w zajezdni 29 czerwca 2017.<BR>Uczesniczył w targach Expo Silesia w Sosnowcu w kwietniu 2018.</TD>
+            <TD>SCZ 55024</TD>
+            <TD><A href="https://czgk.pl/categories.php?cat_id=6353" target="_blank">CZGK</A> </TD>
+        </TR>
+
+         <TR class="tabela_link" data-href="autobusy/MAN-NL253-Hybrid">
+            <TD>25</TD>
+            <TD>MAN NL253 Lion's City Hybrid</TD>
+            <TD>Zielone-Kremowo-Czarne</TD>
+            <TD>2017</TD>
+            <TD><niskopodlogowy> <kamery> <ac> <biletkier></TD>
+            <TD>Prezentacja w zajezdni 29 czerwca 2017.<BR><znr>Na prezentacji numer 27, potem 25.</znr></TD>
+            <TD>SCZ 55025</TD>
+            <TD><A href="https://czgk.pl/categories.php?cat_id=6354" target="_blank">CZGK</A> </TD>
+        </TR>
+
+         <TR class="tabela_link" data-href="autobusy/MAN-NL253-Hybrid">
+            <TD>26</TD>
+            <TD>MAN NL253 Lion's City Hybrid</TD>
+            <TD>Zielone-Kremowo-Czarne</TD>
+            <TD>2017</TD>
+            <TD><niskopodlogowy> <kamery> <ac> <biletkier></TD>
+            <TD>Prezentacja w zajezdni 29 czerwca 2017.</TD>
+            <TD>SCZ 55026</TD>
+            <TD><A href="https://czgk.pl/categories.php?cat_id=6355" target="_blank">CZGK</A> </TD>
+        </TR>
+    </TABLE>
+    <div id="miejscedlalistyliczbyautobusów">
+    <BR>
+    </div>
+
+    <script>
+        const tabela = document.querySelector("#pojazdy");
+        const miejscedlalisty = document.querySelector("#miejscedlalistyliczbyautobusów");
+        const wiersze = tabela.querySelectorAll("tr");
+
+        const marki = {};
+        let sumaPojazdow = 0; // nowa zmienna do sumy
+
+        for (let i = 1; i < wiersze.length; i++) {
+            const komorki = wiersze[i].querySelectorAll("td");
+            if (komorki.length < 2) continue;
+
+            const idTekst = komorki[0].textContent.trim();
+            if (idTekst === "") continue;
+
+            const id = Number(idTekst);
+            if (!Number.isInteger(id)) continue;
+            if (!(id == 15 || (id >= 18 && id <= 26))) continue;
+
+            const pelnaNazwa = komorki[1].textContent.trim();
+            if (pelnaNazwa === "") continue;
+
+            const producent = pelnaNazwa.split(/\s+/)[0];
+            marki[producent] = (marki[producent] || 0) + 1;
+            sumaPojazdow++; // dodajemy do sumy
+        }
+
+        /* ===== TWORZENIE LISTY POD TABELĄ ===== */
+
+        // kontener
+        const kontener = document.createElement("div");
+        kontener.classList.add("skroty");
+
+        // nagłówek
+        const naglowek = document.createElement("h2");
+        naglowek.textContent = "Liczba autobusów według producenta:";
+        kontener.appendChild(naglowek);
+
+        // lista
+        const lista = document.createElement("ul");
+        lista.classList.add("skroty");
+
+        const liSuma = document.createElement("li");
+        liSuma.textContent = `Łącznie autobusów: ${sumaPojazdow}`;
+        liSuma.style.marginBottom = "1em";
+        lista.appendChild(liSuma);
+
+
+        // sortowanie malejąco
+        Object.entries(marki)
+            .sort((a, b) => b[1] - a[1])
+            .forEach(([marka, ilosc]) => {
+                const procent = ((ilosc / sumaPojazdow) * 100).toFixed(1); // procent z jednym miejscem po przecinku
+                const li = document.createElement("li");
+                li.textContent = `${procent}% - ${marka} (${ilosc} sztuk)`;
+                lista.appendChild(li);
+            });
+
+        
+        kontener.appendChild(lista);
+
+
+
+
+        // wstawiamy POD tabelą
+        miejscedlalisty.after(kontener);
+
+
+
+        
+
+        
+
+    </script>
+
+
+
+
+
+
+
+
+<button onclick="scrollToTop()" id="scrollTopBtn" title="Do góry">⬆</button>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Autobusy GZK Rędziny - MPK w Częstochowie</title>
+    <link rel="stylesheet" href="css/style.css"/>
+    
+    <meta name="theme-color" content="#007747"> <!--Kolor strony-->
+
+    <base href="/GZK/">
+
+    <link rel="icon" type="image/png" sizes="16x16" href="img/Favicon/16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/Favicon/32.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="img/Favicon/48.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/Favicon/180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="img/Favicon/192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="img/Favicon/512.">
+
+    <script src="js/ikony.js" defer></script> <!--wczytywanie ikon-->
+    <script src="js/tabela_link.js" defer></script> <!--wczytywanie klikalnych wierszy tabel-->
+    <script src="js/toogleMenu.js" defer></script><!--Skrypt do listy menu-->
+
+    <script src="js/w_gore.js" defer></script> <!--Skrypt do przycisku przesuwania do samej góry-->
+    <script src="js/foto-blok.js" defer></script> <!--Blokada menu kontekstowego na zdjęciach-->
+
+</head>
+<body>
+    <div id="nav"></div>
+    <script>fetch('nav.htm') .then(response => response.text()) 
+    .then(data => document.getElementById('nav').innerHTML = data);
+    </script>
+
+    <div class="tresc-kafelki"> <!--Główna treść strony-->
+        <h1>Autobusy obecne:</h3><hr>
+
+        <div class="menu-container">
+            <a href="autobusy/Solaris-Urbino-10-II" class="tile">
+                <div class="tile">
+                <img src="img/SU10III/miniaturka.webp" alt="Solaris Urbino 10 III">
+                <div class="caption">Solaris Urbino 10 III</div>
+                </div>
+            </a>
+
+            <a href="autobusy/MAN-NL253-Hybrid" class="tile">
+                <div class="tile">
+                <img src="img/MAN-NL253/miniaturka.webp" alt="MAN NL253 Lion's City Hybrid">
+                <div class="caption">MAN NL253 Lion's City Hybrid</div>
+                </div>
+            </a>
+          </div>
+
+
+        <BR><BR>
+        <h1>Autobusy dawne:</h1><hr>
+        <div class="menu-container">
+            <a href="autobusy/wycofane/Jelcz-PR110" class="tile">
+                <div class="tile">
+                <img src="img/PR110/miniaturka.webp" alt="Jelcz PR110M/PR110U">
+                <div class="caption">Jelcz PR110M/PR110U</div>
+                </div>
+            </a>
+
+            <a href="autobusy/wycofane/Jelcz-120M" class="tile">
+                <div class="tile">
+                <img src="img/120M/miniaturka.jpg" alt="Jelcz 120M">
+                <div class="caption">Jelcz 120M</div>
+                </div>
+            </a>
+        </div>
+
+    </div>
+<button onclick="scrollToTop()" id="scrollTopBtn" title="Do góry">⬆</button>
+</body>
+</html>
