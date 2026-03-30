@@ -214,7 +214,7 @@ a.pasek:hover {
   }
 
   nav ul.show {
-    max-height: 500px; /* Wystarczające dla kilku opcji */
+    max-height: 700px; /* Wystarczające dla kilku opcji */
     opacity: 1;
     pointer-events: auto;
   }
