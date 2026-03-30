@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="pl">
+
 <head>
     <base href="/MPK/">
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ikarus 260.04 - MPK Częstochowa</title>
-    <link rel="stylesheet" href="css/style.css"/>
-    
+    <link rel="stylesheet" href="css/style.css" />
+
     <meta name="theme-color" content="#ff8282"> <!--Kolor strony-->
 
     <link rel="icon" type="image/png" sizes="16x16" href="img/Favicon/16.png">
@@ -23,7 +24,7 @@
     <script src="js/toogleMenu.js" defer></script><!--Skrypt do listy menu-->
 
     <script src="js/w_gore.js" defer></script> <!--Skrypt do przycisku przesuwania do samej góry-->
-    <script src="js/zdjecia.js" defer></script> 
+    <script src="js/zdjecia.js" defer></script>
     <script src="js/foto-blok.js" defer></script> <!--Blokada menu kontekstowego na zdjęciach-->
 
     <style>
@@ -35,26 +36,44 @@
 
 
 </head>
+
 <body>
     <div id="nav"></div>
-    <script>fetch('nav.htm') .then(response => response.text()) 
-    .then(data => document.getElementById('nav').innerHTML = data);
+    <script>fetch('nav.htm').then(response => response.text())
+            .then(data => document.getElementById('nav').innerHTML = data);
     </script>
 
     <div class="tresc"> <!--Główna treść strony-->
-        <h1>Ikarus 260.04</h1><hr />
+        <h1>Ikarus 260.04</h1>
+        <hr />
         <BR>
         <img src="img/Ikarus260-04/miniaturka.webp" alt="Ikarusy 260.04 nr 231" class="fullscreen-img miniatura">
         <BR>
 
         <div class="opis-pojazdu">
             <p style="text-indent: 30px;">
-            Pie
+                Ikarusy 260.04 docierały do Częstochowy w dwóch partiach, pierwsza w 1983 zawierała
+                16 sztuk o numerach 229-244 a druga w 1984 w liczbie 34 sztuk o numerach 200-228 i 
+                245-249. Pomalowane były na kremowo-czerwono. W porównaniu do poprzednich 
+                <a href="autobusy/wycofane/Ikarus-260-01">Ikarusów 260.01</a> różniły się przedwszystkim
+                oknami, które były otwierane w 1/2 a nie jak poprzednio - małe lufty.
+            </p><p style="text-indent: 30px;">
+                Autobusy zaczęto złomować już po 9 latach, ale większość trafiła na złom w okresie
+                1997-2002, kiedy zezłomowano 40 autobusów. Pozostałe zezłomowano w 1992 i 1994, a
+                jeden przetrwał do 2022 jako pogotowie techniczne.
+            </p><p style="text-indent: 30px;">
+                Jeden z autobusów o numerze 202 w latach 90 przebudowano na Pogotowie Techniczne
+                Tramwajowe poprzez obcięcie tyłu po drugiej osi, a w 1999 roku nr 231 przebudowano 
+                na Kasy Biletowe. Drugi pojazd miał zostać zachowany jako zabytek, bo był w 
+                najlepszym stanie, jedyny przetrwał po 2002 roku i miał podwójne reflektory na przodzie. 
+                Jednak ze względu na późniejszy zły stan kratownicy, nie udało sie go uratować i MPK 
+                go zezłomowało.
             </p>
         </div>
-        
+
         <BR>
-            <h2>Dane technicze:</h2><hr><br>
+        <h2>Dane technicze:</h2>
+        <hr><br>
 
         <TABLE class="dane-techniczne"> <!--Tabela pojazdów-->
             <colgroup>
@@ -63,7 +82,7 @@
             </colgroup>
 
             <TR> <!--Nagłówek tabeli-->
-            <TH width="90%" colspan="2" style="font-size: 20px;">Ikarus 260.04</TH>
+                <TH width="90%" colspan="2" style="font-size: 20px;">Ikarus 260.04</TH>
             </TR>
 
             <TR class="tabela-hover"> <!--Producent-->
@@ -101,14 +120,15 @@
             <TR class="tabela-hover"> <!--Silnik-->
                 <TD class="kolumna-opis">Silnik (moc)</TD>
                 <TD>Rába D2156HM6U (141 kW)</TD>
-            </TR>  
+            </TR>
             <TR class="tabela-hover"> <!--Skrzynia biegów-->
                 <TD class="kolumna-opis">Skrzynia Biegów</TD>
                 <TD>Csepel ASH-75-2</TD>
             </TR>
             <TR class="tabela-hover"> <!--Liczba miejsc siedzących-->
                 <TD class="kolumna-opis">Liczba miejsc siedzących</TD>
-                <TD>20</TR>
+                <TD>20
+            </TR>
             </TR>
             <TR class="tabela-hover"> <!--Liczba miejsc stojących-->
                 <TD class="kolumna-opis">Liczba miejsc stojących</TD>
@@ -123,102 +143,699 @@
                 <TD>Nie</TD>
             </TR>
         </TABLE>
-        
+
         <BR>
-        <h2>Spis pojazdów:</h2><hr><br>
+        <h2>Spis pojazdów:</h2>
+        <hr><br>
 
         <h3>Ikarus 260.04</h3><BR>
 
-        <TABLE class="spis" > <!--Tabela pojazdów-->
+        <TABLE class="spis"> <!--Tabela pojazdów-->
             <TR> <!--Nagłówek tabeli-->
-            <TH width="90px">Numer</TH>
-            <TH width="200px">Malowanie</TH>
-            <TH width="55px">Rok prod.</TH>
-            <TH width="200px">Atrybuty</TH>
-            <TH width="">Uwagi</TH>
-            <TH width="100px">Rejestracja</TH>
-            <TH width="85px">Linki</TH>
+                <TH width="90px">Numer</TH>
+                <TH width="200px">Malowanie</TH>
+                <TH width="55px">Rok prod.</TH>
+                <TH width="200px">Atrybuty</TH>
+                <TH width="">Uwagi</TH>
+                <TH width="100px">Rejestracja</TH>
+                <TH width="85px">Linki</TH>
             </TR>
 
             <TR class="tabela-hover">
-            <TD>200</TD>
-            <TD>-??-</TD>
-            <TD>1984-2007</TD>
-            <TD><biletkier></TD>
-            <TD><ss>Sprzedany w  1997 roku</ss> do PKM Świerkalniec.<BR>Dawniej CZA 240N</TD>
-            <TD>CEJ 2815</TD>
-            <TD><A href="https://czgk.pl/categories.php?cat_id=172" target="_blank">CZGK</A></TD>
+                <TD>200</TD>
+                <TD>-??-</TD>
+                <TD>1984-2007</TD>
+                <TD>
+                    <biletkier>
+                </TD>
+                <TD>
+                    <ss>Sprzedany w 1997 roku</ss> do PKM Świerklaniec.<BR>Dawniej CZA 240N
+                </TD>
+                <TD>CEJ 2815</TD>
+                <TD><A href="https://czgk.pl/categories.php?cat_id=172" target="_blank">CZGK</A></TD>
             </TR>
 
             <TR class="tabela-hover">
-            <TD>201</TD>
-            <TD>Czerwono-Kremowe</TD>
-            <TD>1984-2001</TD>
-            <TD><biletkier></TD>
-            <TD><zz> w 2001 roku.<BR>Dawniej CEJ 1632</TD>
-            <TD>CZA 241N</TD>
-            <TD><A href="https://czgk.pl/categories.php?cat_id=173" target="_blank">CZGK</A></TD>
+                <TD>201</TD>
+                <TD>Czerwono-Kremowe</TD>
+                <TD>1984-2001</TD>
+                <TD>
+                    <biletkier>
+                </TD>
+                <TD>
+                    <zz> w 2001 roku.<BR>Dawniej CZA 241N EJ 1632
+                </TD>
+                <TD>CEJ 1632</TD>
+                <TD><A href="https://czgk.pl/categories.php?cat_id=173" target="_blank">CZGK</A></TD>
             </TR>
 
             <TR class="tabela-hover">
-            <TD>202</TD>
-            <TD>Czerwono-Kremowe</TD>
-            <TD>1984-2022</TD>
-            <TD><biletkier></TD>
-            <TD><zz> w 2022 roku.<BR>Dawniej CEJ 1626, CZA 242N<BR>Przebudowant na pogotowie techniczne tramwajowe #723.<BR><znr>Zmiana numeru >> 723</znr></TD>
-            <TD>SC 06121</TD>
-            <TD><A href="https://czgk.pl/categories.php?cat_id=7456" target="_blank">CZGK</A></TD>
+                <TD>202</TD>
+                <TD>Czerwono-Kremowe</TD>
+                <TD>1984-2022</TD>
+                <TD><biletkier></TD>
+                <TD><zz> w 2022 roku.<BR>Dawniej CEJ 1626, CZA 242N<BR>Przebudowant na pogotowie techniczne tramwajowe #723.<BR><znr>Zmiana numeru >> 723</znr></TD>
+                <TD>SC 06121</TD>
+                <TD><A href="https://czgk.pl/categories.php?cat_id=7456" target="_blank">CZGK</A></TD>
             </TR>
 
             <TR class="tabela-hover">
-            <TD>203</TD>
-            <TD>Czerwono-Kremowe</TD>
-            <TD>1984-2001</TD>
-            <TD><biletkier></TD>
-            <TD><zz> w 2022 roku.<BR>Dawniej CEJ 1633</TD>
-            <TD>CZA 243N</TD>
-            <TD><A href="https://czgk.pl/categories.php?cat_id=2266" target="_blank">CZGK</A></TD>
+                <TD>203</TD>
+                <TD>Czerwono-Kremowe</TD>
+                <TD>1984-2001</TD>
+                <TD>
+                    <biletkier>
+                </TD>
+                <TD>
+                    <zz> w 2001 roku.<BR>Dawniej CZA 243N
+                </TD>
+                <TD>CEJ 1633</TD>
+                <TD><A href="https://czgk.pl/categories.php?cat_id=2266" target="_blank">CZGK</A></TD>
             </TR>
 
             <TR class="tabela-hover">
-            <TD>204</TD>
-            <TD>Czerwono-Kremowe</TD>
-            <TD>1984-2001</TD>
-            <TD><biletkier></TD>
-            <TD><zz> w 2022 roku.<BR>Dawniej CEJ 1949</TD>
-            <TD>CZA 244N</TD>
-            <TD><A href="https://czgk.pl/categories.php?cat_id=1411" target="_blank">CZGK</A></TD>
-            </TR>
-
-        </TABLE><BR>
-
-        <h3>Ikarus 280/A</h3><BR>
-
-        <TABLE class="spis" > <!--Tabela pojazdów-->
-            <TR> <!--Nagłówek tabeli-->
-            <TH width="90px">Numer</TH>
-            <TH width="200px">Malowanie</TH>
-            <TH width="55px">Rok prod.</TH>
-            <TH width="200px">Atrybuty</TH>
-            <TH width="">Uwagi</TH>
-            <TH width="100px">Rejestracja</TH>
-            <TH width="85px">Linki</TH>
+                <TD>204</TD>
+                <TD>Czerwono-Kremowe</TD>
+                <TD>1984-2001</TD>
+                <TD>
+                    <biletkier>
+                </TD>
+                <TD>
+                    <zz> w 2001 roku.<BR>Dawniej CZA 244N
+                </TD>
+                <TD>CEJ 1949</TD>
+                <TD><A href="https://czgk.pl/categories.php?cat_id=1411" target="_blank">CZGK</A></TD>
             </TR>
 
             <TR class="tabela-hover">
-            <TD>703</TD>
-            <TD>Czerwono-Białe z żółtym pasem</TD>
-            <TD>1981</TD>
-            <TD></TD>
-            <TD>Kupiony w 1989 od WPK Katowice odział Wodzisław Śląski.<BR>Przebudowany z Ikarusa 280.26<BR>Dawniej KAE 706P, CEG 4376.</TD>
-            <TD>SC 06117</TD>
-            <TD><A href="https://czgk.pl/categories.php?cat_id=789" target="_blank">CZGK</A></TD>
+                <TD>205</TD>
+                <TD>Czerwono-Kremowe</TD>
+                <TD>1984-????</TD>
+                <TD>
+                    <biletkier>
+                </TD>
+                <TD>
+                    <zz>. <ss>W 1997 sprzedany do PKM Olkusz</ss><BR>Dawniej CZA 245N
+                </TD>
+                <TD>CZA 245N</TD>
+                <TD><A href="https://czgk.pl/categories.php?cat_id=7457" target="_blank">CZGK</A></TD>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>206</TD>
+                <TD>Czerwono-Kremowe</TD>
+                <TD>1984-1999</TD>
+                <TD>
+                    <biletkier>
+                </TD>
+                <TD>
+                    <zz> w 1999 roku. <BR>Dawniej CZA 246N
+                </TD>
+                <TD>CEJ 3257</TD>
+                <TD><A href="https://czgk.pl/categories.php?cat_id=3215" target="_blank">CZGK</A></TD>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>207</TD>
+                <TD>Białe</TD>
+                <TD>1984-2003</TD>
+                <TD>
+                    <biletkier>
+                </TD>
+                <TD>
+                    <zz> w 2006 roku. <ss>W 2003 sprzedany do PKM Olkusz [18]</ss><BR>Dawniej CZA 247N
+                </TD>
+                <TD>CEJ 1943</TD>
+                <TD><A href="https://czgk.pl/categories.php?cat_id=1167" target="_blank">CZGK</A></TD>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>208</TD>
+                <TD>Czerwono-Białe</TD>
+                <TD>1984-2002</TD>
+                <TD>
+                    <biletkier>
+                </TD>
+                <TD>
+                    <zz> w 2002 roku. <BR>Dawniej CZA 248N
+                </TD>
+                <TD>CEJ 1942</TD>
+                <TD><A href="https://czgk.pl/categories.php?cat_id=7458" target="_blank">CZGK</A></TD>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>209</TD>
+                <TD>-??-</TD>
+                <TD>1984-????</TD>
+                <TD>
+                    <biletkier>
+                </TD>
+                <TD>
+                    <zz>. <ss>W 1997 sprzedany do PKM Olkusz</ss><BR>Dawniej CZA 249N
+                </TD>
+                <TD>CEG 3129</TD>
+                <TD><A href="https://czgk.pl/categories.php?cat_id=7459" target="_blank">CZGK</A></TD>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>210</TD>
+                <TD>Czerwono-Kremowe</TD>
+                <TD>1984</TD>
+                <TD>
+                    <biletkier>
+                </TD>
+                <TD>
+                    <zz> w 2001 roku.<BR>Dawniej CZA 179N
+                </TD>
+                <TD>CEG 3130</TD>
+                <TD><A href="#" target="_blank">CZGK</A></TD>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>211</TD>
+                <TD>Czerwono-Kremowe</TD>
+                <TD>1984</TD>
+                <TD>
+                    <biletkier>
+                </TD>
+                <TD>
+                    <zz> w 2000 roku.<BR>Dawniej CZA 180N
+                </TD>
+                <TD>CZA 180N</TD>
+                <TD><A href="#" target="_blank">CZGK</A></TD>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>212</TD>
+                <TD>Czerwono-Kremowe</TD>
+                <TD>1984</TD>
+                <TD>
+                    <biletkier>
+                </TD>
+                <TD>
+                    <zz> w 2001 roku.<BR>Dawniej CZA 181N
+                </TD>
+                <TD>CEJ 1645</TD>
+                <TD><A href="#" target="_blank">CZGK</A></TD>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>213</TD>
+                <TD>Czerwono-Kremowe</TD>
+                <TD>1984</TD>
+                <TD>
+                    <biletkier>
+                </TD>
+                <TD>
+                    <zz> w 1999 roku.<BR>Dawniej CZA 182N
+                </TD>
+                <TD>CEJ 1628</TD>
+                <TD><A href="#" target="_blank">CZGK</A></TD>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>214</TD>
+                <TD>Czerwono-Kremowe</TD>
+                <TD>1984</TD>
+                <TD>
+                    <biletkier>
+                </TD>
+                <TD><zz> w 2009 roku. <ss>Sprzedany w 1997 do PKM Olkusz.</ss><BR>Dawniej CZA 183N</TD>
+                <TD>CEG 4583</TD>
+                <TD><A href="#" target="_blank">CZGK</A></TD>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>215</TD>
+                <TD>Czerwono-Kremowe</TD>
+                <TD>1984</TD>
+                <TD>
+                    <biletkier>
+                </TD>
+                <TD>
+                    <zz> w 1999 roku.<BR>Dawniej CZA 184N
+                </TD>
+                <TD>CEG 2974</TD>
+                <TD><A href="#" target="_blank">CZGK</A></TD>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>216</TD>
+                <TD>Czerwono-Kremowe</TD>
+                <TD>1984</TD>
+                <TD>
+                    <biletkier>
+                </TD>
+                <TD>
+                    <zz> w 1992 roku.<BR>Dawniej CZA 185N
+                </TD>
+                <TD>CZA 185N</TD>
+                <TD><A href="#" target="_blank">CZGK</A></TD>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>217</TD>
+                <TD>Czerwono-Kremowe</TD>
+                <TD>1984</TD>
+                <TD>
+                    <biletkier>
+                </TD>
+                <TD>
+                    <zz> w 2001 roku.<BR>Dawniej CZA 186N
+                </TD>
+                <TD>CEG 4582</TD>
+                <TD><A href="#" target="_blank">CZGK</A></TD>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>218</TD>
+                <TD>Czerwono-Kremowe</TD>
+                <TD>1984</TD>
+                <TD><biletkier></TD>
+                <TD><zz> w 2008 roku. <ss>Sprzedany w 1997 do PKM Świerklaniec.</ss><BR>Dawniej CZA 187N</TD>
+                <TD>CEJ 4361</TD>
+                <TD><A href="#" target="_blank">CZGK</A></TD>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>219</TD>
+                <TD>Czerwono-Kremowe</TD>
+                <TD>1984</TD>
+                <TD>
+                    <biletkier>
+                </TD>
+                <TD>
+                    <zz> w 1999 roku.<BR>Dawniej CZA 188N
+                </TD>
+                <TD>CEJ 1629</TD>
+                <TD><A href="#" target="_blank">CZGK</A></TD>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>220</TD>
+                <TD>Czerwono-Kremowe</TD>
+                <TD>1984</TD>
+                <TD>
+                    <biletkier>
+                </TD>
+                <TD>
+                    <zz> w 1999 roku.<BR>Dawniej CZA 231N
+                </TD>
+                <TD>CZA 231N</TD>
+                <TD><A href="#" target="_blank">CZGK</A></TD>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>221</TD>
+                <TD>Czerwono-Kremowe</TD>
+                <TD>1984</TD>
+                <TD>
+                    <biletkier>
+                </TD>
+                <TD>
+                    <zz> w 1998 roku.<BR>Dawniej CZA 194N
+                </TD>
+                <TD>CEJ 6775</TD>
+                <TD><A href="#" target="_blank">CZGK</A></TD>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>222</TD>
+                <TD>Czerwono-Kremowe</TD>
+                <TD>1984</TD>
+                <TD>
+                    <biletkier>
+                </TD>
+                <TD>
+                    <zz> w 2001 roku.<BR>Dawniej CZA 193N
+                </TD>
+                <TD>CEJ 1642</TD>
+                <TD><A href="#" target="_blank">CZGK</A></TD>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>223</TD>
+                <TD>Czerwono-Kremowe</TD>
+                <TD>1984</TD>
+                <TD>
+                    <biletkier>
+                </TD>
+                <TD>
+                    <zz> w 1992 roku.
+                </TD>
+                <TD>-</TD>
+                <TD><A href="#" target="_blank">CZGK</A></TD>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>224</TD>
+                <TD>Czerwono-Kremowe</TD>
+                <TD>1984</TD>
+                <TD><biletkier></TD>
+                <TD><zz> w 2008 roku. <ss>Sprzedany w 1997 do PKM Świerklaniec.</ss><BR>Dawniej CZA 195N</TD>
+                <TD>CEJ 2816</TD>
+                <TD><A href="#" target="_blank">CZGK</A></TD>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>225</TD>
+                <TD>Czerwono-Kremowe</TD>
+                <TD>1984</TD>
+                <TD>
+                    <biletkier>
+                </TD>
+                <TD>
+                    <zz> w 1998 roku.<BR>Dawniej CZA 232N
+                </TD>
+                <TD>CEG 3132</TD>
+                <TD><A href="#" target="_blank">CZGK</A></TD>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>226</TD>
+                <TD>Czerwono-Kremowe</TD>
+                <TD>1984</TD>
+                <TD>
+                    <biletkier>
+                </TD>
+                <TD>
+                    <zz> w 2002 roku.<BR>Dawniej CZA 233N
+                </TD>
+                <TD>CEJ 1643</TD>
+                <TD><A href="#" target="_blank">CZGK</A></TD>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>227</TD>
+                <TD>Czerwono-Kremowe</TD>
+                <TD>1984</TD>
+                <TD>
+                    <biletkier>
+                </TD>
+                <TD>
+                    <zz> w 2000 roku. <ss>Sprzedany w 1997 do PKM Świekrlaniec.</ss><BR>Dawniej CZA 227N
+                </TD>
+                <TD>KAN 157P</TD>
+                <TD><A href="#" target="_blank">CZGK</A></TD>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>228</TD>
+                <TD>Czerwono-Kremowe</TD>
+                <TD>1984</TD>
+                <TD>
+                    <biletkier>
+                </TD>
+                <TD>
+                    <zz> w 2001 roku.<BR>Dawniej CZA 228N
+                </TD>
+                <TD>CZA 228N</TD>
+                <TD><A href="#" target="_blank">CZGK</A></TD>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>229</TD>
+                <TD>Czerwono-Kremowe</TD>
+                <TD>1983</TD>
+                <TD>
+                    <biletkier>
+                </TD>
+                <TD>
+                    <zz> w 2003 roku. <ss>Sprzedany w 1997 do PKM Świerklaniec.</ss><BR>Dawniej CZA 229N
+                </TD>
+                <TD>CEJ 3268</TD>
+                <TD><A href="#" target="_blank">CZGK</A></TD>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>230</TD>
+                <TD>Czerwono-Kremowe</TD>
+                <TD>1983</TD>
+                <TD>
+                    <biletkier>
+                </TD>
+                <TD>
+                    <zz> w 1994 roku.
+                </TD>
+                <TD>CZP 886C</TD>
+                <TD><A href="#" target="_blank">CZGK</A></TD>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>231</TD>
+                <TD>Biało-Niebiesko-Fioletowe</TD>
+                <TD>1983-2012</TD>
+                <TD><biletkier></TD>
+                <TD><zz> w 2012 roku.<BR>W 1999 roku przebudowany na kasy biletowe, zachowany na zabytek. Ze względu na tragiczny stan konstrukcji nienadający się do naprawy został zezłomowany.</TD>
+                <TD>CEJ 1554</TD>
+                <TD><A href="https://czgk.pl/categories.php?cat_id=1125" target="_blank">CZGK</A></TD>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>232</TD>
+                <TD>Czerwono-Kremowe</TD>
+                <TD>1983</TD>
+                <TD>
+                    <biletkier>
+                </TD>
+                <TD>
+                    <zz> w 2001 roku.
+                </TD>
+                <TD>CEG 8808</TD>
+                <TD><A href="#" target="_blank">CZGK</A></TD>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>233</TD>
+                <TD>Czerwono-Kremowe</TD>
+                <TD>1983</TD>
+                <TD>
+                    <biletkier>
+                </TD>
+                <TD>
+                    <zz> w 1994 roku.
+                </TD>
+                <TD>CZP 889C</TD>
+                <TD><A href="#" target="_blank">CZGK</A></TD>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>234</TD>
+                <TD>Czerwono-Kremowe</TD>
+                <TD>1983</TD>
+                <TD>
+                    <biletkier>
+                </TD>
+                <TD>
+                    <zz> w 2001 roku.<BR>Dawniej CZP 890C
+                </TD>
+                <TD>CEG 2873</TD>
+                <TD><A href="#" target="_blank">CZGK</A></TD>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>235</TD>
+                <TD>Czerwono-Kremowe</TD>
+                <TD>1983</TD>
+                <TD>
+                    <biletkier>
+                </TD>
+                <TD>
+                    <zz> w 2001 roku.<BR>Dawniej CZP 891C
+                </TD>
+                <TD>CEJ 1627</TD>
+                <TD><A href="#" target="_blank">CZGK</A></TD>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>236</TD>
+                <TD>Czerwono-Kremowe</TD>
+                <TD>1983</TD>
+                <TD>
+                    <biletkier>
+                </TD>
+                <TD>
+                    <zz> w 1997 roku. <ss>Sprzedany w 1997 do PKM Olkusz.</ss><BR>Dawniej CZP 892C
+                </TD>
+                <TD>CEJ 2823</TD>
+                <TD><A href="#" target="_blank">CZGK</A></TD>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>237</TD>
+                <TD>Czerwono-Kremowe</TD>
+                <TD>1983</TD>
+                <TD>
+                    <biletkier>
+                </TD>
+                <TD><zz>. <ss>Sprzedany w 1997 do PKM Olkusz.</ss><BR>Dawniej CZP 893P</TD>
+                <TD>CEG 2874</TD>
+                <TD><A href="#" target="_blank">CZGK</A></TD>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>238</TD>
+                <TD>Czerwono-Kremowe</TD>
+                <TD>1983</TD>
+                <TD>
+                    <biletkier>
+                </TD>
+                <TD>
+                    <zz> w 1994 roku.
+                </TD>
+                <TD>CZP 894C</TD>
+                <TD><A href="#" target="_blank">CZGK</A></TD>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>239</TD>
+                <TD>Czerwono-Kremowe</TD>
+                <TD>1983</TD>
+                <TD>
+                    <biletkier>
+                </TD>
+                <TD>
+                    <zz> w 2001 roku.
+                </TD>
+                <TD>CEJ 6774</TD>
+                <TD><A href="#" target="_blank">CZGK</A></TD>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>240</TD>
+                <TD>Czerwono-Kremowe</TD>
+                <TD>1983</TD>
+                <TD>
+                    <biletkier>
+                </TD>
+                <TD>
+                    <zz> w 1994 roku.
+                </TD>
+                <TD>-</TD>
+                <TD><A href="#" target="_blank">CZGK</A></TD>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>241</TD>
+                <TD>Czerwono-Kremowe</TD>
+                <TD>1983</TD>
+                <TD>
+                    <biletkier>
+                </TD>
+                <TD>
+                    <zz> w 1994 roku.
+                </TD>
+                <TD>-</TD>
+                <TD><A href="#" target="_blank">CZGK</A></TD>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>242</TD>
+                <TD>Czerwono-Kremowe</TD>
+                <TD>1983</TD>
+                <TD>
+                    <biletkier>
+                </TD>
+                <TD>
+                    <zz> w 1994 roku.
+                </TD>
+                <TD>-</TD>
+                <TD><A href="#" target="_blank">CZGK</A></TD>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>243</TD>
+                <TD>Czerwono-Kremowe</TD>
+                <TD>1983</TD>
+                <TD>
+                    <biletkier>
+                </TD>
+                <TD>
+                    <zz> w 1994 roku.
+                </TD>
+                <TD>-</TD>
+                <TD><A href="#" target="_blank">CZGK</A></TD>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>244</TD>
+                <TD>Czerwono-Kremowe</TD>
+                <TD>1983</TD>
+                <TD>
+                    <biletkier>
+                </TD>
+                <TD>
+                    <zz> w 2001 roku. <ss>Sprzedany w 1997 roku do PKM Świerklaniec.</ss><BR>Dawniej CZP 885C
+                </TD>
+                <TD>CEJ 6783</TD>
+                <TD><A href="https://czgk.pl/categories.php?cat_id=7485" target="_blank">CZGK</A></TD>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>245</TD>
+                <TD>Czerwono-Kremowe</TD>
+                <TD>1984</TD>
+                <TD><biletkier></TD>
+                <TD><zz> w 2001 roku.<BR>Dawniej CZA 198N</TD>
+                <TD>CEJ 1631</TD>
+                <TD><A href="https://czgk.pl/categories.php?cat_id=1166" target="_blank">CZGK</A></TD>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>246</TD>
+                <TD>Czerwono-Kremowe</TD>
+                <TD>1984</TD>
+                <TD><biletkier></TD>
+                <TD><zz> w 2001 roku.<BR>Dawniej CZA 226N</TD>
+                <TD>CEJ 1634</TD>
+                <TD><A href="https://czgk.pl/categories.php?cat_id=7486" target="_blank">CZGK</A></TD>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>247</TD>
+                <TD>Czerwono-Kremowe</TD>
+                <TD>1984</TD>
+                <TD><biletkier></TD>
+                <TD><zz> w 2001 roku.</TD>
+                <TD>CZA 196N</TD>
+                <TD><A href="https://czgk.pl/categories.php?cat_id=7487" target="_blank">CZGK</A></TD>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>248</TD>
+                <TD>Czerwono-Kremowe</TD>
+                <TD>1984</TD>
+                <TD><biletkier></TD>
+                <TD><zz> w 2000 roku.<BR>Dawniej CZA 197N</TD>
+                <TD>CEJ 6777</TD>
+                <TD><A href="https://czgk.pl/categories.php?cat_id=1445" target="_blank">CZGK</A></TD>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>249</TD>
+                <TD>Czerwono-Kremowe</TD>
+                <TD>1984-1997</TD>
+                <TD><biletkier></TD>
+                <TD><zz> w 2009 roku. <ss>Sprzedany w 1997 roku.</ss><BR>Dawniej CZA 199N</TD>
+                <TD>CEJ 3289</TD>
+                <TD><A href="https://czgk.pl/categories.php?cat_id=7488" target="_blank">CZGK</A></TD>
+            </TR>
+
+            <TR class="tabela-hover">
+                <TD>723</TD>
+                <TD>Czerwono-Białe</TD>
+                <TD>1984</TD>
+                <TD><biletkier></TD>
+                <TD><ss>Sprzedany w 2022.</ss> Ostatni Ikarus 260 w Częstochowie. W latach 90 przebudowany na Pogotowie Techniczne Tramwajowe, <znr>z numeru 202</znr>.<BR>Dawniej CEJ 1626, CZA 242N</TD>
+                <TD>SC 06121</TD>
+                <TD><A href="https://czgk.pl/categories.php?cat_id=174" target="_blank">CZGK</A></TD>
             </TR>
         </TABLE>
 
         <BR>
-        <h2>Stan taboru na przestrzeni lat:</h2><hr><br>
-        <TABLE class="ilostan" > <!--Tabela pojazdów-->
+        <h2>Stan taboru na przestrzeni lat:</h2>
+        <hr><br>
+        <TABLE class="ilostan"> <!--Tabela pojazdów-->
             <TR> <!--Nagłówek tabeli-->
                 <TH width="70px">Rok</TH>
                 <TH width="130px">Wpisane na stan</TH>
@@ -226,201 +843,106 @@
                 <TH width="100px">Ilość na koniec roku</TH>
             </TR>
             <TR>
-                <TD>1982</TD>
-                <TD>5 (301-305)</TD>
-                <TD>-</TD>
-                <TD>5</TD>
-            </TR>
-            <TR>
                 <TD>1983</TD>
-                <TD>10 (306-315)</TD>
+                <TD>16 (229-244)</TD>
                 <TD>-</TD>
-                <TD>15</TD>
+                <TD>17</TD>
             </TR>
             <TR>
                 <TD>1984</TD>
-                <TD>21 (316-336)</TD>
+                <TD>34 (200-228,<spa>245-249)</TD>
                 <TD>-</TD>
-                <TD>36</TD>
+                <TD>50</TD>
             </TR>
             <TR>
-                <TD>1985</TD>
-                <TD>15 (337-351)</TD>
-                <TD>-</TD>
-                <TD>51</TD>
-            </TR>
-            <TR>
-                <TD>1986-1988</TD>
+                <TD>1985-1991</TD>
                 <TD>-</TD>
                 <TD>-</TD>
-                <TD>51</TD>
-            </TR>
-            <TR>
-                <TD>1989</TD>
-                <TD>1 (703)</TD>
-                <TD>1 (301)</TD>
-                <TD>51</TD>
-            </TR>
-            <TR>
-                <TD>1990</TD>
-                <TD>5 (352-356)</TD>
-                <TD>-</TD>
-                <TD>56</TD>
-            </TR>
-            <TR>
-                <TD>1991</TD>
-                <TD>-</TD>
-                <TD>-</TD>
-                <TD>56</TD>
+                <TD>50</TD>
             </TR>
             <TR>
                 <TD>1992</TD>
                 <TD>-</TD>
-                <TD>2 (307,308)</TD>
-                <TD>54</TD>
+                <TD>2 (216,<spa>223)</TD>
+                <TD>48</TD>
             </TR>
             <TR>
                 <TD>1993</TD>
                 <TD>-</TD>
                 <TD>-</TD>
-                <TD>54</TD>
+                <TD>48</TD>
             </TR>
             <TR>
                 <TD>1994</TD>
                 <TD>-</TD>
-                <TD>2 (346,347)</TD>
-                <TD>52</TD>
+                <TD>7 (230,<spa>233,<spa>238,<spa>240-243)</TD>
+                <TD>41</TD>
             </TR>
             <TR>
-                <TD>1995</TD>
+                <TD>1995-1996</TD>
                 <TD>-</TD>
-                <TD>3 (312,326,331)</TD>
-                <TD>49</TD>
-            </TR>
-            <TR>
-                <TD>1996</TD>
                 <TD>-</TD>
-                <TD>3 (303,306,310)</TD>
-                <TD>46</TD>
+                <TD>41</TD>
             </TR>
             <TR>
                 <TD>1997</TD>
                 <TD>-</TD>
-                <TD>3 (304,311,313)</TD>
-                <TD>43</TD>
+                <TD>12 (200,<spa>205,<spa>209,<spa>214,<spa>218,<spa>224,<spa>227,<spa>229,<spa>236,<spa>237,<spa>244,<spa>249)</TD>
+                <TD>29</TD>
             </TR>
             <TR>
-                <TD>1998-2000</TD>
+                <TD>1998</TD>
                 <TD>-</TD>
+                <TD>2 (221,<spa>225)</TD>
+                <TD>27</TD>
+            </TR>
+            <TR>
+                <TD>1999</TD>
                 <TD>-</TD>
-                <TD>43</TD>
+                <TD>5 (206,<spa>213,<spa>215,<spa>219,<spa>220)</TD>
+                <TD>22</TD>
+            </TR>
+            <TR>
+                <TD>2000</TD>
+                <TD>-</TD>
+                <TD>3 (211,<spa>227,<spa>248)</TD>
+                <TD>19</TD>
             </TR>
             <TR>
                 <TD>2001</TD>
                 <TD>-</TD>
-                <TD>1 (339)</TD>
-                <TD>42</TD>
+                <TD>16 (201,<spa>203,<spa>204,<spa>210,<spa>212,<spa>217,<spa>222,<spa>228,<spa>232,<spa>234,<spa>235,<spa>239,<spa>244-247)</TD>
+                <TD>3</TD>
             </TR>
             <TR>
                 <TD>2002</TD>
                 <TD>-</TD>
-                <TD>2 (302,314)</TD>
-                <TD>40</TD>
-            </TR>
-            <TR>
-                <TD>2003</TD>
-                <TD>-</TD>
-                <TD>3 (305,309,315)</TD>
-                <TD>37</TD>
-            </TR>
-            <TR>
-                <TD>2004</TD>
-                <TD>-</TD>
-                <TD>3 (336,338,342)</TD>
-                <TD>34</TD>
-            </TR>
-            <TR>
-                <TD>2005</TD>
-                <TD>-</TD>
-                <TD>-</TD>
-                <TD>34</TD>
-            </TR>
-            <TR>
-                <TD>2006</TD>
-                <TD>-</TD>
-                <TD>3 (320,325,354)</TD>
-                <TD>31</TD>
-            </TR>
-            <TR>
-                <TD>2007</TD>
-                <TD>-</TD>
-                <TD>6 (318,319,327,333,340,352)</TD>
-                <TD>25</TD>
-            </TR>
-            <TR>
-                <TD>2008</TD>
-                <TD>-</TD>
-                <TD>4 (328,329,343,355)</TD>
-                <TD>21</TD>
-            </TR>
-            <TR>
-                <TD>2009</TD>
-                <TD>-</TD>
-                <TD>4 (316,335,350,356)</TD>
-                <TD>17</TD>
-            </TR>
-            <TR>
-                <TD>2010</TD>
-                <TD>-</TD>
-                <TD>5 (324,337,348,349,353)</TD>
-                <TD>12</TD>
-            </TR>
-            <TR>
-                <TD>2011</TD>
-                <TD>-</TD>
-                <TD>3 (317,323,334)</TD>
-                <TD>9</TD>
-            </TR>
-            <TR>
-                <TD>2012</TD>
-                <TD>-</TD>
-                <TD>1 (322)</TD>
-                <TD>8</TD>
-            </TR>
-            <TR>
-                <TD>2013</TD>
-                <TD>-</TD>
-                <TD>2 (321,341)</TD>
-                <TD>6</TD>
-            </TR>
-            <TR>
-                <TD>2014</TD>
-                <TD>-</TD>
-                <TD>-</TD>
-                <TD>6</TD>
-            </TR>
-            <TR>
-                <TD>2015</TD>
-                <TD>-</TD>
-                <TD>2 (330,344)</TD>
-                <TD>4</TD>
-            </TR>
-            <TR>
-                <TD>2016</TD>
-                <TD>-</TD>
-                <TD>3 (332,345,351)</TD>
+                <TD>2 (208,<spa>226)</TD>
                 <TD>1</TD>
             </TR>
             <TR>
-                <TD>2017+</TD>
+                <TD>2003-2021</TD>
                 <TD>-</TD>
                 <TD>-</TD>
                 <TD>1</TD>
+            </TR>
+            <TR>
+                <TD>2022</TD>
+                <TD>-</TD>
+                <TD>1 (202)</TD>
+                <TD>0</TD>
+            </TR>
+            <TR>
+                <TD>2023+</TD>
+                <TD>-</TD>
+                <TD>-</TD>
+                <TD>0</TD>
             </TR>
         </TABLE>
 
         <BR>
-        <h2>Zdjęcia pojazdów:</h2><hr><br>
+        <h2>Zdjęcia pojazdów:</h2>
+        <hr><br>
         <div class="galeria">
             <div class="opis-zdj">» 301</div>
             <div class="opis-zdj">» 302</div>
@@ -487,6 +1009,7 @@
             <img id="fullscreenImage" class="fullscreen-image">
         </div>
     </div>
-<button onclick="scrollToTop()" id="scrollTopBtn" title="Do góry">⬆</button>
+    <button onclick="scrollToTop()" id="scrollTopBtn" title="Do góry">⬆</button>
 </body>
+
 </html>

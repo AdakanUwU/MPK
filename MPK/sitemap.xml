@@ -8,7 +8,7 @@
   </url>
   <url>
     <loc>https://adakanuwu.github.io/MPK/autobusy</loc>
-    <lastmod>2026-03-29</lastmod>
+    <lastmod>2026-03-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -20,7 +20,7 @@
   </url>
   <url>
     <loc>https://adakanuwu.github.io/MPK/informacje</loc>
-    <lastmod>2026-03-29</lastmod>
+    <lastmod>2026-03-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -194,7 +194,7 @@
   </url>
   <url>
     <loc>https://adakanuwu.github.io/MPK/autobusy/wycofane/Ikarus-260-04</loc>
-    <lastmod>2026-03-28</lastmod>
+    <lastmod>2026-03-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -218,7 +218,7 @@
   </url>
   <url>
     <loc>https://adakanuwu.github.io/MPK/autobusy/wycofane/Ikarus-60</loc>
-    <lastmod>2026-03-29</lastmod>
+    <lastmod>2026-03-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -309,6 +309,12 @@
   <url>
     <loc>https://adakanuwu.github.io/MPK/autobusy/wycofane/Mercedes-Benz-O345G</loc>
     <lastmod>2026-03-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://adakanuwu.github.io/MPK/autobusy/wycofane/MÁVAG-Tr5</loc>
+    <lastmod>2026-03-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
