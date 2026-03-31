@@ -210,7 +210,7 @@ a.pasek:hover {
   nav ul li {
     display: block;
     text-align: center;
-    margin: 10px 0;
+    margin: -20px 0 10px;
   }
 
   nav ul.show {

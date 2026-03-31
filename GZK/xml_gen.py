@@ -2,10 +2,10 @@ import os
 from datetime import datetime
 
 # Adres Twojej strony
-BASE_URL = "https://adakanuwu.github.io/MPK"
+BASE_URL = "https://adakanuwu.github.io/GZK"
 
 # Katalog z plikami HTML (zmień na swoją ścieżkę)
-HTML_DIR = r"C:\Users\adams\Desktop\Foldery\Strona\Aktualne Projekty\NOWA strona MPK Częstochowa — GitHub (base href bez domeny)\MPK"
+HTML_DIR = r"C:\Users\adams\Desktop\Foldery\Strona\Aktualne Projekty\NOWA strona MPK Częstochowa — GitHub (base href bez domeny)\GZK"
 
 # Nazwa pliku wyjściowego
 OUTPUT_FILE = "sitemap.xml"

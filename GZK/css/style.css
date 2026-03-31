@@ -160,7 +160,7 @@ nav ul li {
 nav ul li a {
   color: rgb(255, 255, 255);
   font-size: 20px;
-  padding: 7px 10px;
+  padding: 7px 5px;
   transition-duration: 0.3s;
 }
 
@@ -187,7 +187,7 @@ a.pasek:hover {
 }
 
 /* Responsive styles */
-@media (max-width: 990px) {
+@media (max-width: 1005px) {
   .hamburger {
     display: block;
   }
@@ -196,7 +196,7 @@ a.pasek:hover {
     flex-direction: column;
     background-color: rgb(0, 119, 71);
     position: absolute;
-    top: 80px;
+    top: 8 0px;
     left: 0;
     width: 100%;
 
@@ -210,7 +210,7 @@ a.pasek:hover {
   nav ul li {
     display: block;
     text-align: center;
-    margin: 10px 0;
+    margin: -15px 0 10px;
   }
 
   nav ul.show {
