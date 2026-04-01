@@ -1,14 +1,26 @@
-<div class="pasek"> <!--Pasek nawigacyjny-->
+<div class="pasek">
     <nav>
         <label class="logo"><a href="/MPK/"><img src="img/logo_mpk_krotkie.png" alt="Logo MPK" id="logo_krotkie"><img src="img/logo_mpk_dlugie.png" alt="Logo MPK" id="logo_dlugie"></a></label>
         <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
         <ul id="menu">
-        <li><a class="pasek" href="/MPK/">Spis</a></li>
-        <li><a class="pasek" href="autobusy">Autobusy</a></li>
-        <li><a class="pasek" href="tramwaje">Tramwaje</a></li>
-        <li><a class="pasek" href="trasy">Trasy</a></li>
-        <li><a class="pasek" href="informacje">Informacje</a></li>
-        <li><a class="pasek" href="../GZK/">GZK w Rędzinach</a></li>
+            <li><a class="pasek" href="/MPK/">Spis</a></li>
+            <li><a class="pasek" href="autobusy">Autobusy</a></li>
+            <li><a class="pasek" href="tramwaje">Tramwaje</a></li>
+
+            <!-- Tylko na desktop: przycisk "Więcej" z dropdownem -->
+            <li class="tylko-desktop dropdown" id="dropdown-li">
+                <button class="pasek dropdown-toggle" onclick="toggleDropdown(event)">Więcej ▼</button>
+                <ul class="dropdown-menu" id="dropdownMenu">
+                    <li><a class="pasek" href="trasy">Trasy</a></li>
+                    <li><a class="pasek" href="informacje">Informacje</a></li>
+                    <li><a class="pasek" href="../GZK/">GZK w Rędzinach</a></li>
+                </ul>
+            </li>
+
+            <!-- Tylko na mobile: zwykłe linki -->
+            <li class="tylko-mobile"><a class="pasek" href="trasy">Trasy</a></li>
+            <li class="tylko-mobile"><a class="pasek" href="informacje">Informacje</a></li>
+            <li class="tylko-mobile"><a class="pasek" href="../GZK/">GZK w Rędzinach</a></li>
         </ul>
     </nav>
 </div>
