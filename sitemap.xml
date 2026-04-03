@@ -1,14 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://komunikacja.cc/index</loc>
+    <loc>https://komunikacja.cc/</loc>
     <lastmod>2026-03-13</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://komunikacja.cc/GZK/404</loc>
-    <lastmod>2026-04-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -19,7 +13,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://komunikacja.cc/GZK/index</loc>
+    <loc>https://komunikacja.cc/GZK/</loc>
     <lastmod>2026-04-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -91,19 +85,13 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://komunikacja.cc/MPK/404</loc>
-    <lastmod>2026-03-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://komunikacja.cc/MPK/autobusy</loc>
     <lastmod>2026-04-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://komunikacja.cc/MPK/index</loc>
+    <loc>https://komunikacja.cc/MPK/</loc>
     <lastmod>2026-04-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -133,7 +121,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://komunikacja.cc/MPK/archiwum/index</loc>
+    <loc>https://komunikacja.cc/MPK/archiwum/</loc>
     <lastmod>2026-03-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
