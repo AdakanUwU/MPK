@@ -3571,9 +3571,36 @@
         
 
     </script>
+    
+    <script>
+        (function() {
+        var _origWrite = document.write.bind(document);
+        document.write = function(html) {
+            var m = html.match(/(\d+)/);
+            if (m) {
+            var digits = m[1];
+            var imgPath = 'img/num/';
+            var imgExt  = '.gif';
+            var out = '<span style="display:inline-flex;gap:1px;">';
+            for (var i = 0; i < digits.length; i++) {
+                out += '<img src="' + imgPath + digits[i] + imgExt + '" '
+                    + 'alt="' + digits[i] + '" '
+                    + 'style="height:100px;width:auto;">';
+            }
+            out += '</span>';
+            _origWrite(out);
+            } else {
+            _origWrite(html);
+            }
+        };
+        })();
+    </script>
 
-    TEST:
+
+    <BR><BR>
+            <center><h2>Liczba wizyt na stronie:</h2>
     <script type = "text/javascript" src = "//www.deszczowce.pl/licznik/licznik.php?id=126203160"></script>
+        </center>
 
 
 
