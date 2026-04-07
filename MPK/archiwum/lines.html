@@ -32,7 +32,7 @@
             let historyData = {};
 
             async function init() {
-                const res = await fetch('/api/history');
+                const res = await fetch('/api/history.json');
                 historyData = await res.json();
 
                 const linesSet = new Set();
