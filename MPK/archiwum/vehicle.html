@@ -39,7 +39,7 @@
             const sideNo = params.get("sideNo");
 
             async function init() {
-                const historyRes = await fetch('/api/history');
+                const historyRes = await fetch('/api/history.json');
                 const history = await historyRes.json();
 
                 const metaRes = await fetch('https://raw.githubusercontent.com/AdakanUwU/MPK/refs/heads/main/MPK/vehicles2.json');
