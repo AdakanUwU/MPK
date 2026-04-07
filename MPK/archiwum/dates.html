@@ -50,7 +50,7 @@
             let metaMap = {};
 
             async function init() {
-                const historyRes = await fetch('/api/history');
+                const historyRes = await fetch('/api/history.json');
                 historyData = await historyRes.json();
 
                 const metaRes = await fetch('https://raw.githubusercontent.com/AdakanUwU/MPK/refs/heads/main/MPK/vehicles2.json');
