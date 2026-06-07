@@ -108,9 +108,11 @@ body {
 }
 
 
+
 nav {
-  background-color: rgb(0, 119, 71);
-  list-style: none; 
+  background-color: rgb(0, 119, 71)
+;
+  list-style: none;
   height: 80px;
   width: 100%;
   position: fixed;
@@ -160,7 +162,7 @@ nav ul li {
 nav ul li a {
   color: rgb(255, 255, 255);
   font-size: 20px;
-  padding: 7px 5px;
+  padding: 7px 10px;
   transition-duration: 0.3s;
 }
 
@@ -172,7 +174,7 @@ a.pasek:hover {
   background-color: rgb(100, 232, 180);
   transition-duration: 0.3s;
   border-radius: 8px;
-  color: rgb(21, 21, 21);
+  color: rgb(48, 48, 48);
 }
 
 /* Hamburger button */
@@ -186,38 +188,120 @@ a.pasek:hover {
   float: right;
 }
 
-/* Responsive styles */
-@media (max-width: 1005px) {
-  .hamburger {
-    display: block;
-  }
+/* Dropdown "Więcej" - tylko desktop */
+.tylko-mobile {
+    display: none;
+}
 
-  nav ul {
-    flex-direction: column;
-    background-color: rgb(0, 119, 71);
+.dropdown {
+    position: relative;
+}
+
+.dropdown-toggle {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    padding: 7px 10px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition-duration: 0.3s;
+    font-family: inherit;
+}
+
+.dropdown-toggle:hover {
+    background-color: rgb(100, 232, 180);
+    color: rgb(48, 48, 48);
+}
+
+.dropdown-menu {
+    display: none;
     position: absolute;
-    top: 8 0px;
-    left: 0;
-    width: 100%;
+    top: 80px;
+    right: 0;
+    background-color: rgb(0, 119, 71);
+    border-radius: 8px;
+    min-width: 180px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    z-index: 1001;
+    padding: 6px 0;
+    margin-right: 0;
+}
 
-    max-height: 0;
-    overflow: hidden;
-    opacity: 0;
-    pointer-events: none;
-    transition: max-height 0.4s ease, opacity 0.3s ease;
-  }
-
-  nav ul li {
+.dropdown-menu li {
     display: block;
-    text-align: center;
-    margin: -15px 0 10px;
-  }
+    line-height: normal;
+    margin: 0;
+    text-align: right;
+}
 
-  nav ul.show {
-    max-height: 500px; /* Wystarczające dla kilku opcji */
-    opacity: 1;
-    pointer-events: auto;
-  }
+.dropdown-menu li a {
+    display: block;
+    padding: 10px 16px;
+    font-size: 18px;
+    color: white;
+}
+
+.dropdown-menu li a:hover {
+    background-color: rgb(100, 232, 180);
+    color: rgb(48, 48, 48);
+    border-radius: 8px;
+}
+
+.dropdown-menu.open {
+    display: block;
+}
+
+/* Responsive styles */
+@media (max-width: 800px) {
+    .hamburger {
+        display: block;
+    }
+
+    .tylko-desktop {
+        display: none !important;
+    }
+
+    .tylko-mobile {
+        display: block;
+    }
+
+    nav ul {
+        flex-direction: column;
+        background-color: rgb(0, 119, 71);
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        pointer-events: none;
+        transition: max-height 0.4s ease, opacity 0.3s ease;
+    }
+
+    nav ul li {
+        display: block;
+        text-align: center;
+        margin: 0;
+    }
+
+    nav ul li a {
+        display: block;
+        width: 100%;
+        text-align: center;
+        line-height: normal;
+        padding: 14px 0;
+        font-size: 20px;
+        color: white;
+    }
+
+    nav ul.show {
+        max-height: 500px;
+        opacity: 1;
+        pointer-events: auto;
+        overflow: hidden;
+    }
 }
 
 .tresc-glowna{
