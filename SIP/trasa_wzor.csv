@@ -1,0 +1,5 @@
+stop_nr;stop_name;time;type;line_nr;line_direction;direction_id
+;;;;NR LINII;PRZYSTANEK DOCELOWY;0
+1;PRZYSTANEK 1;0;0;;;
+2;PRZESTANEK 2;2;0;;;
+3;I TAK DALEJ;3;0;;;

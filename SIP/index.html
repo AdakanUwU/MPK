@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <link id="theme-css" rel="stylesheet" href="normal.css">
+</head>
+<body>
+
+<input type="file" id="csvFile" accept=".csv" style="margin-bottom: 20px; color: white;">
+
+<div id="sip-board">
+    <div id="header">
+        <div id="line-nr">---</div>
+        <div id="direction"><span id="direction-text">---</span></div>
+        <div id="clock">--:--</div>
+    </div>
+    <div id="list"></div>
+    <div id="footer">
+        <div id="footer-label">Przystanek początkowy:</div>
+        <div id="footer-name">---</div>
+    </div>
+</div>
+
+<div style="margin-top: 20px;">
+    <button onclick="prevStop()" style="padding: 10px 20px; font-size: 20px;">↑ Wstecz</button>
+    <button onclick="nextStop()" style="padding: 10px 20px; font-size: 20px;">↓ Następny</button>
+    <button onclick="setDojazd()" style="padding: 10px 20px; font-size: 20px; background: #d80000; color: white;">Dojazd</button>
+    <button onclick="setStop()" style="padding: 10px 20px; font-size: 20px; background: #ff9900; color: white;">STOP</button>
+</div>
+<div style="margin-top: 10px;">
+    <label style="color: white; font-size: 20px;">
+        <input type="checkbox" id="blokadaSwitch" onchange="toggleBlokada()"> Blokada kasowników
+    </label>
+</div>
+<div style="margin-top: 20px;">
+    <button onclick="toggleFullscreen()" style="padding: 10px 20px; font-size: 20px; background: #333; color: white;">Full Screen</button>
+</div>
+<div style="margin-top: 20px;">
+    <img src="opis.webp">
+</div>
+<div style="margin-top: 20px; color: white;">
+    • do trybu fullscreen rekomendowany jest ekran o proporcji 16:9<BR>
+    • schemat pliku linii do pobrania: <a href="trasa_wzor.csv" download="trasa_wzor.csv" style="color: #ff9900; font-size: 18px; text-decoration: none;">[ Pobierz szablon trasy (CSV) ]</a>
+</div>
+
+
+<script>
+let allStops = []; 
+let currentIndex = 0; 
+let footerMode = 'start';
+
+document.getElementById('csvFile').addEventListener('change', function(e) {
+    const file = e.target.files[0];
+    if (!file) return;
+
+    const reader = new FileReader();
+    reader.onload = function(e) {
+        const rows = e.target.result.trim().split('\n');
+        const headerData = rows[1].split(';');
+        
+        
+        // 1. Ustawienia nagłówka
+        document.getElementById('line-nr').innerText = headerData[4];
+        
+        // 2. Obsługa długiego tekstu kierunku
+        // ... wewnątrz reader.onload ...
+        const dirContainer = document.getElementById('direction');
+        const dirText = document.getElementById('direction-text');
+
+        dirText.innerText = headerData[5];
+        dirText.classList.remove('scrolling');
+        dirContainer.style.justifyContent = 'center'; // Statyczny tekst jest na środku
+
+        // Czekamy na przeliczenie szerokości
+        requestAnimationFrame(() => {
+            if (dirText.offsetWidth > dirContainer.offsetWidth) {
+                dirContainer.style.justifyContent = 'flex-start'; // Tekst zaczyna się od lewej
+                dirText.classList.add('scrolling');
+            }
+        });
+
+        // 3. Wczytanie przystanków
+        allStops = [];
+        for(let i = 2; i < rows.length; i++) {
+            const cols = rows[i].split(';');
+            if(cols[1]) allStops.push({ 
+                name: cols[1], 
+                originalTime: parseInt(cols[2]) || 0 
+            });
+        }
+        
+        currentIndex = 0;
+        footerMode = 'start';
+        updateFooter();
+        renderBoard();
+    };
+    reader.readAsText(file, 'windows-1250');
+});
+
+function renderBoard() {
+    const list = document.getElementById('list');
+    list.innerHTML = '';
+    
+    // Używamy originalTime z przystanku, na którym jesteśmy jako punktu odniesienia
+    let timeAtCurrent = allStops[currentIndex].originalTime;
+
+    for(let i = currentIndex; i < allStops.length; i++) {
+        const isActive = (i === currentIndex);
+        let timeLeft = allStops[i].originalTime - timeAtCurrent;
+        const displayTime = isActive ? "" : (timeLeft < 0 ? 0 : timeLeft) + "'";
+        
+        const isLast = (i === allStops.length - 1);
+        const displayName = isLast ? "KONIEC TRASY - " + allStops[i].name : allStops[i].name;
+        
+        list.innerHTML += `
+            <div class="stop-row ${isActive ? 'active-stop' : ''}">
+                <div class="stop-time">${displayTime}</div>
+                <div class="stop-marker"></div>
+                <div class="stop-name">${displayName}</div>
+            </div>`;
+    }
+}
+
+let isBlokada = false;
+
+function toggleBlokada() {
+    isBlokada = document.getElementById('blokadaSwitch').checked;
+    document.getElementById('footer').classList.toggle('blokada-active', isBlokada)
+    renderBoard();
+    updateFooter();
+}
+
+// Zaktualizowana funkcja updateFooter
+function updateFooter() {
+    const label = document.getElementById('footer-label');
+    const name = document.getElementById('footer-name');
+    
+    if (isBlokada) {
+        label.innerText = "BLOKADA KASOWNIKÓW";
+        name.innerText = "PROSZĘ PRZYGOTOWAĆ BILETY DO KONTROLI";
+    } else {
+        const labels = {
+            'start': "Przystanek początkowy:",
+            'next': "Następny przystanek:",
+            'current': "Przystanek:",
+            'stop': "STOP Przystanek:"
+        };
+        label.innerText = labels[footerMode];
+        name.innerText = allStops[currentIndex].name;
+    }
+}
+
+function nextStop() {
+    if (currentIndex < allStops.length - 1) {
+        currentIndex++;
+        footerMode = 'next';
+        updateFooter();
+        renderBoard();
+    }
+}
+
+function prevStop() {
+    if (currentIndex > 0) {
+        currentIndex--;
+        footerMode = (currentIndex === 0) ? 'start' : 'next';
+        updateFooter();
+        renderBoard();
+    }
+}
+
+function setDojazd() { footerMode = 'current'; updateFooter(); }
+function setStop() { footerMode = 'stop'; updateFooter(); }
+
+
+
+// Centralna obsługa zmiany trybu ekranu
+document.addEventListener('fullscreenchange', () => {
+    const link = document.getElementById("theme-css");
+    
+    if (document.fullscreenElement) {
+        // Weszliśmy w fullscreen
+        link.href = "fullscreen.css";
+    } else {
+        // Wyszliśmy z fullscreen
+        link.href = "normal.css";
+    }
+});
+
+// Sama funkcja przycisku tylko wywołuje zmianę trybu
+function toggleFullscreen() {
+    const elem = document.getElementById("sip-board");
+    
+    if (!document.fullscreenElement) {
+        elem.requestFullscreen();
+    } else {
+        document.exitFullscreen();
+    }
+}
+
+document.addEventListener('keydown', function(event) {
+    // Sprawdzamy jaki klawisz został naciśnięty
+    switch(event.key) {
+        case 'ArrowUp':
+            event.preventDefault(); // Blokuje scrollowanie strony
+            prevStop();
+            break;
+            
+        case 'ArrowDown':
+            event.preventDefault();
+            nextStop();
+            break;
+            
+        case 'Enter':
+            setDojazd();
+            break;
+            
+        case '\\': // Klawisz backslash
+            setStop();
+            break;
+            
+        case 'b':
+        case 'B':
+            // Przełączanie blokady
+            const switchEl = document.getElementById('blokadaSwitch');
+            if (switchEl) {
+                switchEl.checked = !switchEl.checked;
+                toggleBlokada();
+            }
+            break;
+    }
+});
+
+
+
+setInterval(() => {
+    document.getElementById('clock').innerText = new Date().toLocaleTimeString('pl-PL', {hour: '2-digit', minute:'2-digit'});
+}, 1000);
+</script>
+</body>
+</html>

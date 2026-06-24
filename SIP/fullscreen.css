@@ -1,0 +1,200 @@
+/* fullscreen.css */
+body {
+    background: #1a1a1a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 120px;
+    font-family: 'Myriad Pro', sans-serif;
+}
+
+#sip-board {
+    width: 1920px;
+    height: 1080px;
+    background: #f2f2f2;
+    border: 9.6px solid #333;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+#header {
+    display: flex;
+    height: 144px;
+    align-items: center;
+    padding: 0 24px;
+    gap: 12px;
+    margin-top: 2.4px;
+}
+
+#line-nr {
+    width: 240px;
+    height: 132px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 144px;
+    font-weight: bold;
+    border: 4.8px solid #d80000;
+    background: #e0e0e0;
+}
+
+#direction {
+    flex-grow: 1;
+    height: 132px;
+    background: #d80000;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 108px;
+    border: 4.8px solid #e0e0e0;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+}
+
+#direction-text {
+    display: inline-block;
+    padding: 0 48px;
+    transition: transform 0.5s ease;
+}
+
+/* Klasa włączająca przewijanie */
+.scrolling {
+    animation: marquee 10s linear infinite;
+    justify-content: flex-start;
+    /* Przesuwa tekst do lewej przy scrollu */
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(100%);
+    }
+
+    /* Startuje z prawej krawędzi */
+    100% {
+        transform: translateX(-100%);
+    }
+
+    /* Kończy z lewej krawędzi */
+}
+
+#clock {
+    width: 288px;
+    height: 132px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 108px;
+    font-weight: bold;
+    border: 4.8px solid #d80000;
+    background: #e0e0e0;
+}
+
+#footer {
+    background: #e0e0e0;
+    border-top: 4.8px solid #d80000;
+    border-bottom: 4.8px solid #d80000;
+    padding: 12px;
+    text-align: center;
+    margin-bottom: 4.8px;
+}
+
+#footer-label {
+    font-size: 48px;
+    color: #333;
+    font-weight: bold;
+}
+
+#footer-name {
+    font-size: 84px;
+}
+
+#list {
+    padding: 48px 48px;
+    flex-grow: 1;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+#list::before {
+    content: '';
+    position: absolute;
+    left: 120px;
+    top: 12px;
+    bottom: 12px;
+    width: 19.2px;
+    background: #666;
+}
+
+.stop-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 43.2px;
+    position: relative;
+    height: 72px;
+}
+
+.stop-time {
+    transform: translateX(-84px);
+    width: 120px;
+    font-size: 48px;
+    text-align: right;
+    margin-right: 48px;
+    font-variant-numeric: tabular-nums;
+}
+
+.stop-marker {
+    width: 43.2px;
+    height: 43.2px;
+    background: white;
+    border: 7.2px solid #666;
+    border-radius: 50%;
+    position: absolute;
+    left: 120px;
+    transform: translateX(-115%);
+}
+
+.stop-marker::after {
+    content: '';
+    position: absolute;
+    top: 4.8px;
+    left: 4.8px;
+    width: 33.6px;
+    height: 33.6px;
+    background: #444;
+    /* Wypełnienie wnętrza */
+    border-radius: 50%;
+}
+
+/* Aktywny przystanek (czerwony) */
+.active-stop .stop-marker {
+    transform: translateX(-125%);
+    background: #d80000;
+    border: 3px solid #444;
+}
+
+.active-stop .stop-marker::after {
+    background: #d80000;
+    /* Wypełnienie też czerwone */
+}
+
+.stop-name {
+    transform: translateX(-84px);
+    font-size: 62.4px;
+    margin-left: 60px;
+}
+
+.active-stop .stop-name {
+    color: #d80000;
+    font-weight: bold;
+}
+
+#footer.blokada-active #footer-label,
+#footer.blokada-active #footer-name {
+    font-size: 65.8px;
+}
