@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <link id="theme-css" rel="stylesheet" href="normal-2.css">
+    <SCRIPT language="JAVASCRIPT" src="imieniny.js"></SCRIPT>
+</head>
+<body>
+
+<input type="file" id="csvFile" accept=".csv" style="margin-bottom: 20px; color: white;">
+
+<div id="sip-board">
+    <div id="header">
+        <div id="line-nr">---</div>
+        <div id="direction"><span id="direction-text">---</span></div>
+    </div>
+    <div id="footer">
+        <div id="footer-label">Przystanek początkowy:</div>
+        <div id="footer-name">---</div>
+    </div>
+</div>
+
+<div style="margin-top: 20px;">
+    <button onclick="prevStop()" style="padding: 10px 20px; font-size: 20px;">↑ Wstecz</button>
+    <button onclick="nextStop()" style="padding: 10px 20px; font-size: 20px;">↓ Następny</button>
+    <button onclick="setDojazd()" style="padding: 10px 20px; font-size: 20px; background: #d80000; color: white;">Dojazd</button>
+    <button onclick="setStop()" style="padding: 10px 20px; font-size: 20px; background: #ff9900; color: white;">STOP</button>
+</div>
+<div style="margin-top: 10px;">
+    <label style="color: rgb(138, 138, 138); font-size: 20px;">
+        <input type="checkbox" id="blokadaSwitch" onchange="toggleBlokada()"> Blokada kasowników
+    </label>
+</div>
+<div style="margin-top: 20px;">
+    <button onclick="toggleFullscreen()" style="padding: 10px 20px; font-size: 20px; background: #333; color: white;">Full Screen</button>
+</div>
+<div style="margin-top: 10px;">
+    <label style="color: rgb(119, 119, 119); font-size: 20px;">
+        <input type="checkbox" id="nightModeSwitch" onchange="updateTheme()"> Tryb nocny
+    </label>
+</div>
+
+<script>
+// =====================================================================
+//  DANE
+// =====================================================================
+let allStops  = [];
+let currentIndex = 0;
+let footerMode   = 'start';   // 'start' | 'next' | 'current' | 'stop'
+let isBlokada    = false;
+
+// =====================================================================
+//  ROTACJA STOPKI
+//  Stany: 0=trasa  1=data  2=czas  3=imieniny  4=przystanek
+//  Przystanek (4) wchodzi do cyklu dopiero po kliknięciu Dojazd/Stop.
+// =====================================================================
+let footerState      = 0;
+let stopInCycle      = false;   // czy stan 4 jest już w cyklu
+const TOTAL_BASE     = 4;       // stany 0-3 zawsze obecne
+const SCROLL_PX_S    = 220;     // stała prędkość scrolla trasy [px/s] — zmień wg uznania
+const BOARD_W        = 720;     // szerokość planszy [px] — musi zgadzać się z CSS
+
+// czas wyświetlania stanów statycznych [ms]
+const STATE_DWELL = { 1: 7000, 2: 5000, 3: 7000, 4: 6000 };
+
+let rotationTimer = null;
+
+function totalStates() {
+    return stopInCycle ? TOTAL_BASE + 1 : TOTAL_BASE;
+}
+
+function scheduleNext(delayMs) {
+    clearTimeout(rotationTimer);
+    rotationTimer = setTimeout(() => {
+        if (!isBlokada) {
+            footerState = (footerState + 1) % totalStates();
+            renderFooter();
+        }
+    }, delayMs);
+}
+
+// =====================================================================
+//  RENDEROWANIE STOPKI
+// =====================================================================
+
+// Helper: ustaw etykietę i nazwę; jeśli razem nie mieszczą się w BOARD_W —
+// przewiń je razem jako jeden element (label chowa się, jego tekst wchodzi
+// do name). iterations=1 → jednorazowo (cykl); Infinity → pętla (blokada).
+function setFooterContent(labelText, nameText, dwellMs, iterations) {
+    const label     = document.getElementById('footer-label');
+    const name      = document.getElementById('footer-name');
+    const container = document.getElementById('footer');
+    const capturedState   = footerState;
+    const capturedBlokada = isBlokada;
+
+    label.innerText = labelText;
+    name.innerText  = nameText;
+    label.style.display = '';
+    container.style.justifyContent = 'center';
+
+    requestAnimationFrame(() => {
+        // guard: stan mógł się zmienić w ciągu jednej klatki
+        if (footerState !== capturedState || isBlokada !== capturedBlokada) return;
+
+        const totalW = (labelText ? label.scrollWidth : 0) + name.scrollWidth;
+
+        if (totalW > BOARD_W) {
+            // za długo — scalamy i scrollujemy razem
+            label.innerText = '';
+            label.style.display = 'none';
+            name.innerHTML = '';
+
+            if (labelText) {
+                const lSpan = document.createElement('span');
+                lSpan.style.fontWeight = 'normal';
+                lSpan.style.color = '#333';
+                lSpan.textContent = labelText + '\u00A0\u00A0';
+                name.appendChild(lSpan);
+            }
+            const nSpan = document.createElement('span');
+            nSpan.textContent = nameText;
+            name.appendChild(nSpan);
+
+            const textW  = name.scrollWidth;
+            const durMs  = (BOARD_W + textW) / SCROLL_PX_S * 1000;
+            container.style.justifyContent = 'flex-start';
+
+            name.animate(
+                [
+                    { transform: `translateX(${BOARD_W}px)` },
+                    { transform: `translateX(-${textW}px)` }
+                ],
+                { duration: durMs, easing: 'linear',
+                  fill: 'forwards', iterations: iterations ?? 1 }
+            );
+
+            if ((iterations ?? 1) !== Infinity) scheduleNext(durMs);
+        } else {
+            // mieści się — statycznie, wyśrodkowane
+            if (dwellMs) scheduleNext(dwellMs);
+        }
+    });
+}
+
+function renderFooter() {
+    const label     = document.getElementById('footer-label');
+    const name      = document.getElementById('footer-name');
+    const container = document.getElementById('footer');
+
+    // reset: natychmiast czyść stary tekst i animację
+    name.getAnimations().forEach(a => a.cancel());
+    label.style.display = '';
+    label.innerText = '';
+    name.innerText  = '';
+    container.style.justifyContent = 'center';
+
+    if (isBlokada) {
+        setFooterContent(
+            'BLOKADA KASOWNIKÓW',
+            'PROSZĘ PRZYGOTOWAĆ BILETY DO KONTROLI',
+            null,
+            Infinity   // pętla — blokada trwa do odznaczenia
+        );
+        return;
+    }
+
+    switch (footerState) {
+        // ------ PRZYSTANEK (dojazd / stop) ------
+        case 0: {
+            const labelMap = {
+                start:   'Przystanek początkowy:',
+                next:    'Następny przystanek:',
+                current: 'Przystanek:',
+                stop:    'STOP Przystanek:'
+            };
+            setFooterContent(
+                labelMap[footerMode],
+                allStops[currentIndex]?.name || '---',
+                STATE_DWELL[4]
+            );
+            break;
+        }
+        
+        // ------ TRASA (zawsze scroll, etykieta razem z trasą) ------
+        case 1: {
+            if (allStops.length === 0) { scheduleNext(3000); return; }
+            const remainingStops = allStops.slice(currentIndex);
+            const trasa = remainingStops.map(s => s.name).join('  —  ');
+            setFooterContent('Trasa:', trasa, null, 1);
+            return;
+        }
+
+        // ------ DATA ------
+        case 2: {
+            const d = new Date().toLocaleDateString('pl-PL', {
+                weekday: 'long', day: 'numeric', month: 'long', year: 'numeric'
+            });
+            setFooterContent('Dzisiaj jest:', d, STATE_DWELL[1]);
+            break;
+        }
+
+        // ------ CZAS ------
+        case 3: {
+            const t = new Date().toLocaleTimeString('pl-PL', {
+                hour: '2-digit', minute: '2-digit'
+            });
+            setFooterContent('', t, STATE_DWELL[2]);
+            break;
+        }
+
+        // ------ IMIENINY ------
+        case 4: {
+            const tekst = (typeof di === 'function') ? di() : '---';
+            setFooterContent('Dzisiaj imieniny:', tekst, STATE_DWELL[3]);
+            break;
+        }
+    }
+}
+
+// =====================================================================
+//  WCZYTYWANIE CSV
+// =====================================================================
+document.getElementById('csvFile').addEventListener('change', function (e) {
+    const file = e.target.files[0];
+    if (!file) return;
+
+    const reader = new FileReader();
+    reader.onload = function (e) {
+        const rows       = e.target.result.trim().split('\n');
+        const headerData = rows[1].split(';');
+
+        document.getElementById('line-nr').innerText = headerData[4];
+
+        const dirContainer = document.getElementById('direction');
+        const dirText      = document.getElementById('direction-text');
+        dirText.innerText  = headerData[5];
+        dirText.classList.remove('scrolling');
+        dirContainer.style.justifyContent = 'center';
+        requestAnimationFrame(() => {
+            if (dirText.offsetWidth > dirContainer.offsetWidth) {
+                dirContainer.style.justifyContent = 'flex-start';
+                dirText.classList.add('scrolling');
+            }
+        });
+
+        allStops = [];
+        for (let i = 2; i < rows.length; i++) {
+            const cols = rows[i].split(';');
+            if (cols[1]) allStops.push({
+                name:         cols[1],
+                originalTime: parseInt(cols[2]) || 0
+            });
+        }
+
+        currentIndex = 0;
+        footerMode   = 'start';
+        footerState  = 0;
+        stopInCycle  = false;
+        clearTimeout(rotationTimer);
+        renderFooter();
+    };
+    reader.readAsText(file, 'windows-1250');
+});
+
+// =====================================================================
+//  PRZYCISKI NAWIGACJI
+// =====================================================================
+function nextStop() {
+    if (currentIndex < allStops.length - 1) {
+        currentIndex++;
+        footerMode = 'next';
+        renderFooter();  // odświeża bieżący stan (jeśli jest na 4, pokaże nowy przystanek)
+    }
+}
+
+function prevStop() {
+    if (currentIndex > 0) {
+        currentIndex--;
+        footerMode = (currentIndex === 0) ? 'start' : 'next';
+        renderFooter();
+    }
+}
+
+// Dojazd / Stop — natychmiastowe przejście do stanu 4
+function setDojazd() {
+    footerMode  = 'current';
+    stopInCycle = true;
+    clearTimeout(rotationTimer);
+    footerState = 4;
+    renderFooter();
+}
+
+function setStop() {
+    footerMode  = 'stop';
+    stopInCycle = true;
+    clearTimeout(rotationTimer);
+    footerState = 4;
+    renderFooter();
+}
+
+// =====================================================================
+//  BLOKADA
+// =====================================================================
+function toggleBlokada() {
+    isBlokada = document.getElementById('blokadaSwitch').checked;
+    document.getElementById('footer').classList.toggle('blokada-active', isBlokada);
+    clearTimeout(rotationTimer);
+    renderFooter();
+}
+
+// =====================================================================
+//  ZEGAR — odświeża czas bez przerywania animacji
+// =====================================================================
+setInterval(() => {
+    if (footerState === 3 && !isBlokada) {
+        const name = document.getElementById('footer-name');
+        if (!name.classList.contains('scroll-active')) {
+            name.innerText = new Date().toLocaleTimeString('pl-PL', {
+                hour: '2-digit', minute: '2-digit'
+            });
+        }
+    }
+}, 1000);
+
+// =====================================================================
+//  TRYB NOCNY / FULLSCREEN
+// =====================================================================
+function updateTheme() {
+    const link    = document.getElementById('theme-css');
+    const isNight = document.getElementById('nightModeSwitch').checked;
+    const isFull  = !!document.fullscreenElement;
+
+    let newHref = 'normal-2.css';
+    if (isFull)  newHref = isNight ? 'night-fullscreen.css' : 'fullscreen-2.css';
+    else         newHref = isNight ? 'night-2.css'          : 'normal-2.css';
+
+    if (link.getAttribute('href') !== newHref) link.href = newHref;
+}
+
+document.addEventListener('fullscreenchange', updateTheme);
+
+function toggleFullscreen() {
+    const elem = document.getElementById('sip-board');
+    if (!document.fullscreenElement) {
+        elem.requestFullscreen().then(() => setTimeout(updateTheme, 100));
+    } else {
+        document.exitFullscreen().then(() => setTimeout(updateTheme, 100));
+    }
+}
+
+// =====================================================================
+//  KLAWIATURA
+// =====================================================================
+document.addEventListener('keydown', function (event) {
+    switch (event.key) {
+        case 'ArrowUp':   event.preventDefault(); prevStop();   break;
+        case 'ArrowDown': event.preventDefault(); nextStop();   break;
+        case 'Enter':     setDojazd();                          break;
+        case '\\':        setStop();                            break;
+        case 'n':
+        case 'N': {
+            const sw = document.getElementById('nightModeSwitch');
+            sw.checked = !sw.checked;
+            updateTheme();
+            break;
+        }
+        case 'b':
+        case 'B': {
+            const sw = document.getElementById('blokadaSwitch');
+            sw.checked = !sw.checked;
+            toggleBlokada();
+            break;
+        }
+    }
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,109 @@
+body {
+    background: #1a1a1a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+    font-family: 'Myriad Pro', sans-serif;
+}
+
+#sip-board {
+    width: 720px;
+    height: 96px;
+    background: #f2f2f2;
+    border: 4px solid #333;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* NAGŁÓWEK */
+#header {
+    display: flex;
+    height: 48px;
+    align-items: center;
+}
+
+#line-nr {
+    width: 100px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 48px;
+    font-weight: bold;
+    border: 2px solid #d80000;
+    background: #e0e0e0;
+    flex-shrink: 0;
+}
+
+#direction {
+    flex-grow: 1;
+    min-width: 0;
+    height: 48px;
+    background: #d80000;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+}
+
+#direction-text {
+    display: inline-block;
+    padding: 0 20px;
+}
+
+/* Klasa włączająca przewijanie kierunku */
+.scrolling {
+    animation: marquee 10s linear infinite;
+}
+
+@keyframes marquee {
+    0%   { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+
+/* STOPKA */
+#footer {
+    background: #e0e0e0;
+    border-top: 2px solid #d80000;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;    /* domyślnie tekst statyczny wyśrodkowany */
+    overflow: hidden;
+    white-space: nowrap;
+    gap: 0;
+    padding: 0;
+}
+
+/* blokada */
+#footer.blokada-active {
+    justify-content: center;
+    gap: 10px;
+}
+
+#footer-label {
+    font-size: 35px;
+    color: #333;
+    flex-shrink: 0;             /* etykieta statyczna nie kurczy się */
+    padding: 0 8px 0 10px;
+}
+
+#footer-name {
+    font-size: 35px;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+/* blokada — zmniejsza oba teksty */
+#footer.blokada-active #footer-label,
+#footer.blokada-active #footer-name {
+    font-size: 27px;
+}
+
+/* Scroll trasy obsługiwany przez Web Animations API w JS (lcd-v3.html) */

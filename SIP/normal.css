@@ -47,28 +47,30 @@ body {
 }
 
 #line-nr {
-    width: 100px;
+    width: 120px;
     height: 55px;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 60px;
-    /* Powiększona czcionka */
     font-weight: bold;
     border: 2px solid #d80000;
-    /* Czerwona ramka */
     background: #e0e0e0;
+    
+    /* DODAJ TO: Zapobiega kurczeniu się elementu */
+    flex-shrink: 0; 
 }
 
 #direction {
     flex-grow: 1;
+    /* Usuwamy potencjalne konflikty szerokości */
+    min-width: 0; 
     height: 55px;
     background: #d80000;
     color: white;
     display: flex;
     align-items: center;
     justify-content: center;
-    /* Domyślnie wyśrodkowany */
     font-size: 45px;
     border: 2px solid #e0e0e0;
     overflow: hidden;

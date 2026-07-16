@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <link id="theme-css" rel="stylesheet" href="normal.css">
+
+    <SCRIPT language="JAVASCRIPT" src="imieniny.js"></SCRIPT> <!--ŁADOWANIE IMIENIN-->
 </head>
 <body>
 
@@ -18,6 +20,7 @@
     <div id="footer">
         <div id="footer-label">Przystanek początkowy:</div>
         <div id="footer-name">---</div>
+        <div id="imieniny-data" style="display:none;"></div>
     </div>
 </div>
 
@@ -28,12 +31,17 @@
     <button onclick="setStop()" style="padding: 10px 20px; font-size: 20px; background: #ff9900; color: white;">STOP</button>
 </div>
 <div style="margin-top: 10px;">
-    <label style="color: white; font-size: 20px;">
+    <label style="color: rgb(138, 138, 138); font-size: 20px;">
         <input type="checkbox" id="blokadaSwitch" onchange="toggleBlokada()"> Blokada kasowników
     </label>
 </div>
 <div style="margin-top: 20px;">
     <button onclick="toggleFullscreen()" style="padding: 10px 20px; font-size: 20px; background: #333; color: white;">Full Screen</button>
+</div>
+<div style="margin-top: 10px;">
+    <label style="color: rgb(119, 119, 119); font-size: 20px;">
+        <input type="checkbox" id="nightModeSwitch" onchange="updateTheme()"> Tryb nocny
+    </label>
 </div>
 <div style="margin-top: 20px;">
     <img src="opis.webp">
@@ -48,6 +56,8 @@
 let allStops = []; 
 let currentIndex = 0; 
 let footerMode = 'start';
+let footerState = 0; // 0: przystanek, 1: data, 2: imieniny
+
 
 document.getElementById('csvFile').addEventListener('change', function(e) {
     const file = e.target.files[0];
@@ -58,28 +68,22 @@ document.getElementById('csvFile').addEventListener('change', function(e) {
         const rows = e.target.result.trim().split('\n');
         const headerData = rows[1].split(';');
         
-        
-        // 1. Ustawienia nagłówka
         document.getElementById('line-nr').innerText = headerData[4];
         
-        // 2. Obsługa długiego tekstu kierunku
-        // ... wewnątrz reader.onload ...
         const dirContainer = document.getElementById('direction');
         const dirText = document.getElementById('direction-text');
 
         dirText.innerText = headerData[5];
         dirText.classList.remove('scrolling');
-        dirContainer.style.justifyContent = 'center'; // Statyczny tekst jest na środku
+        dirContainer.style.justifyContent = 'center';
 
-        // Czekamy na przeliczenie szerokości
         requestAnimationFrame(() => {
             if (dirText.offsetWidth > dirContainer.offsetWidth) {
-                dirContainer.style.justifyContent = 'flex-start'; // Tekst zaczyna się od lewej
+                dirContainer.style.justifyContent = 'flex-start';
                 dirText.classList.add('scrolling');
             }
         });
 
-        // 3. Wczytanie przystanków
         allStops = [];
         for(let i = 2; i < rows.length; i++) {
             const cols = rows[i].split(';');
@@ -101,7 +105,6 @@ function renderBoard() {
     const list = document.getElementById('list');
     list.innerHTML = '';
     
-    // Używamy originalTime z przystanku, na którym jesteśmy jako punktu odniesienia
     let timeAtCurrent = allStops[currentIndex].originalTime;
 
     for(let i = currentIndex; i < allStops.length; i++) {
@@ -130,26 +133,6 @@ function toggleBlokada() {
     updateFooter();
 }
 
-// Zaktualizowana funkcja updateFooter
-function updateFooter() {
-    const label = document.getElementById('footer-label');
-    const name = document.getElementById('footer-name');
-    
-    if (isBlokada) {
-        label.innerText = "BLOKADA KASOWNIKÓW";
-        name.innerText = "PROSZĘ PRZYGOTOWAĆ BILETY DO KONTROLI";
-    } else {
-        const labels = {
-            'start': "Przystanek początkowy:",
-            'next': "Następny przystanek:",
-            'current': "Przystanek:",
-            'stop': "STOP Przystanek:"
-        };
-        label.innerText = labels[footerMode];
-        name.innerText = allStops[currentIndex].name;
-    }
-}
-
 function nextStop() {
     if (currentIndex < allStops.length - 1) {
         currentIndex++;
@@ -171,22 +154,50 @@ function prevStop() {
 function setDojazd() { footerMode = 'current'; updateFooter(); }
 function setStop() { footerMode = 'stop'; updateFooter(); }
 
-
-
-// Centralna obsługa zmiany trybu ekranu
-document.addEventListener('fullscreenchange', () => {
+function updateTheme() {
     const link = document.getElementById("theme-css");
+    const isNight = document.getElementById('nightModeSwitch').checked;
     
-    if (document.fullscreenElement) {
-        // Weszliśmy w fullscreen
-        link.href = "fullscreen.css";
+    const isFull = !!document.fullscreenElement;
+
+    let newHref = "normal.css";
+
+    if (isFull) {
+        newHref = isNight ? "night-fullscreen.css" : "fullscreen.css";
     } else {
-        // Wyszliśmy z fullscreen
-        link.href = "normal.css";
+        newHref = isNight ? "night.css" : "normal.css";
     }
+
+    if (link.getAttribute("href") !== newHref) {
+        link.href = newHref;
+    }
+}
+
+document.addEventListener('fullscreenchange', updateTheme);
+
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'n' || event.key === 'N') {
+        const switchEl = document.getElementById('nightModeSwitch');
+        switchEl.checked = !switchEl.checked;
+        updateTheme();
+    }
+
 });
 
-// Sama funkcja przycisku tylko wywołuje zmianę trybu
+
+function toggleFullscreen() {
+    const elem = document.getElementById("sip-board");
+    
+    if (!document.fullscreenElement) {
+        elem.requestFullscreen().then(() => {
+            setTimeout(updateTheme, 100);
+        });
+    } else {
+        document.exitFullscreen().then(() => {
+            setTimeout(updateTheme, 100);
+        });
+    }
+} 
 function toggleFullscreen() {
     const elem = document.getElementById("sip-board");
     
@@ -198,10 +209,9 @@ function toggleFullscreen() {
 }
 
 document.addEventListener('keydown', function(event) {
-    // Sprawdzamy jaki klawisz został naciśnięty
     switch(event.key) {
         case 'ArrowUp':
-            event.preventDefault(); // Blokuje scrollowanie strony
+            event.preventDefault(); 
             prevStop();
             break;
             
@@ -214,13 +224,12 @@ document.addEventListener('keydown', function(event) {
             setDojazd();
             break;
             
-        case '\\': // Klawisz backslash
+        case '\\':
             setStop();
             break;
             
         case 'b':
         case 'B':
-            // Przełączanie blokady
             const switchEl = document.getElementById('blokadaSwitch');
             if (switchEl) {
                 switchEl.checked = !switchEl.checked;
@@ -229,6 +238,45 @@ document.addEventListener('keydown', function(event) {
             break;
     }
 });
+
+
+// W HTML w miejscu gdzie jest <div id="footer-name">---</div> 
+// dodaj pomocniczy span dla imienin, żeby się nie nadpisywały:
+// <div id="footer-name">---</div>
+// <div id="imieniny-data" style="display:none;"></div> 
+
+function updateFooter() {
+    const label = document.getElementById('footer-label');
+    const name = document.getElementById('footer-name');
+    const imieniny = document.getElementById('imieniny-data').innerText;
+
+    if (isBlokada) {
+        label.innerText = "BLOKADA KASOWNIKÓW";
+        name.innerText = "PROSZĘ PRZYGOTOWAĆ BILETY DO KONTROLI";
+    } else {
+        if (footerState === 0) {
+            const labels = {'start': "Przystanek początkowy:", 'next': "Następny przystanek:", 'current': "Przystanek:", 'stop': "STOP Przystanek:"};
+            label.innerText = labels[footerMode];
+            name.innerText = allStops[currentIndex]?.name || "---";
+        } 
+        else if (footerState === 1) {
+            label.innerText = "Dzisiaj jest:";
+            name.innerText = new Date().toLocaleDateString('pl-PL', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' });
+        } 
+        else if (footerState === 2) {
+            label.innerText = "Dzisiaj imieniny:";
+            name.innerText = di();
+        }
+    }
+}
+
+// Przełączanie co 10 sekund
+setInterval(() => {
+    if (!isBlokada) {
+        footerState = (footerState + 1) % 3;
+        updateFooter();
+    }
+}, 10000);
 
 
 

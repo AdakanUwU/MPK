@@ -1,0 +1,204 @@
+/* fullscreen.css */
+body {
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 120px;
+    font-family: 'Myriad Pro', sans-serif;
+}
+
+#sip-board {
+    width: 1920px;
+    height: 1080px;
+    background: #333;
+    border: 9.6px solid #fff;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+#header {
+    display: flex;
+    height: 144px;
+    align-items: center;
+    padding: 0 24px;
+    gap: 12px;
+    margin-top: 2.4px;
+}
+
+#line-nr {
+    width: 240px;
+    height: 132px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 144px;
+    color: #fff;
+    font-weight: bold;
+    border: 2px solid #9b0000;
+    background: #111;
+}
+
+#direction {
+    flex-grow: 1;
+    height: 132px;
+    background: #9b0000;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 108px;
+    border: 4.8px solid #e0e0e0;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+}
+
+#direction-text {
+    display: inline-block;
+    padding: 0 48px;
+    transition: transform 0.5s ease;
+}
+
+/* Klasa włączająca przewijanie */
+.scrolling {
+    animation: marquee 10s linear infinite;
+    justify-content: flex-start;
+    /* Przesuwa tekst do lewej przy scrollu */
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(100%);
+    }
+
+    /* Startuje z prawej krawędzi */
+    100% {
+        transform: translateX(-100%);
+    }
+
+    /* Kończy z lewej krawędzi */
+}
+
+#clock {
+    width: 288px;
+    height: 132px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 108px;
+    font-weight: bold;
+    border: 4.8px solid #9b0000;
+    background: #111;
+}
+
+#footer {
+    background: #666;
+    border-top: 4.8px solid #9b0000;
+    border-bottom: 4.8px solid #9b0000;
+    padding: 12px;
+    text-align: center;
+    margin-bottom: 4.8px;
+}
+
+#footer-label {
+    font-size: 48px;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+#footer-name {
+    color: #ffffff;
+    font-size: 84px;
+}
+
+#list {
+    padding: 48px 48px;
+    flex-grow: 1;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    color: #fff;
+}
+
+#list::before {
+    content: '';
+    position: absolute;
+    left: 120px;
+    top: 12px;
+    bottom: 12px;
+    width: 19.2px;
+    background: #e3e3e3;
+}
+
+.stop-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 43.2px;
+    position: relative;
+    height: 72px;
+}
+
+.stop-time {
+    transform: translateX(-84px);
+    width: 120px;
+    font-size: 48px;
+    text-align: right;
+    margin-right: 48px;
+    font-variant-numeric: tabular-nums;
+}
+
+.stop-marker {
+    width: 43.2px;
+    height: 43.2px;
+    background: #333;
+    border: 7.2px solid #e3e3e3;
+    border-radius: 50%;
+    position: absolute;
+    left: 120px;
+    transform: translateX(-115%);
+}
+
+.stop-marker::after {
+    content: '';
+    position: absolute;
+    top: 4.8px;
+    left: 4.8px;
+    width: 33.6px;
+    height: 33.6px;
+    background: #c1c1c1;
+    /* Wypełnienie wnętrza */
+    border-radius: 50%;
+}
+
+/* Aktywny przystanek (czerwony) */
+.active-stop .stop-marker {
+    transform: translateX(-125%);
+    background: #ff3737;
+    border: 3px solid #c1c1c1;
+}
+
+.active-stop .stop-marker::after {
+    background: #ff3737;
+    /* Wypełnienie też czerwone */
+}
+
+.stop-name {
+    transform: translateX(-84px);
+    font-size: 62.4px;
+    margin-left: 60px;
+}
+
+.active-stop .stop-name {
+    color: #ff3737;
+    font-weight: bold;
+}
+
+#footer.blokada-active #footer-label,
+#footer.blokada-active #footer-name {
+    font-size: 65.8px;
+}

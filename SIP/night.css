@@ -1,0 +1,232 @@
+body {
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+    font-family: 'Myriad Pro', sans-serif;
+}
+
+#sip-board {
+    /* Ustawiamy stały bazowy rozmiar (tu 800x450) */
+    width: 800px;
+    height: 450px;
+    background: #333;
+    border: 4px solid #fff;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    /* To jest klucz do skalowania: */
+    transform-origin: top center;
+}
+
+/* NAGŁÓWEK */
+#header {
+    display: flex;
+    height: 60px;
+    align-items: center;
+    padding: 0 10px;
+    gap: 5px;
+    margin-top: 1px;
+    /* Odstęp od góry ekranu */
+}
+
+#line-nr {
+    width: 100px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 60px;
+    color: #fff;
+    /* Powiększona czcionka */
+    font-weight: bold;
+    border: 2px solid #9b0000;
+    /* Czerwona ramka */
+    background: #111;
+}
+
+#direction {
+    flex-grow: 1;
+    height: 55px;
+    background: #9b0000;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Domyślnie wyśrodkowany */
+    font-size: 45px;
+    border: 2px solid #e0e0e0;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+}
+
+#direction-text {
+    display: inline-block;
+    padding: 0 20px;
+    /* Dodaje oddech od krawędzi */
+    transition: transform 0.5s ease;
+}
+
+/* Klasa włączająca przewijanie */
+.scrolling {
+    animation: marquee 10s linear infinite;
+    justify-content: flex-start;
+    /* Przesuwa tekst do lewej przy scrollu */
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(100%);
+    }
+
+    /* Startuje z prawej krawędzi */
+    100% {
+        transform: translateX(-100%);
+    }
+
+    /* Kończy z lewej krawędzi */
+}
+
+#clock {
+    width: 120px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 45px;
+    color: #fff;
+    /* Powiększona czcionka */
+    font-weight: bold;
+    border: 2px solid #9b0000;
+    /* Czerwona ramka */
+    background: #111;
+}
+
+/* RESZTA ELEMENTÓW */
+
+#footer {
+    background: #666;
+    border-top: 2px solid #9b0000;
+    border-bottom: 2px solid #9b0000;
+    padding: 5px;
+    text-align: center;
+    margin-bottom: 2px;
+}
+
+#footer-label {
+    font-size: 20px;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+#footer-name {
+    color: #ffffff;
+    font-size: 35px;
+}
+
+
+/* Lista przystanków */
+#list {
+    padding: 20px 20px;
+    flex-grow: 1;
+    position: relative;
+    overflow: hidden;
+    /* Zablokowanie scrollowania */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    color: #fff;
+}
+
+/* Pionowa linia - ustawiona dokładnie pod kropkami */
+#list::before {
+    content: '';
+    position: absolute;
+    left: 50px;
+    /* Precyzyjna pozycja linii */
+    top: 5px;
+    bottom: 5px;
+    width: 8px;
+    background: #e3e3e3;
+}
+
+.stop-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 18px;
+    position: relative;
+    height: 30px;
+}
+
+.stop-time {
+    transform: translateX(-35px);
+    width: 50px;
+    /* Ustalona szerokość */
+    font-size: 20px;
+    text-align: right;
+    /* Tekst wyrównany do prawej */
+    margin-right: 20px;
+    font-variant-numeric: tabular-nums;
+    /* Ważne: cyfry mają stałą szerokość */
+}
+
+/* Puste kółko dla nadchodzących przystanków */
+.stop-marker {
+    width: 18px;
+    height: 18px;
+    /* Puste kółko z obwódką: */
+    background: #333;
+    /* Wnętrze kółka */
+    border: 3px solid #e3e3e3;
+    /* Czarna ramka */
+    border-radius: 50%;
+    z-index: 2;
+    position: absolute;
+    left: 34px;
+    /* Dopasuj do pozycji linii */
+    transform: translateX(-50%);
+}
+
+/* Wypełnienie (środek) dla przystanków, które nie są aktywne */
+.stop-marker::after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 14px;
+    height: 14px;
+    background: #c1c1c1;
+    /* Wypełnienie wnętrza */
+    border-radius: 50%;
+}
+
+/* Aktywny przystanek (czerwony) */
+.active-stop .stop-marker {
+    background: #ff3737;
+    border: 3px solid #c1c1c1;
+}
+
+.active-stop .stop-marker::after {
+    background: #ff3737;
+    /* Wypełnienie też czerwone */
+}
+
+.stop-name {
+    transform: translateX(-35px);
+    font-size: 26px;
+    margin-left: 25px;
+    /* Odstęp nazwy od linii */
+}
+
+.active-stop .stop-name {
+    color: #ff3737;
+    font-weight: bold;
+}
+
+/* Styl gdy blokada jest aktywna - możesz dodać klasę w JS jeśli chcesz */
+#footer.blokada-active #footer-label,
+#footer.blokada-active #footer-name {
+    font-size: 27px;
+}
