@@ -12,8 +12,6 @@
             --text-color: #1e293b;
             --border-color: #cbd5e1;
             --header-bg: #e2e8f0;
-            --timeline-start-hour: 7; /* 07:30 */
-            --scale-px-per-min: 1.2; /* Wysokość 1 minuty w pikselach */
             --total-minutes: 540; /* Od 07:30 do 16:30 = 9 godzin = 540 min */
         }
 
@@ -62,8 +60,6 @@
         /* Ukrywanie przez klasy body */
         body.view-p1 .track-p2 { display: none !important; }
         body.view-p2 .track-p1 { display: none !important; }
-        body.view-p1 .timeline-grid { grid-template-columns: 50px 1fr !important; }
-        body.view-p2 .timeline-grid { grid-template-columns: 50px 1fr !important; }
 
         /* Nawigacja dni na telefonie */
         .mobile-day-nav {
@@ -92,7 +88,7 @@
             background: #fff;
             border-radius: 8px;
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-            overflow-x: auto;
+            overflow: hidden;
             padding-bottom: 15px;
         }
 
@@ -104,9 +100,6 @@
             font-weight: 600;
             text-align: center;
             font-size: 0.85rem;
-            position: sticky;
-            top: 0;
-            z-index: 20;
         }
         .timeline-header div {
             padding: 8px 2px;
@@ -158,13 +151,13 @@
         /* Ścieżki P1 i P2 wewnątrz dnia */
         .track-p1 {
             position: absolute;
-            left: 2px;
-            width: calc(50% - 3px);
+            left: 3px;
+            width: calc(50% - 4px);
         }
         .track-p2 {
             position: absolute;
-            right: 2px;
-            width: calc(50% - 3px);
+            right: 3px;
+            width: calc(50% - 4px);
         }
 
         /* Karta lekcji */
@@ -173,7 +166,7 @@
             left: 0;
             right: 0;
             border-radius: 5px;
-            padding: 3px 4px;
+            padding: 4px 6px;
             box-sizing: border-box;
             display: flex;
             flex-direction: column;
@@ -184,25 +177,44 @@
         }
 
         .plan-tag {
-            font-size: 0.55rem;
+            font-size: 0.6rem;
             font-weight: bold;
             background: rgba(0, 0, 0, 0.12);
             padding: 0px 3px;
             border-radius: 2px;
             align-self: flex-start;
-            margin-bottom: 1px;
+            margin-bottom: 2px;
         }
 
         .subject-name {
             font-weight: 600;
-            font-size: 0.72rem;
-            line-height: 1;
+            font-size: 0.78rem;
+            line-height: 1.1;
             margin-bottom: 1px;
         }
 
         .room-number {
-            font-size: 0.62rem;
+            font-size: 0.68rem;
             color: #334155;
+        }
+
+        /* Responsywność dla wąskich ekranów (telefony) */
+        @media (max-width: 900px) {
+            .timeline-header, .timeline-grid {
+                grid-template-columns: 55px 1fr !important;
+            }
+            .day-column {
+                width: 100%;
+            }
+            /* Szersze ścieżki w widoku jednodniowym dla wygody na telefonie */
+            .track-p1 {
+                left: 6px;
+                width: calc(50% - 8px);
+            }
+            .track-p2 {
+                right: 6px;
+                width: calc(50% - 8px);
+            }
         }
     </style>
 </head>
@@ -227,11 +239,11 @@
     <div class="timeline-wrapper">
         <div class="timeline-header" id="timeline-header">
             <div>Godz</div>
-            <div id="th-day-1">Poniedziałek</div>
-            <div id="th-day-2">Wtorek</div>
-            <div id="th-day-3">Środa</div>
-            <div id="th-day-4">Czwartek</div>
-            <div id="th-day-5">Piątek</div>
+            <div id="th-day-1" class="header-col-1">Poniedziałek</div>
+            <div id="th-day-2" class="header-col-2">Wtorek</div>
+            <div id="th-day-3" class="header-col-3">Środa</div>
+            <div id="th-day-4" class="header-col-4">Czwartek</div>
+            <div id="th-day-5" class="header-col-5">Piątek</div>
         </div>
         <div class="timeline-grid" id="timeline-grid">
             <!-- Generowane dynamicznie przez JS -->
@@ -275,7 +287,6 @@
         return subjectColors[key] || subjectColors["default"];
     }
 
-    // Dokładne godziny dla Planu 1
     const p1Hours = [
         {start: "07:40", end: "08:25"},
         {start: "08:30", end: "09:15"},
@@ -287,7 +298,6 @@
         {start: "14:05", end: "14:50"}
     ];
 
-    // Dokładne godziny dla Planu 2 (ze zdjęcia)
     const p2Hours = [
         {start: "08:10", end: "08:55"},
         {start: "09:10", end: "09:55"},
@@ -308,7 +318,6 @@
             { id: 5, name: "Piątek" }
         ],
         lessons: {
-            // Poniedziałek (1)
             "1_1": { p1: {n: "", r: ""}, p2: {n: "Edukacja językowa j. angielski", r: ""} },
             "2_1": { p1: {n: "Matematyka", r: "11"}, p2: {n: "Edukacja wczesnoszkolna", r: ""} },
             "3_1": { p1: {n: "Matematyka", r: "11"}, p2: {n: "Edukacja wczesnoszkolna", r: ""} },
@@ -318,7 +327,6 @@
             "7_1": { p1: {n: "Ekonomia", r: "?"}, p2: {n: "Edukacja wczesnoszkolna", r: ""} },
             "8_1": { p1: {n: "", r: ""}, p2: {n: "Edukacja wczesnoszkolna", r: ""} },
 
-            // Wtorek (2)
             "1_2": { p1: {n: "", r: ""}, p2: {n: "Edukacja językowa j. angielski", r: ""} },
             "2_2": { p1: {n: "", r: ""}, p2: {n: "Religia", r: ""} },
             "3_2": { p1: {n: "J. Polski", r: "57"}, p2: {n: "W-F", r: ""} },
@@ -328,7 +336,6 @@
             "7_2": { p1: {n: "", r: ""}, p2: {n: "Edukacja wczesnoszkolna", r: ""} },
             "8_2": { p1: {n: "", r: ""}, p2: {n: "Edukacja wczesnoszkolna", r: ""} },
 
-            // Środa (3)
             "1_3": { p1: {n: "", r: ""}, p2: {n: "Edukacja wczesnoszkolna", r: ""} },
             "2_3": { p1: {n: "WF", r: "Hala"}, p2: {n: "Edukacja wczesnoszkolna", r: ""} },
             "3_3": { p1: {n: "Matematyka", r: "11"}, p2: {n: "Edukacja wczesnoszkolna", r: ""} },
@@ -338,7 +345,6 @@
             "7_3": { p1: {n: "", r: ""}, p2: {n: "Kompetencje społeczne", r: ""} },
             "8_3": { p1: {n: "", r: ""}, p2: {n: "Art & Craft", r: ""} },
 
-            // Czwartek (4)
             "1_4": { p1: {n: "", r: ""}, p2: {n: "Edukacja wczesnoszkolna", r: ""} },
             "2_4": { p1: {n: "Matematyka", r: "11"}, p2: {n: "Edukacja wczesnoszkolna", r: ""} },
             "3_4": { p1: {n: "J. Niemiecki", r: "42"}, p2: {n: "Edukacja językowa j. angielski", r: ""} },
@@ -348,7 +354,6 @@
             "7_4": { p1: {n: "Godzina Wychowawcza", r: "61"}, p2: {n: "Art & Craft", r: ""} },
             "8_4": { p1: {n: "", r: ""}, p2: {n: "Kodowanie", r: ""} },
 
-            // Piątek (5)
             "1_5": { p1: {n: "", r: ""}, p2: {n: "Edukacja wczesnoszkolna", r: ""} },
             "2_5": { p1: {n: "", r: ""}, p2: {n: "Edukacja wczesnoszkolna", r: ""} },
             "3_5": { p1: {n: "J. Angielski", r: "31"}, p2: {n: "Edukacja wczesnoszkolna", r: ""} },
@@ -368,7 +373,7 @@
         return h * 60 + m;
     }
 
-    const baseMinutes = timeToMinutes("07:30"); // Początek osi czasu
+    const baseMinutes = timeToMinutes("07:30");
 
     function setPlanView(viewMode) {
         currentView = viewMode;
@@ -386,13 +391,12 @@
         const grid = document.getElementById('timeline-grid');
         grid.innerHTML = '';
 
-        // Automatyczne ustawienie dzisiejszego dnia
         const nowDay = new Date().getDay();
         if (nowDay >= 1 && nowDay <= 5) {
             currentSelectedDay = nowDay;
         }
 
-        // 1. Stwórz oś czasu po lewej stronie (godziny co godzinę od 07:30 do 16:30)
+        // Oś czasu
         const timeAxis = document.createElement('div');
         timeAxis.className = 'time-axis';
         
@@ -416,12 +420,11 @@
         }
         grid.appendChild(timeAxis);
 
-        // 2. Stwórz kolumny dla każdego dnia
+        // Kolumny dni
         timetableData.days.forEach(d => {
             const dayCol = document.createElement('div');
             dayCol.className = `day-column day-col-${d.id}`;
 
-            // Linie pomocnicze tła dla dnia
             for (let h = 7; h <= 16; h++) {
                 const min = timeToMinutes(`${String(h).padStart(2, '0')}:30`);
                 const topPx = (min - baseMinutes) * 1.2;
@@ -433,20 +436,16 @@
                 }
             }
 
-            // Kontener P1 (lewa ścieżka w kolumnie dnia)
             const trackP1 = document.createElement('div');
             trackP1.className = 'track-p1';
 
-            // Kontener P2 (prawa ścieżka w kolumnie dnia)
             const trackP2 = document.createElement('div');
             trackP2.className = 'track-p2';
 
-            // Wypełnienie lekcjami dla obu planów
             for (let i = 1; i <= 8; i++) {
                 const key = `${i}_${d.id}`;
                 const lesson = timetableData.lessons[key] || { p1: {n:'', r:''}, p2: {n:'', r:''} };
 
-                // Plan 1 lekcja
                 if (lesson.p1.n) {
                     const p1H = p1Hours[i-1];
                     const startMin = timeToMinutes(p1H.start);
@@ -467,7 +466,6 @@
                     trackP1.appendChild(card);
                 }
 
-                // Plan 2 lekcja
                 if (lesson.p2.n) {
                     const p2H = p2Hours[i-1];
                     const startMin = timeToMinutes(p2H.start);
@@ -538,7 +536,6 @@
         setPlanView(currentView);
         renderTimeline();
         
-        // Zegar live
         setInterval(() => {
             const now = new Date();
             const hours = String(now.getHours()).padStart(2, '0');
