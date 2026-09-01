@@ -261,7 +261,7 @@
 
 <div class="container">
     <header>
-        <h1>Porównywarka Planów Lekcji</h1>
+        <h1>Plan lekcji 4C/4D</h1>
         <div class="header-controls">
             <div class="clock" id="live-clock">14:00:00</div>
         </div>
@@ -311,19 +311,21 @@
 
 <script>
     const subjectColors = {
-        "Matematyka": "#229df5",
-        "J. Angielski": "#22f576",
-        "Biologia": "#17ff55",
-        "Chemia": "#17d1ff",
-        "WF": "#0037ff",
-        "J. Polski": "#ff0000",
-        "Historia": "#914c01",
-        "J. Francuski": "#0b08bd",
-        "J. Niemiecki": "#fffb00",
-        "Fizyka": "#00ffff",
-        "Ekonomia": "#ff7700",
-        "Religia": "#b56100",
-        "Godzina Wychowawcza": "#d4d4d4",
+        "matematyka": "#229df5",
+        "j. angielski": "#22f576",
+        "biologia": "#17ff55",
+        "chemia": "#17d1ff",
+        "wf": "#0037ff",
+        "j. polski": "#ff0000",
+        "historia": "#914c01",
+        "j. francuski": "#0b08bd",
+        "j. niemiecki": "#fffb00",
+        "fizyka": "#00ffff",
+        "inf/fiz": "#00ffff",
+        "fiz/inf": "#00ffff",
+        "ekonomia": "#ff7700",
+        "religia": "#b56100",
+        "godzina wychowawcza": "#d4d4d4",
         "default": "#f1f5f9"
     };
 
@@ -405,7 +407,6 @@
         const tbody = document.getElementById('timetable-body');
         tbody.innerHTML = '';
 
-        // Ustaw domyślnie dzisiejszy dzień jeśli to dni robocze (1-5), w przeciwnym razie Poniedziałek (1)
         const nowDay = new Date().getDay();
         if (nowDay >= 1 && nowDay <= 5) {
             currentSelectedDay = nowDay;
@@ -464,7 +465,6 @@
     }
 
     function updateMobileView() {
-        // Sprawdź czy ekran jest wąski (np. < 900px)
         const isNarrow = window.innerWidth <= 900;
         
         timetableData.days.forEach(d => {
@@ -492,7 +492,6 @@
         }
     }
 
-    // Nasłuchiwanie zmiany rozmiaru okna, by na bieżąco dostosować widok
     window.addEventListener('resize', updateMobileView);
 
     function highlightCurrentDay() {
