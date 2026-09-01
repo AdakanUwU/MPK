@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Połączony Plan Lekcji</title>
+    <title>Połączony Plan Lekcji - Oś Czasu</title>
     <link rel="manifest" href="manifest_plan2.json">
     <meta name="theme-color" content="#72bad9">
     <style>
@@ -12,8 +12,9 @@
             --text-color: #1e293b;
             --border-color: #cbd5e1;
             --header-bg: #e2e8f0;
-            --active-day-bg: #bae6fd;
-            --current-time-bg: #e0f2fe;
+            --timeline-start-hour: 7; /* 07:30 */
+            --scale-px-per-min: 1.2; /* Wysokość 1 minuty w pikselach */
+            --total-minutes: 540; /* Od 07:30 do 16:30 = 9 godzin = 540 min */
         }
 
         body {
@@ -26,23 +27,31 @@
 
         h1 {
             text-align: center;
-            font-size: 1.4rem;
+            font-size: 1.3rem;
             margin-bottom: 5px;
         }
 
-        /* Przełącznik widoków planów */
+        .clock-container {
+            text-align: center;
+            font-size: 0.85rem;
+            margin-bottom: 10px;
+            color: #64748b;
+        }
+
+        /* Przełącznik widoków */
         .plan-toggle-container {
             text-align: center;
-            margin-bottom: 15px;
+            margin-bottom: 12px;
         }
         .plan-btn {
             background: #e2e8f0;
             border: none;
-            padding: 6px 14px;
-            margin: 0 4px;
+            padding: 6px 12px;
+            margin: 0 3px;
             border-radius: 6px;
             cursor: pointer;
             font-weight: 500;
+            font-size: 0.85rem;
             transition: background 0.2s;
         }
         .plan-btn.active {
@@ -50,21 +59,15 @@
             color: #fff;
         }
 
-        /* Sterowanie widocznością przez klasy body */
-        body.view-p1 .plan-2-card { display: none !important; }
-        body.view-p2 .lesson-card:not(.plan-2-card) { display: none !important; }
-        body.view-p1 .plan-tag, body.view-p2 .plan-tag { display: none !important; }
-
-        .clock-container {
-            text-align: center;
-            font-size: 0.9rem;
-            margin-bottom: 10px;
-            color: #64748b;
-        }
+        /* Ukrywanie przez klasy body */
+        body.view-p1 .track-p2 { display: none !important; }
+        body.view-p2 .track-p1 { display: none !important; }
+        body.view-p1 .timeline-grid { grid-template-columns: 50px 1fr !important; }
+        body.view-p2 .timeline-grid { grid-template-columns: 50px 1fr !important; }
 
         /* Nawigacja dni na telefonie */
         .mobile-day-nav {
-            display: none;
+            display: flex;
             justify-content: space-between;
             align-items: center;
             margin-bottom: 10px;
@@ -77,133 +80,129 @@
             background: #4aa3d4;
             color: white;
             border: none;
-            padding: 5px 12px;
+            padding: 6px 12px;
             border-radius: 4px;
             cursor: pointer;
             font-weight: bold;
-        }
-
-        /* Tabela planu */
-        .table-responsive {
-            overflow-x: auto;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            background: #fff;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-            overflow: hidden;
-            position: relative;
-        }
-
-        th, td {
-            border: 1px solid var(--border-color);
-            padding: 6px;
-            text-align: center;
-            vertical-align: middle;
             font-size: 0.85rem;
         }
 
-        th {
-            background-color: var(--header-bg);
+        /* Główna struktura osi czasu */
+        .timeline-wrapper {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            overflow-x: auto;
+            padding-bottom: 15px;
+        }
+
+        .timeline-header {
+            display: grid;
+            grid-template-columns: 55px repeat(5, 1fr);
+            background: var(--header-bg);
+            border-bottom: 2px solid var(--border-color);
             font-weight: 600;
+            text-align: center;
+            font-size: 0.85rem;
+            position: sticky;
+            top: 0;
+            z-index: 20;
+        }
+        .timeline-header div {
+            padding: 8px 2px;
+            border-right: 1px solid var(--border-color);
         }
 
-        th.active-day {
-            background-color: var(--active-day-bg);
-            border-bottom: 3px solid #0284c7;
-        }
-
-        .time-col {
-            background-color: #f1f5f9;
-            font-weight: 500;
-            white-space: nowrap;
-            width: 90px;
-        }
-
-        /* Karty lekcji */
-        .cell-split-horizontal {
-            display: flex;
-            flex-direction: column;
-            gap: 4px;
-        }
-
-        .lesson-card {
-            padding: 6px;
-            border-radius: 6px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            min-height: 38px;
-            box-sizing: border-box;
+        .timeline-grid {
+            display: grid;
+            grid-template-columns: 55px repeat(5, 1fr);
             position: relative;
         }
 
+        /* Oś godzin po lewej stronie */
+        .time-axis {
+            position: relative;
+            height: calc(var(--total-minutes) * 1.2px);
+            border-right: 2px solid var(--border-color);
+            background: #f1f5f9;
+        }
+        .time-label {
+            position: absolute;
+            left: 0;
+            right: 0;
+            text-align: right;
+            padding-right: 4px;
+            font-size: 0.65rem;
+            color: #64748b;
+            transform: translateY(-50%);
+            font-weight: 500;
+        }
+
+        /* Kolumny dni */
+        .day-column {
+            position: relative;
+            height: calc(var(--total-minutes) * 1.2px);
+            border-right: 1px solid var(--border-color);
+            background: #fff;
+        }
+
+        /* Linie poziome siatki czasu */
+        .grid-line {
+            position: absolute;
+            left: 0;
+            right: 0;
+            border-top: 1px dashed #e2e8f0;
+            pointer-events: none;
+        }
+
+        /* Ścieżki P1 i P2 wewnątrz dnia */
+        .track-p1 {
+            position: absolute;
+            left: 2px;
+            width: calc(50% - 3px);
+        }
+        .track-p2 {
+            position: absolute;
+            right: 2px;
+            width: calc(50% - 3px);
+        }
+
+        /* Karta lekcji */
+        .lesson-card {
+            position: absolute;
+            left: 0;
+            right: 0;
+            border-radius: 5px;
+            padding: 3px 4px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            overflow: hidden;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+            border: 1px solid rgba(0,0,0,0.08);
+        }
+
         .plan-tag {
-            font-size: 0.6rem;
+            font-size: 0.55rem;
             font-weight: bold;
-            background: rgba(0, 0, 0, 0.1);
-            padding: 1px 4px;
-            border-radius: 3px;
-            margin-bottom: 2px;
+            background: rgba(0, 0, 0, 0.12);
+            padding: 0px 3px;
+            border-radius: 2px;
             align-self: flex-start;
+            margin-bottom: 1px;
         }
 
         .subject-name {
             font-weight: 600;
-            font-size: 0.8rem;
-            line-height: 1.1;
+            font-size: 0.72rem;
+            line-height: 1;
+            margin-bottom: 1px;
         }
 
         .room-number {
-            font-size: 0.7rem;
+            font-size: 0.62rem;
             color: #334155;
-            margin-top: 2px;
-        }
-
-        .empty-slot {
-            color: #94a3b8;
-            font-style: italic;
-            font-size: 0.75rem;
-        }
-
-        .current-active {
-            box-shadow: 0 0 0 2px #0284c7;
-            background-color: var(--current-time-bg) !important;
-        }
-
-        /* Linia aktualnego czasu */
-        #time-indicator-line {
-            position: absolute;
-            left: 0;
-            right: 0;
-            height: 2px;
-            background-color: #ef4444;
-            z-index: 10;
-            display: none;
-            align-items: center;
-        }
-        #time-indicator-line::before {
-            content: attr(data-time);
-            position: absolute;
-            left: 2px;
-            top: -10px;
-            background: #ef4444;
-            color: white;
-            font-size: 0.6rem;
-            padding: 1px 3px;
-            border-radius: 3px;
-            font-weight: bold;
-        }
-
-        /* Media queries dla telefonów */
-        @media (max-width: 900px) {
-            .mobile-day-nav {
-                display: flex;
-            }
         }
     </style>
 </head>
@@ -221,31 +220,25 @@
 
     <div class="mobile-day-nav">
         <button onclick="changeDay(-1)">◀ Poprzedni</button>
-        <span id="current-day-label" style="font-weight: bold; font-size: 1rem;">Poniedziałek</span>
+        <span id="current-day-label" style="font-weight: bold; font-size: 0.95rem;">Poniedziałek</span>
         <button onclick="changeDay(1)">Następny ▶</button>
     </div>
 
-    <div class="table-responsive">
-        <table id="timetable">
-            <thead>
-                <tr>
-                    <th class="time-col">Godziny</th>
-                    <th id="th-day-1" class="day-header">Poniedziałek</th>
-                    <th id="th-day-2" class="day-header">Wtorek</th>
-                    <th id="th-day-3" class="day-header">Środa</th>
-                    <th id="th-day-4" class="day-header">Czwartek</th>
-                    <th id="th-day-5" class="day-header">Piątek</th>
-                </tr>
-            </thead>
-            <tbody id="timetable-body">
-                <!-- Wypełniane przez JavaScript -->
-            </tbody>
-        </table>
-        <div id="time-indicator-line"></div>
+    <div class="timeline-wrapper">
+        <div class="timeline-header" id="timeline-header">
+            <div>Godz</div>
+            <div id="th-day-1">Poniedziałek</div>
+            <div id="th-day-2">Wtorek</div>
+            <div id="th-day-3">Środa</div>
+            <div id="th-day-4">Czwartek</div>
+            <div id="th-day-5">Piątek</div>
+        </div>
+        <div class="timeline-grid" id="timeline-grid">
+            <!-- Generowane dynamicznie przez JS -->
+        </div>
     </div>
 
 <script>
-    // Stonowana paleta kolorów
     const subjectColors = {
         "matematyka": "#4aa3d4",
         "j. angielski": "#52c479",
@@ -277,12 +270,12 @@
     };
 
     function getColor(subject) {
-        if (!subject) return "#f8fafc";
+        if (!subject) return "transparent";
         const key = subject.toLowerCase().trim();
         return subjectColors[key] || subjectColors["default"];
     }
 
-    // Definicje godzin dla obu planów
+    // Dokładne godziny dla Planu 1
     const p1Hours = [
         {start: "07:40", end: "08:25"},
         {start: "08:30", end: "09:15"},
@@ -294,6 +287,7 @@
         {start: "14:05", end: "14:50"}
     ];
 
+    // Dokładne godziny dla Planu 2 (ze zdjęcia)
     const p2Hours = [
         {start: "08:10", end: "08:55"},
         {start: "09:10", end: "09:55"},
@@ -306,7 +300,6 @@
     ];
 
     const timetableData = {
-        hours: [1, 2, 3, 4, 5, 6, 7, 8],
         days: [
             { id: 1, name: "Poniedziałek" },
             { id: 2, name: "Wtorek" },
@@ -368,11 +361,18 @@
     };
 
     let currentSelectedDay = 1;
-    let currentView = localStorage.getItem('preferred_plan_view_combined') || 'both';
+    let currentView = localStorage.getItem('preferred_plan_view_timeline') || 'both';
+
+    function timeToMinutes(timeStr) {
+        const [h, m] = timeStr.split(':').map(Number);
+        return h * 60 + m;
+    }
+
+    const baseMinutes = timeToMinutes("07:30"); // Początek osi czasu
 
     function setPlanView(viewMode) {
         currentView = viewMode;
-        localStorage.setItem('preferred_plan_view_combined', viewMode);
+        localStorage.setItem('preferred_plan_view_timeline', viewMode);
         
         document.body.classList.remove('view-p1', 'view-p2');
         if (viewMode === 'p1') document.body.classList.add('view-p1');
@@ -382,62 +382,118 @@
         document.getElementById(`btn-${viewMode}`).classList.add('active');
     }
 
-    function renderTable() {
-        const tbody = document.getElementById('timetable-body');
-        tbody.innerHTML = '';
+    function renderTimeline() {
+        const grid = document.getElementById('timeline-grid');
+        grid.innerHTML = '';
 
+        // Automatyczne ustawienie dzisiejszego dnia
         const nowDay = new Date().getDay();
         if (nowDay >= 1 && nowDay <= 5) {
             currentSelectedDay = nowDay;
         }
 
-        timetableData.hours.forEach(id => {
-            const tr = document.createElement('tr');
+        // 1. Stwórz oś czasu po lewej stronie (godziny co godzinę od 07:30 do 16:30)
+        const timeAxis = document.createElement('div');
+        timeAxis.className = 'time-axis';
+        
+        for (let h = 7; h <= 16; h++) {
+            const timeStr = `${String(h).padStart(2, '0')}:30`;
+            const min = timeToMinutes(timeStr);
+            const topPx = (min - baseMinutes) * 1.2;
             
-            // Kolumna czasu z rozróżnieniem P1 i P2
-            const tdTime = document.createElement('td');
-            tdTime.className = 'time-col';
-            tdTime.innerHTML = `
-                <div style="font-weight: bold; font-size: 0.8rem; margin-bottom: 2px;">Lekcja ${id}</div>
-                <div style="font-size: 0.65rem; color: #1e293b;">P1: ${p1Hours[id-1].start}-${p1Hours[id-1].end}</div>
-                <div style="font-size: 0.65rem; color: #0284c7;">P2: ${p2Hours[id-1].start}-${p2Hours[id-1].end}</div>
-            `;
-            tr.appendChild(tdTime);
+            if (topPx >= 0 && topPx <= 540 * 1.2) {
+                const label = document.createElement('div');
+                label.className = 'time-label';
+                label.style.top = `${topPx}px`;
+                label.innerText = timeStr;
+                timeAxis.appendChild(label);
 
-            timetableData.days.forEach(d => {
-                const td = document.createElement('td');
-                td.className = `day-cell day-col-${d.id}`;
-                const key = `${id}_${d.id}`;
+                const line = document.createElement('div');
+                line.className = 'grid-line';
+                line.style.top = `${topPx}px`;
+                timeAxis.appendChild(line);
+            }
+        }
+        grid.appendChild(timeAxis);
+
+        // 2. Stwórz kolumny dla każdego dnia
+        timetableData.days.forEach(d => {
+            const dayCol = document.createElement('div');
+            dayCol.className = `day-column day-col-${d.id}`;
+
+            // Linie pomocnicze tła dla dnia
+            for (let h = 7; h <= 16; h++) {
+                const min = timeToMinutes(`${String(h).padStart(2, '0')}:30`);
+                const topPx = (min - baseMinutes) * 1.2;
+                if (topPx >= 0 && topPx <= 540 * 1.2) {
+                    const line = document.createElement('div');
+                    line.className = 'grid-line';
+                    line.style.top = `${topPx}px`;
+                    dayCol.appendChild(line);
+                }
+            }
+
+            // Kontener P1 (lewa ścieżka w kolumnie dnia)
+            const trackP1 = document.createElement('div');
+            trackP1.className = 'track-p1';
+
+            // Kontener P2 (prawa ścieżka w kolumnie dnia)
+            const trackP2 = document.createElement('div');
+            trackP2.className = 'track-p2';
+
+            // Wypełnienie lekcjami dla obu planów
+            for (let i = 1; i <= 8; i++) {
+                const key = `${i}_${d.id}`;
                 const lesson = timetableData.lessons[key] || { p1: {n:'', r:''}, p2: {n:'', r:''} };
 
-                const p1Bg = getColor(lesson.p1.n);
-                const p2Bg = getColor(lesson.p2.n);
+                // Plan 1 lekcja
+                if (lesson.p1.n) {
+                    const p1H = p1Hours[i-1];
+                    const startMin = timeToMinutes(p1H.start);
+                    const endMin = timeToMinutes(p1H.end);
+                    const topPx = (startMin - baseMinutes) * 1.2;
+                    const heightPx = (endMin - startMin) * 1.2;
 
-                td.innerHTML = `
-                    <div class="cell-split-horizontal">
-                        <div class="lesson-card" style="background-color: ${p1Bg};">
-                            <span class="plan-tag">P1</span>
-                            ${lesson.p1.n ? `
-                                <span class="subject-name">${lesson.p1.n}</span>
-                                ${lesson.p1.r ? `<span class="room-number">sala ${lesson.p1.r}</span>` : ''}
-                            ` : '<span class="empty-slot">-</span>'}
-                        </div>
-                        <div class="lesson-card plan-2-card" id="slot-${d.id}-${id}" style="background-color: ${p2Bg};">
-                            <span class="plan-tag">P2</span>
-                            ${lesson.p2.n ? `
-                                <span class="subject-name">${lesson.p2.n}</span>
-                                ${lesson.p2.r ? `<span class="room-number">sala ${lesson.p2.r}</span>` : ''}
-                            ` : '<span class="empty-slot">-</span>'}
-                        </div>
-                    </div>
-                `;
-                tr.appendChild(td);
-            });
+                    const card = document.createElement('div');
+                    card.className = 'lesson-card';
+                    card.style.top = `${topPx}px`;
+                    card.style.height = `${heightPx}px`;
+                    card.style.backgroundColor = getColor(lesson.p1.n);
+                    card.innerHTML = `
+                        <span class="plan-tag">P1 (L${i})</span>
+                        <span class="subject-name">${lesson.p1.n}</span>
+                        ${lesson.p1.r ? `<span class="room-number">sala ${lesson.p1.r}</span>` : ''}
+                    `;
+                    trackP1.appendChild(card);
+                }
 
-            tbody.appendChild(tr);
+                // Plan 2 lekcja
+                if (lesson.p2.n) {
+                    const p2H = p2Hours[i-1];
+                    const startMin = timeToMinutes(p2H.start);
+                    const endMin = timeToMinutes(p2H.end);
+                    const topPx = (startMin - baseMinutes) * 1.2;
+                    const heightPx = (endMin - startMin) * 1.2;
+
+                    const card = document.createElement('div');
+                    card.className = 'lesson-card';
+                    card.style.top = `${topPx}px`;
+                    card.style.height = `${heightPx}px`;
+                    card.style.backgroundColor = getColor(lesson.p2.n);
+                    card.innerHTML = `
+                        <span class="plan-tag">P2 (L${i})</span>
+                        <span class="subject-name">${lesson.p2.n}</span>
+                        ${lesson.p2.r ? `<span class="room-number">sala ${lesson.p2.r}</span>` : ''}
+                    `;
+                    trackP2.appendChild(card);
+                }
+            }
+
+            dayCol.appendChild(trackP1);
+            dayCol.appendChild(trackP2);
+            grid.appendChild(dayCol);
         });
 
-        highlightCurrentDay();
         updateMobileView();
     }
 
@@ -453,19 +509,19 @@
         
         timetableData.days.forEach(d => {
             const th = document.getElementById(`th-day-${d.id}`);
-            const cells = document.querySelectorAll(`.day-col-${d.id}`);
+            const col = document.querySelector(`.day-col-${d.id}`);
             
             if (isNarrow) {
                 if (d.id === currentSelectedDay) {
                     if (th) th.style.display = '';
-                    cells.forEach(c => c.style.display = '');
+                    if (col) col.style.display = '';
                 } else {
                     if (th) th.style.display = 'none';
-                    cells.forEach(c => c.style.display = 'none');
+                    if (col) col.style.display = 'none';
                 }
             } else {
                 if (th) th.style.display = '';
-                cells.forEach(c => c.style.display = '');
+                if (col) col.style.display = '';
             }
         });
 
@@ -478,22 +534,9 @@
 
     window.addEventListener('resize', updateMobileView);
 
-    function highlightCurrentDay() {
-        const now = new Date();
-        let dayOfWeek = now.getDay(); 
-        const headers = document.querySelectorAll('.day-header');
-        headers.forEach((th, idx) => {
-            if (idx + 1 === dayOfWeek) {
-                th.classList.add('active-day');
-            } else {
-                th.classList.remove('active-day');
-            }
-        });
-    }
-
     window.onload = () => {
         setPlanView(currentView);
-        renderTable();
+        renderTimeline();
         
         // Zegar live
         setInterval(() => {
