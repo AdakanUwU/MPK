@@ -38,6 +38,8 @@
             padding: 15px 25px;
             border-radius: 12px;
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            flex-wrap: wrap;
+            gap: 15px;
         }
 
         h1 {
@@ -46,10 +48,50 @@
             color: var(--primary);
         }
 
+        .header-controls {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
         .clock {
             font-weight: bold;
             color: var(--text-muted);
             font-size: 1.1rem;
+        }
+
+        /* Panel nawigacji dniami dla małych ekranów (domyślnie ukryty na szerokich) */
+        .mobile-day-nav {
+            display: none;
+            align-items: center;
+            justify-content: space-between;
+            background: var(--card-bg);
+            padding: 10px 20px;
+            border-radius: 12px;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+        }
+
+        .nav-btn {
+            background: var(--primary-light);
+            color: var(--primary);
+            border: none;
+            padding: 8px 14px;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .nav-btn:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        #current-day-label {
+            font-weight: 600;
+            color: var(--text-main);
+            font-size: 1rem;
         }
 
         .main-layout {
@@ -120,14 +162,13 @@
             color: var(--primary);
         }
 
-        /* Podział komórki na pół w POZIOMIE (obok siebie) */
+        /* Podział komórki na pół w POZIOMIE */
         .cell-split-horizontal {
             display: flex;
             gap: 6px;
             height: 100%;
         }
 
-        /* Kafelki z zaokrąglonymi rogami */
         .lesson-card {
             flex: 1;
             border-radius: 10px;
@@ -142,7 +183,6 @@
             border: 1px solid rgba(0,0,0,0.06);
         }
 
-        /* Etykieta planu (P1 / P2) w rogu kafelka */
         .plan-tag {
             font-size: 0.65rem;
             font-weight: bold;
@@ -167,7 +207,6 @@
             font-weight: 500;
         }
 
-        /* Aktywna lekcja w planie 2 - pulsująca ramka */
         .lesson-card.plan-2-card.current-active {
             box-shadow: 0 0 0 3px #ca8a04, 0 4px 6px rgba(0,0,0,0.1);
             animation: pulse-border 1.5s infinite;
@@ -195,6 +234,7 @@
             align-items: center;
             font-size: 0.9rem;
             box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+            flex-wrap: wrap;
         }
 
         .legend-item {
@@ -208,6 +248,13 @@
             height: 16px;
             border-radius: 4px;
         }
+
+        /* Automatyczne ukrywanie kolumn dni na małych ekranach (uruchamiane przez media query lub JS) */
+        @media (max-width: 900px) {
+            .mobile-day-nav {
+                display: flex;
+            }
+        }
     </style>
 </head>
 <body>
@@ -215,8 +262,17 @@
 <div class="container">
     <header>
         <h1>Porównywarka Planów Lekcji</h1>
-        <div class="clock" id="live-clock">14:00:00</div>
+        <div class="header-controls">
+            <div class="clock" id="live-clock">14:00:00</div>
+        </div>
     </header>
+
+    <!-- Pasek nawigacji widoczny na wąskich ekranach (np. telefonach) -->
+    <div class="mobile-day-nav" id="mobile-nav">
+        <button class="nav-btn" onclick="changeDay(-1)">◀ Poprzedni</button>
+        <span id="current-day-label">Poniedziałek</span>
+        <button class="nav-btn" onclick="changeDay(1)">Następny ▶</button>
+    </div>
 
     <div class="main-layout" id="timetable-container">
         <div id="time-indicator-line" data-time="12:00" style="top: 150px; display: none;"></div>
@@ -224,11 +280,11 @@
             <thead>
                 <tr>
                     <th style="width: 100px;">Godzina</th>
-                    <th class="day-header" data-day="1">Poniedziałek</th>
-                    <th class="day-header" data-day="2">Wtorek</th>
-                    <th class="day-header" data-day="3">Środa</th>
-                    <th class="day-header" data-day="4">Czwartek</th>
-                    <th class="day-header" data-day="5">Piątek</th>
+                    <th class="day-header" data-day="1" id="th-day-1">Poniedziałek</th>
+                    <th class="day-header" data-day="2" id="th-day-2">Wtorek</th>
+                    <th class="day-header" data-day="3" id="th-day-3">Środa</th>
+                    <th class="day-header" data-day="4" id="th-day-4">Czwartek</th>
+                    <th class="day-header" data-day="5" id="th-day-5">Piątek</th>
                 </tr>
             </thead>
             <tbody id="timetable-body">
@@ -240,11 +296,11 @@
     <div class="legend">
         <div class="legend-item">
             <div class="legend-color" style="background: #e2e8f0;"></div>
-            <span>Plan 1 (Lewa strona)</span>
+            <span>Plan 1 (Lewa)</span>
         </div>
         <div class="legend-item">
             <div class="legend-color" style="background: #fde047;"></div>
-            <span>Plan 2 (Prawa strona – z podświetleniem czasu)</span>
+            <span>Plan 2 (Prawa – z podświetleniem)</span>
         </div>
         <div class="legend-item">
             <div class="legend-color" style="background: var(--current-time-color);"></div>
@@ -254,17 +310,16 @@
 </div>
 
 <script>
-    // Słownik kolorów dla poszczególnych przedmiotów (możesz dopisać własne)
     const subjectColors = {
-        "matematyka": "#fed7aa", // pastelowy pomarańcz
-        "angielski": "#bfdbfe",  // pastelowy niebieski
-        "biologia": "#bbf7d0",   // pastelowy zielony
-        "chemia": "#fbcfe8",     // pastelowy różowy
-        "wf": "#e9d5ff",         // pastelowy fioletowy
-        "j. polski": "#fef08a",  // pastelowy żółty
+        "matematyka": "#fed7aa",
+        "angielski": "#bfdbfe",
+        "biologia": "#bbf7d0",
+        "chemia": "#fbcfe8",
+        "wf": "#e9d5ff",
+        "j. polski": "#fef08a",
         "historia": "#fed7aa",
-        "francuski": "#99f6e4",  // turkusowy
-        "niemiecki": "#e2e8f0",  // szarawy
+        "francuski": "#99f6e4",
+        "niemiecki": "#e2e8f0",
         "fizyka": "#bae6fd",
         "inf/fiz": "#ddd6fe",
         "ekonomia": "#c7d2fe",
@@ -279,7 +334,6 @@
         return subjectColors[key] || subjectColors["default"];
     }
 
-    // Konfiguracja planu lekcji: każdy wpis zawiera nazwę (name) oraz numer sali (room)
     const timetableData = {
         hours: [
             { id: 1, start: "07:40", end: "08:25" },
@@ -299,7 +353,6 @@
             { id: 5, name: "Piątek" }
         ],
         lessons: {
-            // Poniedziałek (1)
             "1_1": { p1: {n: "", r: ""}, p2: {n: "", r: ""} },
             "2_1": { p1: {n: "matematyka", r: "101"}, p2: {n: "angielski", r: "204"} },
             "3_1": { p1: {n: "matematyka", r: "101"}, p2: {n: "biologia", r: "lab 2"} },
@@ -309,7 +362,6 @@
             "7_1": { p1: {n: "ekonomia", r: "305"}, p2: {n: "", r: ""} },
             "8_1": { p1: {n: "", r: ""}, p2: {n: "", r: ""} },
 
-            // Wtorek (2)
             "1_2": { p1: {n: "", r: ""}, p2: {n: "biologia", r: "lab 2"} },
             "2_2": { p1: {n: "", r: ""}, p2: {n: "chemia", r: "lab 1"} },
             "3_2": { p1: {n: "j. polski", r: "12"}, p2: {n: "matematyka", r: "101"} },
@@ -319,7 +371,6 @@
             "7_2": { p1: {n: "", r: ""}, p2: {n: "religia", r: "15"} },
             "8_2": { p1: {n: "", r: ""}, p2: {n: "", r: ""} },
 
-            // Środa (3)
             "1_3": { p1: {n: "", r: ""}, p2: {n: "", r: ""} },
             "2_3": { p1: {n: "wf", r: "sala gimn."}, p2: {n: "wf", r: "sala gimn."} },
             "3_3": { p1: {n: "matematyka", r: "101"}, p2: {n: "matematyka", r: "101"} },
@@ -329,7 +380,6 @@
             "7_3": { p1: {n: "", r: ""}, p2: {n: "historia", r: "18"} },
             "8_3": { p1: {n: "", r: ""}, p2: {n: "", r: ""} },
 
-            // Czwartek (4)
             "1_4": { p1: {n: "", r: ""}, p2: {n: "", r: ""} },
             "2_4": { p1: {n: "matematyka", r: "101"}, p2: {n: "francuski", r: "202"} },
             "3_4": { p1: {n: "niemiecki", r: "203"}, p2: {n: "j. polski", r: "12"} },
@@ -339,7 +389,6 @@
             "7_4": { p1: {n: "godzina wychowawcza", r: "12"}, p2: {n: "", r: ""} },
             "8_4": { p1: {n: "", r: ""}, p2: {n: "", r: ""} },
 
-            // Piątek (5)
             "1_5": { p1: {n: "", r: ""}, p2: {n: "", r: ""} },
             "2_5": { p1: {n: "", r: ""}, p2: {n: "", r: ""} },
             "3_5": { p1: {n: "angielski", r: "204"}, p2: {n: "historia", r: "18"} },
@@ -347,26 +396,33 @@
             "5_5": { p1: {n: "matematyka", r: "101"}, p2: {n: "", r: ""} },
             "6_5": { p1: {n: "historia", r: "18"}, p2: {n: "j. polski", r: "12"} },
             "7_5": { p1: {n: "", r: ""}, p2: {n: "", r: ""} },
-            "8_5": { p1: {n: "", r: ""}, p2: {n: "", r: ""} }
+            "8_5": { p1: "", p2: "" }
         }
     };
+
+    let currentSelectedDay = 1;
 
     function renderTable() {
         const tbody = document.getElementById('timetable-body');
         tbody.innerHTML = '';
 
+        // Ustaw domyślnie dzisiejszy dzień jeśli to dni robocze (1-5), w przeciwnym razie Poniedziałek (1)
+        const nowDay = new Date().getDay();
+        if (nowDay >= 1 && nowDay <= 5) {
+            currentSelectedDay = nowDay;
+        }
+
         timetableData.hours.forEach(h => {
             const tr = document.createElement('tr');
             
-            // Kolumna godziny
             const tdTime = document.createElement('td');
             tdTime.className = 'time-col';
             tdTime.innerHTML = `Lekcja ${h.id}<br><span style="font-size:0.7rem">${h.start} - ${h.end}</span>`;
             tr.appendChild(tdTime);
 
-            // Kolumny dni
             timetableData.days.forEach(d => {
                 const td = document.createElement('td');
+                td.className = `day-cell day-col-${d.id}`;
                 const key = `${h.id}_${d.id}`;
                 const lesson = timetableData.lessons[key] || { p1: {n:'', r:''}, p2: {n:'', r:''} };
 
@@ -375,20 +431,18 @@
 
                 td.innerHTML = `
                     <div class="cell-split-horizontal">
-                        <!-- Plan 1 (Lewa) -->
                         <div class="lesson-card" style="background-color: ${p1Bg};">
                             <span class="plan-tag">P1</span>
                             ${lesson.p1.n ? `
                                 <span class="subject-name">${lesson.p1.n}</span>
-                                ${lesson.p1.r ? `<span class="room-number"> sala ${lesson.p1.r}</span>` : ''}
+                                ${lesson.p1.r ? `<span class="room-number">sala ${lesson.p1.r}</span>` : ''}
                             ` : '<span class="empty-slot">-</span>'}
                         </div>
-                        <!-- Plan 2 (Prawa) -->
                         <div class="lesson-card plan-2-card" id="slot-${d.id}-${h.id}" style="background-color: ${p2Bg};">
                             <span class="plan-tag">P2</span>
                             ${lesson.p2.n ? `
                                 <span class="subject-name">${lesson.p2.n}</span>
-                                ${lesson.p2.r ? `<span class="room-number"> sala ${lesson.p2.r}</span>` : ''}
+                                ${lesson.p2.r ? `<span class="room-number">sala ${lesson.p2.r}</span>` : ''}
                             ` : '<span class="empty-slot">-</span>'}
                         </div>
                     </div>
@@ -400,7 +454,47 @@
         });
 
         highlightCurrentDay();
+        updateMobileView();
     }
+
+    function changeDay(direction) {
+        currentSelectedDay += direction;
+        if (currentSelectedDay < 1) currentSelectedDay = 5;
+        if (currentSelectedDay > 5) currentSelectedDay = 1;
+        updateMobileView();
+    }
+
+    function updateMobileView() {
+        // Sprawdź czy ekran jest wąski (np. < 900px)
+        const isNarrow = window.innerWidth <= 900;
+        
+        timetableData.days.forEach(d => {
+            const th = document.getElementById(`th-day-${d.id}`);
+            const cells = document.querySelectorAll(`.day-col-${d.id}`);
+            
+            if (isNarrow) {
+                if (d.id === currentSelectedDay) {
+                    if (th) th.style.display = '';
+                    cells.forEach(c => c.style.display = '');
+                } else {
+                    if (th) th.style.display = 'none';
+                    cells.forEach(c => c.style.display = 'none');
+                }
+            } else {
+                if (th) th.style.display = '';
+                cells.forEach(c => c.style.display = '');
+            }
+        });
+
+        const dayNames = ["Poniedziałek", "Wtorek", "Środa", "Czwartek", "Piątek"];
+        const label = document.getElementById('current-day-label');
+        if (label) {
+            label.innerText = dayNames[currentSelectedDay - 1];
+        }
+    }
+
+    // Nasłuchiwanie zmiany rozmiaru okna, by na bieżąco dostosować widok
+    window.addEventListener('resize', updateMobileView);
 
     function highlightCurrentDay() {
         const now = new Date();
@@ -432,7 +526,6 @@
         const currentTimeStr = `${hours}:${minutes}`;
         const currentMinutes = timeToMinutes(currentTimeStr);
 
-        // Usuń podświetlenia aktywnych lekcji
         document.querySelectorAll('.plan-2-card').forEach(el => el.classList.remove('current-active'));
 
         let dayOfWeek = now.getDay(); 
@@ -450,7 +543,6 @@
             });
         }
 
-        // Suwaczek pionowy
         const dayStartMin = timeToMinutes("07:40");
         const dayEndMin = timeToMinutes("14:50");
         const totalDuration = dayEndMin - dayStartMin;
