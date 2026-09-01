@@ -255,6 +255,25 @@
                 display: flex;
             }
         }
+
+        .plan-btn {
+            background: #e2e8f0;
+            border: none;
+            padding: 6px 12px;
+            margin: 0 4px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: background 0.2s;
+        }
+        .plan-btn.active {
+            background: #72bad9;
+            color: #fff;
+        }
+        /* Klasy sterujące widocznością */
+        body.view-p1 .plan-2-card { display: none !important; }
+        body.view-p2 .lesson-card:not(.plan-2-card) { display: none !important; }
+        body.view-p1 .plan-tag, body.view-p2 .plan-tag { display: none !important; }
     </style>
 </head>
 <body>
@@ -262,6 +281,11 @@
 <div class="container">
     <header>
         <h1>Plan lekcji 4C/4D</h1>
+        <div class="plan-toggle-container" style="text-align: center; margin: 10px 0;">
+            <button onclick="setPlanView('both')" id="btn-both" class="plan-btn active">Cały plan</button>
+            <button onclick="setPlanView('p1')" id="btn-p1" class="plan-btn">Tylko Plan 1</button>
+            <button onclick="setPlanView('p2')" id="btn-p2" class="plan-btn">Tylko Plan 2</button>
+        </div>
         <div class="header-controls">
             <div class="clock" id="live-clock">14:00:00</div>
         </div>
@@ -400,6 +424,26 @@
             "8_5": { p1: "", p2: "" }
         }
     };
+
+    // Odczytaj zapisany widok z cache przy starcie (domyślnie 'both')
+    let currentView = localStorage.getItem('preferred_plan_view') || 'both';
+
+    function setPlanView(viewMode) {
+        currentView = viewMode;
+        localStorage.setItem('preferred_plan_view', viewMode); // Zapis w cache przeglądarki
+        
+        // Usuń klasy widoków z body i dodaj aktualną
+        document.body.classList.remove('view-p1', 'view-p2');
+        if (viewMode === 'p1') document.body.classList.add('view-p1');
+        if (viewMode === 'p2') document.body.classList.add('view-p2');
+
+        // Aktualizuj wygląd przycisków
+        document.querySelectorAll('.plan-btn').forEach(btn => btn.classList.remove('active'));
+        document.getElementById(`btn-${viewMode}`).classList.add('active');
+    }
+
+    // Wywołaj funkcję od razu po załadowaniu skryptu, aby przywrócić stan z cache
+    setPlanView(currentView);
 
     let currentSelectedDay = 1;
 
