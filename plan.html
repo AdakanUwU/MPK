@@ -3,7 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Plan Lekcji - Dwa Plany</title>
+    <title>Plan Lekcji - 4C/4D</title>
+
+    <link rel="manifest" href="manifest_plan.json">
+    <meta name="theme-color" content="#72bad9">
+    
     <style>
         :root {
             --bg-color: #f4f6f9;
@@ -611,6 +615,14 @@
         updateIndicatorAndActiveLesson();
         setInterval(updateIndicatorAndActiveLesson, 1000);
     };
+</script>
+
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('sw.js')
+      .then(() => console.log('Service Worker zarejestrowany pomyślnie!'))
+      .catch((err) => console.log('Błąd rejestracji Service Workera:', err));
+  }
 </script>
 
 </body>
