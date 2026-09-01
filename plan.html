@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Porównywarka Planów Lekcji</title>
+    <style>
+        :root {
+            --bg-color: #f4f6f9;
+            --card-bg: #ffffff;
+            --primary: #4f46e5;
+            --primary-light: #e0e7ff;
+            --text-main: #1f2937;
+            --text-muted: #6b7280;
+            --border-color: #d1d5db;
+            --plan1-bg: #f9fafb;
+            --plan2-bg: #fef9c3; /* delikatny żółty dla planu 2 */
+            --current-time-color: #ef4444;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 15px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            background: var(--card-bg);
+            padding: 15px 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 1.4rem;
+            color: var(--primary);
+        }
+
+        .clock {
+            font-weight: bold;
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+
+        .main-layout {
+            position: relative;
+            background: var(--card-bg);
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+            padding: 10px;
+        }
+
+        /* Suwak czasu */
+        #time-indicator-line {
+            position: absolute;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background-color: var(--current-time-color);
+            z-index: 20;
+            pointer-events: none;
+            display: flex;
+            align-items: center;
+        }
+
+        #time-indicator-line::before {
+            content: attr(data-time);
+            position: absolute;
+            left: 10px;
+            background: var(--current-time-color);
+            color: white;
+            font-size: 0.75rem;
+            padding: 1px 6px;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            table-layout: fixed;
+        }
+
+        th, td {
+            border: 1px solid var(--border-color);
+            padding: 0;
+            vertical-align: middle;
+            text-align: center;
+        }
+
+        th {
+            background-color: #f1f5f9;
+            color: var(--text-main);
+            font-weight: 600;
+            padding: 12px 5px;
+            font-size: 0.95rem;
+        }
+
+        .time-col {
+            width: 110px;
+            background-color: #f8fafc;
+            font-weight: 600;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            padding: 10px;
+        }
+
+        .day-header.active-day {
+            background-color: var(--primary-light);
+            color: var(--primary);
+        }
+
+        /* Podział komórki na pół w pionie */
+        .cell-split {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            min-height: 65px;
+        }
+
+        .sub-lesson {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 6px 8px;
+            font-size: 0.88rem;
+            word-break: break-word;
+        }
+
+        .plan-1-cell {
+            background-color: var(--plan1-bg);
+            border-bottom: 1px dashed var(--border-color);
+            color: #374151;
+        }
+
+        .plan-2-cell {
+            background-color: var(--plan2-bg);
+            color: #713f12;
+            font-weight: 500;
+        }
+
+        /* Animacja aktywnej lekcji w planie 2 */
+        .plan-2-cell.current-active {
+            background-color: #fde047;
+            box-shadow: inset 0 0 0 2px #ca8a04;
+            animation: pulse-bg 1.5s infinite;
+        }
+
+        @keyframes pulse-bg {
+            0% { background-color: #fef08a; }
+            50% { background-color: #fde047; }
+            100% { background-color: #fef08a; }
+        }
+
+        .empty-slot {
+            color: #9ca3af;
+            font-style: italic;
+            font-size: 0.8rem;
+        }
+
+        .legend {
+            display: flex;
+            gap: 20px;
+            margin-top: 15px;
+            padding: 12px 15px;
+            background: var(--card-bg);
+            border-radius: 8px;
+            align-items: center;
+            font-size: 0.9rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .legend-color {
+            width: 16px;
+            height: 16px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Plan Lekcji (Dwa plany)</h1>
+        <div class="clock" id="live-clock">14:00:00</div>
+    </header>
+
+    <div class="main-layout" id="timetable-container">
+        <div id="time-indicator-line" data-time="12:00" style="top: 150px; display: none;"></div>
+        <table id="timetable">
+            <thead>
+                <tr>
+                    <th style="width: 110px;">Godzina</th>
+                    <th class="day-header" data-day="1">Poniedziałek</th>
+                    <th class="day-header" data-day="2">Wtorek</th>
+                    <th class="day-header" data-day="3">Środa</th>
+                    <th class="day-header" data-day="4">Czwartek</th>
+                    <th class="day-header" data-day="5">Piątek</th>
+                </tr>
+            </thead>
+            <tbody id="timetable-body">
+                </tbody>
+        </table>
+    </div>
+
+    <div class="legend">
+        <div class="legend-item">
+            <div class="legend-color" style="background: var(--plan1-bg); border: 1px solid var(--border-color);"></div>
+            <span>Plan 1 (Góra)</span>
+        </div>
+        <div class="legend-item">
+            <div class="legend-color" style="background: var(--plan2-bg); border: 1px solid #fde047;"></div>
+            <span>Plan 2 / Teraz (Dół - wyróżniony)</span>
+        </div>
+        <div class="legend-item">
+            <div class="legend-color" style="background: var(--current-time-color);"></div>
+            <span>Aktualna godzina</span>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Konfiguracja planu lekcji z Twojego zdjęcia
+    const timetableData = {
+        hours: [
+            { id: 1, start: "07:40", end: "08:25" },
+            { id: 2, start: "08:30", end: "09:15" },
+            { id: 3, start: "09:25", end: "10:10" },
+            { id: 4, start: "10:20", end: "11:05" },
+            { id: 5, start: "11:25", end: "12:10" },
+            { id: 6, start: "12:20", end: "13:05" },
+            { id: 7, start: "13:15", end: "14:00" },
+            { id: 8, start: "14:05", end: "14:50" }
+        ],
+        days: [
+            { id: 1, name: "Poniedziałek" },
+            { id: 2, name: "Wtorek" },
+            { id: 3, name: "Środa" },
+            { id: 4, name: "Czwartek" },
+            { id: 5, name: "Piątek" }
+        ],
+        lessons: {
+            // Poniedziałek (1)
+            "1_1": { p1: "", p2: "" },
+            "2_1": { p1: "matematyka", p2: "angielski" },
+            "3_1": { p1: "matematyka", p2: "biologia" },
+            "4_1": { p1: "angielski", p2: "matematyka" },
+            "5_1": { p1: "angielski", p2: "matematyka" },
+            "6_1": { p1: "wf", p2: "wf" },
+            "7_1": { p1: "ekonomia", p2: "" },
+            "8_1": { p1: "", p2: "" },
+
+            // Wtorek (2)
+            "1_2": { p1: "", p2: "biologia" },
+            "2_2": { p1: "", p2: "chemia" },
+            "3_2": { p1: "j. polski", p2: "matematyka" },
+            "4_2": { p1: "j. polski", p2: "francuski" },
+            "5_2": { p1: "wf", p2: "wf" },
+            "6_2": { p1: "matematyka", p2: "j. polski" },
+            "7_2": { p1: "", p2: "religia" },
+            "8_2": { p1: "", p2: "" },
+
+            // Środa (3)
+            "1_3": { p1: "", p2: "" },
+            "2_3": { p1: "wf", p2: "wf" },
+            "3_3": { p1: "matematyka", p2: "matematyka" },
+            "4_3": { p1: "matematyka", p2: "angielski" },
+            "5_3": { p1: "j. polski", p2: "chemia" },
+            "6_3": { p1: "historia", p2: "godz. wych." },
+            "7_3": { p1: "", p2: "historia" },
+            "8_3": { p1: "", p2: "" },
+
+            // Czwartek (4)
+            "1_4": { p1: "", p2: "" },
+            "2_4": { p1: "matematyka", p2: "francuski" },
+            "3_4": { p1: "niemiecki", p2: "j. polski" },
+            "4_4": { p1: "inf/fiz", p2: "j. polski" },
+            "5_4": { p1: "fiz/inf", p2: "biologia" },
+            "6_4": { p1: "j. polski", p2: "angielski" },
+            "7_4": { p1: "godzina wychowawcza", p2: "" },
+            "8_4": { p1: "", p2: "" },
+
+            // Piątek (5)
+            "1_5": { p1: "", p2: "" },
+            "2_5": { p1: "", p2: "" },
+            "3_5": { p1: "angielski", p2: "historia" },
+            "4_5": { p1: "matematyka", p2: "" },
+            "5_5": { p1: "matematyka", p2: "" },
+            "6_5": { p1: "historia", p2: "j. polski" },
+            "7_5": { p1: "", p2: "" },
+            "8_5": { p1: "", p2: "" }
+        }
+    };
+
+    function renderTable() {
+        const tbody = document.getElementById('timetable-body');
+        tbody.innerHTML = '';
+
+        timetableData.hours.forEach(h => {
+            const tr = document.createElement('tr');
+            
+            // Kolumna godziny
+            const tdTime = document.createElement('td');
+            tdTime.className = 'time-col';
+            tdTime.innerHTML = `Lekcja ${h.id}<br><span style="font-size:0.75rem">${h.start} - ${h.end}</span>`;
+            tr.appendChild(tdTime);
+
+            // Kolumny dni
+            timetableData.days.forEach(d => {
+                const td = document.createElement('td');
+                const key = `${h.id}_${d.id}`;
+                const lesson = timetableData.lessons[key] || { p1: '', p2: '' };
+
+                td.innerHTML = `
+                    <div class="cell-split">
+                        <div class="sub-lesson plan-1-cell" title="Plan 1">
+                            ${lesson.p1 ? lesson.p1 : '<span class="empty-slot">-</span>'}
+                        </div>
+                        <div class="sub-lesson plan-2-cell" id="slot-${d.id}-${h.id}" title="Plan 2">
+                            ${lesson.p2 ? lesson.p2 : '<span class="empty-slot">-</span>'}
+                        </div>
+                    </div>
+                `;
+                tr.appendChild(td);
+            });
+
+            tbody.appendChild(tr);
+        });
+
+        highlightCurrentDay();
+    }
+
+    function highlightCurrentDay() {
+        const now = new Date();
+        let dayOfWeek = now.getDay(); // 1 = Poniedziałek ... 5 = Piątek
+        
+        const headers = document.querySelectorAll('.day-header');
+        headers.forEach((th, idx) => {
+            if (idx + 1 === dayOfWeek) {
+                th.classList.add('active-day');
+            } else {
+                th.classList.remove('active-day');
+            }
+        });
+    }
+
+    function timeToMinutes(timeStr) {
+        const [hours, minutes] = timeStr.split(':').map(Number);
+        return hours * 60 + minutes;
+    }
+
+    function updateIndicatorAndActiveLesson() {
+        const now = new Date();
+        const hours = String(now.getHours()).padStart(2, '0');
+        const minutes = String(now.getMinutes()).padStart(2, '0');
+        const seconds = String(now.getSeconds()).padStart(2, '0');
+        
+        document.getElementById('live-clock').innerText = `${hours}:${minutes}:${seconds}`;
+
+        const currentTimeStr = `${hours}:${minutes}`;
+        const currentMinutes = timeToMinutes(currentTimeStr);
+
+        // Usuń stare podświetlenia z Planu 2
+        document.querySelectorAll('.plan-2-cell').forEach(el => el.classList.remove('current-active'));
+
+        let dayOfWeek = now.getDay(); 
+        if (dayOfWeek >= 1 && dayOfWeek <= 5) {
+            timetableData.hours.forEach(h => {
+                const startMin = timeToMinutes(h.start);
+                const endMin = timeToMinutes(h.end);
+
+                if (currentMinutes >= startMin && currentMinutes <= endMin) {
+                    const slot = document.getElementById(`slot-${dayOfWeek}-${h.id}`);
+                    if (slot) {
+                        slot.classList.add('current-active');
+                    }
+                }
+            });
+        }
+
+        // Suwaczek pionowy
+        const dayStartMin = timeToMinutes("07:40");
+        const dayEndMin = timeToMinutes("14:50");
+        const totalDuration = dayEndMin - dayStartMin;
+        const currentElapsed = currentMinutes - dayStartMin;
+
+        const line = document.getElementById('time-indicator-line');
+        const container = document.getElementById('timetable');
+
+        if (currentMinutes >= dayStartMin && currentMinutes <= dayEndMin && dayOfWeek >= 1 && dayOfWeek <= 5) {
+            const tableHeight = container.offsetHeight;
+            const percentage = currentElapsed / totalDuration;
+            const topOffset = 45 + (percentage * (tableHeight - 45));
+
+            line.style.top = `${topOffset}px`;
+            line.style.display = 'flex';
+            line.setAttribute('data-time', `${hours}:${minutes}`);
+        } else {
+            line.style.display = 'none';
+        }
+    }
+
+    window.onload = () => {
+        renderTable();
+        updateIndicatorAndActiveLesson();
+        setInterval(updateIndicatorAndActiveLesson, 1000);
+    };
+</script>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Porównywarka Planów Lekcji</title>
+    <style>
+        :root {
+            --bg-color: #f4f6f9;
+            --card-bg: #ffffff;
+            --primary: #4f46e5;
+            --primary-light: #e0e7ff;
+            --text-main: #1f2937;
+            --text-muted: #6b7280;
+            --border-color: #d1d5db;
+            --plan1-bg: #f9fafb;
+            --plan2-bg: #fef9c3; /* delikatny żółty dla planu 2 */
+            --current-time-color: #ef4444;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 15px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            background: var(--card-bg);
+            padding: 15px 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 1.4rem;
+            color: var(--primary);
+        }
+
+        .clock {
+            font-weight: bold;
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+
+        .main-layout {
+            position: relative;
+            background: var(--card-bg);
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+            padding: 10px;
+        }
+
+        /* Suwak czasu */
+        #time-indicator-line {
+            position: absolute;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background-color: var(--current-time-color);
+            z-index: 20;
+            pointer-events: none;
+            display: flex;
+            align-items: center;
+        }
+
+        #time-indicator-line::before {
+            content: attr(data-time);
+            position: absolute;
+            left: 10px;
+            background: var(--current-time-color);
+            color: white;
+            font-size: 0.75rem;
+            padding: 1px 6px;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            table-layout: fixed;
+        }
+
+        th, td {
+            border: 1px solid var(--border-color);
+            padding: 0;
+            vertical-align: middle;
+            text-align: center;
+        }
+
+        th {
+            background-color: #f1f5f9;
+            color: var(--text-main);
+            font-weight: 600;
+            padding: 12px 5px;
+            font-size: 0.95rem;
+        }
+
+        .time-col {
+            width: 110px;
+            background-color: #f8fafc;
+            font-weight: 600;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            padding: 10px;
+        }
+
+        .day-header.active-day {
+            background-color: var(--primary-light);
+            color: var(--primary);
+        }
+
+        /* Podział komórki na pół w pionie */
+        .cell-split {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            min-height: 65px;
+        }
+
+        .sub-lesson {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 6px 8px;
+            font-size: 0.88rem;
+            word-break: break-word;
+        }
+
+        .plan-1-cell {
+            background-color: var(--plan1-bg);
+            border-bottom: 1px dashed var(--border-color);
+            color: #374151;
+        }
+
+        .plan-2-cell {
+            background-color: var(--plan2-bg);
+            color: #713f12;
+            font-weight: 500;
+        }
+
+        /* Animacja aktywnej lekcji w planie 2 */
+        .plan-2-cell.current-active {
+            background-color: #fde047;
+            box-shadow: inset 0 0 0 2px #ca8a04;
+            animation: pulse-bg 1.5s infinite;
+        }
+
+        @keyframes pulse-bg {
+            0% { background-color: #fef08a; }
+            50% { background-color: #fde047; }
+            100% { background-color: #fef08a; }
+        }
+
+        .empty-slot {
+            color: #9ca3af;
+            font-style: italic;
+            font-size: 0.8rem;
+        }
+
+        .legend {
+            display: flex;
+            gap: 20px;
+            margin-top: 15px;
+            padding: 12px 15px;
+            background: var(--card-bg);
+            border-radius: 8px;
+            align-items: center;
+            font-size: 0.9rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .legend-color {
+            width: 16px;
+            height: 16px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Plan Lekcji (Dwa plany)</h1>
+        <div class="clock" id="live-clock">14:00:00</div>
+    </header>
+
+    <div class="main-layout" id="timetable-container">
+        <div id="time-indicator-line" data-time="12:00" style="top: 150px; display: none;"></div>
+        <table id="timetable">
+            <thead>
+                <tr>
+                    <th style="width: 110px;">Godzina</th>
+                    <th class="day-header" data-day="1">Poniedziałek</th>
+                    <th class="day-header" data-day="2">Wtorek</th>
+                    <th class="day-header" data-day="3">Środa</th>
+                    <th class="day-header" data-day="4">Czwartek</th>
+                    <th class="day-header" data-day="5">Piątek</th>
+                </tr>
+            </thead>
+            <tbody id="timetable-body">
+                </tbody>
+        </table>
+    </div>
+
+    <div class="legend">
+        <div class="legend-item">
+            <div class="legend-color" style="background: var(--plan1-bg); border: 1px solid var(--border-color);"></div>
+            <span>Plan 1 (Góra)</span>
+        </div>
+        <div class="legend-item">
+            <div class="legend-color" style="background: var(--plan2-bg); border: 1px solid #fde047;"></div>
+            <span>Plan 2 / Teraz (Dół - wyróżniony)</span>
+        </div>
+        <div class="legend-item">
+            <div class="legend-color" style="background: var(--current-time-color);"></div>
+            <span>Aktualna godzina</span>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Konfiguracja planu lekcji z Twojego zdjęcia
+    const timetableData = {
+        hours: [
+            { id: 1, start: "07:40", end: "08:25" },
+            { id: 2, start: "08:30", end: "09:15" },
+            { id: 3, start: "09:25", end: "10:10" },
+            { id: 4, start: "10:20", end: "11:05" },
+            { id: 5, start: "11:25", end: "12:10" },
+            { id: 6, start: "12:20", end: "13:05" },
+            { id: 7, start: "13:15", end: "14:00" },
+            { id: 8, start: "14:05", end: "14:50" }
+        ],
+        days: [
+            { id: 1, name: "Poniedziałek" },
+            { id: 2, name: "Wtorek" },
+            { id: 3, name: "Środa" },
+            { id: 4, name: "Czwartek" },
+            { id: 5, name: "Piątek" }
+        ],
+        lessons: {
+            // Poniedziałek (1)
+            "1_1": { p1: "", p2: "" },
+            "2_1": { p1: "matematyka", p2: "angielski" },
+            "3_1": { p1: "matematyka", p2: "biologia" },
+            "4_1": { p1: "angielski", p2: "matematyka" },
+            "5_1": { p1: "angielski", p2: "matematyka" },
+            "6_1": { p1: "wf", p2: "wf" },
+            "7_1": { p1: "ekonomia", p2: "" },
+            "8_1": { p1: "", p2: "" },
+
+            // Wtorek (2)
+            "1_2": { p1: "", p2: "biologia" },
+            "2_2": { p1: "", p2: "chemia" },
+            "3_2": { p1: "j. polski", p2: "matematyka" },
+            "4_2": { p1: "j. polski", p2: "francuski" },
+            "5_2": { p1: "wf", p2: "wf" },
+            "6_2": { p1: "matematyka", p2: "j. polski" },
+            "7_2": { p1: "", p2: "religia" },
+            "8_2": { p1: "", p2: "" },
+
+            // Środa (3)
+            "1_3": { p1: "", p2: "" },
+            "2_3": { p1: "wf", p2: "wf" },
+            "3_3": { p1: "matematyka", p2: "matematyka" },
+            "4_3": { p1: "matematyka", p2: "angielski" },
+            "5_3": { p1: "j. polski", p2: "chemia" },
+            "6_3": { p1: "historia", p2: "godz. wych." },
+            "7_3": { p1: "", p2: "historia" },
+            "8_3": { p1: "", p2: "" },
+
+            // Czwartek (4)
+            "1_4": { p1: "", p2: "" },
+            "2_4": { p1: "matematyka", p2: "francuski" },
+            "3_4": { p1: "niemiecki", p2: "j. polski" },
+            "4_4": { p1: "inf/fiz", p2: "j. polski" },
+            "5_4": { p1: "fiz/inf", p2: "biologia" },
+            "6_4": { p1: "j. polski", p2: "angielski" },
+            "7_4": { p1: "godzina wychowawcza", p2: "" },
+            "8_4": { p1: "", p2: "" },
+
+            // Piątek (5)
+            "1_5": { p1: "", p2: "" },
+            "2_5": { p1: "", p2: "" },
+            "3_5": { p1: "angielski", p2: "historia" },
+            "4_5": { p1: "matematyka", p2: "" },
+            "5_5": { p1: "matematyka", p2: "" },
+            "6_5": { p1: "historia", p2: "j. polski" },
+            "7_5": { p1: "", p2: "" },
+            "8_5": { p1: "", p2: "" }
+        }
+    };
+
+    function renderTable() {
+        const tbody = document.getElementById('timetable-body');
+        tbody.innerHTML = '';
+
+        timetableData.hours.forEach(h => {
+            const tr = document.createElement('tr');
+            
+            // Kolumna godziny
+            const tdTime = document.createElement('td');
+            tdTime.className = 'time-col';
+            tdTime.innerHTML = `Lekcja ${h.id}<br><span style="font-size:0.75rem">${h.start} - ${h.end}</span>`;
+            tr.appendChild(tdTime);
+
+            // Kolumny dni
+            timetableData.days.forEach(d => {
+                const td = document.createElement('td');
+                const key = `${h.id}_${d.id}`;
+                const lesson = timetableData.lessons[key] || { p1: '', p2: '' };
+
+                td.innerHTML = `
+                    <div class="cell-split">
+                        <div class="sub-lesson plan-1-cell" title="Plan 1">
+                            ${lesson.p1 ? lesson.p1 : '<span class="empty-slot">-</span>'}
+                        </div>
+                        <div class="sub-lesson plan-2-cell" id="slot-${d.id}-${h.id}" title="Plan 2">
+                            ${lesson.p2 ? lesson.p2 : '<span class="empty-slot">-</span>'}
+                        </div>
+                    </div>
+                `;
+                tr.appendChild(td);
+            });
+
+            tbody.appendChild(tr);
+        });
+
+        highlightCurrentDay();
+    }
+
+    function highlightCurrentDay() {
+        const now = new Date();
+        let dayOfWeek = now.getDay(); // 1 = Poniedziałek ... 5 = Piątek
+        
+        const headers = document.querySelectorAll('.day-header');
+        headers.forEach((th, idx) => {
+            if (idx + 1 === dayOfWeek) {
+                th.classList.add('active-day');
+            } else {
+                th.classList.remove('active-day');
+            }
+        });
+    }
+
+    function timeToMinutes(timeStr) {
+        const [hours, minutes] = timeStr.split(':').map(Number);
+        return hours * 60 + minutes;
+    }
+
+    function updateIndicatorAndActiveLesson() {
+        const now = new Date();
+        const hours = String(now.getHours()).padStart(2, '0');
+        const minutes = String(now.getMinutes()).padStart(2, '0');
+        const seconds = String(now.getSeconds()).padStart(2, '0');
+        
+        document.getElementById('live-clock').innerText = `${hours}:${minutes}:${seconds}`;
+
+        const currentTimeStr = `${hours}:${minutes}`;
+        const currentMinutes = timeToMinutes(currentTimeStr);
+
+        // Usuń stare podświetlenia z Planu 2
+        document.querySelectorAll('.plan-2-cell').forEach(el => el.classList.remove('current-active'));
+
+        let dayOfWeek = now.getDay(); 
+        if (dayOfWeek >= 1 && dayOfWeek <= 5) {
+            timetableData.hours.forEach(h => {
+                const startMin = timeToMinutes(h.start);
+                const endMin = timeToMinutes(h.end);
+
+                if (currentMinutes >= startMin && currentMinutes <= endMin) {
+                    const slot = document.getElementById(`slot-${dayOfWeek}-${h.id}`);
+                    if (slot) {
+                        slot.classList.add('current-active');
+                    }
+                }
+            });
+        }
+
+        // Suwaczek pionowy
+        const dayStartMin = timeToMinutes("07:40");
+        const dayEndMin = timeToMinutes("14:50");
+        const totalDuration = dayEndMin - dayStartMin;
+        const currentElapsed = currentMinutes - dayStartMin;
+
+        const line = document.getElementById('time-indicator-line');
+        const container = document.getElementById('timetable');
+
+        if (currentMinutes >= dayStartMin && currentMinutes <= dayEndMin && dayOfWeek >= 1 && dayOfWeek <= 5) {
+            const tableHeight = container.offsetHeight;
+            const percentage = currentElapsed / totalDuration;
+            const topOffset = 45 + (percentage * (tableHeight - 45));
+
+            line.style.top = `${topOffset}px`;
+            line.style.display = 'flex';
+            line.setAttribute('data-time', `${hours}:${minutes}`);
+        } else {
+            line.style.display = 'none';
+        }
+    }
+
+    window.onload = () => {
+        renderTable();
+        updateIndicatorAndActiveLesson();
+        setInterval(updateIndicatorAndActiveLesson, 1000);
+    };
+</script>
+
+</body>
+</html>
