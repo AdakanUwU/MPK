@@ -2,11 +2,11 @@
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
-    <title>Obieg pojazdów - Styl 55p.cz</title>
+    <title>Obieg pojazdów - Interaktywny (Styl 55p.cz)</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #ffffe0; /* charakterystyczne lekko żółtawe tło 55p.cz */
+            background-color: #ffffe0;
             color: #000;
             padding: 20px;
             margin: 0;
@@ -16,6 +16,45 @@
             text-align: center;
             margin-bottom: 15px;
             color: #333;
+        }
+        .controls {
+            max-width: 650px;
+            margin: 0 auto 20px auto;
+            background: #fff;
+            padding: 15px;
+            border: 1px solid #000;
+            border-radius: 4px;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            align-items: flex-end;
+            justify-content: center;
+        }
+        .control-group {
+            display: flex;
+            flex-direction: column;
+            font-size: 0.85rem;
+        }
+        .control-group label {
+            font-weight: bold;
+            margin-bottom: 4px;
+        }
+        .control-group input, .control-group select {
+            padding: 5px;
+            font-size: 0.9rem;
+        }
+        button {
+            padding: 6px 14px;
+            background-color: #000080;
+            color: white;
+            border: none;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+        button:hover {
+            background-color: #000050;
         }
         table {
             border-collapse: collapse;
@@ -63,12 +102,31 @@
 </head>
 <body>
 
-    <h1>Obieg jednostki (np. 612) – Tabela obiegowa</h1>
+    <h1>Interaktywny Obieg Pojazdu</h1>
 
-    <table>
-        <!-- Górny nagłówek dat / dni -->
+    <div class="controls">
+        <div class="control-group">
+            <label for="unitNum">Numer jednostki:</label>
+            <input type="text" id="unitNum" value="612" style="width: 80px;">
+        </div>
+        <div class="control-group">
+            <label for="startDay">Dzień obiegu w dniu startowym:</label>
+            <select id="startDay">
+                <option value="1">1. dzień (44431...)</option>
+                <option value="2" selected>2. dzień (44240...)</option>
+                <option value="3">3. dzień (44226...)</option>
+            </select>
+        </div>
+        <div class="control-group">
+            <label for="startDate">Data wyjściowa:</label>
+            <input type="date" id="startDate" value="2026-08-31">
+        </div>
+        <button onclick="updateTable()">Generuj obieg</button>
+    </div>
+
+    <table id="obiegTable">
         <tr>
-            <th rowspan="2" style="min-width: 90px;">oběh dla<br>obiegu:</th>
+            <th rowspan="2" style="min-width: 100px;">data / dzień</th>
             <th colspan="3" class="route-header">Lubliniec – Częstochowa</th>
         </tr>
         <tr>
@@ -76,54 +134,9 @@
             <th style="width: 180px;">2. den<br><span class="train-list">44240, 44243, 44246, 44237, 44224, 44249</span></th>
             <th style="width: 180px;">3. den<br><span class="train-list">44226, 44229, 44230, 44245</span></th>
         </tr>
-
-        <!-- Wiersze z datami i rotacją pojazdu (np. 612) -->
+        <tbody id="tableBody"></tbody>
         <tr>
-            <th>pt 28. 8.</th>
-            <td class="empty-cell"></td>
-            <td><span class="train-badge">612</span></td>
-            <td class="empty-cell"></td>
-        </tr>
-        <tr>
-            <th>so 29. 8.</th>
-            <td class="empty-cell"></td>
-            <td class="empty-cell"></td>
-            <td><span class="train-badge">612</span></td>
-        </tr>
-        <tr>
-            <th>ne 30. 8.</th>
-            <td><span class="train-badge">612</span></td>
-            <td class="empty-cell"></td>
-            <td class="empty-cell"></td>
-        </tr>
-        <tr>
-            <th>po 31. 8.</th>
-            <td class="empty-cell"></td>
-            <td><span class="train-badge">612</span></td>
-            <td class="empty-cell"></td>
-        </tr>
-        <tr style="background-color: #ffcc00;">
-            <th style="background-color: #e6b800;">út 1. 9.</th>
-            <td><span class="train-badge">612</span></td>
-            <td class="empty-cell"></td>
-            <td class="empty-cell"></td>
-        </tr>
-        <tr>
-            <th>st 2. 9.</th>
-            <td class="empty-cell"></td>
-            <td><span class="train-badge">612</span></td>
-            <td class="empty-cell"></td>
-        </tr>
-        <tr>
-            <th>čt 3. 9.</th>
-            <td class="empty-cell"></td>
-            <td class="empty-cell"></td>
-            <td><span class="train-badge">612</span></td>
-        </tr>
-
-        <!-- Dolny symetryczny nagłówek -->
-        <tr>
-            <th rowspan="2">oběh dla<br>obiegu:</th>
+            <th rowspan="2">data / dzień</th>
             <th>1. den</th>
             <th>2. den</th>
             <th>3. den</th>
@@ -132,6 +145,75 @@
             <th colspan="3" class="route-header">Lubliniec – Częstochowa</th>
         </tr>
     </table>
+
+    <script>
+        const daysOfWeek = ['nd', 'pn', 'wt', 'śr', 'cz', 'pt', 'so'];
+        const monthsNames = ['1.', '2.', '3.', '4.', '5.', '6.', '7.', '8.', '9.', '10.', '11.', '12.'];
+
+        function formatDate(dateObj) {
+            const d = daysOfWeek[dateObj.getDay()];
+            const dayNum = dateObj.getDate();
+            const monthNum = dateObj.getMonth() + 1;
+            return `${d} ${dayNum}. ${monthNum}.`;
+        }
+
+        function updateTable() {
+            const unit = document.getElementById('unitNum').value.trim();
+            const baseDayIndex = parseInt(document.getElementById('startDay').value) - 1; // 0, 1 lub 2
+            const startDateStr = document.getElementById('startDate').value;
+
+            if (!startDateStr) return;
+
+            const baseDate = new Date(startDateStr);
+            
+            // Chcemy pokazać np. 7 dni (3 w tył, dzień bazowy, 3 w przód)
+            const tbody = document.getElementById('tableBody');
+            tbody.innerHTML = '';
+
+            // Generujemy wiersze od -3 do +3 dni względem daty bazowej
+            for (let i = -3; i <= 3; i++) {
+                let currDate = new Date(baseDate);
+                currDate.setDate(baseDate.getDate() + i);
+
+                // Obliczanie numeru dnia obiegu (1, 2 lub 3) z uwzględnieniem cykliczności modulo 3
+                // Różnica w dniach względem daty bazowej to 'i'
+                let currentObiegDay = ((baseDayIndex + i) % 3 + 3) % 3 + 1;
+
+                let tr = document.createElement('tr');
+                
+                // Podświetlenie wiersza dla daty bazowej
+                if (i === 0) {
+                    tr.style.backgroundColor = '#ffcc00';
+                }
+
+                let thDate = document.createElement('th');
+                thDate.innerText = formatDate(currDate);
+                if (i === 0) {
+                    thDate.style.backgroundColor = '#e6b800';
+                }
+                tr.appendChild(thDate);
+
+                // Kolumny dla 1, 2, 3 dnia obiegu
+                for (let col = 1; col <= 3; col++) {
+                    let td = document.createElement('td');
+                    if (col === currentObiegDay && unit !== "") {
+                        let badge = document.createElement('span');
+                        badge.className = 'train-badge';
+                        badge.innerText = unit;
+                        td.appendChild(badge);
+                    } else {
+                        td.className = 'empty-cell';
+                    }
+                    tr.appendChild(td);
+                }
+
+                tbody.appendChild(tr);
+            }
+        }
+
+        // Uruchomienie domyślne przy starcie
+        window.onload = updateTable;
+    </script>
 
 </body>
 </html>
