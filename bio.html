@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ada | Moja Strona</title>
+    <title>Ada | Bio</title>
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <script src="https://unpkg.com/topojson@3"></script>
     <style>
@@ -82,7 +82,7 @@
             font-size: 1rem;
             text-transform: uppercase;
             letter-spacing: 2px;
-            margin-bottom: 25px;
+            margin-bottom: 20px;
             display: block;
         }
 
@@ -90,14 +90,14 @@
             color: var(--text-muted);
             line-height: 1.6;
             font-size: 0.95rem;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
         }
 
         .section-title {
-            font-size: 1.1rem;
+            font-size: 1rem;
             text-transform: uppercase;
             letter-spacing: 1px;
-            margin: 20px 0 10px 0;
+            margin: 15px 0 10px 0;
             border-bottom: 1px solid var(--border-color);
             padding-bottom: 5px;
             color: var(--text-main);
@@ -108,24 +108,65 @@
             display: flex;
             flex-wrap: wrap;
             gap: 8px;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
         }
 
         .tag {
             background: #242424;
             border: 1px solid var(--border-color);
-            padding: 6px 12px;
+            padding: 5px 11px;
             border-radius: 20px;
-            font-size: 0.85rem;
+            font-size: 0.82rem;
             color: var(--text-muted);
         }
 
-        /* Linki społecznościowe */
+        /* NOWA SEKCJA: Kontakt (kompaktowa siatka) */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+
+        .contact-item {
+            background: #222222;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 10px 12px;
+            display: flex;
+            flex-direction: column;
+            text-decoration: none;
+            color: var(--text-main);
+            transition: border-color 0.2s ease, transform 0.2s ease;
+        }
+
+        .contact-item:hover {
+            border-color: var(--accent-color);
+            transform: translateY(-2px);
+        }
+
+        .contact-label {
+            font-size: 0.72rem;
+            text-transform: uppercase;
+            color: var(--accent-color);
+            letter-spacing: 0.5px;
+            margin-bottom: 2px;
+        }
+
+        .contact-value {
+            font-size: 0.85rem;
+            color: var(--text-main);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        /* Linki społecznościowe / Projekty */
         .links-container {
             display: flex;
             flex-direction: column;
             gap: 10px;
-            margin-top: auto; /* Spycha linki na dół, jeśli jest miejsce */
+            margin-top: auto;
         }
 
         .social-link {
@@ -164,7 +205,7 @@
             top: 0;
             left: 0;
             z-index: 5;
-            pointer-events: none; /* Pozwala klikać mapę pod tekstem */
+            pointer-events: none;
         }
 
         .map-header h2 {
@@ -246,15 +287,15 @@
             "Poland",
             "Germany",
             "Italy",
-			"Austria",
-			"Slovenia",
-			"Greece",
-			"Czechia",
-			"Croatia",
-			"Bulgaria",
-			"Tunisia",
-			"Vatican City",
-			"Lithuania"
+            "Austria",
+            "Slovenia",
+            "Greece",
+            "Czechia",
+            "Croatia",
+            "Bulgaria",
+            "Tunisia",
+            "Vatican City",
+            "Lithuania"
         ];
     </script>
 
@@ -264,18 +305,39 @@
         <div class="bio-section">
             <div class="profile-header">
                 <h1>Ada</h1>
-                <span class="subtitle">HTML, komunikacji miejska, kolej, anime, manga, rysunek, fotografia</span>
+                <span class="subtitle">HTML, komunikacja miejska, kolej, anime, manga, rysunek, fotografia</span>
             </div>
 
             <div class="bio-text">
-			Ohayō ！ Jestem Ada, pochodzę i mieszkam w Częstochowie. Interesuję się przedewszystkim 
-			komunikacją miejską i koleją, a w szczególności dokumentowaniem i archiwizacją rzeczy z tym 
-			związanym, m.in. za pomocą fotografi lub tworzenia strone internetowych. Z artystycznych
-			dziedzin lubię fotografię i rysowanie. Zdjęcia robię autobusom, trolejbusom, tramwajom, 
-			metrze, pociągom, arhcitekturze, zwierzętą, krajobrazom czy innym ciekawym obiektom. Rysuje
-			szczególnie różnego rodzaju pojazdy w formie kolorych rysunków lub technicznych schematów, albo
-			postaci z anime lub mangi.
-			
+                Ohayō ！ Jestem Ada, pochodzę i mieszkam w Częstochowie. Interesuję się przede wszystkim 
+                komunikacją miejską i koleją, a w szczególności dokumentowaniem i archiwizacją rzeczy z tym 
+                związanych, m.in. za pomocą fotografii lub tworzenia stron internetowych. Z artystycznych 
+                dziedzin lubię fotografię i rysowanie. Zdjęcia robię autobusom, trolejbusom, tramwajom, 
+                metru, pociągom, architekturze, zwierzętom, krajobrazom czy innym ciekawym obiektom. Rysuję 
+                szczególnie różnego rodzaju pojazdy w formie kolorowych rysunków lub technicznych schematów, albo 
+                postaci z anime lub mangi.
+            </div>
+
+            <!-- NOWA SEKCJA KONTAKTU -->
+            <div class="section-title">Kontakt</div>
+            <div class="contact-grid">
+				<a href="https://www.youtube.com/@AdaSlabikowska" target="_blank" class="contact-item">
+                    <span class="contact-label">💬 Matrix</span>
+                    <span class="contact-value">@adakan:matrix.org</span>
+				</a>
+                <a href="https://fluxer.gg/xjSRy0Y9" target="_blank" class="contact-item" title="Dołącz na Fluxer">
+                    <span class="contact-label">💬 Fluxer</span>
+                    <span class="contact-value">Serwer / Wiadomość</span>
+                </a>
+                <!-- Możesz dodać kolejne kafelki lub usunąć niepotrzebne -->
+                <div class="contact-item" title="Mój nick na Discordzie">
+                    <span class="contact-label">🎮 Discord</span>
+                    <span class="contact-value">@twoj_nick</span>
+                </div>
+                <a href="https://www.youtube.com/@AdaSlabikowska" target="_blank" class="contact-item">
+                    <span class="contact-label">🎦 YouTube</span>
+                    <span class="contact-value">@AdaSlabikowska</span>
+                </a>
             </div>
 
             <div class="section-title">Zainteresowania</div>
@@ -287,17 +349,14 @@
                 <span class="tag">Manga</span>
                 <span class="tag">Rysowanie</span>
                 <span class="tag">Fotografia</span>
-				<span class="tag">Nauka Języków</span>
-
+                <span class="tag">Nauka Języków</span>
             </div>
 
             <div class="section-title">Moje Projekty / Linki</div>
             <div class="links-container">
                 <a href="https://galeria.komunikacja.cc" class="social-link" target="_blank">🌐 Moja Galeria Transportowa</a>
                 <a href="https://komunikacja.cc" class="social-link" target="_blank">🌐 Strona taboru MPK Częstochowa i GZK Rędziny</a>
-				<a href="https://www.youtube.com/@AdaSlabikowska" class="social-link" target="_blank">🎦 Kanał Youtube</a>
-				<a href="https://fluxer.gg/xjSRy0Y9" class="social-link" target="_blank">💬 Serwer Fluxer</a>
-			</div>
+            </div>
         </div>
 
         <!-- PRAWA KOLUMNA: MAPA -->
@@ -324,7 +383,6 @@
 
         const g = svg.append("g");
 
-        // Projekcja dopasowana do prostokątnego okna bio-karty
         const projection = d3.geoEqualEarth()
             .scale(width / 5.2)
             .translate([width / 2, height / 1.8]);
@@ -341,7 +399,6 @@
 
         svg.call(zoom);
 
-        // Ładowanie kształtów państw
         d3.json("https://unpkg.com/world-atlas@2.0.2/countries-110m.json").then(data => {
             const countries = topojson.feature(data, data.objects.countries).features;
 
@@ -359,7 +416,6 @@
                     tooltip.style("opacity", 1).html(d.properties.name);
                 })
                 .on("mousemove", function(event) {
-                    // Pozycjonowanie tooltipu względem kontenera mapy
                     const mapRect = container.getBoundingClientRect();
                     tooltip.style("left", (event.clientX - mapRect.left + 15) + "px")
                            .style("top", (event.clientY - mapRect.top - 15) + "px");
@@ -369,7 +425,6 @@
                 });
         });
 
-        // Dynamiczne dopasowanie mapy przy zmianie rozmiaru okna przeglądarki
         window.addEventListener('resize', () => {
             const w = container.clientWidth;
             const h = container.clientHeight;
